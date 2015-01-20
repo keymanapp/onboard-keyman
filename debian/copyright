@@ -1,0 +1,295 @@
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: Onboard
+Upstream-Contact: Onboard devel team (https://launchpad.net/~onboard)
+Source: http://launchpad.net/onboard
+
+Files: Onboard/Appearance.py
+ Onboard/AtspiStateTracker.py
+ Onboard/AutoShow.py
+ Onboard/ClickSimulator.py
+ Onboard/Config.py
+ Onboard/ConfigUtils.py
+ Onboard/Exceptions.py
+ Onboard/Indicator.py
+ Onboard/KbdWindow.py
+ Onboard/KeyCommon.py
+ Onboard/KeyGtk.py
+ Onboard/Keyboard.py
+ Onboard/KeyboardPopups.py
+ Onboard/KeyboardWidget.py
+ Onboard/Layout.py
+ Onboard/LayoutLoaderSVG.py
+ Onboard/LayoutView.py
+ Onboard/OnboardGtk.py
+ Onboard/SnippetView.py
+ Onboard/SpellChecker.py
+ Onboard/TouchHandles.py
+ Onboard/WindowUtils.py
+ Onboard/__init__.py
+ Onboard/canonical_equivalents.py
+ Onboard/pypredict/__init__.py
+ Onboard/pypredict/attic/prune.py
+ Onboard/pypredict/attic/setup.py
+ Onboard/pypredict/test/__init__.py
+ Onboard/pypredict/tools/pypredict.py
+ Onboard/settings.py
+ Onboard/test/__init__.py
+ Onboard/utils.py
+ data/layoutstrings.py
+ scripts/sokSettings.py
+ setup.py
+Copyright: *No copyright*
+License: GPL-2+
+Comment:
+ Assuming license as found in COPYING file.
+
+Files: Onboard/pypredict/lm/accent_transform.h
+Copyright: *No copyright*
+License: GPL-3+
+Comment:
+ Assuming license as found in other language
+ models (lm) files.
+
+Files: Onboard/pypredict/lm/lm_dynamic.cpp
+ Onboard/pypredict/lm/lm_dynamic.h
+ Onboard/pypredict/lm/lm_dynamic_impl.h
+ Onboard/pypredict/lm/lm_dynamic_kn.h
+ Onboard/pypredict/lm/lm_merged.cpp
+ Onboard/pypredict/lm/lm_merged.h
+ Onboard/pypredict/lm/pool_allocator.cpp
+ Onboard/pypredict/lm_wrapper.py
+ Onboard/pypredict/test/test_pypredict.py
+ Onboard/test/test_dbus_service.py
+ Onboard/test/test_translations.py
+ Onboard/LanguageSupport.py
+ Onboard/TextChanges.py
+ Onboard/TextContext.py
+ Onboard/TextDomain.py
+ Onboard/TouchInput.py
+ Onboard/WPEngine.py
+ Onboard/WordSuggestions.py
+ Onboard/XInput.py
+ Onboard/definitions.py
+ Onboard/osk/osk_dconf.c
+ Onboard/osk/osk_hunspell.c
+ Onboard/pypredict/lm/lm.cpp
+ Onboard/pypredict/lm/lm_dynamic_cached.h
+ Onboard/pypredict/lm/lm_python.cpp
+ Onboard/pypredict/lm/lm_unigram.cpp
+ Onboard/pypredict/lm/lm_unigram.h
+ Onboard/pypredict/test/test_checkmodels.py
+ Onboard/test/test_migration.py
+Copyright: 2012, marmuta <marmvta@gmail.com>
+  2012, marmuta
+  2012-2013, marmuta
+  2013, marmuta <marmvta@gmail.com>
+  2013, marmuta
+License: GPL-3+
+Comment:
+  Assuming copyright where it only says "author" (but
+  copyright holder is missing) in the file headers.
+
+Files: Onboard/Scanner.py
+ Onboard/Sound.py
+ Onboard/osk/osk_audio.c
+ Onboard/osk/osk_module.c
+ Onboard/osk/osk_module.h
+ Onboard/osk/osk_struts.c
+Copyright: 2011, Gerd Kohlberger
+  2012, Gerd Kohlberger
+  2013, Gerd Kohlberger
+License: GPL-3+
+
+Files: Onboard/osk/osk_click_mapper.c
+ Onboard/osk/osk_devices.c
+ Onboard/osk/osk_util.c
+Copyright: 2011, Gerd Kohlberger
+  2012, marmuta
+  2012-2013, marmuta
+License: GPL-3+
+
+Files: Onboard/osk/osk_virtkey.c
+Copyright: 2006-2008, Chris Jones
+  2010, marmuta
+  2013, Gerd Kohlberger
+License: GPL-3+
+
+Files: Onboard/IconPalette.py
+Copyright: 2008, Francesco Fumanti <francesco.fumanti@gmx.net>
+License: GPL-3+
+
+Files: Onboard/pypredict/lm/lm.h
+Copyright: 2012, marmuta <marmvta@gmail.com>
+License: GPL-3+
+
+Files: layouts/Whiteboard-Alpha.svg
+ layouts/Whiteboard-Arrows.svg
+ layouts/Whiteboard-Emoji.svg
+ layouts/Whiteboard-Greek.svg
+ layouts/Whiteboard-Numbers.svg
+ layouts/Whiteboard-Syms.svg
+ layouts/Whiteboard.onboard
+ layouts/Whiteboard_wide-Alpha.svg
+ layouts/Whiteboard_wide.onboard
+Copyright: 2014, Johannes Almer
+License: GPL-3+
+
+Files: Onboard/pypredict/README
+Copyright: Michael Djavidan
+License: GPL-3+
+Comment:
+ This copyright holder (and license) probably applies to various
+ files in the Onboard/pypredict folder (and subfolders). However,
+ that name does not appear in any of the code files' headers.
+
+Files: Onboard/pypredict/tools/*
+Copyright: 2014, marmuta
+           2013, marmuta
+           2012, marmuta <marmvta@gmail.com>
+           2012, marmuta
+License: GPL-3+
+
+Files: AUTHORS
+ CHANGELOG
+ COPYING
+ NEWS
+ Onboard/attic/data/org.onboard-prediction.service
+ Onboard/pypredict/attic/Makefile
+ Onboard/pypredict/attic/multilevel
+ Onboard/pypredict/attic/ngram-test
+ Onboard/pypredict/attic/randbench
+ Onboard/pypredict/attic/test-client
+ Onboard/pypredict/lm/gen_accent_transform
+ Onboard/pypredict/tools/analyze
+ Onboard/pypredict/tools/entropy
+ Onboard/pypredict/tools/filter
+ Onboard/pypredict/tools/ksr
+ Onboard/pypredict/tools/makemodels
+ Onboard/pypredict/tools/model_info
+ Onboard/pypredict/tools/optimize
+ Onboard/pypredict/tools/predict
+ Onboard/pypredict/tools/randomize
+ Onboard/pypredict/tools/split_corpus
+ Onboard/pypredict/tools/train
+ PKG-INFO
+ README
+ data/onboard-autostart.desktop
+ data/onboard-settings.desktop.in
+ data/onboard.desktop.in
+ data/org.onboard.gschema.xml
+ docs/alpha.png
+ docs/changeid.png
+ docs/func.png
+ docs/index.html
+ docs/latched.png
+ docs/layoutdialog.png
+ docs/layouts.html
+ docs/locked.png
+ docs/macrodialog.png
+ docs/macrokeys.png
+ docs/onboard.png
+ docs/personalise.png
+ docs/scanningdialog.png
+ docs/usage.html
+ icons/HighContrast/onboard.svg
+ icons/hicolor/onboard.svg
+ icons/ubuntu-mono-dark/onboard-panel.svg
+ icons/ubuntu-mono-light/onboard-panel.svg
+ layouts/Compact-Alpha.svg
+ layouts/Compact-Numbers.svg
+ layouts/Compact-Utils.svg
+ layouts/Compact.onboard
+ layouts/Full Keyboard-Alpha.svg
+ layouts/Full Keyboard-Numpad.svg
+ layouts/Full Keyboard.onboard
+ layouts/Grid-Alpha.svg
+ layouts/Grid.onboard
+ layouts/Phone-Alpha.svg
+ layouts/Phone-Emoji.svg
+ layouts/Phone-Numbers.svg
+ layouts/Phone-Syms.svg
+ layouts/Phone.onboard
+ layouts/Small-Alpha.svg
+ layouts/Small-Emoji.svg
+ layouts/Small-Fn.svg
+ layouts/Small-Numbers.svg
+ layouts/Small-Snippets.svg
+ layouts/Small-Syms.svg
+ layouts/Small.onboard
+ layouts/images/arrow-down.svg
+ layouts/images/arrow-right.svg
+ layouts/images/close.svg
+ layouts/images/double-click.svg
+ layouts/images/drag-click.svg
+ layouts/images/erase-left.svg
+ layouts/images/erase.svg
+ layouts/images/hide.svg
+ layouts/images/hover-click.svg
+ layouts/images/middle-click.svg
+ layouts/images/move.svg
+ layouts/images/pause.svg
+ layouts/images/preferences.svg
+ layouts/images/right-click.svg
+ layouts/images/show-click.svg
+ layouts/images/single-click.svg
+ layouts/images/snippets.svg
+ layouts/key_defs.xml
+ layouts/template.svg
+ layouts/word_suggestions.xml
+ models/*.lm
+ onboard
+ onboard-defaults.conf.example
+ onboard-defaults.conf.example.nexus7
+ onboard-settings
+ settings.ui
+ settings_docking_dialog.ui
+ settings_scanner_dialog.ui
+ settings_theme_dialog.ui
+ sounds/onboard-key-feedback.oga
+ themes/*.theme
+ themes/*.colors
+Copyright: *No copyright*
+License: GPL-2+
+Comment:
+ Assuming License as found in COPYING file.
+
+Files: po/*.po
+Copyright: 2007-2012, Rosetta Contributors and Canonical, Ltd.
+License: GPL-2+
+Comment:
+ Using license from COPYING file.
+
+Files: debian/*
+Copyright: 2012-2015, Francesco Fumanti <francesco.fumanti@gmx.net>
+           2015, Mike Gabriel <mike.gabriel@das-netzwerkteam.de>
+License: GPL-3+
+
+License: GPL-2+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 2 of the License, or
+ (at your option) any later version.
+ .
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with the Onboard package.  If not, please have a look at
+ /usr/share/common-licenses or <http://www.gnu.org/licenses/>.
+
+License: GPL-3+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+ .
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with the Onboard package.  If not, please have a look at
+ /usr/share/common-licenses or <http://www.gnu.org/licenses/>.

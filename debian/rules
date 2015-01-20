@@ -1,0 +1,39 @@
+#!/usr/bin/make -f
+
+DH_VERBOSE=1
+
+%:
+	dh $@ --with python3 --without python-support
+	rm -f po/*.pot
+
+override_dh_python3:
+	dh_python3 --no-guessing-deps
+
+# python3 needs some manual work, see 
+# http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=597105
+override_dh_auto_clean:
+	set -ex; for python in $(shell py3versions -r); do \
+	    if [ -f python.py ]; then $$python setup.py clean; fi; \
+	done
+	rm -rf build
+	rm -rf Onboard/osk*.so
+	rm -rf Onboard/pypredict/lm*.so
+	find . -name __pycache__ -prune | xargs rm -rf
+
+override_dh_auto_build:
+	set -ex; for python in $(shell py3versions -r); do \
+	    $$python setup.py build ; \
+	done
+
+override_dh_auto_install:
+	set -ex; for python in $(shell py3versions -r); do \
+	    $$python setup.py install --root=$(CURDIR)/debian/tmp --install-layout=deb; \
+	done
+
+override_dh_install:
+	rm -f debian/tmp/usr/share/onboard/COPYING
+	dh_install --fail-missing --autodest
+
+get-orig-source:
+	uscan --noconf --force-download --rename --download-current-version --destdir=..
+

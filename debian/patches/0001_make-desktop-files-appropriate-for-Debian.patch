@@ -1,0 +1,50 @@
+Description: Various fixes for .desktop files
+Author: Mike Gabriel <mike.gabriel@das-netzwerkteam.de>
+Abstract:
+ Make the .desktop files more appropriate for MATE and
+ GNOME on Debian.
+
+--- a/data/onboard.desktop.in
++++ b/data/onboard.desktop.in
+@@ -1,14 +1,11 @@
+ [Desktop Entry]
+ _Name=Onboard
+ _GenericName=Onboard onscreen keyboard
+-_Comment=Flexible onscreen keyboard for GNOME
++_Comment=Flexible onscreen keyboard for GNOME/MATE
+ Exec=onboard
+ Terminal=false
+ Type=Application
+ Categories=Utility;Accessibility;
+-#NotShowIn=GNOME;
+-#NotShowIn=GNOME;Unity;
+ NoDisplay=false
+-MimeType=application/x-onboard;
+ Icon=onboard
+ X-Ubuntu-Gettext-Domain=onboard
+--- a/data/onboard-autostart.desktop
++++ b/data/onboard-autostart.desktop
+@@ -1,9 +1,9 @@
+ [Desktop Entry]
+ Name=Onboard
+-Exec=onboard --not-show-in=GNOME
++Exec=onboard
+ Type=Application
+ NoDisplay=true
+ X-Ubuntu-Gettext-Domain=onboard
+ AutostartCondition=GSettings org.gnome.desktop.a11y.applications screen-keyboard-enabled
+ X-GNOME-AutoRestart=true
+-OnlyShowIn=GNOME;Unity;
++OnlyShowIn=GNOME;Unity;MATE;
+--- a/data/onboard-settings.desktop.in
++++ b/data/onboard-settings.desktop.in
+@@ -6,9 +6,6 @@
+ Terminal=false
+ Type=Application
+ Categories=Settings;Accessibility;
+-#NotShowIn=GNOME;
+-#NotShowIn=GNOME;Unity;
+ NoDisplay=false
+-MimeType=application/x-onboardsettings;
+ Icon=onboard
+ X-Ubuntu-Gettext-Domain=onboard
