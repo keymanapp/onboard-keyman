@@ -1,6 +1,6 @@
-onboard (1.0.1-1) UNRELEASED; urgency=low
+onboard (1.0.1-1) unstable; urgency=low
 
   * Initial upload to Debian (Closes: #694514). Most of the packaging
     adopted from the onboard package in Ubuntu trusty (1.0.0-0ubuntu1).
 
- -- Mike Gabriel <sunweaver@debian.org>  Mon, 19 Jan 2015 12:47:40 +0100
+ -- Mike Gabriel <sunweaver@debian.org>  Tue, 20 Jan 2015 05:59:03 +0100
