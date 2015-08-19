@@ -22,20 +22,6 @@ Abstract:
 -MimeType=application/x-onboard;
  Icon=onboard
  X-Ubuntu-Gettext-Domain=onboard
---- a/data/onboard-autostart.desktop
-+++ b/data/onboard-autostart.desktop
-@@ -1,9 +1,9 @@
- [Desktop Entry]
- Name=Onboard
--Exec=onboard --not-show-in=GNOME
-+Exec=onboard
- Type=Application
- NoDisplay=true
- X-Ubuntu-Gettext-Domain=onboard
- AutostartCondition=GSettings org.gnome.desktop.a11y.applications screen-keyboard-enabled
- X-GNOME-AutoRestart=true
--OnlyShowIn=GNOME;Unity;
-+OnlyShowIn=GNOME;Unity;MATE;
 --- a/data/onboard-settings.desktop.in
 +++ b/data/onboard-settings.desktop.in
 @@ -6,9 +6,6 @@
