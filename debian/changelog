@@ -1,8 +1,21 @@
-onboard (1.1.1-1) UNRELEASED; urgency=medium
+onboard (1.1.1-1) unstable; urgency=medium
 
   * New upstream release.
+  * debian/control:
+    + Stop hard-coding dependencies on shared libraries. These are handled by
+      ${shlibs:Depends}. (Closes: #794648).
+  * debian/patches:
+    + Rebase 0001_make-desktop-files-appropriate-for-Debian.patch. Drop
+      modifications of onboard-autostart.desktop.
+  * debian/copyright:
+    + Update copyright.in template file.
+    + Update for latest upstream release.
+  * debian/onboard-common.install:
+    + Adapt to latest upstream release.
+  * lintian:
+    + Drop empty onboard.lintian-overrides file.
 
- -- Mike Gabriel <sunweaver@debian.org>  Wed, 19 Aug 2015 21:49:26 +0200
+ -- Mike Gabriel <sunweaver@debian.org>  Wed, 19 Aug 2015 21:56:37 +0200
 
 onboard (1.0.1-1) unstable; urgency=low
 
