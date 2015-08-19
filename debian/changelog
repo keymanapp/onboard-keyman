@@ -1,3 +1,9 @@
+onboard (1.1.1-1) UNRELEASED; urgency=medium
+
+  * New upstream release.
+
+ -- Mike Gabriel <sunweaver@debian.org>  Wed, 19 Aug 2015 21:49:26 +0200
+
 onboard (1.0.1-1) unstable; urgency=low
 
   * Initial upload to Debian (Closes: #694514). Most of the packaging
