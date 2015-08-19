@@ -5,7 +5,6 @@ Source: http://launchpad.net/onboard
 
 Files: Onboard/Appearance.py
  Onboard/AtspiStateTracker.py
- Onboard/AutoShow.py
  Onboard/ClickSimulator.py
  Onboard/Config.py
  Onboard/ConfigUtils.py
@@ -61,6 +60,8 @@ Files: Onboard/pypredict/lm/lm_dynamic.cpp
  Onboard/pypredict/test/test_pypredict.py
  Onboard/test/test_dbus_service.py
  Onboard/test/test_translations.py
+ Onboard/AutoHide.py
+ Onboard/AutoShow.py
  Onboard/LanguageSupport.py
  Onboard/TextChanges.py
  Onboard/TextContext.py
@@ -78,11 +79,14 @@ Files: Onboard/pypredict/lm/lm_dynamic.cpp
  Onboard/pypredict/lm/lm_unigram.cpp
  Onboard/pypredict/lm/lm_unigram.h
  Onboard/pypredict/test/test_checkmodels.py
+ Onboard/test/test_LayoutLoaderSVG.py
+ Onboard/test/test_gui.py
  Onboard/test/test_migration.py
 Copyright: 2012, marmuta <marmvta@gmail.com>
   2012, marmuta
   2012-2013, marmuta
   2013, marmuta <marmvta@gmail.com>
+  2014, marmuta <marmvta@gmail.com>
   2013, marmuta
 License: GPL-3+
 Comment:
@@ -242,6 +246,7 @@ Files: AUTHORS
  onboard-defaults.conf.example.nexus7
  onboard-settings
  settings.ui
+ settings_auto_show_dialog.ui
  settings_docking_dialog.ui
  settings_scanner_dialog.ui
  settings_theme_dialog.ui
