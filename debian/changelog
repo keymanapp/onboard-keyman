@@ -1,3 +1,9 @@
+onboard (1.1.2-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Mike Gabriel <sunweaver@debian.org>  Wed, 02 Sep 2015 06:26:06 +0200
+
 onboard (1.1.1-1) unstable; urgency=medium
 
   * New upstream release.
