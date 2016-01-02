@@ -203,9 +203,9 @@ Files: AUTHORS
  layouts/Compact-Numbers.svg
  layouts/Compact-Utils.svg
  layouts/Compact.onboard
- layouts/Full Keyboard-Alpha.svg
- layouts/Full Keyboard-Numpad.svg
- layouts/Full Keyboard.onboard
+ layouts/Full?Keyboard-Alpha.svg
+ layouts/Full?Keyboard-Numpad.svg
+ layouts/Full?Keyboard.onboard
  layouts/Grid-Alpha.svg
  layouts/Grid.onboard
  layouts/Phone-Alpha.svg
