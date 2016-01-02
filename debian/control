@@ -1,7 +1,7 @@
 Source: onboard
 Section: gnome
 Priority: optional
-Build-Depends: debhelper (>=7.0.50~),
+Build-Depends: debhelper (>=9),
                quilt,
                python3-all-dev (>= 3.2),
                python3-distutils-extra (>= 2.10),
