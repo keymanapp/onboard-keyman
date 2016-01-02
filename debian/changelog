@@ -1,3 +1,15 @@
+onboard (1.1.2-2) unstable; urgency=medium
+
+  * debian/control:
+    + Raise versioned BD: debhelper (>= 9).
+  * debian/compat:
+     + Bump DH version compatibility to debhelper 9.
+  * debian/patches:
+    + Add 0002-reproducible-build.patch. Make build reproducible.
+      (Closes: #806517).
+
+ -- Mike Gabriel <sunweaver@debian.org>  Sat, 02 Jan 2016 09:57:15 +0100
+
 onboard (1.1.2-1) unstable; urgency=medium
 
   * New upstream release.
