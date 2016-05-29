@@ -32,6 +32,9 @@ override_dh_auto_install:
 
 override_dh_install:
 	rm -f debian/tmp/usr/share/onboard/COPYING
+	rm -f debian/tmp/usr/share/onboard/COPYING.GPL3
+	rm -f debian/tmp/usr/share/onboard/HACKING
+	rm -f debian/tmp/usr/share/onboard/COPYING.BSD3
 	dh_install --fail-missing --autodest
 
 get-orig-source:
