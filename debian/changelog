@@ -1,3 +1,20 @@
+onboard (1.2.0-1) UNRELEASED; urgency=medium
+
+  * New upstream release. (Closes: #818500).
+  * debian/copyright:
+    + DEP-5 does not support filenames containing blanks. Using the ? wildcard
+      to work around lintian failing on those filenames. Thanks to Niels Thykier
+      for suggesting this.
+    + debian/copyright: Update auto-generated copyright.in reference file.
+  * debian/patches:
+    + Drop 0002-reproducible-build.patch. Applied upstream.
+  * man pages:
+    + Drop man pages provided by Debian maintainer. Supplied upstream now.
+  * debian/control:
+    + Bump Standards: to 3.9.8. No changes needed.
+
+ -- Mike Gabriel <mike.gabriel@das-netzwerkteam.de>  Sun, 29 May 2016 15:08:41 +0200
+
 onboard (1.1.2-2) unstable; urgency=medium
 
   * debian/control:
