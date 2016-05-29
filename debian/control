@@ -2,17 +2,17 @@ Source: onboard
 Section: gnome
 Priority: optional
 Build-Depends: debhelper (>=9),
-               quilt,
+               libcanberra-dev,
+               libdconf-dev (>= 0.12.0),
+               libgtk-3-dev,
+               libhunspell-dev,
+               libxkbfile-dev,
+               libxtst-dev,
                python3-all-dev (>= 3.2),
                python3-distutils-extra (>= 2.10),
-               libgtk-3-dev,
-               libxtst-dev,
-               libxkbfile-dev,
-               libdconf-dev (>= 0.12.0),
-               libcanberra-dev,
-               libhunspell-dev
+               quilt,
 Maintainer: MATE Packaging Team <pkg-mate-team@lists.alioth.debian.org>
-Uploaders: Mike Gabriel <sunweaver@debian.org>
+Uploaders: Mike Gabriel <sunweaver@debian.org>,
 Standards-Version: 3.9.8
 Homepage: https://launchpad.net/onboard
 Vcs-Browser: https://anonscm.debian.org/git/pkg-mate/onboard.git
@@ -21,24 +21,25 @@ X-Python3-Version: >= 3.2
 
 Package: onboard
 Architecture: any
-Depends: ${python3:Depends},
-         ${shlibs:Depends},
-         ${misc:Depends},
-         python3-cairo,
-         python3-gi-cairo,
-         python3-dbus,
+Depends: gir1.2-gdkpixbuf-2.0,
+         gir1.2-glib-2.0,
          gir1.2-gtk-3.0,
          gir1.2-pango-1.0 (>= 1.29.3),
-         gir1.2-glib-2.0,
-         gir1.2-gdkpixbuf-2.0,
-         librsvg2-common,
          iso-codes,
-         onboard-common (>= ${source:Version}), onboard-common (<< ${source:Version}.1),
+         librsvg2-common,
+         onboard-common (<< ${source:Version}.1),
+         onboard-common (>= ${source:Version}),
+         python3-cairo,
+         python3-dbus,
+         python3-gi-cairo,
+         ${misc:Depends},
+         ${python3:Depends},
+         ${shlibs:Depends},
 Recommends: gir1.2-appindicator3-0.1,
             gir1.2-atspi-2.0,
             onboard-data (>= ${source:Version}),
-            xdg-utils
-Suggests: mousetweaks (>= 3.3.90)
+            xdg-utils,
+Suggests: mousetweaks (>= 3.3.90),
 Description: Simple On-screen Keyboard
  On-screen Keyboard with macros, easy layout creation and word suggestion.
  .
@@ -59,10 +60,11 @@ Description: Simple On-screen Keyboard (common files)
 
 Package: onboard-data
 Architecture: all
-Depends: ${misc:Depends},
-         onboard (>= ${source:Version}), onboard (<< ${source:Version}.1)
-Replaces: onboard-prediction-data  (<< 0.99.0~alpha1~tr1531)
-Breaks: onboard-prediction-data  (<< 0.99.0~alpha1~tr1531)
+Depends: onboard (<< ${source:Version}.1),
+         onboard (>= ${source:Version}),
+         ${misc:Depends},
+Replaces: onboard-prediction-data  (<< 0.99.0~alpha1~tr1531),
+Breaks: onboard-prediction-data  (<< 0.99.0~alpha1~tr1531),
 Description: Language model files for the word suggestion feature of Onboard
  On-screen Keyboard with macros, easy layout creation and word suggestion.
  .
