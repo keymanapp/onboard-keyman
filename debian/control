@@ -15,8 +15,8 @@ Maintainer: MATE Packaging Team <pkg-mate-team@lists.alioth.debian.org>
 Uploaders: Mike Gabriel <sunweaver@debian.org>
 Standards-Version: 3.9.8
 Homepage: https://launchpad.net/onboard
-Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-mate/onboard.git;a=summary
-Vcs-Git: git://anonscm.debian.org/pkg-mate/onboard.git
+Vcs-Browser: https://anonscm.debian.org/git/pkg-mate/onboard.git
+Vcs-Git: https://anonscm.debian.org/git/pkg-mate/onboard.git
 X-Python3-Version: >= 3.2
 
 Package: onboard
