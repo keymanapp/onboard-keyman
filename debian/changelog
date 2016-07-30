@@ -1,3 +1,20 @@
+onboard (1.2.0-2) unstable; urgency=medium
+
+  [ Jeremy Bicha ]
+  * debian/control:
+    + Depend on gir1.2-atspi-2.0. (Closes: #826579).
+  * Add debian/upstream/signing-key.asc
+  * debian/patches:
+    + Add 0002_build-with-gcc6.patch. (Closes: #812033).
+
+  [ Mike Gabriel ]
+  * debian/rules:
+    + Enable all hardening flags.
+  * debian/control:
+    + Versioned B-D on dpkg-dev (>= 1.16.1.1).
+
+ -- Mike Gabriel <sunweaver@debian.org>  Sat, 30 Jul 2016 23:45:22 +0200
+
 onboard (1.2.0-1) unstable; urgency=medium
 
   * New upstream release. (Closes: #818500).
