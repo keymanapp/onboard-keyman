@@ -2,13 +2,14 @@ Description: Fix build with GCC 6
 Forwarded: https://bazaar.launchpad.net/~onboard/onboard/trunk/revision/2155
 Origin: https://git.archlinux.org/svntogit/community.git/tree/trunk/gcc6.diff?h=packages/onboard
 Bug-Debian: https://bugs.debian.org/812033
---- Onboard/pypredict/lm/lm_dynamic_cached.h	2016-06-30 02:31:38 +0000
-+++ Onboard/pypredict/lm/lm_dynamic_cached.h	2016-07-03 23:13:59 +0000
+
+--- a/Onboard/pypredict/lm/lm_dynamic_cached.h
++++ b/Onboard/pypredict/lm/lm_dynamic_cached.h
 @@ -224,10 +224,11 @@
      public:
          typedef _DynamicModelKN<TNGRAMS> Base;
          static const Smoothing DEFAULT_SMOOTHING = ABS_DISC_I;
--        const double DEFAULT_LAMBDA = 0.3;  // Jelinek-Mercer weights
+-        static const double DEFAULT_LAMBDA = 0.3;  // Jelinek-Mercer weights
 +        const double DEFAULT_LAMBDA;  // default for Jelinek-Mercer weights
  
      public:
