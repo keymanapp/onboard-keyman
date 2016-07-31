@@ -9,7 +9,8 @@ export DEB_BUILD_MAINT_OPTIONS = hardening=+all,-pie
 	dh $@ --with python3 --buildsystem=pybuild
 
 override_dh_auto_clean:
-	dh_auto_clean
+# Don't fail to build from git-buildpackage:
+	-dh_auto_clean
 	rm -rf build
 	rm -rf Onboard/osk*.so
 	rm -rf Onboard/pypredict/lm*.so
