@@ -72,3 +72,12 @@ Description: Language model files for the word suggestion feature of Onboard
  The word suggestion feature of Onboard uses these files (and if available
  also custom user language model files) to compute the word completion
  suggestions and the word prediction suggestions.
+
+Package: gnome-shell-extension-onboard
+Architecture: all
+Depends: ${misc:Depends},
+         gnome-shell (>= 3.16)
+Description: GNOME Shell extension for the on-screen keyboard Onboard
+ This package hides the official GNOME3 keyboard and provides an icon to
+ show/hide Onboard. It is only an initial extension that does not show
+ Onboard for activities and passwords, yet.
