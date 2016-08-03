@@ -1,0 +1,117 @@
+Origin: https://bazaar.launchpad.net/~onboard/onboard/trunk/revision/2110
+Bug: https://launchpad.net/bugs/1550534
+Index: onboard-1.2.0/layouts/Compact-Alpha.svg
+===================================================================
+--- onboard-1.2.0.orig/layouts/Compact-Alpha.svg	2016-02-18 14:31:51.000000000 +0100
++++ onboard-1.2.0/layouts/Compact-Alpha.svg	2016-02-26 12:16:55.040434465 +0100
+@@ -89,32 +89,32 @@
+  </metadata>
+   <rect
+      id="wordlist"
+-     height="14.733308"
++     height="15.028312"
+      width="306.52832"
+-     y="4.7904754"
++     y="4.4858437"
+      x="0.48584402"
+      style="fill:#151530;stroke:#7f7f7f;stroke-width:0.97168803;stroke-miterlimit:4;stroke-dasharray:none" />
+   <rect
+      id="prediction"
+-     height="14.707282"
++     height="15"
+      width="49"
+-     y="4.8034878"
+-     x="110.5"
+-     style="color:#000000;fill:#2b2b63;fill-opacity:1;fill-rule:nonzero;stroke:#7f7f7f;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
++     y="4.5"
++     x="71.5"
++     style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#2b2b63;fill-opacity:1;fill-rule:nonzero;stroke:#7f7f7f;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate" />
+   <rect
+      id="correction"
+-     height="14.707282"
++     height="15"
+      width="49"
+-     y="4.8034878"
+-     x="30.5"
+-     style="color:#000000;fill:#2b2b63;fill-opacity:1;fill-rule:nonzero;stroke:#7f7f7f;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
++     y="4.5"
++     x="1.5"
++     style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#2b2b63;fill-opacity:1;fill-rule:nonzero;stroke:#7f7f7f;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
+      inkscape:label="#correction" />
+   <rect
+      id="expand-corrections"
+-     height="14.707282"
+-     width="17.272728"
+-     y="4.8034878"
+-     x="85.657127"
++     height="14.685742"
++     width="16.685743"
++     y="4.6571288"
++     x="52.657127"
+      style="fill:#2b2b63;stroke:#7f7f7f;stroke-width:1.3142575;stroke-miterlimit:4;stroke-dasharray:none" />
+   <rect
+      id="AB01"
+@@ -711,21 +711,21 @@
+      id="layer2.wordlist"
+      inkscape:label="" />
+   <rect
+-     style="fill:#2b2b63;stroke:#7f7f7f;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none"
++     style="fill:#2b2b63;stroke:#7f7f7f;stroke-width:0.99999994;stroke-miterlimit:4;stroke-dasharray:none"
+      x="285.5"
+-     y="4.8034878"
+-     width="18"
+-     height="14.707282"
++     y="4.5"
++     width="17"
++     height="15"
+      id="hide.wordlist"
+      inkscape:label="" />
+   <rect
+      inkscape:label=""
+      id="language.wordlist"
+-     height="14.707282"
+-     width="18"
+-     y="4.8034878"
++     height="15"
++     width="17"
++     y="4.5"
+      x="265.5"
+-     style="fill:#2b2b63;stroke:#7f7f7f;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none" />
++     style="fill:#2b2b63;stroke:#7f7f7f;stroke-width:0.99999994;stroke-miterlimit:4;stroke-dasharray:none" />
+   <g
+      id="RTRN">
+     <path
+@@ -744,11 +744,27 @@
+        inkscape:label="#RTRN_50pct" />
+   </g>
+   <rect
+-     style="fill:#2b2b63;stroke:#7f7f7f;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none"
+-     x="245.5"
+-     y="4.8034878"
+-     width="18"
+-     height="14.707282"
+-     id="pause-learning.wordlist"
++     style="fill:#2b2b63;stroke:#7f7f7f;stroke-width:0.99999994;stroke-miterlimit:4;stroke-dasharray:none"
++     x="225.5"
++     y="4.5"
++     width="17"
++     height="15"
++     id="next-predictions.wordlist"
+      inkscape:label="" />
++  <rect
++     style="fill:#2b2b63;stroke:#7f7f7f;stroke-width:0.99999994;stroke-miterlimit:4;stroke-dasharray:none"
++     x="205.5"
++     y="4.5"
++     width="17"
++     height="15"
++     id="previous-predictions.wordlist"
++     inkscape:label="" />
++  <rect
++     inkscape:label=""
++     id="pause-learning.wordlist"
++     height="15"
++     width="17"
++     y="4.5"
++     x="245.5"
++     style="fill:#2b2b63;stroke:#7f7f7f;stroke-width:0.99999994;stroke-miterlimit:4;stroke-dasharray:none" />
+ </svg>
