@@ -51,8 +51,8 @@ Package: onboard-common
 Architecture: all
 Depends: python3,
          ${misc:Depends},
-Breaks: onboard (<< 1.0.1-1~),
-Replaces: onboard (<< 1.0.1-1~),
+Breaks: onboard (<< 1.3.0-1~),
+Replaces: onboard (<< 1.3.0-1~),
 Description: Simple On-screen Keyboard (common files)
  On-screen Keyboard with macros, easy layout creation and word suggestion.
  .
