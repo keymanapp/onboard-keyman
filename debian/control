@@ -22,9 +22,7 @@ Vcs-Git: https://anonscm.debian.org/git/pkg-mate/onboard.git
 
 Package: onboard
 Architecture: any
-Depends: gir1.2-appindicator3-0.1,
-         gir1.2-atspi-2.0,
-         gir1.2-gdkpixbuf-2.0,
+Depends: gir1.2-gdkpixbuf-2.0,
          gir1.2-glib-2.0,
          gir1.2-gtk-3.0,
          gir1.2-pango-1.0 (>= 1.29.3),
@@ -38,7 +36,9 @@ Depends: gir1.2-appindicator3-0.1,
          ${misc:Depends},
          ${python3:Depends},
          ${shlibs:Depends},
-Recommends: onboard-data (>= ${source:Version}),
+Recommends: gir1.2-appindicator3-0.1,
+            gir1.2-atspi-2.0,
+            onboard-data (>= ${source:Version}),
             xdg-utils,
 Suggests: mousetweaks (>= 3.3.90),
 Description: Simple On-screen Keyboard
