@@ -79,6 +79,9 @@ Architecture: all
 Depends: ${misc:Depends},
          gnome-shell (>= 3.16),
          gnome-shell (<< 3.23),
+         onboard (>= ${source:Version}),
+Breaks: onboard-common (<< 1.3.0)
+Replaces: onboard-common (<< 1.3.0)
 Description: GNOME Shell extension for the on-screen keyboard Onboard
  This package hides the official GNOME3 keyboard and provides an icon to
  show/hide Onboard. It is only an initial extension that does not show
