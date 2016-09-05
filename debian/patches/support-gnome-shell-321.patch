@@ -5,7 +5,7 @@ Index: onboard-1.3.0/gnome/Onboard_Indicator@onboard.org/metadata.json
 +++ onboard-1.3.0/gnome/Onboard_Indicator@onboard.org/metadata.json
 @@ -1,4 +1,4 @@
 -{"shell-version": ["3.16", "3.18", "3.20", "3.22"],
-+{"shell-version": ["3.16", "3.18", "3.20", "3.21", "3.22"],
++{"shell-version": ["3.16", "3.18", "3.20", "3.21.91", "3.21.92", "3.22"],
   "name": "Onboard Indicator",
   "description": "Add indicator and menu for Onboard onscreen-keyboard and hide the built-in keyboard.",
   "uuid": "Onboard_Indicator@onboard.org"}
