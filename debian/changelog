@@ -1,16 +1,33 @@
-onboard (1.3.0-1) UNRELEASED; urgency=medium
+onboard (1.3.0-1) unstable; urgency=medium
 
+  [ Jeremy Bicha ]
   * New upstream release. (Closes: #834881).
-  * Add gnome-shell-extension-onboard package (Closes: #825807)
-  * Use pybuild and simplify debian/rules
+  * Add gnome-shell-extension-onboard package. (Closes: #825807).
+  * Use pybuild and simplify debian/rules.
   * debian/control:
-    - Build-depend on python3-cairo and python3-gi for dh_auto_test.
-    - Drop unnecessary build-depends on quilt and X-Python3-Version
-    - Explicitly build-depend on dh-python
-  * Enable all hardening flags except pie
-  * Add myself to Uploaders
+    + Build-depend on python3-cairo and python3-gi for dh_auto_test.
+    + Drop unnecessary build-depends on quilt and X-Python3-Version.
+    + Explicitly build-depend on dh-python.
+    + Add myself to Uploaders.
+    + Bump Breaks/Replaces on onboard.
+    + Lower gir1.2-appindicator3-0.1 and gir1.2-atspi-2.0 to Recommends.
+    + declare compatibility with gnome-shell 3.21.91 and 3.21.92.
+  * debian/rules:
+   + Enable all hardening flags except pie.
+  * Update signing-key.asc after verifying new key signed with old one.
+  * debian/patches:
+    + Drop all patches. Applied in new release.
+  * debian/onboard-common.install:
+    + Install dbus service.
+    + Don't install gnome-shell-extension files in onboard-common.
 
- -- Jeremy Bicha <jbicha@ubuntu.com>  Sat, 20 Aug 2016 23:21:21 -0400
+  [ Mike Gabriel ]
+  * debian/copyright:
+    + Update copyright attributions.
+  * debian/copyright.in:
+    + Update auto-generated copyright template.
+
+ -- Mike Gabriel <sunweaver@debian.org>  Tue, 04 Oct 2016 22:58:05 +0200
 
 onboard (1.2.0-2) unstable; urgency=medium
 
