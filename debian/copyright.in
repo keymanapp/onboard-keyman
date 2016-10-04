@@ -28,6 +28,12 @@ Files: Onboard/Appearance.py
  Onboard/canonical_equivalents.py
  Onboard/definitions.py
  Onboard/osk/osk_hunspell.c
+ Onboard/osk/osk_uinput.c
+ Onboard/osk/osk_uinput.h
+ Onboard/osk/osk_virtkey.h
+ Onboard/osk/osk_virtkey_wayland.c
+ Onboard/osk/osk_virtkey_wayland.h
+ Onboard/osk/osk_virtkey_x.h
  Onboard/pypredict/__init__.py
  Onboard/pypredict/attic/prune.py
  Onboard/pypredict/attic/setup.py
@@ -57,27 +63,31 @@ Copyright: 2009, 2012 marmuta <marmvta@gmail.com>
   2009-2010, 2012 marmuta <marmvta@gmail.com>
   2009-2010, 2012-2013, marmuta <marmvta@gmail.com>
   2009-2010, 2012-2014, marmuta <marmvta@gmail.com>
-  2009-2010, 2012-2015, marmuta <marmvta@gmail.com>
+  2009-2010, 2012-2016, marmuta <marmvta@gmail.com>
   2009-2010, 2013-2014, marmuta <marmvta@gmail.com>
-  2010, 2012-2013, marmuta <marmvta@gmail.com>
+  2010, 2012-2013, 2016 marmuta <marmvta@gmail.com>
   2010, 2012-2014, marmuta <marmvta@gmail.com>
   2011-2012, marmuta <marmvta@gmail.com>
-  2011-2014, marmuta <marmvta@gmail.com>
-  2011-2015, marmuta <marmvta@gmail.com>
+  2011-2014, 2016 marmuta <marmvta@gmail.com>
+  2012, 2016 marmuta <marmvta@gmail.com>
   2012, marmuta <marmvta@gmail.com>
-  2012-2013, marmuta <marmvta@gmail.com>
+  2012-2013, 2015-2016, marmuta <marmvta@gmail.com>
+  2012-2013, 2016 marmuta <marmvta@gmail.com>
+  2012-2014, 2016 marmuta <marmvta@gmail.com>
   2012-2014, marmuta <marmvta@gmail.com>
-  2012-2015, marmuta <marmvta@gmail.com>
+  2012-2016, marmuta <marmvta@gmail.com>
   2013, marmuta <marmvta@gmail.com>
   2013-2014, marmuta <marmvta@gmail.com>
-  2013-2015, marmuta <marmvta@gmail.com>
+  2013-2016, marmuta <marmvta@gmail.com>
+  2014, 2016 marmuta <marmvta@gmail.com>
   2014, marmuta <marmvta@gmail.com>
-  2015, marmuta <marmvta@gmail.com>
+  2015-2016, marmuta <marmvta@gmail.com>
   2016, marmuta <marmvta@gmail.com>
 License: GPL-3+
  FIXME
 
 Files: Onboard/ClickSimulator.py
+ Onboard/DBusUtils.py
  Onboard/Layout.py
  Onboard/Scanner.py
  Onboard/Sound.py
@@ -92,15 +102,18 @@ Files: Onboard/ClickSimulator.py
 Copyright: 2011, 2013 Gerd Kohlberger <lowfi@chello.at>
   2011, Gerd Kohlberger <lowfi@chello.at>
   2011-2012, Gerd Kohlberger <lowfi@chello.at>
+  2011-2013, 2016 marmuta <marmvta@gmail.com>
   2011-2013, Gerd Kohlberger <lowfi@chello.at>
-  2011-2013, marmuta <marmvta@gmail.com>
+  2011-2014, 2016 marmuta <marmvta@gmail.com>
   2011-2014, marmuta <marmvta@gmail.com>
   2011-2015, marmuta <marmvta@gmail.com>
   2012, Gerd Kohlberger <lowfi@chello.at>
   2012-2013, marmuta <marmvta@gmail.com>
+  2012-2014, 2016 marmuta <marmvta@gmail.com>
   2012-2014, marmuta <marmvta@gmail.com>
+  2013, 2016 marmuta <marmvta@gmail.com>
   2013, Gerd Kohlberger <lowfi@chello.at>
-  2013, marmuta <marmvta@gmail.com>
+  2013-2016, marmuta <marmvta@gmail.com>
 License: GPL-3+
  FIXME
 
@@ -116,15 +129,14 @@ Copyright: 2006-2007, 2009 Chris Jones <tortoise@tortuga>
   2008-2009, Francesco Fumanti <francesco.fumanti@gmx.net>
   2008-2010, Chris Jones <tortoise@tortuga>
   2008-2010, Francesco Fumanti <francesco.fumanti@gmx.net>
-  2009, 2011-2015, marmuta <marmvta@gmail.com>
+  2008-2011, Francesco Fumanti <francesco.fumanti@gmx.net>
+  2009, 2011-2016, marmuta <marmvta@gmail.com>
   2009, Chris Jones <tortoise@tortuga>
-  2009-2010, Francesco Fumanti <francesco.fumanti@gmx.net>
   2009-2011, Francesco Fumanti <francesco.fumanti@gmx.net>
-  2010-2015, marmuta <marmvta@gmail.com>
+  2010-2016, marmuta <marmvta@gmail.com>
   2011, Gerd Kohlberger <lowfi@chello.at>
   2011-2012, Gerd Kohlberger <lowfi@chello.at>
-  2011-2014, marmuta <marmvta@gmail.com>
-  2011-2015, marmuta <marmvta@gmail.com>
+  2011-2016, marmuta <marmvta@gmail.com>
   2012, Gerd Kohlberger <lowfi@chello.at>
 License: GPL-3+
  FIXME
@@ -134,12 +146,25 @@ Files: Onboard/Exceptions.py
  Onboard/LayoutLoaderSVG.py
  data/layoutstrings.py
 Copyright: 2008-2009, Chris Jones <tortoise@tortuga>
-  2009, Chris Jones <tortoise@tortuga>
+  2008-2010, Chris Jones <tortoise@tortuga>
   2010, Chris Jones <tortoise@tortuga>
   2010, Francesco Fumanti <francesco.fumanti@gmx.net>
   2011, Francesco Fumanti <francesco.fumanti@gmx.net>
   2011-2014, marmuta <marmvta@gmail.com>
-  2011-2015, marmuta <marmvta@gmail.com>
+  2011-2016, marmuta <marmvta@gmail.com>
+License: GPL-3+
+ FIXME
+
+Files: Onboard/KeyboardWidget.py
+ Onboard/osk/osk_virtkey.c
+ Onboard/osk/osk_virtkey_x.c
+Copyright: 2006-2008, Chris Jones <tortoise@tortuga>
+  2009, 2011-2016, marmuta <marmvta@gmail.com>
+  2009, Chris Jones <tortoise@tortuga>
+  2010, 2013, 2015-2016, marmuta <marmvta@gmail.com>
+  2010, 2016 marmuta <marmvta@gmail.com>
+  2012, Gerd Kohlberger <lowfi@chello.at>
+  2013, Gerd Kohlberger <lowfi@chello.at>
 License: GPL-3+
  FIXME
 
@@ -149,29 +174,18 @@ Copyright: 2007, Martin Böhme <martin.bohm@kubuntu.org>
   2007-2009, Chris Jones <tortoise@tortuga>
   2007-2010, Chris Jones <tortoise@tortuga>
   2008-2010, Francesco Fumanti <francesco.fumanti@gmx.net>
-  2009, 2011-2015, marmuta <marmvta@gmail.com>
+  2009, 2011-2016, marmuta <marmvta@gmail.com>
   2010, Francesco Fumanti <francesco.fumanti@gmx.net>
-  2010-2015, marmuta <marmvta@gmail.com>
+  2010-2016, marmuta <marmvta@gmail.com>
   2012, Gerd Kohlberger <lowfi@chello.at>
   2012-2013, Gerd Kohlberger <lowfi@chello.at>
-License: GPL-3+
- FIXME
-
-Files: Onboard/KeyboardWidget.py
- Onboard/osk/osk_virtkey.c
-Copyright: 2006-2008, Chris Jones <tortoise@tortuga>
-  2009, 2011-2015, marmuta <marmvta@gmail.com>
-  2009, Chris Jones <tortoise@tortuga>
-  2010, 2013 marmuta <marmvta@gmail.com>
-  2012, Gerd Kohlberger <lowfi@chello.at>
-  2013, Gerd Kohlberger <lowfi@chello.at>
 License: GPL-3+
  FIXME
 
 Files: Onboard/SnippetView.py
  scripts/sokSettings.py
 Copyright: 2009, Chris Jones <tortoise@tortuga>
-  2011-2012, 2014 marmuta <marmvta@gmail.com>
+  2011-2012, 2014, 2016, marmuta <marmvta@gmail.com>
   2012-2013, marmuta <marmvta@gmail.com>
 License: GPL-3+
  FIXME
@@ -185,7 +199,7 @@ License: UNKNOWN
 Files: Onboard/KeyGtk.py
 Copyright: 2007, Martin Böhme <martin.bohm@kubuntu.org>
   2009, Chris Jones <tortoise@tortuga>
-  2009-2014, marmuta <marmvta@gmail.com>
+  2009-2014, 2016 marmuta <marmvta@gmail.com>
   2010, Francesco Fumanti <francesco.fumanti@gmx.net>
   2011, Alan Bell <alanbell@ubuntu.com>
   2012, Gerd Kohlberger <lowfi@chello.at>
@@ -195,7 +209,7 @@ License: GPL-3+
 Files: Onboard/KeyCommon.py
 Copyright: 2007, Martin Böhme <martin.bohm@kubuntu.org>
   2008-2009, Chris Jones <tortoise@tortuga>
-  2009, 2011-2014, marmuta <marmvta@gmail.com>
+  2009, 2011-2016, marmuta <marmvta@gmail.com>
   2010, Francesco Fumanti <francesco.fumanti@gmx.net>
 License: GPL-3+
  FIXME
@@ -203,7 +217,7 @@ License: GPL-3+
 Files: setup.py
 Copyright: 2007, Martin Böhme <martin.bohm@kubuntu.org>
   2009-2016, Francesco Fumanti <francesco.fumanti@gmx.net>
-  2011-2015, marmuta <marmvta@gmail.com>
+  2011-2016, marmuta <marmvta@gmail.com>
   2012-2013, Gerd Kohlberger <lowfi@chello.at>
   2015, Reiner Herrmann <reiner@reiner-h.de>
 License: GPL-3+
