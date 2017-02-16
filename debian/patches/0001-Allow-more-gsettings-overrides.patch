@@ -1,0 +1,212 @@
+Author: marmuta
+Description: Allow to replace onboard-defaults.conf with gsettings overrides.
+
+Install the example override file
+onboard-default-settings.gschema.override.example.
+manually (for testing) with tools/install_gsettings_schema, or
+add its contents to a distribution specific override file of your choice.
+
+The old onboard-defaults.conf is not necessary anymore and can be removed.
+
+https://bazaar.launchpad.net/~onboard/onboard/trunk/revision/2251
+=== modified file 'Onboard/Config.py'
+---
+ Onboard/Config.py                                 |   58 ++++++----------------
+ data/org.onboard.gschema.xml                      |   32 ++++++++++--
+ onboard-default-settings.gschema.override.example |   11 ++++
+ onboard-defaults.conf.example                     |    2 
+ 4 files changed, 56 insertions(+), 47 deletions(-)
+
+--- a/Onboard/Config.py
++++ b/Onboard/Config.py
+@@ -200,7 +200,6 @@ class Config(ConfigObject):
+     window_scaling_factor = 1.0
+ 
+     _xembed_background_rgba = None
+-    _xembed_background_image_enabled = None
+ 
+     _desktop_environment = None
+ 
+@@ -445,7 +444,6 @@ class Config(ConfigObject):
+         used_system_defaults = self.init_properties(self.options)
+ 
+         self._update_xembed_background_rgba()
+-        self._update_xembed_background_image_enabled()
+ 
+         # Make sure there is a 'Default' entry when tracking the system theme.
+         # 'Default' is the theme used when encountering a so far unknown
+@@ -628,12 +626,17 @@ class Config(ConfigObject):
+                                                    "AppIndicator" : 2,
+                                                   })
+         self.add_key("start-minimized", False)
+-        self.add_key("xembed-onboard", False, prop="onboard_xembed_enabled")
+         self.add_key("show-tooltips", True)
+         self.add_key("key-label-font", "")      # default font for all themes
+         self.add_key("key-label-overrides", {}, "as") # default labels for all themes
+         self.add_key("current-settings-page", 0)
+ 
++        self.add_key("xembed-onboard", False, prop="onboard_xembed_enabled")
++        self.add_key("xembed-aspect-change-range", [0, 1.6])
++        self.add_key("xembed-background-color", "#0000007F")
++        self.add_key("xembed-background-image-enabled", True)
++        self.add_key("xembed-unity-greeter-offset-x", 85.0)
++
+         self.keyboard          = ConfigKeyboard()
+         self.window            = ConfigWindow()
+         self.icp               = ConfigICP(self)
+@@ -819,12 +822,8 @@ class Config(ConfigObject):
+ 
+     def _convert_sysdef_key(self, gskey, sysdef, value):
+         # key exclusive to system defaults?
+-        if sysdef in ["superkey-label", \
+-                      "superkey-label-independent-size",
+-                      "xembed-aspect-change-range",
+-                      "xembed-background-color",
+-                      "xembed-background-image-enabled",
+-                      "xembed-unity-greeter-offset-x"]:
++        if sysdef in ["superkey-label",
++                      "superkey-label-independent-size"]:
+             return value
+         else:
+             return super(self.__class__, self). \
+@@ -968,7 +967,7 @@ class Config(ConfigObject):
+ 
+             candidates += [theme_assocs.get(gtk_theme, ""),
+                            theme_assocs.get("Default", ""),
+-                           ""]
++                           self.theme]
+         else:
+             candidates += ["",
+                            "",
+@@ -1217,9 +1216,7 @@ class Config(ConfigObject):
+             self.is_keep_docking_frame_aspect_ratio_enabled(orientation_co)
+ 
+     def is_keep_xembed_frame_aspect_ratio_enabled(self):
+-        return (self.xid_mode and self.launched_by != self.LAUNCHER_NONE and
+-                self.system_defaults.get("xembed_aspect_change_range")
+-                is not None)
++        return self.xid_mode and self.launched_by != self.LAUNCHER_NONE
+ 
+     def is_keep_docking_frame_aspect_ratio_enabled(self, orientation_co):
+         return (not self.xid_mode and
+@@ -1397,40 +1394,19 @@ class Config(ConfigObject):
+                             .format(fn, unicode_str(ex)))
+         return fn
+ 
+-    def get_xembed_aspect_change_range(self):
+-        aspect_change_range = [0.0, 1000.0]
+-        value = self.system_defaults.get("xembed_aspect_change_range")
+-        if not value is None:
+-            value = value[1:-1]
+-            begin, end = value.split(",")
+-            aspect_change_range[0] = float(begin)
+-            aspect_change_range[1] = float(end)
+-        return aspect_change_range
+-
+     def get_xembed_unity_greeter_offset_x(self):
+-        offset = self.system_defaults.get("xembed_unity_greeter_offset_x")
+-        if not offset is None:
+-            try:
+-                offset = float(offset)
+-            except ValueError:
+-                offset = None
+-        return offset
++        value = self.gskeys["xembed_unity_greeter_offset_x"].value
++        if value < 0:
++            value = None
++        return value
+ 
+     def get_xembed_background_rgba(self):
+         return self._xembed_background_rgba
+ 
+     def _update_xembed_background_rgba(self):
+-        value = self.system_defaults.get("xembed_background_color")
+-        self._xembed_background_rgba = hexcolor_to_rgba(value[1:-1]) \
+-                                       if not value is None else None
+-
+-    def get_xembed_background_image_enabled(self):
+-        return self._xembed_background_image_enabled
+-
+-    def _update_xembed_background_image_enabled(self):
+-        value = self.system_defaults.get("xembed_background_image_enabled")
+-        self._xembed_background_image_enabled = value == "True" \
+-                                                if not value is None else None
++        value = self.xembed_background_color
++        self._xembed_background_rgba = hexcolor_to_rgba(value)
++
+     def _is_running_from_source(self):
+         return bool(self._get_source_path())
+ 
+--- a/data/org.onboard.gschema.xml
++++ b/data/org.onboard.gschema.xml
+@@ -73,11 +73,6 @@ If unavailable, 'AppIndicator' falls bac
+             <summary>Start onboard with a minimized window.</summary>
+             <description>Do not display the onboard window on start; start onboard minimized.</description>
+         </key>
+-        <key name="xembed-onboard" type="b">
+-            <default>false</default>
+-            <summary>Show onboard when unlocking the screen.</summary>
+-            <description>Make onboard appear in conjunction to the dialog to unlock the screen.</description>
+-        </key>
+         <key name="show-tooltips" type="b">
+             <default>true</default>
+             <summary>Show tooltips.</summary>
+@@ -103,6 +98,33 @@ If unavailable, 'AppIndicator' falls bac
+             <summary>Current settings page</summary>
+             <description>Current tab page of onboard-settings.</description>
+         </key>
++        <key name="xembed-onboard" type="b">
++            <default>false</default>
++            <summary>Show onboard when unlocking the screen.</summary>
++            <description>Make onboard appear in conjunction to the dialog to unlock the screen.</description>
++        </key>
++        <key name="xembed-aspect-change-range" type="ad">
++            <default>[0, 1.6]</default>
++            <summary>Aspect range while embedded</summary>
++            <description>Limits of the keyboard's aspect ratio when it is embedded, i.e. in unity-greeter, gnome-screensaver.</description>
++        </key>
++        <key name="xembed-background-color" type="s">
++            <default>'#0000007F'</default>
++            <summary>Background color when embedded</summary>
++            <description>Color of the background bar that is rendered on top of the background image in unity-greeter and gnome-screensaver. If empty, the color is taken from the keyboard's current background color.'</description>
++        </key>
++        <key name="xembed-background-image-enabled" type="b">
++            <default>true</default>
++            <summary>Enable drawing background image when embedded</summary>
++            <description>Enable drawing the current GNOME background image in unity-greeter and gnome-screensaver.</description>
++        </key>
++        <key name="xembed-unity-greeter-offset-x" type="d">
++            <default>85.0</default>
++            <summary>Horizontal position in unity-greeter</summary>
++            <description>Maximum distance of the keyboard in unity-greeter in pixels from the left screen edge. Depending on the available width, the offset is gradually lowered. Negative values center the keyboard horizontally. 
++This key has no effect outside of unity-greeter.</description>
++        </key>
++
+         <child name="auto-show" schema="org.onboard.auto-show" />
+         <child name="keyboard" schema="org.onboard.keyboard" />
+         <child name="window" schema="org.onboard.window" />
+--- /dev/null
++++ b/onboard-default-settings.gschema.override.example
+@@ -0,0 +1,11 @@
++[org.onboard]
++layout='Compact'
++theme='Nightshade'
++key-label-font='Ubuntu'
++key-label-overrides=['RWIN:îƒ¿:super-group', 'LWIN:îƒ¿:super-group']
++xembed-onboard=true
++
++[org.onboard.window]
++docking-enabled=true
++force-to-top=true
++
+--- a/onboard-defaults.conf.example
++++ b/onboard-defaults.conf.example
+@@ -114,7 +114,7 @@ xembed-unity-greeter-offset-x=85.0
+ # Color of the background bar that is rendered on top of the
+ # background image in unity-greeter and gnome-screensaver.
+ # If not specified, the color is taken from the keyboard's background color.
+-xembed-background-color='#0000007F'
++xembed-background-color=#0000007F
+ 
+ # Enable drawing the current GNOME background image as background in
+ # unity-greeter and gnome-screensaver.
