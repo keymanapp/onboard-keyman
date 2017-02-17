@@ -1,18 +1,16 @@
 usr/share/dbus-1
+usr/share/help
 usr/share/locale
-usr/share/sounds/freedesktop/stereo
+usr/share/sounds
 usr/share/onboard/layouts
 usr/share/onboard/scripts
 usr/share/onboard/themes
-usr/share/onboard/AUTHORS
-usr/share/onboard/CHANGELOG
 usr/share/onboard/layoutstrings.py
-usr/share/onboard/NEWS
-usr/share/onboard/onboard-defaults.conf*
-usr/share/onboard/README
-usr/share/onboard/settings.ui
-usr/share/onboard/settings_scanner_dialog.ui
-usr/share/onboard/settings_theme_dialog.ui
-usr/share/onboard/settings_docking_dialog.ui
-usr/share/onboard/tools/checkmodels
-usr/share/help
+usr/share/onboard/*.ui
+usr/share/onboard/tools
+usr/share/onboard/AUTHORS usr/share/doc/onboard
+usr/share/onboard/CHANGELOG usr/share/doc/onboard
+usr/share/onboard/NEWS usr/share/doc/onboard
+usr/share/onboard/onboard-defaults.conf* usr/share/doc/onboard
+usr/share/onboard/onboard-default-settings.gschema.override.example usr/share/doc/onboard
+usr/share/onboard/README usr/share/doc/onboard
