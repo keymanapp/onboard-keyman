@@ -1,6 +1,6 @@
 onboard (1.4.1-1) UNRELEASED; urgency=medium
 
-  * New upstream release (LP: #1664746)
+  * New upstream release (Closes: #858773) (LP: #1664746)
     - Add tablet mode (LP: #1366421)
     - For GNOME Shell, only auto-show on first start (LP: #1650810)
     - Add Comment field and more to autostart file (LP: #1656779)
