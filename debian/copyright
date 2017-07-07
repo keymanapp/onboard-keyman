@@ -8,6 +8,8 @@ Files: Onboard/Appearance.py
  Onboard/AutoHide.py
  Onboard/AutoShow.py
  Onboard/ConfigUtils.py
+ Onboard/GlobalKeyListener.py
+ Onboard/HardwareSensorTracker.py
  Onboard/KeyboardPopups.py
  Onboard/LanguageSupport.py
  Onboard/LayoutView.py
@@ -18,6 +20,7 @@ Files: Onboard/Appearance.py
  Onboard/Timer.py
  Onboard/TouchHandles.py
  Onboard/TouchInput.py
+ Onboard/UDevTracker.py
  Onboard/Version.py
  Onboard/WPEngine.py
  Onboard/WindowUtils.py
@@ -27,6 +30,7 @@ Files: Onboard/Appearance.py
  Onboard/canonical_equivalents.py
  Onboard/definitions.py
  Onboard/osk/osk_hunspell.c
+ Onboard/osk/osk_udev.c
  Onboard/osk/osk_uinput.c
  Onboard/osk/osk_uinput.h
  Onboard/osk/osk_virtkey.h
@@ -34,10 +38,14 @@ Files: Onboard/Appearance.py
  Onboard/osk/osk_virtkey_wayland.h
  Onboard/osk/osk_virtkey_x.h
  Onboard/pypredict/__init__.py
+ Onboard/pypredict/attic/multilevel
  Onboard/pypredict/attic/prune.py
+ Onboard/pypredict/attic/randbench
  Onboard/pypredict/attic/setup.py
+ Onboard/pypredict/attic/test-client
  Onboard/pypredict/lm/accent_transform.h
  Onboard/pypredict/lm/lm.cpp
+ Onboard/pypredict/lm/lm.h
  Onboard/pypredict/lm/lm_dynamic.cpp
  Onboard/pypredict/lm/lm_dynamic.h
  Onboard/pypredict/lm/lm_dynamic_cached.h
@@ -58,6 +66,8 @@ Files: Onboard/Appearance.py
  Onboard/test/test_gui.py
  Onboard/test/test_migration.py
  Onboard/test/test_translations.py
+ gnome/Onboard_Indicator@onboard.org/prefs.js
+ gnome/Onboard_Indicator@onboard.org/schemas/org.gnome.shell.extensions.onboard-indicator.gschema.xml
 Copyright: 2009, 2012 marmuta <marmvta@gmail.com>
   2009-2010, 2012 marmuta <marmvta@gmail.com>
   2009-2010, 2012-2013, marmuta <marmvta@gmail.com>
@@ -184,6 +194,8 @@ License: GPL-3+
 
 Files: Onboard/pypredict/test/__init__.py
  Onboard/test/__init__.py
+ gnome/Onboard_Indicator@onboard.org/schemas/gschemas.compiled
+ onboard-default-settings.gschema.override.example
 Copyright: *No copyright*
 License: GPL-3+
 Comment:
@@ -209,6 +221,10 @@ Files: gnome/Onboard_Indicator@onboard.org/extension.js
 Copyright: 2016, Simon Schumann
   2016, marmuta <marmvta@gmail.com>
 License: GPL-3+
+
+Files: gnome/Onboard_Indicator@onboard.org/convenience.js
+Copyright: 2011-2012, Giovanni Campagna <scampa.giovanni@gmail.com>
+License: BSD-3-clause
 
 Files: Onboard/pypredict/lm/lm.h
 Copyright: 2009-2010, 2012-2014, marmuta <marmvta@gmail.com>
@@ -253,7 +269,7 @@ Copyright: 2011-2015, marmuta <marmvta@gmail.com>
   2012, Gerd Kohlberger <lowfi@chello.at>
 License: GPL-3+
 
-Files: data/onboard-autostart.desktop
+Files: data/onboard-autostart.desktop.in
 Copyright: 2012, 2015, marmuta <marmvta@gmail.com>
   2015, Martin Wimpress <martin@flexion.org>
   2011, Luke Yelavitch <luke.yelavich@canonical.com>
@@ -360,8 +376,7 @@ Copyright: 2014, marmuta <marmvta@gmail.com>
   2012, Gerd Kohlberger <lowfi@chello.at>
 License: GPL-3+
 
-Files: settings_auto_show_dialog.ui
-  settings_docking_dialog.ui
+Files: settings_docking_dialog.ui
   settings_theme_dialog.ui
 Copyright: 2012-2016, marmuta <marmvta@gmail.com>
 License: GPL-3+
