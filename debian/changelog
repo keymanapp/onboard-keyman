@@ -1,3 +1,10 @@
+onboard (1.4.1-2) unstable; urgency=medium
+
+  * debian/control:
+    + Onboard requires libudev, so let's build it on linux-any architectures.
+
+ -- Mike Gabriel <sunweaver@debian.org>  Wed, 23 Aug 2017 18:54:52 +0200
+
 onboard (1.4.1-1) unstable; urgency=medium
 
   [ Jeremy Bicha ]
