@@ -23,7 +23,7 @@ Vcs-Browser: https://anonscm.debian.org/git/pkg-mate/onboard.git
 Vcs-Git: https://anonscm.debian.org/git/pkg-mate/onboard.git
 
 Package: onboard
-Architecture: any
+Architecture: linux-any
 Depends: gir1.2-gdkpixbuf-2.0,
          gir1.2-glib-2.0,
          gir1.2-gtk-3.0,
