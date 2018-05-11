@@ -1,0 +1,37 @@
+Description: Switch to AyatanaAppIndicator.
+Author: Mike Gabriel <mike.gabriel@das-netzwerkteam.de>
+
+--- a/Onboard/Indicator.py
++++ b/Onboard/Indicator.py
+@@ -294,7 +294,7 @@
+         BackendBase.__init__(self, menu)
+ 
+         try:
+-            from gi.repository import AppIndicator3 as AppIndicator
++            from gi.repository import AyatanaAppIndicator3 as AppIndicator
+         except ImportError as ex:
+             raise RuntimeError(ex)
+ 
+@@ -350,7 +350,7 @@
+ 
+     def _set_indicator_active(self, active):
+         try:
+-            from gi.repository import AppIndicator3 as AppIndicator
++            from gi.repository import AyatanaAppIndicator3 as AppIndicator
+         except ImportError:
+             pass
+         else:
+--- a/Onboard/Version.py
++++ b/Onboard/Version.py
+@@ -33,9 +33,9 @@
+     except ValueError:
+         pass
+ 
+-    # AppIndicator3 is not required
++    # AyatanaAppIndicator3 is not required
+     try:
+-        gi.require_version('AppIndicator3', '0.1')
++        gi.require_version('AyatanaAppIndicator3', '0.1')
+     except ValueError:
+         pass
+ 
