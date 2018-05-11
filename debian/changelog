@@ -1,3 +1,23 @@
+onboard (1.4.1-3) unstable; urgency=medium
+
+  [ Vangelis Mouhtsis ]
+  * debian/control:
+    + Rename pretty name of our team -> Debian+Ubuntu MATE Packaging Team.
+    + Update Maintainer: field to debian-mate ML on lists.debian.org.
+    + Add myself to Uploaders: field.
+    + Temporarily have pkg-mate-team ML under Uploaders:.
+
+  [ Mike Gabriel ]
+  * debian/copyright:
+    + Use secure URI for copyright format.
+    + Update Vcs-*: fields. Package has been migrated to salsa.debian.org.
+    + Bump Standards-Version: to 4.1.4. No changes needed.
+    + Switch R from gir1.2-appindicator3-0.1 to gir1.2-ayatanaappindicator3-0.1.
+  * debian/patches:
+    + Add 1002_build-against-Ayatana-AppIndicator.patch.
+
+ -- Mike Gabriel <sunweaver@debian.org>  Fri, 11 May 2018 13:37:23 +0200
+
 onboard (1.4.1-2) unstable; urgency=medium
 
   * debian/control:
