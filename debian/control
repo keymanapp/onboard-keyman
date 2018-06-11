@@ -18,7 +18,6 @@ Build-Depends: debhelper (>=9),
 Maintainer: Debian+Ubuntu MATE Packaging Team <debian-mate@lists.debian.org>
 Uploaders: Mike Gabriel <sunweaver@debian.org>, Jeremy Bicha <jbicha@ubuntu.com>,
            Vangelis Mouhtsis <vangelis@gnugr.org>,
-           MATE Packaging Team <pkg-mate-team@lists.alioth.debian.org>,
 Standards-Version: 4.1.4
 Homepage: https://launchpad.net/onboard
 Vcs-Browser: https://salsa.debian.org/debian-mate-team/onboard
