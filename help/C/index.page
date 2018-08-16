@@ -1,0 +1,47 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="guide"
+      id="index">
+
+  <info>
+    <title type="text">Onboard Help</title>
+    <title type="link">Onboard Help</title>
+
+    <revision pkgversion="1.4.1" docversion="0.1"/>
+
+    <credit type="author">
+      <name>Francesco Fumanti</name>
+      <email>francesco.fumanti@gmx.net</email>
+      <years>2016</years>
+    </credit>
+
+    <license href="http://www.gnu.org/licenses/gpl.html">
+      <p>This work is licensed under the
+      <link href="http://www.gnu.org/licenses/gpl.html">GNU General Public License version 3 or any later version</link>.</p>
+    </license>
+
+    <desc>On-screen Keyboard with macros, custom layout creation and word suggestions.</desc>
+
+  </info>
+
+  <title>
+    <media type="image" mime="image/png" src="figures/onboard-icon.png" />
+    <app>Onboard</app>
+  </title>
+
+  <section id="usage" style="2column">
+    <title>Using <app>Onboard</app></title>
+  </section>
+
+  <section id="prefs" style="2column">
+    <title><app>Onboard</app> Preferences</title>
+  </section>
+
+  <section id="advanced" style="2column">
+    <title>Advanced Configuration</title>
+  </section>
+
+  <section id="tips" style="2column">
+    <title>Tips</title>
+  </section>
+
+</page>

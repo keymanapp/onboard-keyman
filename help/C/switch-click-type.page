@@ -1,0 +1,42 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="topic" style="task"
+      id="switch-click-type">
+
+  <info>
+    <link type="guide" xref="index#usage"/>
+    <link type="seealso" xref="key-behaviours"/>
+    <link type="seealso" xref="snippet-usage"/>
+    <link type="seealso" xref="switch-layer"/>
+    <link type="seealso" xref="hover-click"/>
+
+    <desc>Perform a middle or right click with the left mouse button.</desc>
+
+    <credit type="author">
+      <name>Francesco Fumanti</name>
+      <email>francesco.fumanti@gmx.net</email>
+      <years>2016</years>
+    </credit>
+
+    <license href="http://www.gnu.org/licenses/gpl.html">
+      <p>This work is licensed under the
+      <link href="http://www.gnu.org/licenses/gpl.html">GNU General Public License version 3 or any later version</link>.</p>
+    </license>
+
+
+  </info>
+
+  <title>Switch click type</title>
+  <p>This feature is especially useful to people that for some reason are able to only perform single left clicks.</p>
+
+  <p><app>Onboard</app> can offer the possibility to translate a single left click into a middle click, right click, double click or drag click.</p>
+
+  <p>In fact, depending on the layout used, there is a <key>Click</key> button that makes an additional column with <gui>click type buttons</gui> appear, when the user clicks on it (or when he hovers with the pointer for a little time over it).</p>
+
+  <p>In this column, there are buttons for the various click types. If the user activates one of these <gui>click type buttons</gui>, <app>Onboard</app> will translate the next left click into a click of the type of the activated <gui>click type button</gui> and the activated <gui>click type button</gui> gets deactivated.</p>
+
+  <note style="advanced">
+    <p>In the column that appears, there also is a <key>Hover Click</key> button to enable automatic clicking in <app>Onboard</app>. Please, see the <link xref="hover-click" /> page for more information about it.</p>
+  </note>
+
+
+</page>

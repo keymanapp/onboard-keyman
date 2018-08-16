@@ -1,0 +1,119 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="topic" style="task"
+      id="layouts-specification">
+
+  <info>
+    <link type="guide" xref="layouts-index#topics"/>
+    <link type="seealso" xref="layouts-replace-character"/>
+    <link type="seealso" xref="layouts-create-copy"/>
+
+    <desc>Tags and attributes supported by the .onboard layout xml file.</desc>
+
+    <credit type="author">
+      <name>Francesco Fumanti</name>
+      <email>francesco.fumanti@gmx.net</email>
+      <years>2016</years>
+    </credit>
+
+    <license href="http://www.gnu.org/licenses/gpl.html">
+      <p>This work is licensed under the
+      <link href="http://www.gnu.org/licenses/gpl.html">GNU General Public License version 3 or any later version</link>.</p>
+    </license>
+
+
+  </info>
+
+  <title>Supported tags and attributes</title>
+
+  <note style="warning">
+    <p>The following specification is outdated and incomplete. It is nevertheless available here, as it might be helpful when working with layouts.</p>
+  </note>
+
+  <section id="layouts-specification">
+    <title>Layout specification</title>
+    <p>The following section assumes a basic knowledge about markup languages by the reader. Moreover, I am only going to talk about the main points of the layout specification; you are encouraged to open the layouts shipping with <app>Onboard</app> in order to learn about more details.</p>
+    <p>A layout consists of one <file>xml</file> file with the <code>.onboard</code> extension and one <file>svg</file> file per pane defined in the <file>.onboard</file> file.</p>
+    <p>The <file>.onboard</file> file specifies what key are on each pane, their properties such as label and action; it does not specify size and the location of each key. These are defined in the <file>svg</file> file corresponding to the pane. The connection between the keys in the <file>.onboard</file> file and in the <file>svg</file> files is made by the ids of the keys: the key in the <file>svg</file> file that has the same id of a key in the <file>.onboard</file> file determines the size and position of the key on the pane.</p>
+    <p>You can use the application named <app>Inkscape</app> to create or modify the <file>svg</file> files corresponding to the panes. The keys can be rectangles or paths (straight lines or bezier curves) though <app>Onboard</app> only detects clicks quite approximately around curves. Do not forget to set the id of the keys in <app>Inkscape</app> by right clicking on the object and selecting object properties.</p>
+
+    <p>Each &lt;pane&gt; tag in the <file>.onboard</file> file <em>has</em>:</p>
+    <list>
+       <item><p><code>id = "name"</code>: the id of the pane</p></item>
+       <item><p><code>filename = "name"</code>: the name of the corresponding svg file</p></item>
+    </list>
+
+    <p>Each &lt;key&gt; tag in the <file>.onboard</file> file <em>has</em>:</p>
+    <list>
+       <item><p><code>id = "name"</code>: the id of the key</p></item>
+       <item><p><code>sticky = "true/false"</code>: whether the key is a latching and locking key; please see <link xref="key-behaviours" /></p></item>
+       <item><p><code>label = "name"</code>: the default label on the key</p></item>
+    </list>
+
+    <p>Each &lt;key&gt; tag in the <file>.onboard</file> file <em>can also have</em>:</p>
+    <list>
+       <item><p><code>cap_label = "name"</code>: the label for when caps lock or shift is pressed</p></item>
+       <item><p><code>shift_label = "name"</code>: the label for when only shift is pressed</p></item>
+       <item><p><code>altgr_label = "name"</code>: the label for when alt gr is pressed</p></item>
+       <item><p><code>altgrNshift_label = "name"</code>: the label for when alt gr and shift is pressed</p></item>
+       <item><p><code>font_offset_x = "number between 0 and 1"</code>: the x offset of the label in the key</p></item>
+       <item><p><code>font_offset_y = "number between 0 and 1"</code>: the y offset of the label in the key</p></item>
+    </list>
+
+    <p>Each &lt;key&gt; tag in the <file>.onboard</file> file <em>must have exactly one of</em>:</p>
+    <list>
+       <item><p><code>char = "character"</code>: the character written when key pressed</p></item>
+       <item><p><code>keysym = "number"</code>: the keysym or the physical key being emulated in decimal or hex prefixed by 0x</p></item>
+       <item><p><code>modifier = "name"</code>: the name of the modifier which key emulates. It is recommended to have the sticky attribute set to true for modifiers. List of modifier names given below.</p></item>
+       <item><p><code>keypress = "name"</code>: name of emulated keys. List of press names given below.</p></item>
+       <item><p><code>macro = "number"</code>: the macro aka snippet number starting from 0 that the key corresponds with</p></item>
+       <item><p><code>script = "name"</code>: he name of the script which is run when key is pressed</p></item>
+    </list>
+
+    <p>List of <em>modifier names</em> that can be paired with the modifier attribute of key:</p>
+    <list>
+       <item><p><code>shift</code></p></item>
+       <item><p><code>caps</code></p></item>
+       <item><p><code>control</code></p></item>
+       <item><p><code>mod1</code> aka alt</p></item>
+       <item><p><code>mod2</code></p></item>
+       <item><p><code>mod3</code> aka num lock</p></item>
+       <item><p><code>mod4</code></p></item>
+       <item><p><code>mod5</code> aka alt gr</p></item>
+    </list>
+
+    <p>List of <em>keypress names</em> that can be paired with the keypress attribute of key:</p>
+    <list>
+       <item><p><code>space</code></p></item>
+       <item><p><code>insert</code></p></item>
+       <item><p><code>home</code></p></item>
+       <item><p><code>page_up</code></p></item>
+       <item><p><code>page_down</code></p></item>
+       <item><p><code>end</code></p></item>
+       <item><p><code>delete</code></p></item>
+       <item><p><code>return</code></p></item>
+       <item><p><code>backspace</code></p></item>
+    </list>
+
+    <p>List of <em>group names</em> that can be paired with the group attribute of key:</p>
+    <list>
+       <item><p><code>alphanumeric</code></p></item>
+       <item><p><code>bottomrow</code></p></item>
+       <item><p><code>backspace</code></p></item>
+       <item><p><code>misc</code></p></item>
+       <item><p><code>shifts</code></p></item>
+       <item><p><code>keypadmisc</code></p></item>
+       <item><p><code>keypadnumber</code></p></item>
+       <item><p><code>keypadoperators</code></p></item>
+       <item><p><code>directions</code></p></item>
+       <item><p><code>editing</code></p></item>
+       <item><p><code>snippets</code></p></item>
+       <item><p><code>mousebutton</code></p></item>
+       <item><p><code>scripts</code></p></item>
+       <item><p><code>fkeys</code></p></item>
+    </list>
+
+  </section>
+
+</page>
+
+

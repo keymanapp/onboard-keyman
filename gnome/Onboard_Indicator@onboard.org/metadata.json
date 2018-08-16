@@ -1,0 +1,7 @@
+{"shell-version": ["3.16", "3.18", "3.20", "3.22"],
+ "name": "Onboard Indicator",
+ "description": "Add indicator and menu for Onboard onscreen-keyboard and hide the built-in keyboard.",
+ "uuid": "Onboard_Indicator@onboard.org",
+ "settings-schema":  "org.gnome.shell.extensions.onboard-indicator",
+ "gettext-domain": "onboard"
+}

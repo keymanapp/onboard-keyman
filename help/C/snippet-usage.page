@@ -1,0 +1,36 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="topic" style="task"
+      id="snippet-usage">
+
+  <info>
+    <link type="guide" xref="index#usage"/>
+    <link type="seealso" xref="key-behaviours"/>
+    <link type="seealso" xref="switch-layer"/>
+    <link type="seealso" xref="switch-click-type"/>
+    <link type="seealso" xref="hover-click"/>
+
+    <desc>Have the content of a snippet automatically typed.</desc>
+
+    <credit type="author">
+      <name>Francesco Fumanti</name>
+      <email>francesco.fumanti@gmx.net</email>
+      <years>2016</years>
+    </credit>
+
+    <license href="http://www.gnu.org/licenses/gpl.html">
+      <p>This work is licensed under the
+      <link href="http://www.gnu.org/licenses/gpl.html">GNU General Public License version 3 or any later version</link>.</p>
+    </license>
+
+
+  </info>
+
+  <title>Use a snippet</title>
+
+  <p>On the layouts shipping by default with <app>Onboard</app>, there are <key>buttons</key> that are linked to predefined texts. A click on one of these <key>buttons</key> will prompt <app>Onboard</app> to automatically write the predefined text, called <gui>snippet</gui>, associated with the <key>button</key>.</p>
+
+  <p>On a fresh <app>Onboard</app> installation, most <key>snippet buttons</key> do not have a <gui>snippet</gui> associated to them. The user can define a <gui>text</gui> and <gui>title</gui> for the various <key>snippet buttons</key> he wants to use.</p>
+
+  <p>Information about how to define the <gui>text</gui> and <gui>title</gui> for a <key>snippet button</key> can be found on the <link xref="snippet-definition" /> page.</p>
+
+</page>

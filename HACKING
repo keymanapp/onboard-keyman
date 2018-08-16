@@ -1,0 +1,14 @@
+* Always_underscore_variable_names, no CamelCase.
+
+* Don't leave commented out code lying around.
+
+* Use the Logger instead of print statements.
+
+* Lines shouldn't be longer than 80 characters.
+
+* Docstrings on class members.
+
+* Don't let gsettings leak out of the Config singleton. Don't use gsettings
+directly in any other class.
+
+* Call "./setup.py build_i18n -m" to merge code changes into .po files.

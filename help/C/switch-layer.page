@@ -1,0 +1,34 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="topic" style="task"
+      id="switch-layer">
+
+  <info>
+    <link type="guide" xref="index#usage"/>
+    <link type="seealso" xref="key-behaviours"/>
+    <link type="seealso" xref="snippet-usage"/>
+    <link type="seealso" xref="switch-click-type"/>
+    <link type="seealso" xref="hover-click"/>
+
+    <desc>Switch to a different pane of the layout in use.</desc>
+
+    <credit type="author">
+      <name>Francesco Fumanti</name>
+      <email>francesco.fumanti@gmx.net</email>
+      <years>2016</years>
+    </credit>
+
+    <license href="http://www.gnu.org/licenses/gpl.html">
+      <p>This work is licensed under the
+      <link href="http://www.gnu.org/licenses/gpl.html">GNU General Public License version 3 or any later version</link>.</p>
+    </license>
+
+
+  </info>
+
+  <title>Switch layer</title>
+
+  <p>Most layouts of the <app>Onboard</app> on-screen keyboard have more than one layer of keys. This way, it is possible to save screen space by putting the most used keys on one layer and other, less often used keys, on other layers.</p>
+  <p>It is the designer of the layout that decides how many layers he wants to use in the layout.</p>
+  <p>Every layout has <key>buttons</key> on all layers to allow the user to switch between them.</p>
+
+</page>

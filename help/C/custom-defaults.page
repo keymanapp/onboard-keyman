@@ -1,0 +1,44 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="topic"
+      id="custom-defaults">
+
+  <info>
+    <link type="guide" xref="index#advanced"/>
+    <link type="seealso" xref="layouts-index"/>
+    <link type="seealso" xref="themes-index"/>
+
+    <desc>Set custom system defaults that are used by Onboard the first time it is launched.</desc>
+
+    <credit type="author">
+      <name>Francesco Fumanti</name>
+      <email>francesco.fumanti@gmx.net</email>
+      <years>2016</years>
+    </credit>
+
+    <license href="http://www.gnu.org/licenses/gpl.html">
+      <p>This work is licensed under the
+      <link href="http://www.gnu.org/licenses/gpl.html">GNU General Public License version 3 or any later version</link>.</p>
+    </license>
+
+
+  </info>
+
+  <title>Onboard custom system defaults</title>
+
+  <section id="system-default-desc">
+    <title>Description</title>
+    <p><app>Onboard</app> offers the possibility to set values for its various configuration options by placing an Onboard custom system configuration file on the system. This is especially interesting for distributions that want <app>Onboard</app> to appear on a clean system with settings matching their desktop.</p>
+  </section>
+
+  <section id="system-default-honored">
+    <title>When does <app>Onboard</app> honor the custom defaults?</title>
+    <p><app>Onboard</app> reads the custom configuration file the first time it is launched. The configuration settings of the configuration file will remain active as long as the user does not override them with new settings. For example, if the user moves or resizes the <app>Onboard</app> window, the new values for position and size will override those stored in the <file>system configuration</file> file. Moreover, the new values are automatically stored as the user's settings and used afterwards.</p>
+    <p>If <app>Onboard</app> is started from a script or from the command line with parameters, these values do also override the values specified in the <file>system configuration</file> file. The values of the parameters will be stored automatically in the user's settings and used afterwards.</p>
+  </section>
+
+  <section id="system-default-config">
+    <title>How to configure system defaults?</title>
+    <p>A sample <file>system configuration</file> file comes with the <app>Onboard</app> package and should have been installed on your system. It is named <file>onboard-defaults.conf.example</file>. It contains a lot of comments about how to use it and what parameters are supported. In order to make use of a <file>system configuration</file> file, simply create a copy of the <file>example file</file> in the same directory, keep the name of the <file>example file</file> without the .example suffix and edit the contents according to your wishes.</p>
+  </section>
+
+</page>

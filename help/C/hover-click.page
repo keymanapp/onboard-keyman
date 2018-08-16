@@ -1,0 +1,44 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="topic" style="task"
+      id="hover-click">
+
+  <info>
+    <link type="guide" xref="index#usage"/>
+    <link type="seealso" xref="switch-layer"/>
+    <link type="seealso" xref="key-behaviours"/>
+    <link type="seealso" xref="snippet-usage"/>
+    <link type="seealso" xref="switch-click-type"/>
+
+    <desc>Perform clicks without any hardware button.</desc>
+
+    <credit type="author">
+      <name>Francesco Fumanti</name>
+      <email>francesco.fumanti@gmx.net</email>
+      <years>2016</years>
+    </credit>
+
+    <license href="http://www.gnu.org/licenses/gpl.html">
+      <p>This work is licensed under the
+      <link href="http://www.gnu.org/licenses/gpl.html">GNU General Public License version 3 or any later version</link>.</p>
+    </license>
+
+
+  </info>
+
+  <title>Use the hover click</title>
+
+  <p><app>Onboard</app> offers the possibility to automatically perform left, middle, right, double and drag clicks without clicking on any mouse button. We call this fonctionality hover click.</p>
+  <p>In fact, there is a <key>Click</key> button for example on the Small, Compact and Full Keyboard layouts that makes additional <gui>click type buttons</gui> appear. The user can make these additional buttons appear by clicking on that <key>Click</key> button or by hovering with the pointer for a little while over it.</p>
+  <p>Among these additional buttons, there is a button showing a pointer with a very little clock near the upper right corner. By clicking or hovering for a while on that button, the hover click gets activated. From now on, an automatic click will be performed at the location of the pointer each time shortly afterwards the pointer stops moving.</p>
+  <p>The amount of time, the pointer has to remain motionless before the automatic click is performed, can be adjusted in the <gui>Pointing and Clicking</gui> tab of the <gui>Universal Access</gui> panel of the <gui>System Settings</gui> window.</p>
+  <p>By default, the automatic click performed is a single left click. However, the user can switch to a different click type by using the <gui>click type buttons</gui>. By hovering over one of these <gui>click type buttons</gui>, that <key>button</key> will be activated and the next click will be of the type corresponding to the activated click type. After the click has been performed, the hover click switches back to single left click.</p>
+
+  <note style="important">
+    <p>For the hover click to work, the <app>mousetweaks</app> package has to be installed on the system.</p>
+  </note>
+
+  <note style="advanced">
+    <p><app>Onboard</app> can also offer the possibility to translate a single left click done by a hardware button into another click type. Please, have a look at the <link xref="switch-click-type" /> page for more information about this feature.</p>
+  </note>
+
+</page>

@@ -1,0 +1,39 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="topic" style="task"
+      id="layouts-create-copy">
+
+  <info>
+    <link type="guide" xref="layouts-index#topics"/>
+    <link type="seealso" xref="layouts-specification"/>
+    <link type="seealso" xref="layouts-replace-character"/>
+
+    <desc>Create a copy of the current layout.</desc>
+
+    <credit type="author">
+      <name>Francesco Fumanti</name>
+      <email>francesco.fumanti@gmx.net</email>
+      <years>2016</years>
+    </credit>
+
+    <license href="http://www.gnu.org/licenses/gpl.html">
+      <p>This work is licensed under the
+      <link href="http://www.gnu.org/licenses/gpl.html">GNU General Public License version 3 or any later version</link>.</p>
+    </license>
+
+
+  </info>
+
+  <title>Copy current layout</title>
+
+  <p>If you want to create a custom layout, you do not have to do it from scratch. In fact, it might be easier to choose an already existing layout, have Onboard create a copy of it and apply changes to the copy.</p>
+  <p>To create a copy of a layout, you can do the following:</p>
+  <steps>
+    <item><p>Click on the <key>Preferences</key> key in <app>Onboard</app> to open the <app>Onboard Preferences</app> dialogue.</p></item>
+    <item><p>In the <app>Onboard Preferences</app> dialogue click on the <gui>Layouts</gui> tab and select the layout that you want to copy in order to make it the current layout.</p></item>
+    <item><p>Click on the <key>New</key> button to create a copy of the selected layout. You will be prompted for a name to give to the copy. The files of the newly created copy will be located in the <file>.local/share/onboard/layouts/</file> directory of your home folder.</p></item>
+    <item><p>At this point, you can switch back to any layout you want to use for <app>Onboard</app>, close the <app>Onboard Preferences</app> dialog and start editing the layout files that were just created.</p></item>
+  </steps>
+
+</page>
+
+
