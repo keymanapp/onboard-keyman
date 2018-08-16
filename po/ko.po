@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: onboard\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-14 20:56+0100\n"
+"POT-Creation-Date: 2017-02-16 22:56+0100\n"
 "PO-Revision-Date: 2015-03-26 14:03+0000\n"
 "Last-Translator: RHOsanghoon <dr.noul@gmail.com>\n"
 "Language-Team: Korean <ko@li.org>\n"
@@ -25,96 +25,653 @@ msgstr ""
 "X-Launchpad-Export-Date: 2017-02-14 14:04+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 
-#: ../Onboard/WPEngine.py:483
-msgid "Failed to load language model '{}': {} ({})"
-msgstr "'{}' 언어 모델을 불러오는 데 실패하였습니다: {} ({})"
+#: ../settings_scanner_dialog.ui.h:1
+msgid "Automatic scan for 1 switch"
+msgstr "한 스위치에 대한 자동 스캔을 합니다"
+
+#: ../settings_scanner_dialog.ui.h:2
+msgid "Critical overscan for 1 switch"
+msgstr "한 스위치에 대한 핵심 오버스캔을 합니다"
+
+#: ../settings_scanner_dialog.ui.h:3
+msgid "Step scan for 2 switches"
+msgstr "두 스위치에 대한 단계 스캔을 합니다"
+
+#: ../settings_scanner_dialog.ui.h:4
+msgid "Directed scan for 3 or 5 switches"
+msgstr "세게나 다섯 스위치에 대한 직접 스캔을 합니다"
+
+#: ../settings_scanner_dialog.ui.h:5
+msgid "Scanner Settings"
+msgstr "스캐너 설정"
+
+#: ../settings_scanner_dialog.ui.h:6
+msgctxt "Label of the close button of the scanner settings dialog."
+msgid "_Close"
+msgstr "닫기(_C)"
+
+#: ../settings_scanner_dialog.ui.h:7
+msgid "Select a scanning _profile:"
+msgstr "스캔 프로필 선택하기(_p):"
+
+#: ../settings_scanner_dialog.ui.h:8
+msgid "_Step interval:"
+msgstr "단계 간격(_S):"
+
+#: ../settings_scanner_dialog.ui.h:9
+msgid "Sc_an cycles:"
+msgstr "스캔 횟수(_a):"
+
+#: ../settings_scanner_dialog.ui.h:10
+msgid ""
+"The time the scanner rests on a key or group before moving to the next. (in "
+"seconds)"
+msgstr ""
+"다음으로 넘어가기 전에 스캐너가 키나 그룹에서 얼마 동안 쉴지 정하는 시간입니"
+"다. (초 단위)"
+
+#: ../settings_scanner_dialog.ui.h:11
+msgid ""
+"The number of times the scanner cycles through the entire keyboard before it "
+"stops."
+msgstr "스캐너가 정지하기 전까지 전체 키보드를 순환하는 횟수입니다."
+
+#: ../settings_scanner_dialog.ui.h:12
+msgid "Step _only during switch down"
+msgstr "스위치 입력 시에만 단계 진행하기(_o)"
+
+#: ../settings_scanner_dialog.ui.h:13
+msgid "Progress the highlight only while the switch is held down."
+msgstr "스위치가 눌려 있는 동안에만 하이라이트를 진행합니다."
+
+#: ../settings_scanner_dialog.ui.h:14
+msgid "_Forward interval:"
+msgstr "앞으로 간격(_F):"
+
+#: ../settings_scanner_dialog.ui.h:15
+msgid "_Backtrack interval:"
+msgstr "되추적 간격(_B):"
+
+#: ../settings_scanner_dialog.ui.h:16
+msgid ""
+"The time the scanner rests on a key  while progressing forward. (in seconds)"
+msgstr ""
+"앞으로 넘어가는 동안 스캐너가 키에서 얼마 동안 쉴지 정하는 시간입니다. (초 단"
+"위)"
+
+#: ../settings_scanner_dialog.ui.h:17
+msgid ""
+"The time the scanner rests on a key  while moving backwards. (in seconds)"
+msgstr ""
+"뒤로 넘어가는 동안 스캐너가 키에서 얼마 동안 쉴지 정하는 시간입니다. (초 단"
+"위)"
+
+#: ../settings_scanner_dialog.ui.h:18
+msgid "Backtrack _steps:"
+msgstr "되추적 단계(_s):"
+
+#: ../settings_scanner_dialog.ui.h:19
+msgid "The number of keys the scanner steps back before moving forward again."
+msgstr ""
+"다시 앞으로 넘어가기 전에 스캐너가 얼마 동안 뒤로 갈지 정하는 키 수입니다."
+
+#: ../settings_scanner_dialog.ui.h:20
+msgid "_Alternate switch actions"
+msgstr "대체 스위치 동작(_A)"
+
+#: ../settings_scanner_dialog.ui.h:21
+msgid ""
+"Swap the scan actions after every key activation. The Step action will "
+"become the Activate action and vice versa."
+msgstr ""
+"모든 키 활성화 이후에 스캔 동작을 바꿉니다. 단계 동작은 활성화 동작이 될 것이"
+"며 그 반대 역시 똑같이 적용됩니다."
+
+#: ../settings_scanner_dialog.ui.h:22
+msgid "Profiles"
+msgstr "프로필"
+
+#: ../settings_scanner_dialog.ui.h:23
+msgid "_Select an input device:"
+msgstr "입력 장치 선택하기(_S):"
+
+#: ../settings_scanner_dialog.ui.h:24
+msgid "_Use this device only for scanning"
+msgstr "이 장치를 스캔을 위해서만 사용하기(_U)"
+
+#: ../settings_scanner_dialog.ui.h:25
+msgid ""
+"The selected device should not control the system mouse cursor or the "
+"keyboard caret."
+msgstr "선택된 장치는 마우스 커서나 키보드 커서를 조작하지 않습니다."
+
+#: ../settings_scanner_dialog.ui.h:26
+msgid "Input Device"
+msgstr "입력 장치"
+
+#: ../settings_theme_dialog.ui.h:1
+msgid "Customize Theme"
+msgstr "사용자 테마"
+
+#: ../settings_theme_dialog.ui.h:2
+msgctxt "Label of the revert button of the theme settings dialog."
+msgid "_Revert"
+msgstr "되돌리기(_R)"
+
+#: ../settings_theme_dialog.ui.h:3
+msgctxt "Label of the close button of the theme settings dialog."
+msgid "_Close"
+msgstr "닫기(_C)"
+
+#: ../settings_theme_dialog.ui.h:4
+msgid "Color Sche_me"
+msgstr "컬러 스키마(_m)"
+
+#: ../settings_theme_dialog.ui.h:5 ../settings.ui.h:82
+msgid "_Background:"
+msgstr "배경(_B):"
+
+#. Key style with simple gradients
+#: ../settings_theme_dialog.ui.h:6 ../Onboard/settings.py:1621
+msgid "Gradient"
+msgstr "부드러운 변화"
+
+#: ../settings_theme_dialog.ui.h:7
+msgid "_Angle:"
+msgstr "각도(_A):"
+
+#: ../settings_theme_dialog.ui.h:8
+msgid "Light Direction"
+msgstr "밝은 방향"
+
+#: ../settings_theme_dialog.ui.h:9 ../settings.ui.h:28
+msgid "Keyboard"
+msgstr "키보드"
+
+#: ../settings_theme_dialog.ui.h:10
+msgid "_Style:"
+msgstr "스타일(_S):"
+
+#: ../settings_theme_dialog.ui.h:11
+msgid "R_oundness:"
+msgstr "둥근 정도(_o)"
+
+#: ../settings_theme_dialog.ui.h:12
+msgid "S_ize:"
+msgstr "크기(_i):"
+
+#: ../settings_theme_dialog.ui.h:13
+msgid "B_order width:"
+msgstr "테두리 두께(_o):"
+
+#: ../settings_theme_dialog.ui.h:14
+msgid "Key Style"
+msgstr "키 스타일"
+
+#: ../settings_theme_dialog.ui.h:15
+msgid "_Key:"
+msgstr "키(_K):"
+
+#: ../settings_theme_dialog.ui.h:16
+msgid "_Border:"
+msgstr "테두리(_B):"
+
+#: ../settings_theme_dialog.ui.h:17
+msgid "Gradients"
+msgstr "기울기"
+
+#: ../settings_theme_dialog.ui.h:18
+msgid "_Strength:"
+msgstr "강도(_S):"
+
+#: ../settings_theme_dialog.ui.h:19
+msgid "Shadow"
+msgstr "그림자"
+
+#: ../settings_theme_dialog.ui.h:20
+msgid "Keys"
+msgstr "키"
+
+#: ../settings_theme_dialog.ui.h:21
+msgid "_Font:"
+msgstr "글꼴(_F):"
+
+#: ../settings_theme_dialog.ui.h:22
+msgid "_Attributes:"
+msgstr "속성(_A):"
+
+#: ../settings_theme_dialog.ui.h:23
+msgid "Font"
+msgstr "글꼴"
+
+#: ../settings_theme_dialog.ui.h:24
+msgid "I_ndependent size"
+msgstr "독립적인 크기(_n)"
+
+#: ../settings_theme_dialog.ui.h:25
+msgid "_Super key:"
+msgstr "상위키(_S):"
+
+#: ../settings_theme_dialog.ui.h:26
+msgid "Label Override"
+msgstr "레이블 덮어쓰기"
+
+#: ../settings_theme_dialog.ui.h:27
+msgid "Labels"
+msgstr "이름표"
+
+#: ../Onboard/Appearance.py:130
+#, python-brace-format
+msgid "Color scheme for theme '{filename}' not found"
+msgstr "'{filename}' 테마를 위한 색상 스키마를 찾지 못했습니다"
+
+#: ../Onboard/Appearance.py:350
+#, python-brace-format
+msgid "Error loading theme '{filename}'. {exception}: {cause}"
+msgstr ""
+"'{filename}' 테마를 불러오는 도중에 오류가 발생했습니다. {exception}: {cause}"
+
+#: ../Onboard/Appearance.py:424
+msgid "Error saving "
+msgstr "저장 오류가 발생했습니다 "
+
+#: ../Onboard/Appearance.py:842
+#, python-brace-format
+msgid ""
+"Loading legacy color scheme format '{old_format}', please consider upgrading "
+"to current format '{new_format}': '{filename}'"
+msgstr ""
+"레거시 컬러 스키마 형식 '{old_format}'을 불러오는 중입니다, 현재 형식인 "
+"'{new_format}'으로 업그레이드를 권장합니다: '{filename}'"
+
+#: ../Onboard/Appearance.py:862
+#, python-brace-format
+msgid "Error loading color scheme '{filename}'. {exception}: {cause}"
+msgstr ""
+"'{filename}' 컬러 스키마를 불러오는 중 오류가 발생했습니다. {exception}: "
+"{cause}"
+
+#: ../Onboard/Appearance.py:939 ../Onboard/Appearance.py:1071
+msgid ""
+"Duplicate key_id '{}' found in color scheme file. Key_ids must occur only "
+"once."
+msgstr ""
+"중복된 key_id '{}'가 색상 스키마 파일에서 발견되었습니다. Key_id는 한 번만 나"
+"타나야 합니다."
+
+#. Title of the snippets dialog for existing snippets
+#: ../Onboard/KeyboardWidget.py:1590
+msgid "Edit snippet #{}"
+msgstr "글자조각 #{}을 편집하기"
+
+#. Title of the snippets dialog for new snippets
+#: ../Onboard/KeyboardWidget.py:1594
+msgid "New snippet"
+msgstr "새 글자조각"
+
+#. Message in the snippets dialog for new snippets
+#: ../Onboard/KeyboardWidget.py:1596
+msgid "Enter a new snippet for button #{}:"
+msgstr "버튼 #{}을 위한 글자조각을 입력하십시오:"
+
+#. Translators: cancel button of the snippets dialog. It used to
+#. be stock item STOCK_CANCEL until Gtk 3.10 deprecated those.
+#. Translators: cancel button of "New Input Device" dialog. It used to be
+#. stock item STOCK_CANCEL until Gtk 3.10 deprecated those.
+#: ../Onboard/KeyboardWidget.py:1606 ../Onboard/WindowUtils.py:1144
+msgid "_Cancel"
+msgstr "취소(_C)"
+
+#: ../Onboard/KeyboardWidget.py:1607
+msgid "_Save snippet"
+msgstr "글자조각 저장하기(_S)"
+
+#: ../Onboard/KeyboardWidget.py:1627
+msgid "_Button label:"
+msgstr "버튼 이름표(_B) :"
+
+#: ../Onboard/KeyboardWidget.py:1631
+msgid "S_nippet:"
+msgstr "글자조각(_S):"
+
+#: ../Onboard/KeyboardWidget.py:1801
+msgid "Other _Languages"
+msgstr "기타 언어(_L)"
+
+#: ../Onboard/KeyboardWidget.py:1845
+msgid "_Remove suggestion…"
+msgstr "추천 항목 제거하기(_R)..."
 
 #. Default dialog title: name of the application
-#: ../Onboard/WindowUtils.py:1108 ../Onboard/KbdWindow.py:108
-#: ../data/onboard.desktop.in.h:1 ../Onboard/KeyboardWidget.py:1892
+#: ../Onboard/KeyboardWidget.py:1892 ../Onboard/WindowUtils.py:1108
+#: ../data/onboard.desktop.in.h:1 ../Onboard/KbdWindow.py:108
 #: ../data/onboard-autostart.desktop.in.h:1
 msgid "Onboard"
 msgstr "온보드(Onboard)"
 
-#: ../Onboard/WindowUtils.py:1128
-msgid "New Input Device"
-msgstr "새 입력 장치"
+#: ../Onboard/KeyboardWidget.py:1901
+msgid "Remove word suggestion"
+msgstr "추천 단어 제거하기"
 
-#: ../Onboard/WindowUtils.py:1129
-msgid "Onboard has detected a new input device"
-msgstr "온보드가 새로운 입력장치를 발견했습니다"
+#: ../Onboard/KeyboardWidget.py:1912
+msgid "Remove '{}' everywhere."
+msgstr "모든 곳에 있는 '{}'을 제거합니다."
 
-#: ../Onboard/WindowUtils.py:1138
-msgid "Do you want to use this device for keyboard scanning?"
-msgstr "이 장치를 키보드 스캔에 사용하시겠습니까?"
+#: ../Onboard/KeyboardWidget.py:1922
+msgid "This will only affect learned suggestions."
+msgstr "이는 학습된 추천 항목에만 적용됩니다."
 
-#. Translators: cancel button of "New Input Device" dialog. It used to be
-#. stock item STOCK_CANCEL until Gtk 3.10 deprecated those.
-#. Translators: cancel button of the snippets dialog. It used to
-#. be stock item STOCK_CANCEL until Gtk 3.10 deprecated those.
-#: ../Onboard/WindowUtils.py:1144 ../Onboard/KeyboardWidget.py:1606
-msgid "_Cancel"
-msgstr "취소(_C)"
+#: ../Onboard/KeyboardWidget.py:1962
+msgid "Remove '{}' only where it occures at text begin."
+msgstr "텍스트의 처음 부분에 영향을 끼치는 '{}'만을 제거합니다."
 
-#: ../Onboard/WindowUtils.py:1145
-msgid "Use device"
-msgstr "장치 사용하기"
+#: ../Onboard/KeyboardWidget.py:1965
+msgid "Remove '{}' only where it occures at sentence begin."
+msgstr "문장의 처음 부분에 영향을 끼치는 '{}'만을 제거합니다."
+
+#: ../Onboard/KeyboardWidget.py:1968
+msgid "Remove '{}' only where it occures after numbers."
+msgstr "숫자 이후에 영향을 끼치는 '{}'만을 제거합니다."
+
+#: ../Onboard/KeyboardWidget.py:1971
+msgid "Remove '{}' only where it occures after '{}'."
+msgstr "'{}' 이후에 영향을 끼치는 '{}'만을 제거합니다."
 
 #: ../Onboard/Timer.py:160 ../Onboard/pypredict/tools/filter.py:382
-#: ../Onboard/LanguageSupport.py:173 ../Onboard/SpellChecker.py:634
-#: ../Onboard/SpellChecker.py:670 ../Onboard/SpellChecker.py:709
-#: ../Onboard/SpellChecker.py:723 ../Onboard/pypredict/tools/train.py:227
+#: ../Onboard/LanguageSupport.py:173 ../Onboard/pypredict/tools/train.py:227
+#: ../Onboard/SpellChecker.py:634 ../Onboard/SpellChecker.py:670
+#: ../Onboard/SpellChecker.py:709 ../Onboard/SpellChecker.py:723
 msgid "Failed to execute '{}', {}"
 msgstr "실행에 실패하였습니다 '{}', {}"
 
-#: ../Onboard/WordSuggestions.py:2692
-msgid ""
-"<big>Onboard failed to open learned word suggestions.</big>\n"
-"\n"
-"The error was:\n"
-"<tt>{}</tt>\n"
-"\n"
-"Revert word suggestions to the last backup (recommended)?"
-msgstr ""
-"<big>온보드가 학습된 단어 추천을 여는 데 실패하였습니다.</big>\n"
-"\n"
-"오류는 다음과 같습니다:\n"
-"<tt>{}</tt>\n"
-"\n"
-"단추 추천을 마지막 백업으로 되돌리시겠습니까(권장)?"
-
-#: ../Onboard/WordSuggestions.py:2711
-msgid ""
-"<big>Onboard failed to open learned word suggestions.</big>\n"
-"\n"
-"The error was:\n"
-"<tt>{}</tt>\n"
-"\n"
-"The suggestions have to be reset, but the erroneous file will remain at \n"
-"'{}'"
-msgstr ""
-"<big>온보드가 학습된 단어 추천을 여는 데 실패하였습니다.</big>\n"
-"\n"
-"오류는 다음과 같습니다:\n"
-"<tt>{}</tt>\n"
-"\n"
-"추천이 초기화되어야 하지만, 오류가 있는 파일이 '{}'에 남습니다."
-
-#: ../data/onboard-settings.desktop.in.h:1
-msgid "Onboard Settings"
+#: ../Onboard/settings.py:316
+msgid "Onboard Preferences"
 msgstr "온보드 설정"
 
-#: ../data/onboard-settings.desktop.in.h:2
-msgid "Onboard onscreen keyboard settings"
-msgstr "온보드 화면 키보드 설정"
+#. touch_feedback_size_label: 0=auto, i.e. let Onboard guess
+#. the size of the label popup.
+#: ../Onboard/settings.py:675
+msgid "auto"
+msgstr ""
 
-#: ../data/onboard-settings.desktop.in.h:3
-msgid "Change Onboard settings"
-msgstr "온보드 설정 바꾸기"
+#: ../Onboard/settings.py:751
+msgid "Copy layout '{}' to this new name:"
+msgstr "'{}' 레이아웃을 새로운 이름으로 복사:"
 
-#: ../Onboard/KbdWindow.py:202
-msgid "no window transparency available; screen doesn't support alpha channels"
-msgstr "창 투명화를 사용할 수 없습니다; 화면이 알파 채널을 지원하지 않습니다"
+#: ../Onboard/settings.py:764
+msgid "Delete layout '{}'?"
+msgstr "'{}' 레이아웃을 삭제할까요?"
+
+#: ../Onboard/settings.py:812
+msgid "System settings not found ({}): {}"
+msgstr "시스템 설정을 찾을수 없습니다 ({}): {}"
+
+#: ../Onboard/settings.py:835
+msgid "Core layouts"
+msgstr "핵심 레이아웃"
+
+#: ../Onboard/settings.py:836
+msgid "Contributions"
+msgstr "기여자"
+
+#: ../Onboard/settings.py:837
+msgid "My layouts"
+msgstr ""
+
+#: ../Onboard/settings.py:872
+msgid "Author: {}"
+msgstr "저자: {}"
+
+#: ../Onboard/settings.py:876
+msgid "About Layout"
+msgstr "About 레이아웃"
+
+#: ../Onboard/settings.py:981
+msgid "Enter a name for the new theme:"
+msgstr "새로운 테마의 이름 정하기 :"
+
+#: ../Onboard/settings.py:989
+#, python-brace-format
+msgid ""
+"This theme file already exists.\n"
+"'{filename}'\n"
+"\n"
+"Overwrite it?"
+msgstr ""
+"이 테마 파일은 이미 존재합니다.\n"
+"'{filename}'\n"
+"\n"
+"덮어 쓰시겠습니까?"
+
+#: ../Onboard/settings.py:1006
+msgid "Reset selected theme to Onboard defaults?"
+msgstr "선택하신 테마를 온보드 기본 테마로 설정하시겠습니까?"
+
+#: ../Onboard/settings.py:1008
+msgid "Delete selected theme?"
+msgstr "선택한 테마를 삭제하시겠습니까?"
+
+#. Translators: reset button of Preferences->Theme.
+#: ../Onboard/settings.py:1137
+msgid "_Reset"
+msgstr "초기화(_R)"
+
+#. Translators: delete button of Preferences->Theme. It used to be
+#. stock item STOCK_DELETE until Gtk 3.10 deprecated those.
+#: ../Onboard/settings.py:1141
+msgid "_Delete"
+msgstr "삭제하기(_D)"
+
+#. Translators: header of a tree view column with toggles to ignore
+#. keyboard devices (Preferences->Auto-show->External Keyboards).
+#: ../Onboard/settings.py:1278
+msgid "Ignore"
+msgstr ""
+
+#. Translators: header of a tree view column with device names
+#. (Preferences->Auto-show->External Keyboards).
+#: ../Onboard/settings.py:1282
+msgid "Device"
+msgstr ""
+
+#. Key style with flat fill- and border colors
+#: ../Onboard/settings.py:1619
+msgid "Flat"
+msgstr "평평하게"
+
+#. Key style for dish-like key caps
+#: ../Onboard/settings.py:1623
+msgid "Dish"
+msgstr "접시 형태"
+
+#: ../Onboard/settings.py:1672 ../Onboard/settings.py:1729
+msgid "Default"
+msgstr "기본값"
+
+#: ../Onboard/settings.py:1713
+msgid "Bold"
+msgstr "진하게"
+
+#: ../Onboard/settings.py:1715
+msgid "Italic"
+msgstr "기울임"
+
+#: ../Onboard/settings.py:1717
+msgid "Condensed"
+msgstr "줄임"
+
+#: ../Onboard/settings.py:1730
+msgid ""
+msgstr ""
+
+#: ../Onboard/settings.py:1730
+msgid "Ubuntu Logo"
+msgstr "우분투 로고"
+
+#: ../Onboard/settings.py:1864
+msgid "Step"
+msgstr "단계"
+
+#: ../Onboard/settings.py:1865
+msgid "Left"
+msgstr "왼쪽"
+
+#: ../Onboard/settings.py:1866
+msgid "Right"
+msgstr "오른쪽"
+
+#: ../Onboard/settings.py:1867
+msgid "Up"
+msgstr "위"
+
+#: ../Onboard/settings.py:1868
+msgid "Down"
+msgstr "아래"
+
+#: ../Onboard/settings.py:1869
+msgid "Activate"
+msgstr "활성화"
+
+#: ../Onboard/settings.py:2038
+msgid "Action:"
+msgstr "동작:"
+
+#: ../Onboard/settings.py:2202
+msgid "Disabled"
+msgstr "사용하지 않음"
+
+#: ../Onboard/settings.py:2208
+msgid "Button"
+msgstr "버튼"
+
+#: ../Onboard/settings.py:2263 ../Onboard/settings.py:2308
+msgid "Press a button..."
+msgstr "버튼을 누르세요...."
+
+#: ../Onboard/settings.py:2310
+msgid "Press a key..."
+msgstr "키를 누르십시오..."
+
+#: ../Onboard/Indicator.py:56
+msgid "_Show Onboard"
+msgstr "온보드 보이기(_S)"
+
+#: ../Onboard/Indicator.py:57
+msgid "_Hide Onboard"
+msgstr "온보드 숨기기(_H)"
+
+#. Translators: label of a menu item. It used to be stock item
+#. STOCK_PREFERENCES until Gtk 3.10 deprecated those.
+#: ../Onboard/Indicator.py:83
+msgid "_Preferences"
+msgstr "기본 설정(_P)"
+
+#: ../Onboard/Indicator.py:91
+msgid "_Help"
+msgstr ""
+
+#. Translators: label of a menu item. It used to be stock item
+#. STOCK_QUIT until Gtk 3.10 deprecated those.
+#: ../Onboard/Indicator.py:102
+msgid "_Quit"
+msgstr "끝내기(_Q)"
+
+#: ../Onboard/Indicator.py:228 ../Onboard/Indicator.py:231
+msgid "Onboard on-screen keyboard"
+msgstr "온보드 화면 키보드"
+
+#: ../Onboard/utils.py:1535
+msgid "failed to create directory '{}': {}"
+msgstr "'{}' 디렉터리를 생성하는 데 실패하였습니다: {}"
+
+#: ../settings_docking_dialog.ui.h:1
+msgid "Top"
+msgstr "상단"
+
+#: ../settings_docking_dialog.ui.h:2
+msgid "Bottom"
+msgstr "하단"
+
+#: ../settings_docking_dialog.ui.h:3
+msgid "Active Monitor"
+msgstr "활성 모니터"
+
+#: ../settings_docking_dialog.ui.h:4
+msgid "Primary Monitor"
+msgstr "주 모니터"
+
+#: ../settings_docking_dialog.ui.h:5
+msgid "Monitor 0"
+msgstr "모니터 0"
+
+#: ../settings_docking_dialog.ui.h:6
+msgid "Monitor 1"
+msgstr "모니터 1"
+
+#: ../settings_docking_dialog.ui.h:7
+msgid "Monitor 2"
+msgstr "모니터 2"
+
+#: ../settings_docking_dialog.ui.h:8
+msgid "Monitor 3"
+msgstr "모니터 3"
+
+#: ../settings_docking_dialog.ui.h:9
+msgid "Monitor 4"
+msgstr "모니터 4"
+
+#: ../settings_docking_dialog.ui.h:10
+msgid "Monitor 5"
+msgstr "모니터 5"
+
+#: ../settings_docking_dialog.ui.h:11
+msgid "Monitor 6"
+msgstr "모니터 6"
+
+#: ../settings_docking_dialog.ui.h:12
+msgid "Monitor 7"
+msgstr "모니터 7"
+
+#: ../settings_docking_dialog.ui.h:13
+msgid "Monitor 8"
+msgstr "모니터 8"
+
+#: ../settings_docking_dialog.ui.h:14
+msgid "Docking settings"
+msgstr "도킹 설정"
+
+#: ../settings_docking_dialog.ui.h:15
+msgctxt "Label of the close button of the docking settings dialog."
+msgid "_Close"
+msgstr "닫기(_C)"
+
+#: ../settings_docking_dialog.ui.h:16
+msgid "Shrink workarea"
+msgstr "작업공간 줄이기"
+
+#: ../settings_docking_dialog.ui.h:17
+msgid "Shrink the available space for maximized windows."
+msgstr "창 최대화시 사용 가능 공간 줄이기"
+
+#: ../settings_docking_dialog.ui.h:18
+msgid "Expand on landscape screens"
+msgstr "가로 화면 확장"
+
+#: ../settings_docking_dialog.ui.h:19
+msgid "Expand keyboard to the width of the workarea."
+msgstr "작업 공간의 폭으로 키보드 확장"
+
+#: ../settings_docking_dialog.ui.h:20
+msgid "Expand on portrait screens"
+msgstr "세로 화면 확장"
+
+#: ../settings_docking_dialog.ui.h:21
+msgid "Dock to screen edge:"
+msgstr "화면 테두리에 도킹"
+
+#: ../settings_docking_dialog.ui.h:22
+msgid "Dock to monitor:"
+msgstr "모니터에 도킹하기:"
 
 #: ../settings.ui.h:1
 msgid "Key-repeat"
@@ -224,10 +781,6 @@ msgstr "테마"
 #: ../settings.ui.h:27 ../data/layoutstrings.py:88 ../data/layoutstrings.py:340
 msgid "Snippets"
 msgstr "글자조각"
-
-#: ../settings.ui.h:28 ../settings_theme_dialog.ui.h:9
-msgid "Keyboard"
-msgstr "키보드"
 
 #: ../settings.ui.h:29
 msgid "Auto-show"
@@ -455,10 +1008,6 @@ msgstr "창(_o):"
 #: ../settings.ui.h:81
 msgid "Transparency of the whole keyboard window. Requires compositing."
 msgstr "전체 키보드 창을 투명화시킵니다. 합성이 필요합니다."
-
-#: ../settings.ui.h:82 ../settings_theme_dialog.ui.h:5
-msgid "_Background:"
-msgstr "배경(_B):"
 
 #: ../settings.ui.h:83
 msgid "Transparency of the keyboard background"
@@ -1031,456 +1580,21 @@ msgstr ""
 msgid "Hover Click"
 msgstr "호버 누름"
 
-#: ../settings_scanner_dialog.ui.h:1
-msgid "Automatic scan for 1 switch"
-msgstr "한 스위치에 대한 자동 스캔을 합니다"
-
-#: ../settings_scanner_dialog.ui.h:2
-msgid "Critical overscan for 1 switch"
-msgstr "한 스위치에 대한 핵심 오버스캔을 합니다"
-
-#: ../settings_scanner_dialog.ui.h:3
-msgid "Step scan for 2 switches"
-msgstr "두 스위치에 대한 단계 스캔을 합니다"
-
-#: ../settings_scanner_dialog.ui.h:4
-msgid "Directed scan for 3 or 5 switches"
-msgstr "세게나 다섯 스위치에 대한 직접 스캔을 합니다"
-
-#: ../settings_scanner_dialog.ui.h:5
-msgid "Scanner Settings"
-msgstr "스캐너 설정"
-
-#: ../settings_scanner_dialog.ui.h:6
-msgctxt "Label of the close button of the scanner settings dialog."
-msgid "_Close"
-msgstr "닫기(_C)"
-
-#: ../settings_scanner_dialog.ui.h:7
-msgid "Select a scanning _profile:"
-msgstr "스캔 프로필 선택하기(_p):"
-
-#: ../settings_scanner_dialog.ui.h:8
-msgid "_Step interval:"
-msgstr "단계 간격(_S):"
-
-#: ../settings_scanner_dialog.ui.h:9
-msgid "Sc_an cycles:"
-msgstr "스캔 횟수(_a):"
-
-#: ../settings_scanner_dialog.ui.h:10
-msgid ""
-"The time the scanner rests on a key or group before moving to the next. (in "
-"seconds)"
-msgstr ""
-"다음으로 넘어가기 전에 스캐너가 키나 그룹에서 얼마 동안 쉴지 정하는 시간입니"
-"다. (초 단위)"
-
-#: ../settings_scanner_dialog.ui.h:11
-msgid ""
-"The number of times the scanner cycles through the entire keyboard before it "
-"stops."
-msgstr "스캐너가 정지하기 전까지 전체 키보드를 순환하는 횟수입니다."
-
-#: ../settings_scanner_dialog.ui.h:12
-msgid "Step _only during switch down"
-msgstr "스위치 입력 시에만 단계 진행하기(_o)"
-
-#: ../settings_scanner_dialog.ui.h:13
-msgid "Progress the highlight only while the switch is held down."
-msgstr "스위치가 눌려 있는 동안에만 하이라이트를 진행합니다."
-
-#: ../settings_scanner_dialog.ui.h:14
-msgid "_Forward interval:"
-msgstr "앞으로 간격(_F):"
-
-#: ../settings_scanner_dialog.ui.h:15
-msgid "_Backtrack interval:"
-msgstr "되추적 간격(_B):"
-
-#: ../settings_scanner_dialog.ui.h:16
-msgid ""
-"The time the scanner rests on a key  while progressing forward. (in seconds)"
-msgstr ""
-"앞으로 넘어가는 동안 스캐너가 키에서 얼마 동안 쉴지 정하는 시간입니다. (초 단"
-"위)"
-
-#: ../settings_scanner_dialog.ui.h:17
-msgid ""
-"The time the scanner rests on a key  while moving backwards. (in seconds)"
-msgstr ""
-"뒤로 넘어가는 동안 스캐너가 키에서 얼마 동안 쉴지 정하는 시간입니다. (초 단"
-"위)"
-
-#: ../settings_scanner_dialog.ui.h:18
-msgid "Backtrack _steps:"
-msgstr "되추적 단계(_s):"
-
-#: ../settings_scanner_dialog.ui.h:19
-msgid "The number of keys the scanner steps back before moving forward again."
-msgstr ""
-"다시 앞으로 넘어가기 전에 스캐너가 얼마 동안 뒤로 갈지 정하는 키 수입니다."
-
-#: ../settings_scanner_dialog.ui.h:20
-msgid "_Alternate switch actions"
-msgstr "대체 스위치 동작(_A)"
-
-#: ../settings_scanner_dialog.ui.h:21
-msgid ""
-"Swap the scan actions after every key activation. The Step action will "
-"become the Activate action and vice versa."
-msgstr ""
-"모든 키 활성화 이후에 스캔 동작을 바꿉니다. 단계 동작은 활성화 동작이 될 것이"
-"며 그 반대 역시 똑같이 적용됩니다."
-
-#: ../settings_scanner_dialog.ui.h:22
-msgid "Profiles"
-msgstr "프로필"
-
-#: ../settings_scanner_dialog.ui.h:23
-msgid "_Select an input device:"
-msgstr "입력 장치 선택하기(_S):"
-
-#: ../settings_scanner_dialog.ui.h:24
-msgid "_Use this device only for scanning"
-msgstr "이 장치를 스캔을 위해서만 사용하기(_U)"
-
-#: ../settings_scanner_dialog.ui.h:25
-msgid ""
-"The selected device should not control the system mouse cursor or the "
-"keyboard caret."
-msgstr "선택된 장치는 마우스 커서나 키보드 커서를 조작하지 않습니다."
-
-#: ../settings_scanner_dialog.ui.h:26
-msgid "Input Device"
-msgstr "입력 장치"
-
-#: ../data/onboard.desktop.in.h:2 ../data/onboard-autostart.desktop.in.h:2
-msgid "Onboard onscreen keyboard"
-msgstr "온보드 화면 키보드"
-
-#: ../data/onboard.desktop.in.h:3 ../data/onboard-autostart.desktop.in.h:3
-msgid "Flexible onscreen keyboard"
-msgstr "유연한 화상 키보드"
-
-#. Title of the snippets dialog for existing snippets
-#: ../Onboard/KeyboardWidget.py:1590
-msgid "Edit snippet #{}"
-msgstr "글자조각 #{}을 편집하기"
-
-#. Title of the snippets dialog for new snippets
-#: ../Onboard/KeyboardWidget.py:1594
-msgid "New snippet"
-msgstr "새 글자조각"
-
-#. Message in the snippets dialog for new snippets
-#: ../Onboard/KeyboardWidget.py:1596
-msgid "Enter a new snippet for button #{}:"
-msgstr "버튼 #{}을 위한 글자조각을 입력하십시오:"
-
-#: ../Onboard/KeyboardWidget.py:1607
-msgid "_Save snippet"
-msgstr "글자조각 저장하기(_S)"
-
-#: ../Onboard/KeyboardWidget.py:1627
-msgid "_Button label:"
-msgstr "버튼 이름표(_B) :"
-
-#: ../Onboard/KeyboardWidget.py:1631
-msgid "S_nippet:"
-msgstr "글자조각(_S):"
-
-#: ../Onboard/KeyboardWidget.py:1801
-msgid "Other _Languages"
-msgstr "기타 언어(_L)"
-
-#: ../Onboard/KeyboardWidget.py:1845
-msgid "_Remove suggestion…"
-msgstr "추천 항목 제거하기(_R)..."
-
-#: ../Onboard/KeyboardWidget.py:1901
-msgid "Remove word suggestion"
-msgstr "추천 단어 제거하기"
-
-#: ../Onboard/KeyboardWidget.py:1912
-msgid "Remove '{}' everywhere."
-msgstr "모든 곳에 있는 '{}'을 제거합니다."
-
-#: ../Onboard/KeyboardWidget.py:1922
-msgid "This will only affect learned suggestions."
-msgstr "이는 학습된 추천 항목에만 적용됩니다."
-
-#: ../Onboard/KeyboardWidget.py:1962
-msgid "Remove '{}' only where it occures at text begin."
-msgstr "텍스트의 처음 부분에 영향을 끼치는 '{}'만을 제거합니다."
-
-#: ../Onboard/KeyboardWidget.py:1965
-msgid "Remove '{}' only where it occures at sentence begin."
-msgstr "문장의 처음 부분에 영향을 끼치는 '{}'만을 제거합니다."
-
-#: ../Onboard/KeyboardWidget.py:1968
-msgid "Remove '{}' only where it occures after numbers."
-msgstr "숫자 이후에 영향을 끼치는 '{}'만을 제거합니다."
-
-#: ../Onboard/KeyboardWidget.py:1971
-msgid "Remove '{}' only where it occures after '{}'."
-msgstr "'{}' 이후에 영향을 끼치는 '{}'만을 제거합니다."
-
-#: ../settings_docking_dialog.ui.h:1
-msgid "Top"
-msgstr "상단"
-
-#: ../settings_docking_dialog.ui.h:2
-msgid "Bottom"
-msgstr "하단"
-
-#: ../settings_docking_dialog.ui.h:3
-msgid "Active Monitor"
-msgstr "활성 모니터"
-
-#: ../settings_docking_dialog.ui.h:4
-msgid "Primary Monitor"
-msgstr "주 모니터"
-
-#: ../settings_docking_dialog.ui.h:5
-msgid "Monitor 0"
-msgstr "모니터 0"
-
-#: ../settings_docking_dialog.ui.h:6
-msgid "Monitor 1"
-msgstr "모니터 1"
-
-#: ../settings_docking_dialog.ui.h:7
-msgid "Monitor 2"
-msgstr "모니터 2"
-
-#: ../settings_docking_dialog.ui.h:8
-msgid "Monitor 3"
-msgstr "모니터 3"
-
-#: ../settings_docking_dialog.ui.h:9
-msgid "Monitor 4"
-msgstr "모니터 4"
-
-#: ../settings_docking_dialog.ui.h:10
-msgid "Monitor 5"
-msgstr "모니터 5"
-
-#: ../settings_docking_dialog.ui.h:11
-msgid "Monitor 6"
-msgstr "모니터 6"
-
-#: ../settings_docking_dialog.ui.h:12
-msgid "Monitor 7"
-msgstr "모니터 7"
-
-#: ../settings_docking_dialog.ui.h:13
-msgid "Monitor 8"
-msgstr "모니터 8"
-
-#: ../settings_docking_dialog.ui.h:14
-msgid "Docking settings"
-msgstr "도킹 설정"
-
-#: ../settings_docking_dialog.ui.h:15
-msgctxt "Label of the close button of the docking settings dialog."
-msgid "_Close"
-msgstr "닫기(_C)"
-
-#: ../settings_docking_dialog.ui.h:16
-msgid "Shrink workarea"
-msgstr "작업공간 줄이기"
-
-#: ../settings_docking_dialog.ui.h:17
-msgid "Shrink the available space for maximized windows."
-msgstr "창 최대화시 사용 가능 공간 줄이기"
-
-#: ../settings_docking_dialog.ui.h:18
-msgid "Expand on landscape screens"
-msgstr "가로 화면 확장"
-
-#: ../settings_docking_dialog.ui.h:19
-msgid "Expand keyboard to the width of the workarea."
-msgstr "작업 공간의 폭으로 키보드 확장"
-
-#: ../settings_docking_dialog.ui.h:20
-msgid "Expand on portrait screens"
-msgstr "세로 화면 확장"
-
-#: ../settings_docking_dialog.ui.h:21
-msgid "Dock to screen edge:"
-msgstr "화면 테두리에 도킹"
-
-#: ../settings_docking_dialog.ui.h:22
-msgid "Dock to monitor:"
-msgstr "모니터에 도킹하기:"
-
-#: ../Onboard/Indicator.py:56
-msgid "_Show Onboard"
-msgstr "온보드 보이기(_S)"
-
-#: ../Onboard/Indicator.py:57
-msgid "_Hide Onboard"
-msgstr "온보드 숨기기(_H)"
-
-#. Translators: label of a menu item. It used to be stock item
-#. STOCK_PREFERENCES until Gtk 3.10 deprecated those.
-#: ../Onboard/Indicator.py:83
-msgid "_Preferences"
-msgstr "기본 설정(_P)"
-
-#: ../Onboard/Indicator.py:91
-msgid "_Help"
-msgstr ""
-
-#. Translators: label of a menu item. It used to be stock item
-#. STOCK_QUIT until Gtk 3.10 deprecated those.
-#: ../Onboard/Indicator.py:102
-msgid "_Quit"
-msgstr "끝내기(_Q)"
-
-#: ../Onboard/Indicator.py:228 ../Onboard/Indicator.py:231
-msgid "Onboard on-screen keyboard"
-msgstr "온보드 화면 키보드"
-
-#: ../Onboard/OnboardGtk.py:429
-msgid ""
-"Onboard is configured to appear with the dialog to unlock the screen; for "
-"example to dismiss the password-protected screensaver.\n"
-"\n"
-"However the system is not configured anymore to use Onboard to unlock the "
-"screen. A possible reason can be that another application configured the "
-"system to use something else.\n"
-"\n"
-"Would you like to reconfigure the system to show Onboard when unlocking the "
-"screen?"
-msgstr ""
-"온보드는 화면 잠금 대화상자와 함께 나오도록 설정되어 있습니다. 이 프로그램은 "
-"화면 보호기의 암호를 푸는 데 쓰입니다.\n"
-"\n"
-"그러나 현재 시스템이 온보드로 화면 보호기 암호를 풀 수 없게 되어 있습니다. 이"
-"것은 시스템에 다른 프로그램이 설정된 경우에 가능합니다.\n"
-"\n"
-"온보드를 사용하여 화면 잠금을 해제하도록 시스템을 재설정하시겠습니까?"
-
-#: ../Onboard/OnboardGtk.py:448
-msgid ""
-"Onboard is configured to appear with the dialog to unlock the screen; for "
-"example to dismiss the password-protected screensaver.\n"
-"\n"
-"However this function is disabled in the system.\n"
-"\n"
-"Would you like to activate it?"
-msgstr ""
-"온보드(Onboard)는 화면 잠금을 풀 때, 대화 상자와 함께 나타내도록 설정되었습니"
-"다. 예를 들어 비밀번호로 보호된 화면 보호기를 필요 없게 합니다.\n"
-"\n"
-"그렇나 이 기능은 현재 시스템에서 비활성화 되어 있습니다.\n"
-"\n"
-"이 기능을 활성화 하시겠습니까?"
-
-#: ../settings_theme_dialog.ui.h:1
-msgid "Customize Theme"
-msgstr "사용자 테마"
-
-#: ../settings_theme_dialog.ui.h:2
-msgctxt "Label of the revert button of the theme settings dialog."
-msgid "_Revert"
-msgstr "되돌리기(_R)"
-
-#: ../settings_theme_dialog.ui.h:3
-msgctxt "Label of the close button of the theme settings dialog."
-msgid "_Close"
-msgstr "닫기(_C)"
-
-#: ../settings_theme_dialog.ui.h:4
-msgid "Color Sche_me"
-msgstr "컬러 스키마(_m)"
-
-#. Key style with simple gradients
-#: ../settings_theme_dialog.ui.h:6 ../Onboard/settings.py:1621
-msgid "Gradient"
-msgstr "부드러운 변화"
-
-#: ../settings_theme_dialog.ui.h:7
-msgid "_Angle:"
-msgstr "각도(_A):"
-
-#: ../settings_theme_dialog.ui.h:8
-msgid "Light Direction"
-msgstr "밝은 방향"
-
-#: ../settings_theme_dialog.ui.h:10
-msgid "_Style:"
-msgstr "스타일(_S):"
-
-#: ../settings_theme_dialog.ui.h:11
-msgid "R_oundness:"
-msgstr "둥근 정도(_o)"
-
-#: ../settings_theme_dialog.ui.h:12
-msgid "S_ize:"
-msgstr "크기(_i):"
-
-#: ../settings_theme_dialog.ui.h:13
-msgid "B_order width:"
-msgstr "테두리 두께(_o):"
-
-#: ../settings_theme_dialog.ui.h:14
-msgid "Key Style"
-msgstr "키 스타일"
-
-#: ../settings_theme_dialog.ui.h:15
-msgid "_Key:"
-msgstr "키(_K):"
-
-#: ../settings_theme_dialog.ui.h:16
-msgid "_Border:"
-msgstr "테두리(_B):"
-
-#: ../settings_theme_dialog.ui.h:17
-msgid "Gradients"
-msgstr "기울기"
-
-#: ../settings_theme_dialog.ui.h:18
-msgid "_Strength:"
-msgstr "강도(_S):"
-
-#: ../settings_theme_dialog.ui.h:19
-msgid "Shadow"
-msgstr "그림자"
-
-#: ../settings_theme_dialog.ui.h:20
-msgid "Keys"
-msgstr "키"
-
-#: ../settings_theme_dialog.ui.h:21
-msgid "_Font:"
-msgstr "글꼴(_F):"
-
-#: ../settings_theme_dialog.ui.h:22
-msgid "_Attributes:"
-msgstr "속성(_A):"
-
-#: ../settings_theme_dialog.ui.h:23
-msgid "Font"
-msgstr "글꼴"
-
-#: ../settings_theme_dialog.ui.h:24
-msgid "I_ndependent size"
-msgstr "독립적인 크기(_n)"
-
-#: ../settings_theme_dialog.ui.h:25
-msgid "_Super key:"
-msgstr "상위키(_S):"
-
-#: ../settings_theme_dialog.ui.h:26
-msgid "Label Override"
-msgstr "레이블 덮어쓰기"
-
-#: ../settings_theme_dialog.ui.h:27
-msgid "Labels"
-msgstr "이름표"
+#: ../data/onboard-settings.desktop.in.h:1
+msgid "Onboard Settings"
+msgstr "온보드 설정"
+
+#: ../data/onboard-settings.desktop.in.h:2
+msgid "Onboard onscreen keyboard settings"
+msgstr "온보드 화면 키보드 설정"
+
+#: ../data/onboard-settings.desktop.in.h:3
+msgid "Change Onboard settings"
+msgstr "온보드 설정 바꾸기"
+
+#: ../Onboard/WPEngine.py:483
+msgid "Failed to load language model '{}': {} ({})"
+msgstr "'{}' 언어 모델을 불러오는 데 실패하였습니다: {} ({})"
 
 #. translators: this is a 'tooltip' of the key_template 'hoverclick' in keyboard layout 'key_defs.xml'
 #: ../data/layoutstrings.py:35 ../data/layoutstrings.py:193
@@ -2058,6 +2172,236 @@ msgstr "철자 추천"
 msgid "Sub-, Superscripts; Fractions"
 msgstr "아래-, 위 첨자; 분수 기호"
 
+#: ../Onboard/OnboardGtk.py:429
+msgid ""
+"Onboard is configured to appear with the dialog to unlock the screen; for "
+"example to dismiss the password-protected screensaver.\n"
+"\n"
+"However the system is not configured anymore to use Onboard to unlock the "
+"screen. A possible reason can be that another application configured the "
+"system to use something else.\n"
+"\n"
+"Would you like to reconfigure the system to show Onboard when unlocking the "
+"screen?"
+msgstr ""
+"온보드는 화면 잠금 대화상자와 함께 나오도록 설정되어 있습니다. 이 프로그램은 "
+"화면 보호기의 암호를 푸는 데 쓰입니다.\n"
+"\n"
+"그러나 현재 시스템이 온보드로 화면 보호기 암호를 풀 수 없게 되어 있습니다. 이"
+"것은 시스템에 다른 프로그램이 설정된 경우에 가능합니다.\n"
+"\n"
+"온보드를 사용하여 화면 잠금을 해제하도록 시스템을 재설정하시겠습니까?"
+
+#: ../Onboard/OnboardGtk.py:448
+msgid ""
+"Onboard is configured to appear with the dialog to unlock the screen; for "
+"example to dismiss the password-protected screensaver.\n"
+"\n"
+"However this function is disabled in the system.\n"
+"\n"
+"Would you like to activate it?"
+msgstr ""
+"온보드(Onboard)는 화면 잠금을 풀 때, 대화 상자와 함께 나타내도록 설정되었습니"
+"다. 예를 들어 비밀번호로 보호된 화면 보호기를 필요 없게 합니다.\n"
+"\n"
+"그렇나 이 기능은 현재 시스템에서 비활성화 되어 있습니다.\n"
+"\n"
+"이 기능을 활성화 하시겠습니까?"
+
+#: ../Onboard/Config.py:235
+msgid "Layout file ({}) or name"
+msgstr "배치 파일({}) 또는 이름"
+
+#: ../Onboard/Config.py:238
+msgid "Theme file (.theme) or name"
+msgstr "테마 파일(.theme) 또는 이름"
+
+#: ../Onboard/Config.py:240
+msgid "Window size, widthxheight"
+msgstr "창 크기, 가로×세로"
+
+#: ../Onboard/Config.py:241
+msgid "Window x position"
+msgstr "창 x 좌표"
+
+#: ../Onboard/Config.py:242
+msgid "Window y position"
+msgstr "창 y 좌표"
+
+#: ../Onboard/Config.py:247
+msgid "Start in XEmbed mode, e.g. for gnome-screensaver"
+msgstr "XEmbed 모드로 시작하기, 예) 그놈-화면 보호기용"
+
+#: ../Onboard/Config.py:250
+msgid "Allow multiple Onboard instances"
+msgstr "여러 개의 온보드 인스턴스를 허용하기"
+
+#: ../Onboard/Config.py:253
+msgid ""
+"Silently fail to start in the given desktop environments. DESKTOPS is a "
+"comma-separated list of XDG desktop names, e.g. GNOME for GNOME Shell."
+msgstr ""
+"주어진 데스크톱 환경에서 시작하는 걸 자동으로 실패했습니다. 데스크톱은 쉼표"
+"로 구분한 XDG 데스크톱 이름 목록입니다, 예. 그놈 셸은 그놈입니다."
+
+#: ../Onboard/Config.py:259
+msgid ""
+"Delay showing the initial keyboard window by STARTUP_DELAY seconds (default "
+"0.0)."
+msgstr "초기 키보드 창을 STARTUP_DELAY 초 지연하여 표시합니다 (기본값 0.0)."
+
+#: ../Onboard/Config.py:263
+msgid "Keep aspect ratio when resizing the window"
+msgstr "창 크기 조정 시 비율을 유지하기"
+
+#: ../Onboard/Config.py:265
+msgid ""
+"Override auto-detection and manually select quirks\n"
+"QUIRKS={metacity|compiz|mutter}"
+msgstr ""
+"자동 감지를 무시하고 수동으로 쿼크 선택하기\n"
+"쿼크={metacity|compiz|mutter}"
+
+#: ../Onboard/Config.py:380
+msgid "Migrating user directory '{}' to '{}'."
+msgstr "사용자 디렉토리를 '{}'에서 '{}'로 이동"
+
+#. honor XDG spec
+#. python >2.5
+#: ../Onboard/Config.py:388
+msgid "failed to migrate user directory. "
+msgstr "사용자 디렉터리 이동에 실패했습니다. "
+
+#: ../Onboard/Config.py:867
+#, python-brace-format
+msgid "layout '{filename}' does not exist"
+msgstr "'{filename}' 배치가 존재하지 않습니다"
+
+#: ../Onboard/Config.py:908
+#, python-brace-format
+msgid "theme '{filename}' does not exist"
+msgstr "'{filename}' 테마가 존재하지 않습니다"
+
+#: ../Onboard/Config.py:933
+msgid "Loading theme from '{}'"
+msgstr "'{}'에서 테마를 불러옵니다"
+
+#: ../Onboard/Config.py:937
+msgid "Unable to read theme '{}'"
+msgstr "테마 '{}'을 읽을 수 없습니다"
+
+#: ../Onboard/Config.py:1143
+msgid ""
+"Enabling auto-show requires Gnome Accessibility.\n"
+"\n"
+"Onboard can turn on accessiblity now, however it is recommended that you log "
+"out and back in for it to reach its full potential.\n"
+"\n"
+"Enable accessibility now?"
+msgstr ""
+"자동 보기를 활성화하려면 그놈 접근성이 필요합니다.\n"
+"\n"
+"온보드는 접근성을 지금 켤 수 있지만, 최상의 상태를 위해 로그아웃 후 다시 돌아"
+"오는 것을 권장합니다.\n"
+"\n"
+"접근성을 지금 활성화 하시겠습니까?"
+
+#: ../Onboard/Config.py:1902
+#, python-brace-format
+msgid "color scheme '{filename}' does not exist"
+msgstr "'{filename}' 색상 스키마가 존재하지 않습니다"
+
+#: ../Onboard/WindowUtils.py:1128
+msgid "New Input Device"
+msgstr "새 입력 장치"
+
+#: ../Onboard/WindowUtils.py:1129
+msgid "Onboard has detected a new input device"
+msgstr "온보드가 새로운 입력장치를 발견했습니다"
+
+#: ../Onboard/WindowUtils.py:1138
+msgid "Do you want to use this device for keyboard scanning?"
+msgstr "이 장치를 키보드 스캔에 사용하시겠습니까?"
+
+#: ../Onboard/WindowUtils.py:1145
+msgid "Use device"
+msgstr "장치 사용하기"
+
+#: ../data/onboard.desktop.in.h:2 ../data/onboard-autostart.desktop.in.h:2
+msgid "Onboard onscreen keyboard"
+msgstr "온보드 화면 키보드"
+
+#: ../data/onboard.desktop.in.h:3 ../data/onboard-autostart.desktop.in.h:3
+msgid "Flexible onscreen keyboard"
+msgstr "유연한 화상 키보드"
+
+#: ../Onboard/KbdWindow.py:202
+msgid "no window transparency available; screen doesn't support alpha channels"
+msgstr "창 투명화를 사용할 수 없습니다; 화면이 알파 채널을 지원하지 않습니다"
+
+#. ##############
+#: ../Onboard/SnippetView.py:39
+msgid "<Enter label>"
+msgstr "<레이블 입력>"
+
+#: ../Onboard/SnippetView.py:40
+msgid "<Enter text>"
+msgstr "<텍스트 입력>"
+
+#: ../Onboard/SnippetView.py:52
+msgid "Button Number"
+msgstr "버튼 번호"
+
+#: ../Onboard/SnippetView.py:59
+msgid "Button Label"
+msgstr "버튼 레이블"
+
+#: ../Onboard/SnippetView.py:68
+msgid "Snippet Text"
+msgstr "관용구 텍스트"
+
+#: ../Onboard/SnippetView.py:113
+msgid "Must be an integer number"
+msgstr "정수를 입력하셔야 합니다"
+
+#: ../Onboard/SnippetView.py:122
+#, python-format
+msgid "Snippet %d is already in use."
+msgstr "%d 관용구는 이미 사용 중입니다."
+
+#: ../Onboard/WordSuggestions.py:2692
+msgid ""
+"<big>Onboard failed to open learned word suggestions.</big>\n"
+"\n"
+"The error was:\n"
+"<tt>{}</tt>\n"
+"\n"
+"Revert word suggestions to the last backup (recommended)?"
+msgstr ""
+"<big>온보드가 학습된 단어 추천을 여는 데 실패하였습니다.</big>\n"
+"\n"
+"오류는 다음과 같습니다:\n"
+"<tt>{}</tt>\n"
+"\n"
+"단추 추천을 마지막 백업으로 되돌리시겠습니까(권장)?"
+
+#: ../Onboard/WordSuggestions.py:2711
+msgid ""
+"<big>Onboard failed to open learned word suggestions.</big>\n"
+"\n"
+"The error was:\n"
+"<tt>{}</tt>\n"
+"\n"
+"The suggestions have to be reset, but the erroneous file will remain at \n"
+"'{}'"
+msgstr ""
+"<big>온보드가 학습된 단어 추천을 여는 데 실패하였습니다.</big>\n"
+"\n"
+"오류는 다음과 같습니다:\n"
+"<tt>{}</tt>\n"
+"\n"
+"추천이 초기화되어야 하지만, 오류가 있는 파일이 '{}'에 남습니다."
+
 #: ../Onboard/LayoutLoaderSVG.py:164
 msgid ""
 "Loading legacy layout, format '{}'. Please consider upgrading to current "
@@ -2090,109 +2434,6 @@ msgstr "copy_layouts에 실패했습니다, 지원되지 않는 배치 형식 '{
 #: ../Onboard/LayoutLoaderSVG.py:1000
 msgid "copying svg file '{}' to '{}'"
 msgstr "svg 파일 '{}'을 '{}'에 복사합니다"
-
-#: ../Onboard/Config.py:236
-msgid "Layout file ({}) or name"
-msgstr "배치 파일({}) 또는 이름"
-
-#: ../Onboard/Config.py:239
-msgid "Theme file (.theme) or name"
-msgstr "테마 파일(.theme) 또는 이름"
-
-#: ../Onboard/Config.py:241
-msgid "Window size, widthxheight"
-msgstr "창 크기, 가로×세로"
-
-#: ../Onboard/Config.py:242
-msgid "Window x position"
-msgstr "창 x 좌표"
-
-#: ../Onboard/Config.py:243
-msgid "Window y position"
-msgstr "창 y 좌표"
-
-#: ../Onboard/Config.py:248
-msgid "Start in XEmbed mode, e.g. for gnome-screensaver"
-msgstr "XEmbed 모드로 시작하기, 예) 그놈-화면 보호기용"
-
-#: ../Onboard/Config.py:251
-msgid "Allow multiple Onboard instances"
-msgstr "여러 개의 온보드 인스턴스를 허용하기"
-
-#: ../Onboard/Config.py:254
-msgid ""
-"Silently fail to start in the given desktop environments. DESKTOPS is a "
-"comma-separated list of XDG desktop names, e.g. GNOME for GNOME Shell."
-msgstr ""
-"주어진 데스크톱 환경에서 시작하는 걸 자동으로 실패했습니다. 데스크톱은 쉼표"
-"로 구분한 XDG 데스크톱 이름 목록입니다, 예. 그놈 셸은 그놈입니다."
-
-#: ../Onboard/Config.py:260
-msgid ""
-"Delay showing the initial keyboard window by STARTUP_DELAY seconds (default "
-"0.0)."
-msgstr "초기 키보드 창을 STARTUP_DELAY 초 지연하여 표시합니다 (기본값 0.0)."
-
-#: ../Onboard/Config.py:264
-msgid "Keep aspect ratio when resizing the window"
-msgstr "창 크기 조정 시 비율을 유지하기"
-
-#: ../Onboard/Config.py:266
-msgid ""
-"Override auto-detection and manually select quirks\n"
-"QUIRKS={metacity|compiz|mutter}"
-msgstr ""
-"자동 감지를 무시하고 수동으로 쿼크 선택하기\n"
-"쿼크={metacity|compiz|mutter}"
-
-#: ../Onboard/Config.py:381
-msgid "Migrating user directory '{}' to '{}'."
-msgstr "사용자 디렉토리를 '{}'에서 '{}'로 이동"
-
-#. honor XDG spec
-#. python >2.5
-#: ../Onboard/Config.py:389
-msgid "failed to migrate user directory. "
-msgstr "사용자 디렉터리 이동에 실패했습니다. "
-
-#: ../Onboard/Config.py:868
-#, python-brace-format
-msgid "layout '{filename}' does not exist"
-msgstr "'{filename}' 배치가 존재하지 않습니다"
-
-#: ../Onboard/Config.py:909
-#, python-brace-format
-msgid "theme '{filename}' does not exist"
-msgstr "'{filename}' 테마가 존재하지 않습니다"
-
-#: ../Onboard/Config.py:934
-msgid "Loading theme from '{}'"
-msgstr "'{}'에서 테마를 불러옵니다"
-
-#: ../Onboard/Config.py:938
-msgid "Unable to read theme '{}'"
-msgstr "테마 '{}'을 읽을 수 없습니다"
-
-#: ../Onboard/Config.py:1144
-msgid ""
-"Enabling auto-show requires Gnome Accessibility.\n"
-"\n"
-"Onboard can turn on accessiblity now, however it is recommended that you log "
-"out and back in for it to reach its full potential.\n"
-"\n"
-"Enable accessibility now?"
-msgstr ""
-"자동 보기를 활성화하려면 그놈 접근성이 필요합니다.\n"
-"\n"
-"온보드는 접근성을 지금 켤 수 있지만, 최상의 상태를 위해 로그아웃 후 다시 돌아"
-"오는 것을 권장합니다.\n"
-"\n"
-"접근성을 지금 활성화 하시겠습니까?"
-
-#: ../Onboard/Config.py:1926
-#, python-brace-format
-msgid "color scheme '{filename}' does not exist"
-msgstr "'{filename}' 색상 스키마가 존재하지 않습니다"
 
 #: ../Onboard/ConfigUtils.py:81
 msgid "gsettings schema for '{}' is not installed"
@@ -2270,247 +2511,6 @@ msgstr ""
 #: ../Onboard/ConfigUtils.py:732
 msgid "Failed to get gsettings value. "
 msgstr "gsettings 값을 얻지 못했습니다. "
-
-#: ../Onboard/Appearance.py:130
-#, python-brace-format
-msgid "Color scheme for theme '{filename}' not found"
-msgstr "'{filename}' 테마를 위한 색상 스키마를 찾지 못했습니다"
-
-#: ../Onboard/Appearance.py:350
-#, python-brace-format
-msgid "Error loading theme '{filename}'. {exception}: {cause}"
-msgstr ""
-"'{filename}' 테마를 불러오는 도중에 오류가 발생했습니다. {exception}: {cause}"
-
-#: ../Onboard/Appearance.py:424
-msgid "Error saving "
-msgstr "저장 오류가 발생했습니다 "
-
-#: ../Onboard/Appearance.py:842
-#, python-brace-format
-msgid ""
-"Loading legacy color scheme format '{old_format}', please consider upgrading "
-"to current format '{new_format}': '{filename}'"
-msgstr ""
-"레거시 컬러 스키마 형식 '{old_format}'을 불러오는 중입니다, 현재 형식인 "
-"'{new_format}'으로 업그레이드를 권장합니다: '{filename}'"
-
-#: ../Onboard/Appearance.py:862
-#, python-brace-format
-msgid "Error loading color scheme '{filename}'. {exception}: {cause}"
-msgstr ""
-"'{filename}' 컬러 스키마를 불러오는 중 오류가 발생했습니다. {exception}: "
-"{cause}"
-
-#: ../Onboard/Appearance.py:939 ../Onboard/Appearance.py:1071
-msgid ""
-"Duplicate key_id '{}' found in color scheme file. Key_ids must occur only "
-"once."
-msgstr ""
-"중복된 key_id '{}'가 색상 스키마 파일에서 발견되었습니다. Key_id는 한 번만 나"
-"타나야 합니다."
-
-#: ../Onboard/settings.py:316
-msgid "Onboard Preferences"
-msgstr "온보드 설정"
-
-#. touch_feedback_size_label: 0=auto, i.e. let Onboard guess
-#. the size of the label popup.
-#: ../Onboard/settings.py:675
-msgid "auto"
-msgstr ""
-
-#: ../Onboard/settings.py:751
-msgid "Copy layout '{}' to this new name:"
-msgstr "'{}' 레이아웃을 새로운 이름으로 복사:"
-
-#: ../Onboard/settings.py:764
-msgid "Delete layout '{}'?"
-msgstr "'{}' 레이아웃을 삭제할까요?"
-
-#: ../Onboard/settings.py:812
-msgid "System settings not found ({}): {}"
-msgstr "시스템 설정을 찾을수 없습니다 ({}): {}"
-
-#: ../Onboard/settings.py:835
-msgid "Core layouts"
-msgstr "핵심 레이아웃"
-
-#: ../Onboard/settings.py:836
-msgid "Contributions"
-msgstr "기여자"
-
-#: ../Onboard/settings.py:837
-msgid "My layouts"
-msgstr ""
-
-#: ../Onboard/settings.py:872
-msgid "Author: {}"
-msgstr "저자: {}"
-
-#: ../Onboard/settings.py:876
-msgid "About Layout"
-msgstr "About 레이아웃"
-
-#: ../Onboard/settings.py:981
-msgid "Enter a name for the new theme:"
-msgstr "새로운 테마의 이름 정하기 :"
-
-#: ../Onboard/settings.py:989
-#, python-brace-format
-msgid ""
-"This theme file already exists.\n"
-"'{filename}'\n"
-"\n"
-"Overwrite it?"
-msgstr ""
-"이 테마 파일은 이미 존재합니다.\n"
-"'{filename}'\n"
-"\n"
-"덮어 쓰시겠습니까?"
-
-#: ../Onboard/settings.py:1006
-msgid "Reset selected theme to Onboard defaults?"
-msgstr "선택하신 테마를 온보드 기본 테마로 설정하시겠습니까?"
-
-#: ../Onboard/settings.py:1008
-msgid "Delete selected theme?"
-msgstr "선택한 테마를 삭제하시겠습니까?"
-
-#. Translators: reset button of Preferences->Theme.
-#: ../Onboard/settings.py:1137
-msgid "_Reset"
-msgstr "초기화(_R)"
-
-#. Translators: delete button of Preferences->Theme. It used to be
-#. stock item STOCK_DELETE until Gtk 3.10 deprecated those.
-#: ../Onboard/settings.py:1141
-msgid "_Delete"
-msgstr "삭제하기(_D)"
-
-#. Translators: header of a tree view column with toggles to ignore
-#. keyboard devices (Preferences->Auto-show->External Keyboards).
-#: ../Onboard/settings.py:1278
-msgid "Ignore"
-msgstr ""
-
-#. Translators: header of a tree view column with device names
-#. (Preferences->Auto-show->External Keyboards).
-#: ../Onboard/settings.py:1282
-msgid "Device"
-msgstr ""
-
-#. Key style with flat fill- and border colors
-#: ../Onboard/settings.py:1619
-msgid "Flat"
-msgstr "평평하게"
-
-#. Key style for dish-like key caps
-#: ../Onboard/settings.py:1623
-msgid "Dish"
-msgstr "접시 형태"
-
-#: ../Onboard/settings.py:1672 ../Onboard/settings.py:1729
-msgid "Default"
-msgstr "기본값"
-
-#: ../Onboard/settings.py:1713
-msgid "Bold"
-msgstr "진하게"
-
-#: ../Onboard/settings.py:1715
-msgid "Italic"
-msgstr "기울임"
-
-#: ../Onboard/settings.py:1717
-msgid "Condensed"
-msgstr "줄임"
-
-#: ../Onboard/settings.py:1730
-msgid ""
-msgstr ""
-
-#: ../Onboard/settings.py:1730
-msgid "Ubuntu Logo"
-msgstr "우분투 로고"
-
-#: ../Onboard/settings.py:1864
-msgid "Step"
-msgstr "단계"
-
-#: ../Onboard/settings.py:1865
-msgid "Left"
-msgstr "왼쪽"
-
-#: ../Onboard/settings.py:1866
-msgid "Right"
-msgstr "오른쪽"
-
-#: ../Onboard/settings.py:1867
-msgid "Up"
-msgstr "위"
-
-#: ../Onboard/settings.py:1868
-msgid "Down"
-msgstr "아래"
-
-#: ../Onboard/settings.py:1869
-msgid "Activate"
-msgstr "활성화"
-
-#: ../Onboard/settings.py:2038
-msgid "Action:"
-msgstr "동작:"
-
-#: ../Onboard/settings.py:2202
-msgid "Disabled"
-msgstr "사용하지 않음"
-
-#: ../Onboard/settings.py:2208
-msgid "Button"
-msgstr "버튼"
-
-#: ../Onboard/settings.py:2263 ../Onboard/settings.py:2308
-msgid "Press a button..."
-msgstr "버튼을 누르세요...."
-
-#: ../Onboard/settings.py:2310
-msgid "Press a key..."
-msgstr "키를 누르십시오..."
-
-#. ##############
-#: ../Onboard/SnippetView.py:39
-msgid "<Enter label>"
-msgstr "<레이블 입력>"
-
-#: ../Onboard/SnippetView.py:40
-msgid "<Enter text>"
-msgstr "<텍스트 입력>"
-
-#: ../Onboard/SnippetView.py:52
-msgid "Button Number"
-msgstr "버튼 번호"
-
-#: ../Onboard/SnippetView.py:59
-msgid "Button Label"
-msgstr "버튼 레이블"
-
-#: ../Onboard/SnippetView.py:68
-msgid "Snippet Text"
-msgstr "관용구 텍스트"
-
-#: ../Onboard/SnippetView.py:113
-msgid "Must be an integer number"
-msgstr "정수를 입력하셔야 합니다"
-
-#: ../Onboard/SnippetView.py:122
-#, python-format
-msgid "Snippet %d is already in use."
-msgstr "%d 관용구는 이미 사용 중입니다."
-
-#: ../Onboard/utils.py:1535
-msgid "failed to create directory '{}': {}"
-msgstr "'{}' 디렉터리를 생성하는 데 실패하였습니다: {}"
 
 #~ msgid "Show settings"
 #~ msgstr "설정 보기"

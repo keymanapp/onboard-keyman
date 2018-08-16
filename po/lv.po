@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: onboard\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-14 20:56+0100\n"
+"POT-Creation-Date: 2017-02-16 22:56+0100\n"
 "PO-Revision-Date: 2011-08-29 21:35+0000\n"
 "Last-Translator: Rūdolfs Mazurs <Unknown>\n"
 "Language-Team: Latvian <lv@li.org>\n"
@@ -26,97 +26,649 @@ msgstr ""
 "X-Launchpad-Export-Date: 2017-02-14 14:04+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 
-#: ../Onboard/WPEngine.py:483
-msgid "Failed to load language model '{}': {} ({})"
-msgstr "Neizdevās ielādēt valodas modeli '{}': {} ({})"
+#: ../settings_scanner_dialog.ui.h:1
+msgid "Automatic scan for 1 switch"
+msgstr "Automātiski skenēt 1 slēdzi"
+
+#: ../settings_scanner_dialog.ui.h:2
+msgid "Critical overscan for 1 switch"
+msgstr "Kritiska pārskanēšana vienam slēdzim"
+
+#: ../settings_scanner_dialog.ui.h:3
+msgid "Step scan for 2 switches"
+msgstr "Skenēšanas solis diviem slēdžiem"
+
+#: ../settings_scanner_dialog.ui.h:4
+msgid "Directed scan for 3 or 5 switches"
+msgstr "Virziena skenēšana trīs vai pieciem slēdžiem"
+
+#: ../settings_scanner_dialog.ui.h:5
+msgid "Scanner Settings"
+msgstr "Skenera iestatījumi"
+
+#: ../settings_scanner_dialog.ui.h:6
+msgctxt "Label of the close button of the scanner settings dialog."
+msgid "_Close"
+msgstr ""
+
+#: ../settings_scanner_dialog.ui.h:7
+msgid "Select a scanning _profile:"
+msgstr "Izvēlieties skenēšanas _profilu:"
+
+#: ../settings_scanner_dialog.ui.h:8
+msgid "_Step interval:"
+msgstr "_Soļa intervāls:"
+
+#: ../settings_scanner_dialog.ui.h:9
+msgid "Sc_an cycles:"
+msgstr "Sk_enēšanas cikls:"
+
+#: ../settings_scanner_dialog.ui.h:10
+msgid ""
+"The time the scanner rests on a key or group before moving to the next. (in "
+"seconds)"
+msgstr ""
+"Laiks sekundēs, kurā skeneris paliek uz taustiņa vai grupas, pirms "
+"pārvietoties uz nākamo."
+
+#: ../settings_scanner_dialog.ui.h:11
+msgid ""
+"The number of times the scanner cycles through the entire keyboard before it "
+"stops."
+msgstr "Reizes, cik skeneris iet cauri visai tastatūrai, līdz pārtrauc."
+
+#: ../settings_scanner_dialog.ui.h:12
+msgid "Step _only during switch down"
+msgstr "Veikt s_oli tikai piespiesta slēdža laikā"
+
+#: ../settings_scanner_dialog.ui.h:13
+msgid "Progress the highlight only while the switch is held down."
+msgstr "Turpināt izcelšanu tikai tad, kad slēdzis ir piespiests."
+
+#: ../settings_scanner_dialog.ui.h:14
+msgid "_Forward interval:"
+msgstr "_Intervāls uz priekšu:"
+
+#: ../settings_scanner_dialog.ui.h:15
+msgid "_Backtrack interval:"
+msgstr "Intervāls _atpakaļ:"
+
+#: ../settings_scanner_dialog.ui.h:16
+msgid ""
+"The time the scanner rests on a key  while progressing forward. (in seconds)"
+msgstr "Laiks sekundēs, kurā skeneris paliek uz taustiņa, pirms doties tālāk."
+
+#: ../settings_scanner_dialog.ui.h:17
+msgid ""
+"The time the scanner rests on a key  while moving backwards. (in seconds)"
+msgstr ""
+"Laiks sekundēs, kurā skeneris paliek uz taustiņa, pirms doties atpakaļ."
+
+#: ../settings_scanner_dialog.ui.h:18
+msgid "Backtrack _steps:"
+msgstr "Atpakaļ _soļi:"
+
+#: ../settings_scanner_dialog.ui.h:19
+msgid "The number of keys the scanner steps back before moving forward again."
+msgstr ""
+"Taustiņu skaits, par ko atkāpjas atpakaļ skeneris, pirms atkal doties uz "
+"priekšu."
+
+#: ../settings_scanner_dialog.ui.h:20
+msgid "_Alternate switch actions"
+msgstr "M_ainīt slēdža darbības"
+
+#: ../settings_scanner_dialog.ui.h:21
+msgid ""
+"Swap the scan actions after every key activation. The Step action will "
+"become the Activate action and vice versa."
+msgstr ""
+"Mainīt vietām skenēšanas darbības pēc katra taustiņa aktivēšanas. Soļa "
+"darbība kļūs par aktivēšanas darbību un otrādi."
+
+#: ../settings_scanner_dialog.ui.h:22
+msgid "Profiles"
+msgstr "Profili"
+
+#: ../settings_scanner_dialog.ui.h:23
+msgid "_Select an input device:"
+msgstr "Izvēlietie_s ievades ierīci:"
+
+#: ../settings_scanner_dialog.ui.h:24
+msgid "_Use this device only for scanning"
+msgstr "_Lietot šo ierīci tikai skenēšanai"
+
+#: ../settings_scanner_dialog.ui.h:25
+msgid ""
+"The selected device should not control the system mouse cursor or the "
+"keyboard caret."
+msgstr ""
+"Izvēlētajai ierīcei nevajadzētu ļaut kontrolēt peles kursoru vai tastatūru."
+
+#: ../settings_scanner_dialog.ui.h:26
+msgid "Input Device"
+msgstr "Ievades ierīce"
+
+#: ../settings_theme_dialog.ui.h:1
+msgid "Customize Theme"
+msgstr "Pielāgot motīvu"
+
+#: ../settings_theme_dialog.ui.h:2
+msgctxt "Label of the revert button of the theme settings dialog."
+msgid "_Revert"
+msgstr ""
+
+#: ../settings_theme_dialog.ui.h:3
+msgctxt "Label of the close button of the theme settings dialog."
+msgid "_Close"
+msgstr ""
+
+#: ../settings_theme_dialog.ui.h:4
+msgid "Color Sche_me"
+msgstr "Krāsu s_askaņa"
+
+#: ../settings_theme_dialog.ui.h:5 ../settings.ui.h:82
+msgid "_Background:"
+msgstr "_Fons:"
+
+#. Key style with simple gradients
+#: ../settings_theme_dialog.ui.h:6 ../Onboard/settings.py:1621
+msgid "Gradient"
+msgstr "Krāsu pāreja"
+
+#: ../settings_theme_dialog.ui.h:7
+msgid "_Angle:"
+msgstr "_Leņķis:"
+
+#: ../settings_theme_dialog.ui.h:8
+msgid "Light Direction"
+msgstr "Gaismas virziens"
+
+#: ../settings_theme_dialog.ui.h:9 ../settings.ui.h:28
+msgid "Keyboard"
+msgstr "Tastatūra"
+
+#: ../settings_theme_dialog.ui.h:10
+msgid "_Style:"
+msgstr "_Stils:"
+
+#: ../settings_theme_dialog.ui.h:11
+msgid "R_oundness:"
+msgstr "A_paļums:"
+
+#: ../settings_theme_dialog.ui.h:12
+msgid "S_ize:"
+msgstr "_Izmērs:"
+
+#: ../settings_theme_dialog.ui.h:13
+msgid "B_order width:"
+msgstr "_Malas platums:"
+
+#: ../settings_theme_dialog.ui.h:14
+msgid "Key Style"
+msgstr "Taustiņa stils"
+
+#: ../settings_theme_dialog.ui.h:15
+msgid "_Key:"
+msgstr "_Taustiņš:"
+
+#: ../settings_theme_dialog.ui.h:16
+msgid "_Border:"
+msgstr "_Mala:"
+
+#: ../settings_theme_dialog.ui.h:17
+msgid "Gradients"
+msgstr "Krāsu pārejas"
+
+#: ../settings_theme_dialog.ui.h:18
+msgid "_Strength:"
+msgstr "_Stiprums:"
+
+#: ../settings_theme_dialog.ui.h:19
+msgid "Shadow"
+msgstr "Ēna"
+
+#: ../settings_theme_dialog.ui.h:20
+msgid "Keys"
+msgstr "Tasutiņi"
+
+#: ../settings_theme_dialog.ui.h:21
+msgid "_Font:"
+msgstr "_Fonts:"
+
+#: ../settings_theme_dialog.ui.h:22
+msgid "_Attributes:"
+msgstr "_Atribūti:"
+
+#: ../settings_theme_dialog.ui.h:23
+msgid "Font"
+msgstr "Fonts"
+
+#: ../settings_theme_dialog.ui.h:24
+msgid "I_ndependent size"
+msgstr "_Neatkarīgs izmērs"
+
+#: ../settings_theme_dialog.ui.h:25
+msgid "_Super key:"
+msgstr "_Super taustiņš:"
+
+#: ../settings_theme_dialog.ui.h:26
+msgid "Label Override"
+msgstr "Etiķetes pārrakstīšana"
+
+#: ../settings_theme_dialog.ui.h:27
+msgid "Labels"
+msgstr "Etiķetes"
+
+#: ../Onboard/Appearance.py:130
+#, python-brace-format
+msgid "Color scheme for theme '{filename}' not found"
+msgstr "Nav atrasta krāsu saskaņa motīvam “{filename}”"
+
+#: ../Onboard/Appearance.py:350
+#, python-brace-format
+msgid "Error loading theme '{filename}'. {exception}: {cause}"
+msgstr "Kļūda, ielādējot motīvu “{filename}”. {exception} — {cause}"
+
+#: ../Onboard/Appearance.py:424
+msgid "Error saving "
+msgstr "Kļūda saglabājot "
+
+#: ../Onboard/Appearance.py:842
+#, python-brace-format
+msgid ""
+"Loading legacy color scheme format '{old_format}', please consider upgrading "
+"to current format '{new_format}': '{filename}'"
+msgstr ""
+"Ielādē novecojušu krāsu saskaņas formātu “{old_format}”. Lūdzu, apsveriet "
+"uzlabošanu uz aktuālo formātu “{new_format}” — “{filename}”"
+
+#: ../Onboard/Appearance.py:862
+#, python-brace-format
+msgid "Error loading color scheme '{filename}'. {exception}: {cause}"
+msgstr "Kļūda, ielādējot krāsu saskaņu “{filename}”. {exception} — {cause}"
+
+#: ../Onboard/Appearance.py:939 ../Onboard/Appearance.py:1071
+msgid ""
+"Duplicate key_id '{}' found in color scheme file. Key_ids must occur only "
+"once."
+msgstr ""
+"Ir atrasts key_id “{}” dublikāts krāsu saskaņas datnē. Key_id jāparādās "
+"tikai vienreiz."
+
+#. Title of the snippets dialog for existing snippets
+#: ../Onboard/KeyboardWidget.py:1590
+msgid "Edit snippet #{}"
+msgstr "Rediģēt fragmentu #{}"
+
+#. Title of the snippets dialog for new snippets
+#: ../Onboard/KeyboardWidget.py:1594
+msgid "New snippet"
+msgstr "Jauns fragments"
+
+#. Message in the snippets dialog for new snippets
+#: ../Onboard/KeyboardWidget.py:1596
+msgid "Enter a new snippet for button #{}:"
+msgstr "Ievadiet jaunu fragmentu pogai #{}:"
+
+#. Translators: cancel button of the snippets dialog. It used to
+#. be stock item STOCK_CANCEL until Gtk 3.10 deprecated those.
+#. Translators: cancel button of "New Input Device" dialog. It used to be
+#. stock item STOCK_CANCEL until Gtk 3.10 deprecated those.
+#: ../Onboard/KeyboardWidget.py:1606 ../Onboard/WindowUtils.py:1144
+msgid "_Cancel"
+msgstr "At_celt"
+
+#: ../Onboard/KeyboardWidget.py:1607
+msgid "_Save snippet"
+msgstr "_Saglabāt fragmentu"
+
+#: ../Onboard/KeyboardWidget.py:1627
+msgid "_Button label:"
+msgstr "_Pogas etiķete:"
+
+#: ../Onboard/KeyboardWidget.py:1631
+msgid "S_nippet:"
+msgstr "F_ragments"
+
+#: ../Onboard/KeyboardWidget.py:1801
+msgid "Other _Languages"
+msgstr "Citas va_lodas"
+
+#: ../Onboard/KeyboardWidget.py:1845
+msgid "_Remove suggestion…"
+msgstr "_Izņemt ieteikumu…"
 
 #. Default dialog title: name of the application
-#: ../Onboard/WindowUtils.py:1108 ../Onboard/KbdWindow.py:108
-#: ../data/onboard.desktop.in.h:1 ../Onboard/KeyboardWidget.py:1892
+#: ../Onboard/KeyboardWidget.py:1892 ../Onboard/WindowUtils.py:1108
+#: ../data/onboard.desktop.in.h:1 ../Onboard/KbdWindow.py:108
 #: ../data/onboard-autostart.desktop.in.h:1
 msgid "Onboard"
 msgstr "Onboard"
 
-#: ../Onboard/WindowUtils.py:1128
-msgid "New Input Device"
-msgstr "Jauna ievades ierīce"
+#: ../Onboard/KeyboardWidget.py:1901
+msgid "Remove word suggestion"
+msgstr "Izņemt vārda ieteikumu"
 
-#: ../Onboard/WindowUtils.py:1129
-msgid "Onboard has detected a new input device"
-msgstr "Onboard ir atklājis jaunu ievades ierīci"
+#: ../Onboard/KeyboardWidget.py:1912
+msgid "Remove '{}' everywhere."
+msgstr "Izņemt “{}” visur."
 
-#: ../Onboard/WindowUtils.py:1138
-msgid "Do you want to use this device for keyboard scanning?"
-msgstr "Vai vēlaties izmantot šo ierīci tastatūras skenēšanai?"
+#: ../Onboard/KeyboardWidget.py:1922
+msgid "This will only affect learned suggestions."
+msgstr "Tas ietekmēs tikai iemācītos ieteikumus."
 
-#. Translators: cancel button of "New Input Device" dialog. It used to be
-#. stock item STOCK_CANCEL until Gtk 3.10 deprecated those.
-#. Translators: cancel button of the snippets dialog. It used to
-#. be stock item STOCK_CANCEL until Gtk 3.10 deprecated those.
-#: ../Onboard/WindowUtils.py:1144 ../Onboard/KeyboardWidget.py:1606
-msgid "_Cancel"
-msgstr "At_celt"
+#: ../Onboard/KeyboardWidget.py:1962
+msgid "Remove '{}' only where it occures at text begin."
+msgstr "Izņemt “{}” tikai kur tie parādās teksta sākumā."
 
-#: ../Onboard/WindowUtils.py:1145
-msgid "Use device"
-msgstr "Izmantot ierīci"
+#: ../Onboard/KeyboardWidget.py:1965
+msgid "Remove '{}' only where it occures at sentence begin."
+msgstr "Izņemt “{}” tikai kur tie parādās teikuma sākumā."
+
+#: ../Onboard/KeyboardWidget.py:1968
+msgid "Remove '{}' only where it occures after numbers."
+msgstr "Izņemt “{}” tikai kur tie parādās pēc skaitļiem."
+
+#: ../Onboard/KeyboardWidget.py:1971
+msgid "Remove '{}' only where it occures after '{}'."
+msgstr "Izņemt “{}” tikai kur tie parādās pēc “{}”."
 
 #: ../Onboard/Timer.py:160 ../Onboard/pypredict/tools/filter.py:382
-#: ../Onboard/LanguageSupport.py:173 ../Onboard/SpellChecker.py:634
-#: ../Onboard/SpellChecker.py:670 ../Onboard/SpellChecker.py:709
-#: ../Onboard/SpellChecker.py:723 ../Onboard/pypredict/tools/train.py:227
+#: ../Onboard/LanguageSupport.py:173 ../Onboard/pypredict/tools/train.py:227
+#: ../Onboard/SpellChecker.py:634 ../Onboard/SpellChecker.py:670
+#: ../Onboard/SpellChecker.py:709 ../Onboard/SpellChecker.py:723
 msgid "Failed to execute '{}', {}"
 msgstr "Neizdevās palaist “{}”, {}"
 
-#: ../Onboard/WordSuggestions.py:2692
-msgid ""
-"<big>Onboard failed to open learned word suggestions.</big>\n"
-"\n"
-"The error was:\n"
-"<tt>{}</tt>\n"
-"\n"
-"Revert word suggestions to the last backup (recommended)?"
-msgstr ""
-"<big>Onboard neizdevās atvērt iemācīto vārdu ieteikumus.</big>\n"
-"\n"
-"Kļūda:\n"
-"<tt>{}</tt>\n"
-"\n"
-"Atgriezt vārdu ieteikumus uz pēdējo dublējumu (ieteicams)?"
-
-#: ../Onboard/WordSuggestions.py:2711
-msgid ""
-"<big>Onboard failed to open learned word suggestions.</big>\n"
-"\n"
-"The error was:\n"
-"<tt>{}</tt>\n"
-"\n"
-"The suggestions have to be reset, but the erroneous file will remain at \n"
-"'{}'"
-msgstr ""
-"<big>Onboard neizdevās atvērt iemācīto vārdu ieteikumus.</big>\n"
-"\n"
-"Kļūda:\n"
-"<tt>{}</tt>\n"
-"\n"
-"Ieteikumi ir atstatīti, bet kļūdainā datne palika\n"
-"“{}”"
-
-#: ../data/onboard-settings.desktop.in.h:1
-msgid "Onboard Settings"
+#: ../Onboard/settings.py:316
+msgid "Onboard Preferences"
 msgstr "Onboard iestatījumi"
 
-#: ../data/onboard-settings.desktop.in.h:2
-msgid "Onboard onscreen keyboard settings"
-msgstr "Onboard ekrāna tastatūras iestatījumi"
+#. touch_feedback_size_label: 0=auto, i.e. let Onboard guess
+#. the size of the label popup.
+#: ../Onboard/settings.py:675
+msgid "auto"
+msgstr ""
 
-#: ../data/onboard-settings.desktop.in.h:3
-msgid "Change Onboard settings"
-msgstr "Mainīt Onboard iestatījumus"
+#: ../Onboard/settings.py:751
+msgid "Copy layout '{}' to this new name:"
+msgstr "Kopēt izkārtojumu “{}” uz šo jauno nosaukumu:"
 
-#: ../Onboard/KbdWindow.py:202
-msgid "no window transparency available; screen doesn't support alpha channels"
-msgstr "nav pieejama logu caurspīdība; ekrāns neatbalsta alfa kanālus"
+#: ../Onboard/settings.py:764
+msgid "Delete layout '{}'?"
+msgstr "Dzēst izkārtojumu “{}”?"
+
+#: ../Onboard/settings.py:812
+msgid "System settings not found ({}): {}"
+msgstr "Nav atrasti sistēmas iestatījumi ({}) — {}"
+
+#: ../Onboard/settings.py:835
+msgid "Core layouts"
+msgstr "Kodola izkārtojumi"
+
+#: ../Onboard/settings.py:836
+msgid "Contributions"
+msgstr "Pienesumi"
+
+#: ../Onboard/settings.py:837
+msgid "My layouts"
+msgstr ""
+
+#: ../Onboard/settings.py:872
+msgid "Author: {}"
+msgstr "Autors: {}"
+
+#: ../Onboard/settings.py:876
+msgid "About Layout"
+msgstr "Par izkārtojumu"
+
+#: ../Onboard/settings.py:981
+msgid "Enter a name for the new theme:"
+msgstr "Ievadiet nosaukumu jaunajam motīvam:"
+
+#: ../Onboard/settings.py:989
+#, python-brace-format
+msgid ""
+"This theme file already exists.\n"
+"'{filename}'\n"
+"\n"
+"Overwrite it?"
+msgstr ""
+"Šī stila datne jau eksistē.\n"
+"“{filename}”\n"
+"\n"
+"Vai to pārrakstīt?"
+
+#: ../Onboard/settings.py:1006
+msgid "Reset selected theme to Onboard defaults?"
+msgstr "Atstatīt izvēlēto motīvu uz Onboard noklusējuma?"
+
+#: ../Onboard/settings.py:1008
+msgid "Delete selected theme?"
+msgstr "Dzēst izvēlēto motīvu?"
+
+#. Translators: reset button of Preferences->Theme.
+#: ../Onboard/settings.py:1137
+msgid "_Reset"
+msgstr "_Atstatīt"
+
+#. Translators: delete button of Preferences->Theme. It used to be
+#. stock item STOCK_DELETE until Gtk 3.10 deprecated those.
+#: ../Onboard/settings.py:1141
+msgid "_Delete"
+msgstr "_Dzēst"
+
+#. Translators: header of a tree view column with toggles to ignore
+#. keyboard devices (Preferences->Auto-show->External Keyboards).
+#: ../Onboard/settings.py:1278
+msgid "Ignore"
+msgstr ""
+
+#. Translators: header of a tree view column with device names
+#. (Preferences->Auto-show->External Keyboards).
+#: ../Onboard/settings.py:1282
+msgid "Device"
+msgstr ""
+
+#. Key style with flat fill- and border colors
+#: ../Onboard/settings.py:1619
+msgid "Flat"
+msgstr "Plakans"
+
+#. Key style for dish-like key caps
+#: ../Onboard/settings.py:1623
+msgid "Dish"
+msgstr "Šķīvis"
+
+#: ../Onboard/settings.py:1672 ../Onboard/settings.py:1729
+msgid "Default"
+msgstr "Noklusējuma"
+
+#: ../Onboard/settings.py:1713
+msgid "Bold"
+msgstr "Treknraksts"
+
+#: ../Onboard/settings.py:1715
+msgid "Italic"
+msgstr "Slīpraksts"
+
+#: ../Onboard/settings.py:1717
+msgid "Condensed"
+msgstr "Saspiests"
+
+#: ../Onboard/settings.py:1730
+msgid ""
+msgstr ""
+
+#: ../Onboard/settings.py:1730
+msgid "Ubuntu Logo"
+msgstr "Ubuntu logo"
+
+#: ../Onboard/settings.py:1864
+msgid "Step"
+msgstr "Solis"
+
+#: ../Onboard/settings.py:1865
+msgid "Left"
+msgstr "Pa kreisi"
+
+#: ../Onboard/settings.py:1866
+msgid "Right"
+msgstr "Pa labi"
+
+#: ../Onboard/settings.py:1867
+msgid "Up"
+msgstr "Augšup"
+
+#: ../Onboard/settings.py:1868
+msgid "Down"
+msgstr "Lejup"
+
+#: ../Onboard/settings.py:1869
+msgid "Activate"
+msgstr "Aktīvs"
+
+#: ../Onboard/settings.py:2038
+msgid "Action:"
+msgstr "Darbība:"
+
+#: ../Onboard/settings.py:2202
+msgid "Disabled"
+msgstr "Deaktivēts"
+
+#: ../Onboard/settings.py:2208
+msgid "Button"
+msgstr "Poga"
+
+#: ../Onboard/settings.py:2263 ../Onboard/settings.py:2308
+msgid "Press a button..."
+msgstr "Nospiediet pogu..."
+
+#: ../Onboard/settings.py:2310
+msgid "Press a key..."
+msgstr "Nospiediet taustiņu..."
+
+#: ../Onboard/Indicator.py:56
+msgid "_Show Onboard"
+msgstr "_Rādīt Onboard"
+
+#: ../Onboard/Indicator.py:57
+msgid "_Hide Onboard"
+msgstr "_Slēpt Onboard"
+
+#. Translators: label of a menu item. It used to be stock item
+#. STOCK_PREFERENCES until Gtk 3.10 deprecated those.
+#: ../Onboard/Indicator.py:83
+msgid "_Preferences"
+msgstr "_Iestatījumi"
+
+#: ../Onboard/Indicator.py:91
+msgid "_Help"
+msgstr ""
+
+#. Translators: label of a menu item. It used to be stock item
+#. STOCK_QUIT until Gtk 3.10 deprecated those.
+#: ../Onboard/Indicator.py:102
+msgid "_Quit"
+msgstr "_Iziet"
+
+#: ../Onboard/Indicator.py:228 ../Onboard/Indicator.py:231
+msgid "Onboard on-screen keyboard"
+msgstr "Onboard ekrāna tastatūra"
+
+#: ../Onboard/utils.py:1535
+msgid "failed to create directory '{}': {}"
+msgstr "neizdevās izveidot direktoriju “{}”: {}"
+
+#: ../settings_docking_dialog.ui.h:1
+msgid "Top"
+msgstr "Augša"
+
+#: ../settings_docking_dialog.ui.h:2
+msgid "Bottom"
+msgstr "Apakša"
+
+#: ../settings_docking_dialog.ui.h:3
+msgid "Active Monitor"
+msgstr "Aktīvais monitors"
+
+#: ../settings_docking_dialog.ui.h:4
+msgid "Primary Monitor"
+msgstr "Primārais monitors"
+
+#: ../settings_docking_dialog.ui.h:5
+msgid "Monitor 0"
+msgstr "Monitors 0"
+
+#: ../settings_docking_dialog.ui.h:6
+msgid "Monitor 1"
+msgstr "Monitors 1"
+
+#: ../settings_docking_dialog.ui.h:7
+msgid "Monitor 2"
+msgstr "Monitors 2"
+
+#: ../settings_docking_dialog.ui.h:8
+msgid "Monitor 3"
+msgstr "Monitors 3"
+
+#: ../settings_docking_dialog.ui.h:9
+msgid "Monitor 4"
+msgstr "Monitors 4"
+
+#: ../settings_docking_dialog.ui.h:10
+msgid "Monitor 5"
+msgstr "Monitors 5"
+
+#: ../settings_docking_dialog.ui.h:11
+msgid "Monitor 6"
+msgstr "Monitors 6"
+
+#: ../settings_docking_dialog.ui.h:12
+msgid "Monitor 7"
+msgstr "Monitors 7"
+
+#: ../settings_docking_dialog.ui.h:13
+msgid "Monitor 8"
+msgstr "Monitors 8"
+
+#: ../settings_docking_dialog.ui.h:14
+msgid "Docking settings"
+msgstr "Dokošanas iestatījumi"
+
+#: ../settings_docking_dialog.ui.h:15
+msgctxt "Label of the close button of the docking settings dialog."
+msgid "_Close"
+msgstr ""
+
+#: ../settings_docking_dialog.ui.h:16
+msgid "Shrink workarea"
+msgstr "Samazināt darba laukumu"
+
+#: ../settings_docking_dialog.ui.h:17
+msgid "Shrink the available space for maximized windows."
+msgstr "Samazināt pieejamo telpu maksimizētiem logiem."
+
+#: ../settings_docking_dialog.ui.h:18
+msgid "Expand on landscape screens"
+msgstr "Izvērst ainavas ekrāniem"
+
+#: ../settings_docking_dialog.ui.h:19
+msgid "Expand keyboard to the width of the workarea."
+msgstr "Izvērst tastatūru līdz darba laukuma platumam."
+
+#: ../settings_docking_dialog.ui.h:20
+msgid "Expand on portrait screens"
+msgstr "Izvērst portretu ekrāniem"
+
+#: ../settings_docking_dialog.ui.h:21
+msgid "Dock to screen edge:"
+msgstr "Dokot uz ekrāna malām:"
+
+#: ../settings_docking_dialog.ui.h:22
+msgid "Dock to monitor:"
+msgstr "Doks uz monitoru:"
 
 #: ../settings.ui.h:1
 msgid "Key-repeat"
@@ -226,10 +778,6 @@ msgstr "Motīvs"
 #: ../settings.ui.h:27 ../data/layoutstrings.py:88 ../data/layoutstrings.py:340
 msgid "Snippets"
 msgstr "Fragmenti"
-
-#: ../settings.ui.h:28 ../settings_theme_dialog.ui.h:9
-msgid "Keyboard"
-msgstr "Tastatūra"
 
 #: ../settings.ui.h:29
 msgid "Auto-show"
@@ -451,10 +999,6 @@ msgstr "L_ogs:"
 #: ../settings.ui.h:81
 msgid "Transparency of the whole keyboard window. Requires compositing."
 msgstr "Visa tastatūras loga caurspīdīgums. Pieprasa kopozicionēšanu."
-
-#: ../settings.ui.h:82 ../settings_theme_dialog.ui.h:5
-msgid "_Background:"
-msgstr "_Fons:"
 
 #: ../settings.ui.h:83
 msgid "Transparency of the keyboard background"
@@ -1026,456 +1570,21 @@ msgstr ""
 msgid "Hover Click"
 msgstr "Uzkavēšanās klikšķis"
 
-#: ../settings_scanner_dialog.ui.h:1
-msgid "Automatic scan for 1 switch"
-msgstr "Automātiski skenēt 1 slēdzi"
-
-#: ../settings_scanner_dialog.ui.h:2
-msgid "Critical overscan for 1 switch"
-msgstr "Kritiska pārskanēšana vienam slēdzim"
-
-#: ../settings_scanner_dialog.ui.h:3
-msgid "Step scan for 2 switches"
-msgstr "Skenēšanas solis diviem slēdžiem"
-
-#: ../settings_scanner_dialog.ui.h:4
-msgid "Directed scan for 3 or 5 switches"
-msgstr "Virziena skenēšana trīs vai pieciem slēdžiem"
-
-#: ../settings_scanner_dialog.ui.h:5
-msgid "Scanner Settings"
-msgstr "Skenera iestatījumi"
-
-#: ../settings_scanner_dialog.ui.h:6
-msgctxt "Label of the close button of the scanner settings dialog."
-msgid "_Close"
-msgstr ""
-
-#: ../settings_scanner_dialog.ui.h:7
-msgid "Select a scanning _profile:"
-msgstr "Izvēlieties skenēšanas _profilu:"
-
-#: ../settings_scanner_dialog.ui.h:8
-msgid "_Step interval:"
-msgstr "_Soļa intervāls:"
-
-#: ../settings_scanner_dialog.ui.h:9
-msgid "Sc_an cycles:"
-msgstr "Sk_enēšanas cikls:"
-
-#: ../settings_scanner_dialog.ui.h:10
-msgid ""
-"The time the scanner rests on a key or group before moving to the next. (in "
-"seconds)"
-msgstr ""
-"Laiks sekundēs, kurā skeneris paliek uz taustiņa vai grupas, pirms "
-"pārvietoties uz nākamo."
-
-#: ../settings_scanner_dialog.ui.h:11
-msgid ""
-"The number of times the scanner cycles through the entire keyboard before it "
-"stops."
-msgstr "Reizes, cik skeneris iet cauri visai tastatūrai, līdz pārtrauc."
-
-#: ../settings_scanner_dialog.ui.h:12
-msgid "Step _only during switch down"
-msgstr "Veikt s_oli tikai piespiesta slēdža laikā"
-
-#: ../settings_scanner_dialog.ui.h:13
-msgid "Progress the highlight only while the switch is held down."
-msgstr "Turpināt izcelšanu tikai tad, kad slēdzis ir piespiests."
-
-#: ../settings_scanner_dialog.ui.h:14
-msgid "_Forward interval:"
-msgstr "_Intervāls uz priekšu:"
-
-#: ../settings_scanner_dialog.ui.h:15
-msgid "_Backtrack interval:"
-msgstr "Intervāls _atpakaļ:"
-
-#: ../settings_scanner_dialog.ui.h:16
-msgid ""
-"The time the scanner rests on a key  while progressing forward. (in seconds)"
-msgstr "Laiks sekundēs, kurā skeneris paliek uz taustiņa, pirms doties tālāk."
-
-#: ../settings_scanner_dialog.ui.h:17
-msgid ""
-"The time the scanner rests on a key  while moving backwards. (in seconds)"
-msgstr ""
-"Laiks sekundēs, kurā skeneris paliek uz taustiņa, pirms doties atpakaļ."
-
-#: ../settings_scanner_dialog.ui.h:18
-msgid "Backtrack _steps:"
-msgstr "Atpakaļ _soļi:"
-
-#: ../settings_scanner_dialog.ui.h:19
-msgid "The number of keys the scanner steps back before moving forward again."
-msgstr ""
-"Taustiņu skaits, par ko atkāpjas atpakaļ skeneris, pirms atkal doties uz "
-"priekšu."
-
-#: ../settings_scanner_dialog.ui.h:20
-msgid "_Alternate switch actions"
-msgstr "M_ainīt slēdža darbības"
-
-#: ../settings_scanner_dialog.ui.h:21
-msgid ""
-"Swap the scan actions after every key activation. The Step action will "
-"become the Activate action and vice versa."
-msgstr ""
-"Mainīt vietām skenēšanas darbības pēc katra taustiņa aktivēšanas. Soļa "
-"darbība kļūs par aktivēšanas darbību un otrādi."
-
-#: ../settings_scanner_dialog.ui.h:22
-msgid "Profiles"
-msgstr "Profili"
-
-#: ../settings_scanner_dialog.ui.h:23
-msgid "_Select an input device:"
-msgstr "Izvēlietie_s ievades ierīci:"
-
-#: ../settings_scanner_dialog.ui.h:24
-msgid "_Use this device only for scanning"
-msgstr "_Lietot šo ierīci tikai skenēšanai"
-
-#: ../settings_scanner_dialog.ui.h:25
-msgid ""
-"The selected device should not control the system mouse cursor or the "
-"keyboard caret."
-msgstr ""
-"Izvēlētajai ierīcei nevajadzētu ļaut kontrolēt peles kursoru vai tastatūru."
-
-#: ../settings_scanner_dialog.ui.h:26
-msgid "Input Device"
-msgstr "Ievades ierīce"
-
-#: ../data/onboard.desktop.in.h:2 ../data/onboard-autostart.desktop.in.h:2
-msgid "Onboard onscreen keyboard"
-msgstr "Onboard ekrāna tastatūra"
-
-#: ../data/onboard.desktop.in.h:3 ../data/onboard-autostart.desktop.in.h:3
-msgid "Flexible onscreen keyboard"
-msgstr ""
-
-#. Title of the snippets dialog for existing snippets
-#: ../Onboard/KeyboardWidget.py:1590
-msgid "Edit snippet #{}"
-msgstr "Rediģēt fragmentu #{}"
-
-#. Title of the snippets dialog for new snippets
-#: ../Onboard/KeyboardWidget.py:1594
-msgid "New snippet"
-msgstr "Jauns fragments"
-
-#. Message in the snippets dialog for new snippets
-#: ../Onboard/KeyboardWidget.py:1596
-msgid "Enter a new snippet for button #{}:"
-msgstr "Ievadiet jaunu fragmentu pogai #{}:"
-
-#: ../Onboard/KeyboardWidget.py:1607
-msgid "_Save snippet"
-msgstr "_Saglabāt fragmentu"
-
-#: ../Onboard/KeyboardWidget.py:1627
-msgid "_Button label:"
-msgstr "_Pogas etiķete:"
-
-#: ../Onboard/KeyboardWidget.py:1631
-msgid "S_nippet:"
-msgstr "F_ragments"
-
-#: ../Onboard/KeyboardWidget.py:1801
-msgid "Other _Languages"
-msgstr "Citas va_lodas"
-
-#: ../Onboard/KeyboardWidget.py:1845
-msgid "_Remove suggestion…"
-msgstr "_Izņemt ieteikumu…"
-
-#: ../Onboard/KeyboardWidget.py:1901
-msgid "Remove word suggestion"
-msgstr "Izņemt vārda ieteikumu"
-
-#: ../Onboard/KeyboardWidget.py:1912
-msgid "Remove '{}' everywhere."
-msgstr "Izņemt “{}” visur."
-
-#: ../Onboard/KeyboardWidget.py:1922
-msgid "This will only affect learned suggestions."
-msgstr "Tas ietekmēs tikai iemācītos ieteikumus."
-
-#: ../Onboard/KeyboardWidget.py:1962
-msgid "Remove '{}' only where it occures at text begin."
-msgstr "Izņemt “{}” tikai kur tie parādās teksta sākumā."
-
-#: ../Onboard/KeyboardWidget.py:1965
-msgid "Remove '{}' only where it occures at sentence begin."
-msgstr "Izņemt “{}” tikai kur tie parādās teikuma sākumā."
-
-#: ../Onboard/KeyboardWidget.py:1968
-msgid "Remove '{}' only where it occures after numbers."
-msgstr "Izņemt “{}” tikai kur tie parādās pēc skaitļiem."
-
-#: ../Onboard/KeyboardWidget.py:1971
-msgid "Remove '{}' only where it occures after '{}'."
-msgstr "Izņemt “{}” tikai kur tie parādās pēc “{}”."
-
-#: ../settings_docking_dialog.ui.h:1
-msgid "Top"
-msgstr "Augša"
-
-#: ../settings_docking_dialog.ui.h:2
-msgid "Bottom"
-msgstr "Apakša"
-
-#: ../settings_docking_dialog.ui.h:3
-msgid "Active Monitor"
-msgstr "Aktīvais monitors"
-
-#: ../settings_docking_dialog.ui.h:4
-msgid "Primary Monitor"
-msgstr "Primārais monitors"
-
-#: ../settings_docking_dialog.ui.h:5
-msgid "Monitor 0"
-msgstr "Monitors 0"
-
-#: ../settings_docking_dialog.ui.h:6
-msgid "Monitor 1"
-msgstr "Monitors 1"
-
-#: ../settings_docking_dialog.ui.h:7
-msgid "Monitor 2"
-msgstr "Monitors 2"
-
-#: ../settings_docking_dialog.ui.h:8
-msgid "Monitor 3"
-msgstr "Monitors 3"
-
-#: ../settings_docking_dialog.ui.h:9
-msgid "Monitor 4"
-msgstr "Monitors 4"
-
-#: ../settings_docking_dialog.ui.h:10
-msgid "Monitor 5"
-msgstr "Monitors 5"
-
-#: ../settings_docking_dialog.ui.h:11
-msgid "Monitor 6"
-msgstr "Monitors 6"
-
-#: ../settings_docking_dialog.ui.h:12
-msgid "Monitor 7"
-msgstr "Monitors 7"
-
-#: ../settings_docking_dialog.ui.h:13
-msgid "Monitor 8"
-msgstr "Monitors 8"
-
-#: ../settings_docking_dialog.ui.h:14
-msgid "Docking settings"
-msgstr "Dokošanas iestatījumi"
-
-#: ../settings_docking_dialog.ui.h:15
-msgctxt "Label of the close button of the docking settings dialog."
-msgid "_Close"
-msgstr ""
-
-#: ../settings_docking_dialog.ui.h:16
-msgid "Shrink workarea"
-msgstr "Samazināt darba laukumu"
-
-#: ../settings_docking_dialog.ui.h:17
-msgid "Shrink the available space for maximized windows."
-msgstr "Samazināt pieejamo telpu maksimizētiem logiem."
-
-#: ../settings_docking_dialog.ui.h:18
-msgid "Expand on landscape screens"
-msgstr "Izvērst ainavas ekrāniem"
-
-#: ../settings_docking_dialog.ui.h:19
-msgid "Expand keyboard to the width of the workarea."
-msgstr "Izvērst tastatūru līdz darba laukuma platumam."
-
-#: ../settings_docking_dialog.ui.h:20
-msgid "Expand on portrait screens"
-msgstr "Izvērst portretu ekrāniem"
-
-#: ../settings_docking_dialog.ui.h:21
-msgid "Dock to screen edge:"
-msgstr "Dokot uz ekrāna malām:"
-
-#: ../settings_docking_dialog.ui.h:22
-msgid "Dock to monitor:"
-msgstr "Doks uz monitoru:"
-
-#: ../Onboard/Indicator.py:56
-msgid "_Show Onboard"
-msgstr "_Rādīt Onboard"
-
-#: ../Onboard/Indicator.py:57
-msgid "_Hide Onboard"
-msgstr "_Slēpt Onboard"
-
-#. Translators: label of a menu item. It used to be stock item
-#. STOCK_PREFERENCES until Gtk 3.10 deprecated those.
-#: ../Onboard/Indicator.py:83
-msgid "_Preferences"
-msgstr "_Iestatījumi"
-
-#: ../Onboard/Indicator.py:91
-msgid "_Help"
-msgstr ""
-
-#. Translators: label of a menu item. It used to be stock item
-#. STOCK_QUIT until Gtk 3.10 deprecated those.
-#: ../Onboard/Indicator.py:102
-msgid "_Quit"
-msgstr "_Iziet"
-
-#: ../Onboard/Indicator.py:228 ../Onboard/Indicator.py:231
-msgid "Onboard on-screen keyboard"
-msgstr "Onboard ekrāna tastatūra"
-
-#: ../Onboard/OnboardGtk.py:429
-msgid ""
-"Onboard is configured to appear with the dialog to unlock the screen; for "
-"example to dismiss the password-protected screensaver.\n"
-"\n"
-"However the system is not configured anymore to use Onboard to unlock the "
-"screen. A possible reason can be that another application configured the "
-"system to use something else.\n"
-"\n"
-"Would you like to reconfigure the system to show Onboard when unlocking the "
-"screen?"
-msgstr ""
-"Onboard ir konfigurēts parādīties ekrāna atbloķēšanas dialoglodziņā, "
-"piemēram, lai atceltu paroles aizsargātu ekrānsaudzētāju.\n"
-"\n"
-"Taču sistēma vairs nav konfigurēta tā, lai izmantotu Onboard ekrāna "
-"atbloķēšanai. Iespējamais iemesls varētu būt tāds, ka kāda cita lietotne ir "
-"konfigurējusi sistēmu, lai izmantotu ko citu.\n"
-"\n"
-"Vai vēlaties pārkonfigurēt sistēmu, lai lietotu Onboard ekrāna atbloķēšanai?"
-
-#: ../Onboard/OnboardGtk.py:448
-msgid ""
-"Onboard is configured to appear with the dialog to unlock the screen; for "
-"example to dismiss the password-protected screensaver.\n"
-"\n"
-"However this function is disabled in the system.\n"
-"\n"
-"Would you like to activate it?"
-msgstr ""
-"Onboard ir nokonfigurēta, lai parādītos ar ekrāna atslēgšanas dialoglodziņu; "
-"piemēram, lai izkļūtu no paroles aizsargāta ekrānsaudzētāja.\n"
-"\n"
-"Taču šobrīd šī funkcija ir deaktivēta šajā sistēmā.\n"
-"\n"
-"Vai vēlaties to aktivizēt?"
-
-#: ../settings_theme_dialog.ui.h:1
-msgid "Customize Theme"
-msgstr "Pielāgot motīvu"
-
-#: ../settings_theme_dialog.ui.h:2
-msgctxt "Label of the revert button of the theme settings dialog."
-msgid "_Revert"
-msgstr ""
-
-#: ../settings_theme_dialog.ui.h:3
-msgctxt "Label of the close button of the theme settings dialog."
-msgid "_Close"
-msgstr ""
-
-#: ../settings_theme_dialog.ui.h:4
-msgid "Color Sche_me"
-msgstr "Krāsu s_askaņa"
-
-#. Key style with simple gradients
-#: ../settings_theme_dialog.ui.h:6 ../Onboard/settings.py:1621
-msgid "Gradient"
-msgstr "Krāsu pāreja"
-
-#: ../settings_theme_dialog.ui.h:7
-msgid "_Angle:"
-msgstr "_Leņķis:"
-
-#: ../settings_theme_dialog.ui.h:8
-msgid "Light Direction"
-msgstr "Gaismas virziens"
-
-#: ../settings_theme_dialog.ui.h:10
-msgid "_Style:"
-msgstr "_Stils:"
-
-#: ../settings_theme_dialog.ui.h:11
-msgid "R_oundness:"
-msgstr "A_paļums:"
-
-#: ../settings_theme_dialog.ui.h:12
-msgid "S_ize:"
-msgstr "_Izmērs:"
-
-#: ../settings_theme_dialog.ui.h:13
-msgid "B_order width:"
-msgstr "_Malas platums:"
-
-#: ../settings_theme_dialog.ui.h:14
-msgid "Key Style"
-msgstr "Taustiņa stils"
-
-#: ../settings_theme_dialog.ui.h:15
-msgid "_Key:"
-msgstr "_Taustiņš:"
-
-#: ../settings_theme_dialog.ui.h:16
-msgid "_Border:"
-msgstr "_Mala:"
-
-#: ../settings_theme_dialog.ui.h:17
-msgid "Gradients"
-msgstr "Krāsu pārejas"
-
-#: ../settings_theme_dialog.ui.h:18
-msgid "_Strength:"
-msgstr "_Stiprums:"
-
-#: ../settings_theme_dialog.ui.h:19
-msgid "Shadow"
-msgstr "Ēna"
-
-#: ../settings_theme_dialog.ui.h:20
-msgid "Keys"
-msgstr "Tasutiņi"
-
-#: ../settings_theme_dialog.ui.h:21
-msgid "_Font:"
-msgstr "_Fonts:"
-
-#: ../settings_theme_dialog.ui.h:22
-msgid "_Attributes:"
-msgstr "_Atribūti:"
-
-#: ../settings_theme_dialog.ui.h:23
-msgid "Font"
-msgstr "Fonts"
-
-#: ../settings_theme_dialog.ui.h:24
-msgid "I_ndependent size"
-msgstr "_Neatkarīgs izmērs"
-
-#: ../settings_theme_dialog.ui.h:25
-msgid "_Super key:"
-msgstr "_Super taustiņš:"
-
-#: ../settings_theme_dialog.ui.h:26
-msgid "Label Override"
-msgstr "Etiķetes pārrakstīšana"
-
-#: ../settings_theme_dialog.ui.h:27
-msgid "Labels"
-msgstr "Etiķetes"
+#: ../data/onboard-settings.desktop.in.h:1
+msgid "Onboard Settings"
+msgstr "Onboard iestatījumi"
+
+#: ../data/onboard-settings.desktop.in.h:2
+msgid "Onboard onscreen keyboard settings"
+msgstr "Onboard ekrāna tastatūras iestatījumi"
+
+#: ../data/onboard-settings.desktop.in.h:3
+msgid "Change Onboard settings"
+msgstr "Mainīt Onboard iestatījumus"
+
+#: ../Onboard/WPEngine.py:483
+msgid "Failed to load language model '{}': {} ({})"
+msgstr "Neizdevās ielādēt valodas modeli '{}': {} ({})"
 
 #. translators: this is a 'tooltip' of the key_template 'hoverclick' in keyboard layout 'key_defs.xml'
 #: ../data/layoutstrings.py:35 ../data/layoutstrings.py:193
@@ -2053,6 +2162,239 @@ msgstr "Pareizrakstības ieteikums"
 msgid "Sub-, Superscripts; Fractions"
 msgstr "Apakš/augšraksts; daļas"
 
+#: ../Onboard/OnboardGtk.py:429
+msgid ""
+"Onboard is configured to appear with the dialog to unlock the screen; for "
+"example to dismiss the password-protected screensaver.\n"
+"\n"
+"However the system is not configured anymore to use Onboard to unlock the "
+"screen. A possible reason can be that another application configured the "
+"system to use something else.\n"
+"\n"
+"Would you like to reconfigure the system to show Onboard when unlocking the "
+"screen?"
+msgstr ""
+"Onboard ir konfigurēts parādīties ekrāna atbloķēšanas dialoglodziņā, "
+"piemēram, lai atceltu paroles aizsargātu ekrānsaudzētāju.\n"
+"\n"
+"Taču sistēma vairs nav konfigurēta tā, lai izmantotu Onboard ekrāna "
+"atbloķēšanai. Iespējamais iemesls varētu būt tāds, ka kāda cita lietotne ir "
+"konfigurējusi sistēmu, lai izmantotu ko citu.\n"
+"\n"
+"Vai vēlaties pārkonfigurēt sistēmu, lai lietotu Onboard ekrāna atbloķēšanai?"
+
+#: ../Onboard/OnboardGtk.py:448
+msgid ""
+"Onboard is configured to appear with the dialog to unlock the screen; for "
+"example to dismiss the password-protected screensaver.\n"
+"\n"
+"However this function is disabled in the system.\n"
+"\n"
+"Would you like to activate it?"
+msgstr ""
+"Onboard ir nokonfigurēta, lai parādītos ar ekrāna atslēgšanas dialoglodziņu; "
+"piemēram, lai izkļūtu no paroles aizsargāta ekrānsaudzētāja.\n"
+"\n"
+"Taču šobrīd šī funkcija ir deaktivēta šajā sistēmā.\n"
+"\n"
+"Vai vēlaties to aktivizēt?"
+
+#: ../Onboard/Config.py:235
+msgid "Layout file ({}) or name"
+msgstr "Izkārtojuma datne ({}) vai nosaukums"
+
+#: ../Onboard/Config.py:238
+msgid "Theme file (.theme) or name"
+msgstr "Motīva datne (.theme) vai nosaukums"
+
+#: ../Onboard/Config.py:240
+msgid "Window size, widthxheight"
+msgstr "Loga izmērs, platumsxaugstums"
+
+#: ../Onboard/Config.py:241
+msgid "Window x position"
+msgstr "Loga x novietojums"
+
+#: ../Onboard/Config.py:242
+msgid "Window y position"
+msgstr "Loga y novietojums"
+
+#: ../Onboard/Config.py:247
+msgid "Start in XEmbed mode, e.g. for gnome-screensaver"
+msgstr "Palaist XEmbed režīmā, piemēram, programmai gnome-screensaver"
+
+#: ../Onboard/Config.py:250
+msgid "Allow multiple Onboard instances"
+msgstr "Atļaut vairākas Onboard instances"
+
+#: ../Onboard/Config.py:253
+msgid ""
+"Silently fail to start in the given desktop environments. DESKTOPS is a "
+"comma-separated list of XDG desktop names, e.g. GNOME for GNOME Shell."
+msgstr ""
+"Klusām neizdevās palaist dotajā darbvirsmas vidē. DESKTOPS ir ar komatiem "
+"atdalīts saraksts ar XDF darbvirsmu nosaukumiem, piemēram, GNOME attiecas uz "
+"GNOME Shell."
+
+#: ../Onboard/Config.py:259
+msgid ""
+"Delay showing the initial keyboard window by STARTUP_DELAY seconds (default "
+"0.0)."
+msgstr ""
+
+#: ../Onboard/Config.py:263
+msgid "Keep aspect ratio when resizing the window"
+msgstr "Paturēt izmēru attiecību, kad maina loga izmēru"
+
+#: ../Onboard/Config.py:265
+msgid ""
+"Override auto-detection and manually select quirks\n"
+"QUIRKS={metacity|compiz|mutter}"
+msgstr ""
+"Pārrakstīt automātisko noteikšanu un pašrocīgi izvēlēties trikus\n"
+"QUIRKS={metacity|compiz|mutter}"
+
+#: ../Onboard/Config.py:380
+msgid "Migrating user directory '{}' to '{}'."
+msgstr "Pārvieto lietotāja direktoriju “{}” uz “{}”."
+
+#. honor XDG spec
+#. python >2.5
+#: ../Onboard/Config.py:388
+msgid "failed to migrate user directory. "
+msgstr "neizdevās pārvietot lietotāja direktoriju. "
+
+#: ../Onboard/Config.py:867
+#, python-brace-format
+msgid "layout '{filename}' does not exist"
+msgstr "neeksistē izkārtojums “{filename}”"
+
+#: ../Onboard/Config.py:908
+#, python-brace-format
+msgid "theme '{filename}' does not exist"
+msgstr "neeksistē motīvs “{filename}”"
+
+#: ../Onboard/Config.py:933
+msgid "Loading theme from '{}'"
+msgstr "Ielādē motīvu no “{}”"
+
+#: ../Onboard/Config.py:937
+msgid "Unable to read theme '{}'"
+msgstr "Nevar nolasīt motīvu “{}”"
+
+#: ../Onboard/Config.py:1143
+msgid ""
+"Enabling auto-show requires Gnome Accessibility.\n"
+"\n"
+"Onboard can turn on accessiblity now, however it is recommended that you log "
+"out and back in for it to reach its full potential.\n"
+"\n"
+"Enable accessibility now?"
+msgstr ""
+"Lai aktivētu automātisko attēlošanu, vajag Gnome pieejamību.\n"
+"\n"
+"Onboard var ieslēgt pieejamību tagad, bet ir vēlams izrakstīties un "
+"ierakstīties, lai tas darbotos pilnībā.\n"
+"\n"
+"Vai tagad aktivēt pieejamību?"
+
+#: ../Onboard/Config.py:1902
+#, python-brace-format
+msgid "color scheme '{filename}' does not exist"
+msgstr "neeksistē krāsu saderība “{filename}”"
+
+#: ../Onboard/WindowUtils.py:1128
+msgid "New Input Device"
+msgstr "Jauna ievades ierīce"
+
+#: ../Onboard/WindowUtils.py:1129
+msgid "Onboard has detected a new input device"
+msgstr "Onboard ir atklājis jaunu ievades ierīci"
+
+#: ../Onboard/WindowUtils.py:1138
+msgid "Do you want to use this device for keyboard scanning?"
+msgstr "Vai vēlaties izmantot šo ierīci tastatūras skenēšanai?"
+
+#: ../Onboard/WindowUtils.py:1145
+msgid "Use device"
+msgstr "Izmantot ierīci"
+
+#: ../data/onboard.desktop.in.h:2 ../data/onboard-autostart.desktop.in.h:2
+msgid "Onboard onscreen keyboard"
+msgstr "Onboard ekrāna tastatūra"
+
+#: ../data/onboard.desktop.in.h:3 ../data/onboard-autostart.desktop.in.h:3
+msgid "Flexible onscreen keyboard"
+msgstr ""
+
+#: ../Onboard/KbdWindow.py:202
+msgid "no window transparency available; screen doesn't support alpha channels"
+msgstr "nav pieejama logu caurspīdība; ekrāns neatbalsta alfa kanālus"
+
+#. ##############
+#: ../Onboard/SnippetView.py:39
+msgid "<Enter label>"
+msgstr "<Ievadiet etiķeti>"
+
+#: ../Onboard/SnippetView.py:40
+msgid "<Enter text>"
+msgstr "<Ievadiet tekstu>"
+
+#: ../Onboard/SnippetView.py:52
+msgid "Button Number"
+msgstr "Pogas numurs"
+
+#: ../Onboard/SnippetView.py:59
+msgid "Button Label"
+msgstr "Pogas etiķete"
+
+#: ../Onboard/SnippetView.py:68
+msgid "Snippet Text"
+msgstr "Fragmenta teksts"
+
+#: ../Onboard/SnippetView.py:113
+msgid "Must be an integer number"
+msgstr "Jābūt veselam skaitlim"
+
+#: ../Onboard/SnippetView.py:122
+#, python-format
+msgid "Snippet %d is already in use."
+msgstr "Fragments %d jau tiek izmantots."
+
+#: ../Onboard/WordSuggestions.py:2692
+msgid ""
+"<big>Onboard failed to open learned word suggestions.</big>\n"
+"\n"
+"The error was:\n"
+"<tt>{}</tt>\n"
+"\n"
+"Revert word suggestions to the last backup (recommended)?"
+msgstr ""
+"<big>Onboard neizdevās atvērt iemācīto vārdu ieteikumus.</big>\n"
+"\n"
+"Kļūda:\n"
+"<tt>{}</tt>\n"
+"\n"
+"Atgriezt vārdu ieteikumus uz pēdējo dublējumu (ieteicams)?"
+
+#: ../Onboard/WordSuggestions.py:2711
+msgid ""
+"<big>Onboard failed to open learned word suggestions.</big>\n"
+"\n"
+"The error was:\n"
+"<tt>{}</tt>\n"
+"\n"
+"The suggestions have to be reset, but the erroneous file will remain at \n"
+"'{}'"
+msgstr ""
+"<big>Onboard neizdevās atvērt iemācīto vārdu ieteikumus.</big>\n"
+"\n"
+"Kļūda:\n"
+"<tt>{}</tt>\n"
+"\n"
+"Ieteikumi ir atstatīti, bet kļūdainā datne palika\n"
+"“{}”"
+
 #: ../Onboard/LayoutLoaderSVG.py:164
 msgid ""
 "Loading legacy layout, format '{}'. Please consider upgrading to current "
@@ -2085,110 +2427,6 @@ msgstr "izkārtojumu kopēšana neizdevās, neatbalstīts izkārtojuma formāts 
 #: ../Onboard/LayoutLoaderSVG.py:1000
 msgid "copying svg file '{}' to '{}'"
 msgstr "kopē svg datni “{}” uz “{}”"
-
-#: ../Onboard/Config.py:236
-msgid "Layout file ({}) or name"
-msgstr "Izkārtojuma datne ({}) vai nosaukums"
-
-#: ../Onboard/Config.py:239
-msgid "Theme file (.theme) or name"
-msgstr "Motīva datne (.theme) vai nosaukums"
-
-#: ../Onboard/Config.py:241
-msgid "Window size, widthxheight"
-msgstr "Loga izmērs, platumsxaugstums"
-
-#: ../Onboard/Config.py:242
-msgid "Window x position"
-msgstr "Loga x novietojums"
-
-#: ../Onboard/Config.py:243
-msgid "Window y position"
-msgstr "Loga y novietojums"
-
-#: ../Onboard/Config.py:248
-msgid "Start in XEmbed mode, e.g. for gnome-screensaver"
-msgstr "Palaist XEmbed režīmā, piemēram, programmai gnome-screensaver"
-
-#: ../Onboard/Config.py:251
-msgid "Allow multiple Onboard instances"
-msgstr "Atļaut vairākas Onboard instances"
-
-#: ../Onboard/Config.py:254
-msgid ""
-"Silently fail to start in the given desktop environments. DESKTOPS is a "
-"comma-separated list of XDG desktop names, e.g. GNOME for GNOME Shell."
-msgstr ""
-"Klusām neizdevās palaist dotajā darbvirsmas vidē. DESKTOPS ir ar komatiem "
-"atdalīts saraksts ar XDF darbvirsmu nosaukumiem, piemēram, GNOME attiecas uz "
-"GNOME Shell."
-
-#: ../Onboard/Config.py:260
-msgid ""
-"Delay showing the initial keyboard window by STARTUP_DELAY seconds (default "
-"0.0)."
-msgstr ""
-
-#: ../Onboard/Config.py:264
-msgid "Keep aspect ratio when resizing the window"
-msgstr "Paturēt izmēru attiecību, kad maina loga izmēru"
-
-#: ../Onboard/Config.py:266
-msgid ""
-"Override auto-detection and manually select quirks\n"
-"QUIRKS={metacity|compiz|mutter}"
-msgstr ""
-"Pārrakstīt automātisko noteikšanu un pašrocīgi izvēlēties trikus\n"
-"QUIRKS={metacity|compiz|mutter}"
-
-#: ../Onboard/Config.py:381
-msgid "Migrating user directory '{}' to '{}'."
-msgstr "Pārvieto lietotāja direktoriju “{}” uz “{}”."
-
-#. honor XDG spec
-#. python >2.5
-#: ../Onboard/Config.py:389
-msgid "failed to migrate user directory. "
-msgstr "neizdevās pārvietot lietotāja direktoriju. "
-
-#: ../Onboard/Config.py:868
-#, python-brace-format
-msgid "layout '{filename}' does not exist"
-msgstr "neeksistē izkārtojums “{filename}”"
-
-#: ../Onboard/Config.py:909
-#, python-brace-format
-msgid "theme '{filename}' does not exist"
-msgstr "neeksistē motīvs “{filename}”"
-
-#: ../Onboard/Config.py:934
-msgid "Loading theme from '{}'"
-msgstr "Ielādē motīvu no “{}”"
-
-#: ../Onboard/Config.py:938
-msgid "Unable to read theme '{}'"
-msgstr "Nevar nolasīt motīvu “{}”"
-
-#: ../Onboard/Config.py:1144
-msgid ""
-"Enabling auto-show requires Gnome Accessibility.\n"
-"\n"
-"Onboard can turn on accessiblity now, however it is recommended that you log "
-"out and back in for it to reach its full potential.\n"
-"\n"
-"Enable accessibility now?"
-msgstr ""
-"Lai aktivētu automātisko attēlošanu, vajag Gnome pieejamību.\n"
-"\n"
-"Onboard var ieslēgt pieejamību tagad, bet ir vēlams izrakstīties un "
-"ierakstīties, lai tas darbotos pilnībā.\n"
-"\n"
-"Vai tagad aktivēt pieejamību?"
-
-#: ../Onboard/Config.py:1926
-#, python-brace-format
-msgid "color scheme '{filename}' does not exist"
-msgstr "neeksistē krāsu saderība “{filename}”"
 
 #: ../Onboard/ConfigUtils.py:81
 msgid "gsettings schema for '{}' is not installed"
@@ -2263,244 +2501,6 @@ msgstr ""
 #: ../Onboard/ConfigUtils.py:732
 msgid "Failed to get gsettings value. "
 msgstr "Neizdevās saņemt gsettings vērtību. "
-
-#: ../Onboard/Appearance.py:130
-#, python-brace-format
-msgid "Color scheme for theme '{filename}' not found"
-msgstr "Nav atrasta krāsu saskaņa motīvam “{filename}”"
-
-#: ../Onboard/Appearance.py:350
-#, python-brace-format
-msgid "Error loading theme '{filename}'. {exception}: {cause}"
-msgstr "Kļūda, ielādējot motīvu “{filename}”. {exception} — {cause}"
-
-#: ../Onboard/Appearance.py:424
-msgid "Error saving "
-msgstr "Kļūda saglabājot "
-
-#: ../Onboard/Appearance.py:842
-#, python-brace-format
-msgid ""
-"Loading legacy color scheme format '{old_format}', please consider upgrading "
-"to current format '{new_format}': '{filename}'"
-msgstr ""
-"Ielādē novecojušu krāsu saskaņas formātu “{old_format}”. Lūdzu, apsveriet "
-"uzlabošanu uz aktuālo formātu “{new_format}” — “{filename}”"
-
-#: ../Onboard/Appearance.py:862
-#, python-brace-format
-msgid "Error loading color scheme '{filename}'. {exception}: {cause}"
-msgstr "Kļūda, ielādējot krāsu saskaņu “{filename}”. {exception} — {cause}"
-
-#: ../Onboard/Appearance.py:939 ../Onboard/Appearance.py:1071
-msgid ""
-"Duplicate key_id '{}' found in color scheme file. Key_ids must occur only "
-"once."
-msgstr ""
-"Ir atrasts key_id “{}” dublikāts krāsu saskaņas datnē. Key_id jāparādās "
-"tikai vienreiz."
-
-#: ../Onboard/settings.py:316
-msgid "Onboard Preferences"
-msgstr "Onboard iestatījumi"
-
-#. touch_feedback_size_label: 0=auto, i.e. let Onboard guess
-#. the size of the label popup.
-#: ../Onboard/settings.py:675
-msgid "auto"
-msgstr ""
-
-#: ../Onboard/settings.py:751
-msgid "Copy layout '{}' to this new name:"
-msgstr "Kopēt izkārtojumu “{}” uz šo jauno nosaukumu:"
-
-#: ../Onboard/settings.py:764
-msgid "Delete layout '{}'?"
-msgstr "Dzēst izkārtojumu “{}”?"
-
-#: ../Onboard/settings.py:812
-msgid "System settings not found ({}): {}"
-msgstr "Nav atrasti sistēmas iestatījumi ({}) — {}"
-
-#: ../Onboard/settings.py:835
-msgid "Core layouts"
-msgstr "Kodola izkārtojumi"
-
-#: ../Onboard/settings.py:836
-msgid "Contributions"
-msgstr "Pienesumi"
-
-#: ../Onboard/settings.py:837
-msgid "My layouts"
-msgstr ""
-
-#: ../Onboard/settings.py:872
-msgid "Author: {}"
-msgstr "Autors: {}"
-
-#: ../Onboard/settings.py:876
-msgid "About Layout"
-msgstr "Par izkārtojumu"
-
-#: ../Onboard/settings.py:981
-msgid "Enter a name for the new theme:"
-msgstr "Ievadiet nosaukumu jaunajam motīvam:"
-
-#: ../Onboard/settings.py:989
-#, python-brace-format
-msgid ""
-"This theme file already exists.\n"
-"'{filename}'\n"
-"\n"
-"Overwrite it?"
-msgstr ""
-"Šī stila datne jau eksistē.\n"
-"“{filename}”\n"
-"\n"
-"Vai to pārrakstīt?"
-
-#: ../Onboard/settings.py:1006
-msgid "Reset selected theme to Onboard defaults?"
-msgstr "Atstatīt izvēlēto motīvu uz Onboard noklusējuma?"
-
-#: ../Onboard/settings.py:1008
-msgid "Delete selected theme?"
-msgstr "Dzēst izvēlēto motīvu?"
-
-#. Translators: reset button of Preferences->Theme.
-#: ../Onboard/settings.py:1137
-msgid "_Reset"
-msgstr "_Atstatīt"
-
-#. Translators: delete button of Preferences->Theme. It used to be
-#. stock item STOCK_DELETE until Gtk 3.10 deprecated those.
-#: ../Onboard/settings.py:1141
-msgid "_Delete"
-msgstr "_Dzēst"
-
-#. Translators: header of a tree view column with toggles to ignore
-#. keyboard devices (Preferences->Auto-show->External Keyboards).
-#: ../Onboard/settings.py:1278
-msgid "Ignore"
-msgstr ""
-
-#. Translators: header of a tree view column with device names
-#. (Preferences->Auto-show->External Keyboards).
-#: ../Onboard/settings.py:1282
-msgid "Device"
-msgstr ""
-
-#. Key style with flat fill- and border colors
-#: ../Onboard/settings.py:1619
-msgid "Flat"
-msgstr "Plakans"
-
-#. Key style for dish-like key caps
-#: ../Onboard/settings.py:1623
-msgid "Dish"
-msgstr "Šķīvis"
-
-#: ../Onboard/settings.py:1672 ../Onboard/settings.py:1729
-msgid "Default"
-msgstr "Noklusējuma"
-
-#: ../Onboard/settings.py:1713
-msgid "Bold"
-msgstr "Treknraksts"
-
-#: ../Onboard/settings.py:1715
-msgid "Italic"
-msgstr "Slīpraksts"
-
-#: ../Onboard/settings.py:1717
-msgid "Condensed"
-msgstr "Saspiests"
-
-#: ../Onboard/settings.py:1730
-msgid ""
-msgstr ""
-
-#: ../Onboard/settings.py:1730
-msgid "Ubuntu Logo"
-msgstr "Ubuntu logo"
-
-#: ../Onboard/settings.py:1864
-msgid "Step"
-msgstr "Solis"
-
-#: ../Onboard/settings.py:1865
-msgid "Left"
-msgstr "Pa kreisi"
-
-#: ../Onboard/settings.py:1866
-msgid "Right"
-msgstr "Pa labi"
-
-#: ../Onboard/settings.py:1867
-msgid "Up"
-msgstr "Augšup"
-
-#: ../Onboard/settings.py:1868
-msgid "Down"
-msgstr "Lejup"
-
-#: ../Onboard/settings.py:1869
-msgid "Activate"
-msgstr "Aktīvs"
-
-#: ../Onboard/settings.py:2038
-msgid "Action:"
-msgstr "Darbība:"
-
-#: ../Onboard/settings.py:2202
-msgid "Disabled"
-msgstr "Deaktivēts"
-
-#: ../Onboard/settings.py:2208
-msgid "Button"
-msgstr "Poga"
-
-#: ../Onboard/settings.py:2263 ../Onboard/settings.py:2308
-msgid "Press a button..."
-msgstr "Nospiediet pogu..."
-
-#: ../Onboard/settings.py:2310
-msgid "Press a key..."
-msgstr "Nospiediet taustiņu..."
-
-#. ##############
-#: ../Onboard/SnippetView.py:39
-msgid "<Enter label>"
-msgstr "<Ievadiet etiķeti>"
-
-#: ../Onboard/SnippetView.py:40
-msgid "<Enter text>"
-msgstr "<Ievadiet tekstu>"
-
-#: ../Onboard/SnippetView.py:52
-msgid "Button Number"
-msgstr "Pogas numurs"
-
-#: ../Onboard/SnippetView.py:59
-msgid "Button Label"
-msgstr "Pogas etiķete"
-
-#: ../Onboard/SnippetView.py:68
-msgid "Snippet Text"
-msgstr "Fragmenta teksts"
-
-#: ../Onboard/SnippetView.py:113
-msgid "Must be an integer number"
-msgstr "Jābūt veselam skaitlim"
-
-#: ../Onboard/SnippetView.py:122
-#, python-format
-msgid "Snippet %d is already in use."
-msgstr "Fragments %d jau tiek izmantots."
-
-#: ../Onboard/utils.py:1535
-msgid "failed to create directory '{}': {}"
-msgstr "neizdevās izveidot direktoriju “{}”: {}"
 
 #~ msgid "Change onBoard settings"
 #~ msgstr "Mainīt onBoard iestatījumus"

@@ -48,7 +48,7 @@
 layout=Compact
 #layout=Phone
 
-#system-theme-associations={'HighContrast' : 'HighContrast', 'HighContrastInverse' : 'HighContrastInverse', 'LowContrast' : 'LowContrast', 'ContrastHighInverse' : 'HighContrastInverse'}}
+#system-theme-associations={'HighContrast' : 'HighContrast', 'HighContrastInverse' : 'HighContrastInverse', 'LowContrast' : 'LowContrast', 'ContrastHighInverse' : 'HighContrastInverse'}
 #system-theme-tracking-enabled=True
 
 # Default theme
@@ -114,7 +114,7 @@ xembed-unity-greeter-offset-x=85.0
 # Color of the background bar that is rendered on top of the
 # background image in unity-greeter and gnome-screensaver.
 # If not specified, the color is taken from the keyboard's background color.
-xembed-background-color='#0000007F'
+xembed-background-color=#0000007F
 
 # Enable drawing the current GNOME background image as background in
 # unity-greeter and gnome-screensaver.

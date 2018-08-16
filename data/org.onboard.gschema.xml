@@ -73,11 +73,6 @@ If unavailable, 'AppIndicator' falls back to GtkStatusIcon.
             <summary>Start onboard with a minimized window.</summary>
             <description>Do not display the onboard window on start; start onboard minimized.</description>
         </key>
-        <key name="xembed-onboard" type="b">
-            <default>false</default>
-            <summary>Show onboard when unlocking the screen.</summary>
-            <description>Make onboard appear in conjunction to the dialog to unlock the screen.</description>
-        </key>
         <key name="show-tooltips" type="b">
             <default>true</default>
             <summary>Show tooltips.</summary>
@@ -103,6 +98,33 @@ If unavailable, 'AppIndicator' falls back to GtkStatusIcon.
             <summary>Current settings page</summary>
             <description>Current tab page of onboard-settings.</description>
         </key>
+        <key name="xembed-onboard" type="b">
+            <default>false</default>
+            <summary>Show onboard when unlocking the screen.</summary>
+            <description>Make onboard appear in conjunction to the dialog to unlock the screen.</description>
+        </key>
+        <key name="xembed-aspect-change-range" type="ad">
+            <default>[0, 1.6]</default>
+            <summary>Aspect range while embedded</summary>
+            <description>Limits of the keyboard's aspect ratio when it is embedded, i.e. in unity-greeter, gnome-screensaver.</description>
+        </key>
+        <key name="xembed-background-color" type="s">
+            <default>'#0000007F'</default>
+            <summary>Background color when embedded</summary>
+            <description>Color of the background bar that is rendered on top of the background image in unity-greeter and gnome-screensaver. If empty, the color is taken from the keyboard's current background color.'</description>
+        </key>
+        <key name="xembed-background-image-enabled" type="b">
+            <default>true</default>
+            <summary>Enable drawing background image when embedded</summary>
+            <description>Enable drawing the current GNOME background image in unity-greeter and gnome-screensaver.</description>
+        </key>
+        <key name="xembed-unity-greeter-offset-x" type="d">
+            <default>85.0</default>
+            <summary>Horizontal position in unity-greeter</summary>
+            <description>Maximum distance of the keyboard in unity-greeter in pixels from the left screen edge. Depending on the available width, the offset is gradually lowered. Negative values center the keyboard horizontally. 
+This key has no effect outside of unity-greeter.</description>
+        </key>
+
         <child name="auto-show" schema="org.onboard.auto-show" />
         <child name="keyboard" schema="org.onboard.keyboard" />
         <child name="window" schema="org.onboard.window" />

@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: onboard\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-14 20:56+0100\n"
+"POT-Creation-Date: 2017-02-16 22:56+0100\n"
 "PO-Revision-Date: 2014-06-06 07:18+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Sanskrit <sa@li.org>\n"
@@ -25,83 +25,632 @@ msgstr ""
 "X-Launchpad-Export-Date: 2017-02-14 14:04+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 
-#: ../Onboard/WPEngine.py:483
-msgid "Failed to load language model '{}': {} ({})"
+#: ../settings_scanner_dialog.ui.h:1
+msgid "Automatic scan for 1 switch"
+msgstr ""
+
+#: ../settings_scanner_dialog.ui.h:2
+msgid "Critical overscan for 1 switch"
+msgstr ""
+
+#: ../settings_scanner_dialog.ui.h:3
+msgid "Step scan for 2 switches"
+msgstr ""
+
+#: ../settings_scanner_dialog.ui.h:4
+msgid "Directed scan for 3 or 5 switches"
+msgstr ""
+
+#: ../settings_scanner_dialog.ui.h:5
+msgid "Scanner Settings"
+msgstr ""
+
+#: ../settings_scanner_dialog.ui.h:6
+msgctxt "Label of the close button of the scanner settings dialog."
+msgid "_Close"
+msgstr ""
+
+#: ../settings_scanner_dialog.ui.h:7
+msgid "Select a scanning _profile:"
+msgstr ""
+
+#: ../settings_scanner_dialog.ui.h:8
+msgid "_Step interval:"
+msgstr ""
+
+#: ../settings_scanner_dialog.ui.h:9
+msgid "Sc_an cycles:"
+msgstr ""
+
+#: ../settings_scanner_dialog.ui.h:10
+msgid ""
+"The time the scanner rests on a key or group before moving to the next. (in "
+"seconds)"
+msgstr ""
+
+#: ../settings_scanner_dialog.ui.h:11
+msgid ""
+"The number of times the scanner cycles through the entire keyboard before it "
+"stops."
+msgstr ""
+
+#: ../settings_scanner_dialog.ui.h:12
+msgid "Step _only during switch down"
+msgstr ""
+
+#: ../settings_scanner_dialog.ui.h:13
+msgid "Progress the highlight only while the switch is held down."
+msgstr ""
+
+#: ../settings_scanner_dialog.ui.h:14
+msgid "_Forward interval:"
+msgstr ""
+
+#: ../settings_scanner_dialog.ui.h:15
+msgid "_Backtrack interval:"
+msgstr ""
+
+#: ../settings_scanner_dialog.ui.h:16
+msgid ""
+"The time the scanner rests on a key  while progressing forward. (in seconds)"
+msgstr ""
+
+#: ../settings_scanner_dialog.ui.h:17
+msgid ""
+"The time the scanner rests on a key  while moving backwards. (in seconds)"
+msgstr ""
+
+#: ../settings_scanner_dialog.ui.h:18
+msgid "Backtrack _steps:"
+msgstr ""
+
+#: ../settings_scanner_dialog.ui.h:19
+msgid "The number of keys the scanner steps back before moving forward again."
+msgstr ""
+
+#: ../settings_scanner_dialog.ui.h:20
+msgid "_Alternate switch actions"
+msgstr ""
+
+#: ../settings_scanner_dialog.ui.h:21
+msgid ""
+"Swap the scan actions after every key activation. The Step action will "
+"become the Activate action and vice versa."
+msgstr ""
+
+#: ../settings_scanner_dialog.ui.h:22
+msgid "Profiles"
+msgstr ""
+
+#: ../settings_scanner_dialog.ui.h:23
+msgid "_Select an input device:"
+msgstr ""
+
+#: ../settings_scanner_dialog.ui.h:24
+msgid "_Use this device only for scanning"
+msgstr ""
+
+#: ../settings_scanner_dialog.ui.h:25
+msgid ""
+"The selected device should not control the system mouse cursor or the "
+"keyboard caret."
+msgstr ""
+
+#: ../settings_scanner_dialog.ui.h:26
+msgid "Input Device"
+msgstr ""
+
+#: ../settings_theme_dialog.ui.h:1
+msgid "Customize Theme"
+msgstr ""
+
+#: ../settings_theme_dialog.ui.h:2
+msgctxt "Label of the revert button of the theme settings dialog."
+msgid "_Revert"
+msgstr ""
+
+#: ../settings_theme_dialog.ui.h:3
+msgctxt "Label of the close button of the theme settings dialog."
+msgid "_Close"
+msgstr ""
+
+#: ../settings_theme_dialog.ui.h:4
+msgid "Color Sche_me"
+msgstr ""
+
+#: ../settings_theme_dialog.ui.h:5 ../settings.ui.h:82
+msgid "_Background:"
+msgstr "पृष्ठदेशः-"
+
+#. Key style with simple gradients
+#: ../settings_theme_dialog.ui.h:6 ../Onboard/settings.py:1621
+msgid "Gradient"
+msgstr ""
+
+#: ../settings_theme_dialog.ui.h:7
+msgid "_Angle:"
+msgstr ""
+
+#: ../settings_theme_dialog.ui.h:8
+msgid "Light Direction"
+msgstr ""
+
+#: ../settings_theme_dialog.ui.h:9 ../settings.ui.h:28
+msgid "Keyboard"
+msgstr "कीलफलकम्"
+
+#: ../settings_theme_dialog.ui.h:10
+msgid "_Style:"
+msgstr ""
+
+#: ../settings_theme_dialog.ui.h:11
+msgid "R_oundness:"
+msgstr ""
+
+#: ../settings_theme_dialog.ui.h:12
+msgid "S_ize:"
+msgstr ""
+
+#: ../settings_theme_dialog.ui.h:13
+msgid "B_order width:"
+msgstr ""
+
+#: ../settings_theme_dialog.ui.h:14
+msgid "Key Style"
+msgstr ""
+
+#: ../settings_theme_dialog.ui.h:15
+msgid "_Key:"
+msgstr ""
+
+#: ../settings_theme_dialog.ui.h:16
+msgid "_Border:"
+msgstr ""
+
+#: ../settings_theme_dialog.ui.h:17
+msgid "Gradients"
+msgstr ""
+
+#: ../settings_theme_dialog.ui.h:18
+msgid "_Strength:"
+msgstr ""
+
+#: ../settings_theme_dialog.ui.h:19
+msgid "Shadow"
+msgstr ""
+
+#: ../settings_theme_dialog.ui.h:20
+msgid "Keys"
+msgstr ""
+
+#: ../settings_theme_dialog.ui.h:21
+msgid "_Font:"
+msgstr ""
+
+#: ../settings_theme_dialog.ui.h:22
+msgid "_Attributes:"
+msgstr ""
+
+#: ../settings_theme_dialog.ui.h:23
+msgid "Font"
+msgstr ""
+
+#: ../settings_theme_dialog.ui.h:24
+msgid "I_ndependent size"
+msgstr ""
+
+#: ../settings_theme_dialog.ui.h:25
+msgid "_Super key:"
+msgstr ""
+
+#: ../settings_theme_dialog.ui.h:26
+msgid "Label Override"
+msgstr ""
+
+#: ../settings_theme_dialog.ui.h:27
+msgid "Labels"
+msgstr ""
+
+#: ../Onboard/Appearance.py:130
+#, python-brace-format
+msgid "Color scheme for theme '{filename}' not found"
+msgstr ""
+
+#: ../Onboard/Appearance.py:350
+#, python-brace-format
+msgid "Error loading theme '{filename}'. {exception}: {cause}"
+msgstr ""
+
+#: ../Onboard/Appearance.py:424
+msgid "Error saving "
+msgstr ""
+
+#: ../Onboard/Appearance.py:842
+#, python-brace-format
+msgid ""
+"Loading legacy color scheme format '{old_format}', please consider upgrading "
+"to current format '{new_format}': '{filename}'"
+msgstr ""
+
+#: ../Onboard/Appearance.py:862
+#, python-brace-format
+msgid "Error loading color scheme '{filename}'. {exception}: {cause}"
+msgstr ""
+
+#: ../Onboard/Appearance.py:939 ../Onboard/Appearance.py:1071
+msgid ""
+"Duplicate key_id '{}' found in color scheme file. Key_ids must occur only "
+"once."
+msgstr ""
+
+#. Title of the snippets dialog for existing snippets
+#: ../Onboard/KeyboardWidget.py:1590
+msgid "Edit snippet #{}"
+msgstr ""
+
+#. Title of the snippets dialog for new snippets
+#: ../Onboard/KeyboardWidget.py:1594
+msgid "New snippet"
+msgstr ""
+
+#. Message in the snippets dialog for new snippets
+#: ../Onboard/KeyboardWidget.py:1596
+msgid "Enter a new snippet for button #{}:"
+msgstr ""
+
+#. Translators: cancel button of the snippets dialog. It used to
+#. be stock item STOCK_CANCEL until Gtk 3.10 deprecated those.
+#. Translators: cancel button of "New Input Device" dialog. It used to be
+#. stock item STOCK_CANCEL until Gtk 3.10 deprecated those.
+#: ../Onboard/KeyboardWidget.py:1606 ../Onboard/WindowUtils.py:1144
+msgid "_Cancel"
+msgstr ""
+
+#: ../Onboard/KeyboardWidget.py:1607
+msgid "_Save snippet"
+msgstr ""
+
+#: ../Onboard/KeyboardWidget.py:1627
+msgid "_Button label:"
+msgstr ""
+
+#: ../Onboard/KeyboardWidget.py:1631
+msgid "S_nippet:"
+msgstr ""
+
+#: ../Onboard/KeyboardWidget.py:1801
+msgid "Other _Languages"
+msgstr ""
+
+#: ../Onboard/KeyboardWidget.py:1845
+msgid "_Remove suggestion…"
 msgstr ""
 
 #. Default dialog title: name of the application
-#: ../Onboard/WindowUtils.py:1108 ../Onboard/KbdWindow.py:108
-#: ../data/onboard.desktop.in.h:1 ../Onboard/KeyboardWidget.py:1892
+#: ../Onboard/KeyboardWidget.py:1892 ../Onboard/WindowUtils.py:1108
+#: ../data/onboard.desktop.in.h:1 ../Onboard/KbdWindow.py:108
 #: ../data/onboard-autostart.desktop.in.h:1
 msgid "Onboard"
 msgstr ""
 
-#: ../Onboard/WindowUtils.py:1128
-msgid "New Input Device"
+#: ../Onboard/KeyboardWidget.py:1901
+msgid "Remove word suggestion"
 msgstr ""
 
-#: ../Onboard/WindowUtils.py:1129
-msgid "Onboard has detected a new input device"
+#: ../Onboard/KeyboardWidget.py:1912
+msgid "Remove '{}' everywhere."
 msgstr ""
 
-#: ../Onboard/WindowUtils.py:1138
-msgid "Do you want to use this device for keyboard scanning?"
+#: ../Onboard/KeyboardWidget.py:1922
+msgid "This will only affect learned suggestions."
 msgstr ""
 
-#. Translators: cancel button of "New Input Device" dialog. It used to be
-#. stock item STOCK_CANCEL until Gtk 3.10 deprecated those.
-#. Translators: cancel button of the snippets dialog. It used to
-#. be stock item STOCK_CANCEL until Gtk 3.10 deprecated those.
-#: ../Onboard/WindowUtils.py:1144 ../Onboard/KeyboardWidget.py:1606
-msgid "_Cancel"
+#: ../Onboard/KeyboardWidget.py:1962
+msgid "Remove '{}' only where it occures at text begin."
 msgstr ""
 
-#: ../Onboard/WindowUtils.py:1145
-msgid "Use device"
+#: ../Onboard/KeyboardWidget.py:1965
+msgid "Remove '{}' only where it occures at sentence begin."
+msgstr ""
+
+#: ../Onboard/KeyboardWidget.py:1968
+msgid "Remove '{}' only where it occures after numbers."
+msgstr ""
+
+#: ../Onboard/KeyboardWidget.py:1971
+msgid "Remove '{}' only where it occures after '{}'."
 msgstr ""
 
 #: ../Onboard/Timer.py:160 ../Onboard/pypredict/tools/filter.py:382
-#: ../Onboard/LanguageSupport.py:173 ../Onboard/SpellChecker.py:634
-#: ../Onboard/SpellChecker.py:670 ../Onboard/SpellChecker.py:709
-#: ../Onboard/SpellChecker.py:723 ../Onboard/pypredict/tools/train.py:227
+#: ../Onboard/LanguageSupport.py:173 ../Onboard/pypredict/tools/train.py:227
+#: ../Onboard/SpellChecker.py:634 ../Onboard/SpellChecker.py:670
+#: ../Onboard/SpellChecker.py:709 ../Onboard/SpellChecker.py:723
 msgid "Failed to execute '{}', {}"
 msgstr ""
 
-#: ../Onboard/WordSuggestions.py:2692
+#: ../Onboard/settings.py:316
+msgid "Onboard Preferences"
+msgstr ""
+
+#. touch_feedback_size_label: 0=auto, i.e. let Onboard guess
+#. the size of the label popup.
+#: ../Onboard/settings.py:675
+msgid "auto"
+msgstr ""
+
+#: ../Onboard/settings.py:751
+msgid "Copy layout '{}' to this new name:"
+msgstr ""
+
+#: ../Onboard/settings.py:764
+msgid "Delete layout '{}'?"
+msgstr ""
+
+#: ../Onboard/settings.py:812
+msgid "System settings not found ({}): {}"
+msgstr ""
+
+#: ../Onboard/settings.py:835
+msgid "Core layouts"
+msgstr ""
+
+#: ../Onboard/settings.py:836
+msgid "Contributions"
+msgstr ""
+
+#: ../Onboard/settings.py:837
+msgid "My layouts"
+msgstr ""
+
+#: ../Onboard/settings.py:872
+msgid "Author: {}"
+msgstr ""
+
+#: ../Onboard/settings.py:876
+msgid "About Layout"
+msgstr ""
+
+#: ../Onboard/settings.py:981
+msgid "Enter a name for the new theme:"
+msgstr ""
+
+#: ../Onboard/settings.py:989
+#, python-brace-format
 msgid ""
-"<big>Onboard failed to open learned word suggestions.</big>\n"
+"This theme file already exists.\n"
+"'{filename}'\n"
 "\n"
-"The error was:\n"
-"<tt>{}</tt>\n"
-"\n"
-"Revert word suggestions to the last backup (recommended)?"
+"Overwrite it?"
 msgstr ""
 
-#: ../Onboard/WordSuggestions.py:2711
-msgid ""
-"<big>Onboard failed to open learned word suggestions.</big>\n"
-"\n"
-"The error was:\n"
-"<tt>{}</tt>\n"
-"\n"
-"The suggestions have to be reset, but the erroneous file will remain at \n"
-"'{}'"
+#: ../Onboard/settings.py:1006
+msgid "Reset selected theme to Onboard defaults?"
 msgstr ""
 
-#: ../data/onboard-settings.desktop.in.h:1
-msgid "Onboard Settings"
+#: ../Onboard/settings.py:1008
+msgid "Delete selected theme?"
 msgstr ""
 
-#: ../data/onboard-settings.desktop.in.h:2
-msgid "Onboard onscreen keyboard settings"
+#. Translators: reset button of Preferences->Theme.
+#: ../Onboard/settings.py:1137
+msgid "_Reset"
 msgstr ""
 
-#: ../data/onboard-settings.desktop.in.h:3
-msgid "Change Onboard settings"
+#. Translators: delete button of Preferences->Theme. It used to be
+#. stock item STOCK_DELETE until Gtk 3.10 deprecated those.
+#: ../Onboard/settings.py:1141
+msgid "_Delete"
 msgstr ""
 
-#: ../Onboard/KbdWindow.py:202
-msgid "no window transparency available; screen doesn't support alpha channels"
+#. Translators: header of a tree view column with toggles to ignore
+#. keyboard devices (Preferences->Auto-show->External Keyboards).
+#: ../Onboard/settings.py:1278
+msgid "Ignore"
+msgstr ""
+
+#. Translators: header of a tree view column with device names
+#. (Preferences->Auto-show->External Keyboards).
+#: ../Onboard/settings.py:1282
+msgid "Device"
+msgstr ""
+
+#. Key style with flat fill- and border colors
+#: ../Onboard/settings.py:1619
+msgid "Flat"
+msgstr ""
+
+#. Key style for dish-like key caps
+#: ../Onboard/settings.py:1623
+msgid "Dish"
+msgstr ""
+
+#: ../Onboard/settings.py:1672 ../Onboard/settings.py:1729
+msgid "Default"
+msgstr ""
+
+#: ../Onboard/settings.py:1713
+msgid "Bold"
+msgstr ""
+
+#: ../Onboard/settings.py:1715
+msgid "Italic"
+msgstr ""
+
+#: ../Onboard/settings.py:1717
+msgid "Condensed"
+msgstr ""
+
+#: ../Onboard/settings.py:1730
+msgid ""
+msgstr ""
+
+#: ../Onboard/settings.py:1730
+msgid "Ubuntu Logo"
+msgstr ""
+
+#: ../Onboard/settings.py:1864
+msgid "Step"
+msgstr ""
+
+#: ../Onboard/settings.py:1865
+msgid "Left"
+msgstr ""
+
+#: ../Onboard/settings.py:1866
+msgid "Right"
+msgstr ""
+
+#: ../Onboard/settings.py:1867
+msgid "Up"
+msgstr ""
+
+#: ../Onboard/settings.py:1868
+msgid "Down"
+msgstr ""
+
+#: ../Onboard/settings.py:1869
+msgid "Activate"
+msgstr ""
+
+#: ../Onboard/settings.py:2038
+msgid "Action:"
+msgstr ""
+
+#: ../Onboard/settings.py:2202
+msgid "Disabled"
+msgstr ""
+
+#: ../Onboard/settings.py:2208
+msgid "Button"
+msgstr ""
+
+#: ../Onboard/settings.py:2263 ../Onboard/settings.py:2308
+msgid "Press a button..."
+msgstr ""
+
+#: ../Onboard/settings.py:2310
+msgid "Press a key..."
+msgstr ""
+
+#: ../Onboard/Indicator.py:56
+msgid "_Show Onboard"
+msgstr ""
+
+#: ../Onboard/Indicator.py:57
+msgid "_Hide Onboard"
+msgstr ""
+
+#. Translators: label of a menu item. It used to be stock item
+#. STOCK_PREFERENCES until Gtk 3.10 deprecated those.
+#: ../Onboard/Indicator.py:83
+msgid "_Preferences"
+msgstr ""
+
+#: ../Onboard/Indicator.py:91
+msgid "_Help"
+msgstr ""
+
+#. Translators: label of a menu item. It used to be stock item
+#. STOCK_QUIT until Gtk 3.10 deprecated those.
+#: ../Onboard/Indicator.py:102
+msgid "_Quit"
+msgstr ""
+
+#: ../Onboard/Indicator.py:228 ../Onboard/Indicator.py:231
+msgid "Onboard on-screen keyboard"
+msgstr ""
+
+#: ../Onboard/utils.py:1535
+msgid "failed to create directory '{}': {}"
+msgstr ""
+
+#: ../settings_docking_dialog.ui.h:1
+msgid "Top"
+msgstr ""
+
+#: ../settings_docking_dialog.ui.h:2
+msgid "Bottom"
+msgstr ""
+
+#: ../settings_docking_dialog.ui.h:3
+msgid "Active Monitor"
+msgstr ""
+
+#: ../settings_docking_dialog.ui.h:4
+msgid "Primary Monitor"
+msgstr ""
+
+#: ../settings_docking_dialog.ui.h:5
+msgid "Monitor 0"
+msgstr ""
+
+#: ../settings_docking_dialog.ui.h:6
+msgid "Monitor 1"
+msgstr ""
+
+#: ../settings_docking_dialog.ui.h:7
+msgid "Monitor 2"
+msgstr ""
+
+#: ../settings_docking_dialog.ui.h:8
+msgid "Monitor 3"
+msgstr ""
+
+#: ../settings_docking_dialog.ui.h:9
+msgid "Monitor 4"
+msgstr ""
+
+#: ../settings_docking_dialog.ui.h:10
+msgid "Monitor 5"
+msgstr ""
+
+#: ../settings_docking_dialog.ui.h:11
+msgid "Monitor 6"
+msgstr ""
+
+#: ../settings_docking_dialog.ui.h:12
+msgid "Monitor 7"
+msgstr ""
+
+#: ../settings_docking_dialog.ui.h:13
+msgid "Monitor 8"
+msgstr ""
+
+#: ../settings_docking_dialog.ui.h:14
+msgid "Docking settings"
+msgstr ""
+
+#: ../settings_docking_dialog.ui.h:15
+msgctxt "Label of the close button of the docking settings dialog."
+msgid "_Close"
+msgstr ""
+
+#: ../settings_docking_dialog.ui.h:16
+msgid "Shrink workarea"
+msgstr ""
+
+#: ../settings_docking_dialog.ui.h:17
+msgid "Shrink the available space for maximized windows."
+msgstr ""
+
+#: ../settings_docking_dialog.ui.h:18
+msgid "Expand on landscape screens"
+msgstr ""
+
+#: ../settings_docking_dialog.ui.h:19
+msgid "Expand keyboard to the width of the workarea."
+msgstr ""
+
+#: ../settings_docking_dialog.ui.h:20
+msgid "Expand on portrait screens"
+msgstr ""
+
+#: ../settings_docking_dialog.ui.h:21
+msgid "Dock to screen edge:"
+msgstr ""
+
+#: ../settings_docking_dialog.ui.h:22
+msgid "Dock to monitor:"
 msgstr ""
 
 #: ../settings.ui.h:1
@@ -212,10 +761,6 @@ msgstr ""
 #: ../settings.ui.h:27 ../data/layoutstrings.py:88 ../data/layoutstrings.py:340
 msgid "Snippets"
 msgstr ""
-
-#: ../settings.ui.h:28 ../settings_theme_dialog.ui.h:9
-msgid "Keyboard"
-msgstr "कीलफलकम्"
 
 #: ../settings.ui.h:29
 msgid "Auto-show"
@@ -429,10 +974,6 @@ msgstr "चित्रायणम्-"
 #: ../settings.ui.h:81
 msgid "Transparency of the whole keyboard window. Requires compositing."
 msgstr ""
-
-#: ../settings.ui.h:82 ../settings_theme_dialog.ui.h:5
-msgid "_Background:"
-msgstr "पृष्ठदेशः-"
 
 #: ../settings.ui.h:83
 msgid "Transparency of the keyboard background"
@@ -975,433 +1516,20 @@ msgstr ""
 msgid "Hover Click"
 msgstr ""
 
-#: ../settings_scanner_dialog.ui.h:1
-msgid "Automatic scan for 1 switch"
+#: ../data/onboard-settings.desktop.in.h:1
+msgid "Onboard Settings"
 msgstr ""
 
-#: ../settings_scanner_dialog.ui.h:2
-msgid "Critical overscan for 1 switch"
+#: ../data/onboard-settings.desktop.in.h:2
+msgid "Onboard onscreen keyboard settings"
 msgstr ""
 
-#: ../settings_scanner_dialog.ui.h:3
-msgid "Step scan for 2 switches"
+#: ../data/onboard-settings.desktop.in.h:3
+msgid "Change Onboard settings"
 msgstr ""
 
-#: ../settings_scanner_dialog.ui.h:4
-msgid "Directed scan for 3 or 5 switches"
-msgstr ""
-
-#: ../settings_scanner_dialog.ui.h:5
-msgid "Scanner Settings"
-msgstr ""
-
-#: ../settings_scanner_dialog.ui.h:6
-msgctxt "Label of the close button of the scanner settings dialog."
-msgid "_Close"
-msgstr ""
-
-#: ../settings_scanner_dialog.ui.h:7
-msgid "Select a scanning _profile:"
-msgstr ""
-
-#: ../settings_scanner_dialog.ui.h:8
-msgid "_Step interval:"
-msgstr ""
-
-#: ../settings_scanner_dialog.ui.h:9
-msgid "Sc_an cycles:"
-msgstr ""
-
-#: ../settings_scanner_dialog.ui.h:10
-msgid ""
-"The time the scanner rests on a key or group before moving to the next. (in "
-"seconds)"
-msgstr ""
-
-#: ../settings_scanner_dialog.ui.h:11
-msgid ""
-"The number of times the scanner cycles through the entire keyboard before it "
-"stops."
-msgstr ""
-
-#: ../settings_scanner_dialog.ui.h:12
-msgid "Step _only during switch down"
-msgstr ""
-
-#: ../settings_scanner_dialog.ui.h:13
-msgid "Progress the highlight only while the switch is held down."
-msgstr ""
-
-#: ../settings_scanner_dialog.ui.h:14
-msgid "_Forward interval:"
-msgstr ""
-
-#: ../settings_scanner_dialog.ui.h:15
-msgid "_Backtrack interval:"
-msgstr ""
-
-#: ../settings_scanner_dialog.ui.h:16
-msgid ""
-"The time the scanner rests on a key  while progressing forward. (in seconds)"
-msgstr ""
-
-#: ../settings_scanner_dialog.ui.h:17
-msgid ""
-"The time the scanner rests on a key  while moving backwards. (in seconds)"
-msgstr ""
-
-#: ../settings_scanner_dialog.ui.h:18
-msgid "Backtrack _steps:"
-msgstr ""
-
-#: ../settings_scanner_dialog.ui.h:19
-msgid "The number of keys the scanner steps back before moving forward again."
-msgstr ""
-
-#: ../settings_scanner_dialog.ui.h:20
-msgid "_Alternate switch actions"
-msgstr ""
-
-#: ../settings_scanner_dialog.ui.h:21
-msgid ""
-"Swap the scan actions after every key activation. The Step action will "
-"become the Activate action and vice versa."
-msgstr ""
-
-#: ../settings_scanner_dialog.ui.h:22
-msgid "Profiles"
-msgstr ""
-
-#: ../settings_scanner_dialog.ui.h:23
-msgid "_Select an input device:"
-msgstr ""
-
-#: ../settings_scanner_dialog.ui.h:24
-msgid "_Use this device only for scanning"
-msgstr ""
-
-#: ../settings_scanner_dialog.ui.h:25
-msgid ""
-"The selected device should not control the system mouse cursor or the "
-"keyboard caret."
-msgstr ""
-
-#: ../settings_scanner_dialog.ui.h:26
-msgid "Input Device"
-msgstr ""
-
-#: ../data/onboard.desktop.in.h:2 ../data/onboard-autostart.desktop.in.h:2
-msgid "Onboard onscreen keyboard"
-msgstr ""
-
-#: ../data/onboard.desktop.in.h:3 ../data/onboard-autostart.desktop.in.h:3
-msgid "Flexible onscreen keyboard"
-msgstr ""
-
-#. Title of the snippets dialog for existing snippets
-#: ../Onboard/KeyboardWidget.py:1590
-msgid "Edit snippet #{}"
-msgstr ""
-
-#. Title of the snippets dialog for new snippets
-#: ../Onboard/KeyboardWidget.py:1594
-msgid "New snippet"
-msgstr ""
-
-#. Message in the snippets dialog for new snippets
-#: ../Onboard/KeyboardWidget.py:1596
-msgid "Enter a new snippet for button #{}:"
-msgstr ""
-
-#: ../Onboard/KeyboardWidget.py:1607
-msgid "_Save snippet"
-msgstr ""
-
-#: ../Onboard/KeyboardWidget.py:1627
-msgid "_Button label:"
-msgstr ""
-
-#: ../Onboard/KeyboardWidget.py:1631
-msgid "S_nippet:"
-msgstr ""
-
-#: ../Onboard/KeyboardWidget.py:1801
-msgid "Other _Languages"
-msgstr ""
-
-#: ../Onboard/KeyboardWidget.py:1845
-msgid "_Remove suggestion…"
-msgstr ""
-
-#: ../Onboard/KeyboardWidget.py:1901
-msgid "Remove word suggestion"
-msgstr ""
-
-#: ../Onboard/KeyboardWidget.py:1912
-msgid "Remove '{}' everywhere."
-msgstr ""
-
-#: ../Onboard/KeyboardWidget.py:1922
-msgid "This will only affect learned suggestions."
-msgstr ""
-
-#: ../Onboard/KeyboardWidget.py:1962
-msgid "Remove '{}' only where it occures at text begin."
-msgstr ""
-
-#: ../Onboard/KeyboardWidget.py:1965
-msgid "Remove '{}' only where it occures at sentence begin."
-msgstr ""
-
-#: ../Onboard/KeyboardWidget.py:1968
-msgid "Remove '{}' only where it occures after numbers."
-msgstr ""
-
-#: ../Onboard/KeyboardWidget.py:1971
-msgid "Remove '{}' only where it occures after '{}'."
-msgstr ""
-
-#: ../settings_docking_dialog.ui.h:1
-msgid "Top"
-msgstr ""
-
-#: ../settings_docking_dialog.ui.h:2
-msgid "Bottom"
-msgstr ""
-
-#: ../settings_docking_dialog.ui.h:3
-msgid "Active Monitor"
-msgstr ""
-
-#: ../settings_docking_dialog.ui.h:4
-msgid "Primary Monitor"
-msgstr ""
-
-#: ../settings_docking_dialog.ui.h:5
-msgid "Monitor 0"
-msgstr ""
-
-#: ../settings_docking_dialog.ui.h:6
-msgid "Monitor 1"
-msgstr ""
-
-#: ../settings_docking_dialog.ui.h:7
-msgid "Monitor 2"
-msgstr ""
-
-#: ../settings_docking_dialog.ui.h:8
-msgid "Monitor 3"
-msgstr ""
-
-#: ../settings_docking_dialog.ui.h:9
-msgid "Monitor 4"
-msgstr ""
-
-#: ../settings_docking_dialog.ui.h:10
-msgid "Monitor 5"
-msgstr ""
-
-#: ../settings_docking_dialog.ui.h:11
-msgid "Monitor 6"
-msgstr ""
-
-#: ../settings_docking_dialog.ui.h:12
-msgid "Monitor 7"
-msgstr ""
-
-#: ../settings_docking_dialog.ui.h:13
-msgid "Monitor 8"
-msgstr ""
-
-#: ../settings_docking_dialog.ui.h:14
-msgid "Docking settings"
-msgstr ""
-
-#: ../settings_docking_dialog.ui.h:15
-msgctxt "Label of the close button of the docking settings dialog."
-msgid "_Close"
-msgstr ""
-
-#: ../settings_docking_dialog.ui.h:16
-msgid "Shrink workarea"
-msgstr ""
-
-#: ../settings_docking_dialog.ui.h:17
-msgid "Shrink the available space for maximized windows."
-msgstr ""
-
-#: ../settings_docking_dialog.ui.h:18
-msgid "Expand on landscape screens"
-msgstr ""
-
-#: ../settings_docking_dialog.ui.h:19
-msgid "Expand keyboard to the width of the workarea."
-msgstr ""
-
-#: ../settings_docking_dialog.ui.h:20
-msgid "Expand on portrait screens"
-msgstr ""
-
-#: ../settings_docking_dialog.ui.h:21
-msgid "Dock to screen edge:"
-msgstr ""
-
-#: ../settings_docking_dialog.ui.h:22
-msgid "Dock to monitor:"
-msgstr ""
-
-#: ../Onboard/Indicator.py:56
-msgid "_Show Onboard"
-msgstr ""
-
-#: ../Onboard/Indicator.py:57
-msgid "_Hide Onboard"
-msgstr ""
-
-#. Translators: label of a menu item. It used to be stock item
-#. STOCK_PREFERENCES until Gtk 3.10 deprecated those.
-#: ../Onboard/Indicator.py:83
-msgid "_Preferences"
-msgstr ""
-
-#: ../Onboard/Indicator.py:91
-msgid "_Help"
-msgstr ""
-
-#. Translators: label of a menu item. It used to be stock item
-#. STOCK_QUIT until Gtk 3.10 deprecated those.
-#: ../Onboard/Indicator.py:102
-msgid "_Quit"
-msgstr ""
-
-#: ../Onboard/Indicator.py:228 ../Onboard/Indicator.py:231
-msgid "Onboard on-screen keyboard"
-msgstr ""
-
-#: ../Onboard/OnboardGtk.py:429
-msgid ""
-"Onboard is configured to appear with the dialog to unlock the screen; for "
-"example to dismiss the password-protected screensaver.\n"
-"\n"
-"However the system is not configured anymore to use Onboard to unlock the "
-"screen. A possible reason can be that another application configured the "
-"system to use something else.\n"
-"\n"
-"Would you like to reconfigure the system to show Onboard when unlocking the "
-"screen?"
-msgstr ""
-
-#: ../Onboard/OnboardGtk.py:448
-msgid ""
-"Onboard is configured to appear with the dialog to unlock the screen; for "
-"example to dismiss the password-protected screensaver.\n"
-"\n"
-"However this function is disabled in the system.\n"
-"\n"
-"Would you like to activate it?"
-msgstr ""
-
-#: ../settings_theme_dialog.ui.h:1
-msgid "Customize Theme"
-msgstr ""
-
-#: ../settings_theme_dialog.ui.h:2
-msgctxt "Label of the revert button of the theme settings dialog."
-msgid "_Revert"
-msgstr ""
-
-#: ../settings_theme_dialog.ui.h:3
-msgctxt "Label of the close button of the theme settings dialog."
-msgid "_Close"
-msgstr ""
-
-#: ../settings_theme_dialog.ui.h:4
-msgid "Color Sche_me"
-msgstr ""
-
-#. Key style with simple gradients
-#: ../settings_theme_dialog.ui.h:6 ../Onboard/settings.py:1621
-msgid "Gradient"
-msgstr ""
-
-#: ../settings_theme_dialog.ui.h:7
-msgid "_Angle:"
-msgstr ""
-
-#: ../settings_theme_dialog.ui.h:8
-msgid "Light Direction"
-msgstr ""
-
-#: ../settings_theme_dialog.ui.h:10
-msgid "_Style:"
-msgstr ""
-
-#: ../settings_theme_dialog.ui.h:11
-msgid "R_oundness:"
-msgstr ""
-
-#: ../settings_theme_dialog.ui.h:12
-msgid "S_ize:"
-msgstr ""
-
-#: ../settings_theme_dialog.ui.h:13
-msgid "B_order width:"
-msgstr ""
-
-#: ../settings_theme_dialog.ui.h:14
-msgid "Key Style"
-msgstr ""
-
-#: ../settings_theme_dialog.ui.h:15
-msgid "_Key:"
-msgstr ""
-
-#: ../settings_theme_dialog.ui.h:16
-msgid "_Border:"
-msgstr ""
-
-#: ../settings_theme_dialog.ui.h:17
-msgid "Gradients"
-msgstr ""
-
-#: ../settings_theme_dialog.ui.h:18
-msgid "_Strength:"
-msgstr ""
-
-#: ../settings_theme_dialog.ui.h:19
-msgid "Shadow"
-msgstr ""
-
-#: ../settings_theme_dialog.ui.h:20
-msgid "Keys"
-msgstr ""
-
-#: ../settings_theme_dialog.ui.h:21
-msgid "_Font:"
-msgstr ""
-
-#: ../settings_theme_dialog.ui.h:22
-msgid "_Attributes:"
-msgstr ""
-
-#: ../settings_theme_dialog.ui.h:23
-msgid "Font"
-msgstr ""
-
-#: ../settings_theme_dialog.ui.h:24
-msgid "I_ndependent size"
-msgstr ""
-
-#: ../settings_theme_dialog.ui.h:25
-msgid "_Super key:"
-msgstr ""
-
-#: ../settings_theme_dialog.ui.h:26
-msgid "Label Override"
-msgstr ""
-
-#: ../settings_theme_dialog.ui.h:27
-msgid "Labels"
+#: ../Onboard/WPEngine.py:483
+msgid "Failed to load language model '{}': {} ({})"
 msgstr ""
 
 #. translators: this is a 'tooltip' of the key_template 'hoverclick' in keyboard layout 'key_defs.xml'
@@ -1975,6 +2103,201 @@ msgstr ""
 msgid "Sub-, Superscripts; Fractions"
 msgstr ""
 
+#: ../Onboard/OnboardGtk.py:429
+msgid ""
+"Onboard is configured to appear with the dialog to unlock the screen; for "
+"example to dismiss the password-protected screensaver.\n"
+"\n"
+"However the system is not configured anymore to use Onboard to unlock the "
+"screen. A possible reason can be that another application configured the "
+"system to use something else.\n"
+"\n"
+"Would you like to reconfigure the system to show Onboard when unlocking the "
+"screen?"
+msgstr ""
+
+#: ../Onboard/OnboardGtk.py:448
+msgid ""
+"Onboard is configured to appear with the dialog to unlock the screen; for "
+"example to dismiss the password-protected screensaver.\n"
+"\n"
+"However this function is disabled in the system.\n"
+"\n"
+"Would you like to activate it?"
+msgstr ""
+
+#: ../Onboard/Config.py:235
+msgid "Layout file ({}) or name"
+msgstr ""
+
+#: ../Onboard/Config.py:238
+msgid "Theme file (.theme) or name"
+msgstr ""
+
+#: ../Onboard/Config.py:240
+msgid "Window size, widthxheight"
+msgstr ""
+
+#: ../Onboard/Config.py:241
+msgid "Window x position"
+msgstr ""
+
+#: ../Onboard/Config.py:242
+msgid "Window y position"
+msgstr ""
+
+#: ../Onboard/Config.py:247
+msgid "Start in XEmbed mode, e.g. for gnome-screensaver"
+msgstr ""
+
+#: ../Onboard/Config.py:250
+msgid "Allow multiple Onboard instances"
+msgstr ""
+
+#: ../Onboard/Config.py:253
+msgid ""
+"Silently fail to start in the given desktop environments. DESKTOPS is a "
+"comma-separated list of XDG desktop names, e.g. GNOME for GNOME Shell."
+msgstr ""
+
+#: ../Onboard/Config.py:259
+msgid ""
+"Delay showing the initial keyboard window by STARTUP_DELAY seconds (default "
+"0.0)."
+msgstr ""
+
+#: ../Onboard/Config.py:263
+msgid "Keep aspect ratio when resizing the window"
+msgstr ""
+
+#: ../Onboard/Config.py:265
+msgid ""
+"Override auto-detection and manually select quirks\n"
+"QUIRKS={metacity|compiz|mutter}"
+msgstr ""
+
+#: ../Onboard/Config.py:380
+msgid "Migrating user directory '{}' to '{}'."
+msgstr ""
+
+#. honor XDG spec
+#. python >2.5
+#: ../Onboard/Config.py:388
+msgid "failed to migrate user directory. "
+msgstr ""
+
+#: ../Onboard/Config.py:867
+#, python-brace-format
+msgid "layout '{filename}' does not exist"
+msgstr ""
+
+#: ../Onboard/Config.py:908
+#, python-brace-format
+msgid "theme '{filename}' does not exist"
+msgstr ""
+
+#: ../Onboard/Config.py:933
+msgid "Loading theme from '{}'"
+msgstr ""
+
+#: ../Onboard/Config.py:937
+msgid "Unable to read theme '{}'"
+msgstr ""
+
+#: ../Onboard/Config.py:1143
+msgid ""
+"Enabling auto-show requires Gnome Accessibility.\n"
+"\n"
+"Onboard can turn on accessiblity now, however it is recommended that you log "
+"out and back in for it to reach its full potential.\n"
+"\n"
+"Enable accessibility now?"
+msgstr ""
+
+#: ../Onboard/Config.py:1902
+#, python-brace-format
+msgid "color scheme '{filename}' does not exist"
+msgstr ""
+
+#: ../Onboard/WindowUtils.py:1128
+msgid "New Input Device"
+msgstr ""
+
+#: ../Onboard/WindowUtils.py:1129
+msgid "Onboard has detected a new input device"
+msgstr ""
+
+#: ../Onboard/WindowUtils.py:1138
+msgid "Do you want to use this device for keyboard scanning?"
+msgstr ""
+
+#: ../Onboard/WindowUtils.py:1145
+msgid "Use device"
+msgstr ""
+
+#: ../data/onboard.desktop.in.h:2 ../data/onboard-autostart.desktop.in.h:2
+msgid "Onboard onscreen keyboard"
+msgstr ""
+
+#: ../data/onboard.desktop.in.h:3 ../data/onboard-autostart.desktop.in.h:3
+msgid "Flexible onscreen keyboard"
+msgstr ""
+
+#: ../Onboard/KbdWindow.py:202
+msgid "no window transparency available; screen doesn't support alpha channels"
+msgstr ""
+
+#. ##############
+#: ../Onboard/SnippetView.py:39
+msgid "<Enter label>"
+msgstr ""
+
+#: ../Onboard/SnippetView.py:40
+msgid "<Enter text>"
+msgstr ""
+
+#: ../Onboard/SnippetView.py:52
+msgid "Button Number"
+msgstr ""
+
+#: ../Onboard/SnippetView.py:59
+msgid "Button Label"
+msgstr ""
+
+#: ../Onboard/SnippetView.py:68
+msgid "Snippet Text"
+msgstr ""
+
+#: ../Onboard/SnippetView.py:113
+msgid "Must be an integer number"
+msgstr ""
+
+#: ../Onboard/SnippetView.py:122
+#, python-format
+msgid "Snippet %d is already in use."
+msgstr ""
+
+#: ../Onboard/WordSuggestions.py:2692
+msgid ""
+"<big>Onboard failed to open learned word suggestions.</big>\n"
+"\n"
+"The error was:\n"
+"<tt>{}</tt>\n"
+"\n"
+"Revert word suggestions to the last backup (recommended)?"
+msgstr ""
+
+#: ../Onboard/WordSuggestions.py:2711
+msgid ""
+"<big>Onboard failed to open learned word suggestions.</big>\n"
+"\n"
+"The error was:\n"
+"<tt>{}</tt>\n"
+"\n"
+"The suggestions have to be reset, but the erroneous file will remain at \n"
+"'{}'"
+msgstr ""
+
 #: ../Onboard/LayoutLoaderSVG.py:164
 msgid ""
 "Loading legacy layout, format '{}'. Please consider upgrading to current "
@@ -2004,99 +2327,6 @@ msgstr ""
 
 #: ../Onboard/LayoutLoaderSVG.py:1000
 msgid "copying svg file '{}' to '{}'"
-msgstr ""
-
-#: ../Onboard/Config.py:236
-msgid "Layout file ({}) or name"
-msgstr ""
-
-#: ../Onboard/Config.py:239
-msgid "Theme file (.theme) or name"
-msgstr ""
-
-#: ../Onboard/Config.py:241
-msgid "Window size, widthxheight"
-msgstr ""
-
-#: ../Onboard/Config.py:242
-msgid "Window x position"
-msgstr ""
-
-#: ../Onboard/Config.py:243
-msgid "Window y position"
-msgstr ""
-
-#: ../Onboard/Config.py:248
-msgid "Start in XEmbed mode, e.g. for gnome-screensaver"
-msgstr ""
-
-#: ../Onboard/Config.py:251
-msgid "Allow multiple Onboard instances"
-msgstr ""
-
-#: ../Onboard/Config.py:254
-msgid ""
-"Silently fail to start in the given desktop environments. DESKTOPS is a "
-"comma-separated list of XDG desktop names, e.g. GNOME for GNOME Shell."
-msgstr ""
-
-#: ../Onboard/Config.py:260
-msgid ""
-"Delay showing the initial keyboard window by STARTUP_DELAY seconds (default "
-"0.0)."
-msgstr ""
-
-#: ../Onboard/Config.py:264
-msgid "Keep aspect ratio when resizing the window"
-msgstr ""
-
-#: ../Onboard/Config.py:266
-msgid ""
-"Override auto-detection and manually select quirks\n"
-"QUIRKS={metacity|compiz|mutter}"
-msgstr ""
-
-#: ../Onboard/Config.py:381
-msgid "Migrating user directory '{}' to '{}'."
-msgstr ""
-
-#. honor XDG spec
-#. python >2.5
-#: ../Onboard/Config.py:389
-msgid "failed to migrate user directory. "
-msgstr ""
-
-#: ../Onboard/Config.py:868
-#, python-brace-format
-msgid "layout '{filename}' does not exist"
-msgstr ""
-
-#: ../Onboard/Config.py:909
-#, python-brace-format
-msgid "theme '{filename}' does not exist"
-msgstr ""
-
-#: ../Onboard/Config.py:934
-msgid "Loading theme from '{}'"
-msgstr ""
-
-#: ../Onboard/Config.py:938
-msgid "Unable to read theme '{}'"
-msgstr ""
-
-#: ../Onboard/Config.py:1144
-msgid ""
-"Enabling auto-show requires Gnome Accessibility.\n"
-"\n"
-"Onboard can turn on accessiblity now, however it is recommended that you log "
-"out and back in for it to reach its full potential.\n"
-"\n"
-"Enable accessibility now?"
-msgstr ""
-
-#: ../Onboard/Config.py:1926
-#, python-brace-format
-msgid "color scheme '{filename}' does not exist"
 msgstr ""
 
 #: ../Onboard/ConfigUtils.py:81
@@ -2168,236 +2398,6 @@ msgstr ""
 
 #: ../Onboard/ConfigUtils.py:732
 msgid "Failed to get gsettings value. "
-msgstr ""
-
-#: ../Onboard/Appearance.py:130
-#, python-brace-format
-msgid "Color scheme for theme '{filename}' not found"
-msgstr ""
-
-#: ../Onboard/Appearance.py:350
-#, python-brace-format
-msgid "Error loading theme '{filename}'. {exception}: {cause}"
-msgstr ""
-
-#: ../Onboard/Appearance.py:424
-msgid "Error saving "
-msgstr ""
-
-#: ../Onboard/Appearance.py:842
-#, python-brace-format
-msgid ""
-"Loading legacy color scheme format '{old_format}', please consider upgrading "
-"to current format '{new_format}': '{filename}'"
-msgstr ""
-
-#: ../Onboard/Appearance.py:862
-#, python-brace-format
-msgid "Error loading color scheme '{filename}'. {exception}: {cause}"
-msgstr ""
-
-#: ../Onboard/Appearance.py:939 ../Onboard/Appearance.py:1071
-msgid ""
-"Duplicate key_id '{}' found in color scheme file. Key_ids must occur only "
-"once."
-msgstr ""
-
-#: ../Onboard/settings.py:316
-msgid "Onboard Preferences"
-msgstr ""
-
-#. touch_feedback_size_label: 0=auto, i.e. let Onboard guess
-#. the size of the label popup.
-#: ../Onboard/settings.py:675
-msgid "auto"
-msgstr ""
-
-#: ../Onboard/settings.py:751
-msgid "Copy layout '{}' to this new name:"
-msgstr ""
-
-#: ../Onboard/settings.py:764
-msgid "Delete layout '{}'?"
-msgstr ""
-
-#: ../Onboard/settings.py:812
-msgid "System settings not found ({}): {}"
-msgstr ""
-
-#: ../Onboard/settings.py:835
-msgid "Core layouts"
-msgstr ""
-
-#: ../Onboard/settings.py:836
-msgid "Contributions"
-msgstr ""
-
-#: ../Onboard/settings.py:837
-msgid "My layouts"
-msgstr ""
-
-#: ../Onboard/settings.py:872
-msgid "Author: {}"
-msgstr ""
-
-#: ../Onboard/settings.py:876
-msgid "About Layout"
-msgstr ""
-
-#: ../Onboard/settings.py:981
-msgid "Enter a name for the new theme:"
-msgstr ""
-
-#: ../Onboard/settings.py:989
-#, python-brace-format
-msgid ""
-"This theme file already exists.\n"
-"'{filename}'\n"
-"\n"
-"Overwrite it?"
-msgstr ""
-
-#: ../Onboard/settings.py:1006
-msgid "Reset selected theme to Onboard defaults?"
-msgstr ""
-
-#: ../Onboard/settings.py:1008
-msgid "Delete selected theme?"
-msgstr ""
-
-#. Translators: reset button of Preferences->Theme.
-#: ../Onboard/settings.py:1137
-msgid "_Reset"
-msgstr ""
-
-#. Translators: delete button of Preferences->Theme. It used to be
-#. stock item STOCK_DELETE until Gtk 3.10 deprecated those.
-#: ../Onboard/settings.py:1141
-msgid "_Delete"
-msgstr ""
-
-#. Translators: header of a tree view column with toggles to ignore
-#. keyboard devices (Preferences->Auto-show->External Keyboards).
-#: ../Onboard/settings.py:1278
-msgid "Ignore"
-msgstr ""
-
-#. Translators: header of a tree view column with device names
-#. (Preferences->Auto-show->External Keyboards).
-#: ../Onboard/settings.py:1282
-msgid "Device"
-msgstr ""
-
-#. Key style with flat fill- and border colors
-#: ../Onboard/settings.py:1619
-msgid "Flat"
-msgstr ""
-
-#. Key style for dish-like key caps
-#: ../Onboard/settings.py:1623
-msgid "Dish"
-msgstr ""
-
-#: ../Onboard/settings.py:1672 ../Onboard/settings.py:1729
-msgid "Default"
-msgstr ""
-
-#: ../Onboard/settings.py:1713
-msgid "Bold"
-msgstr ""
-
-#: ../Onboard/settings.py:1715
-msgid "Italic"
-msgstr ""
-
-#: ../Onboard/settings.py:1717
-msgid "Condensed"
-msgstr ""
-
-#: ../Onboard/settings.py:1730
-msgid ""
-msgstr ""
-
-#: ../Onboard/settings.py:1730
-msgid "Ubuntu Logo"
-msgstr ""
-
-#: ../Onboard/settings.py:1864
-msgid "Step"
-msgstr ""
-
-#: ../Onboard/settings.py:1865
-msgid "Left"
-msgstr ""
-
-#: ../Onboard/settings.py:1866
-msgid "Right"
-msgstr ""
-
-#: ../Onboard/settings.py:1867
-msgid "Up"
-msgstr ""
-
-#: ../Onboard/settings.py:1868
-msgid "Down"
-msgstr ""
-
-#: ../Onboard/settings.py:1869
-msgid "Activate"
-msgstr ""
-
-#: ../Onboard/settings.py:2038
-msgid "Action:"
-msgstr ""
-
-#: ../Onboard/settings.py:2202
-msgid "Disabled"
-msgstr ""
-
-#: ../Onboard/settings.py:2208
-msgid "Button"
-msgstr ""
-
-#: ../Onboard/settings.py:2263 ../Onboard/settings.py:2308
-msgid "Press a button..."
-msgstr ""
-
-#: ../Onboard/settings.py:2310
-msgid "Press a key..."
-msgstr ""
-
-#. ##############
-#: ../Onboard/SnippetView.py:39
-msgid "<Enter label>"
-msgstr ""
-
-#: ../Onboard/SnippetView.py:40
-msgid "<Enter text>"
-msgstr ""
-
-#: ../Onboard/SnippetView.py:52
-msgid "Button Number"
-msgstr ""
-
-#: ../Onboard/SnippetView.py:59
-msgid "Button Label"
-msgstr ""
-
-#: ../Onboard/SnippetView.py:68
-msgid "Snippet Text"
-msgstr ""
-
-#: ../Onboard/SnippetView.py:113
-msgid "Must be an integer number"
-msgstr ""
-
-#: ../Onboard/SnippetView.py:122
-#, python-format
-msgid "Snippet %d is already in use."
-msgstr ""
-
-#: ../Onboard/utils.py:1535
-msgid "failed to create directory '{}': {}"
 msgstr ""
 
 #~ msgid "_Settings"

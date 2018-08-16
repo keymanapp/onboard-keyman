@@ -6,7 +6,7 @@
     <title type="text">Onboard Help</title>
     <title type="link">Onboard Help</title>
 
-    <revision pkgversion="1.4.0" docversion="0.1"/>
+    <revision pkgversion="1.4.1" docversion="0.1"/>
 
     <credit type="author">
       <name>Francesco Fumanti</name>

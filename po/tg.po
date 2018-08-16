@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: onboard\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-14 20:56+0100\n"
+"POT-Creation-Date: 2017-02-16 22:56+0100\n"
 "PO-Revision-Date: 2013-04-20 11:47+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Tajik <tg@li.org>\n"
@@ -25,101 +25,658 @@ msgstr ""
 "X-Launchpad-Export-Date: 2017-02-14 14:04+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 
-#: ../Onboard/WPEngine.py:483
-msgid "Failed to load language model '{}': {} ({})"
-msgstr "Боркунии намунаи забони '{}' қатъ шудааст: {} ({})"
+#: ../settings_scanner_dialog.ui.h:1
+msgid "Automatic scan for 1 switch"
+msgstr "Сканкунии худкор барои 1 пахшкунӣ"
+
+#: ../settings_scanner_dialog.ui.h:2
+msgid "Critical overscan for 1 switch"
+msgstr "Сканкунии дубораи танқидӣ барои 1 пахшкунӣ"
+
+#: ../settings_scanner_dialog.ui.h:3
+msgid "Step scan for 2 switches"
+msgstr "Сканкунии қадамӣ барои 2 пахшкунӣ"
+
+#: ../settings_scanner_dialog.ui.h:4
+msgid "Directed scan for 3 or 5 switches"
+msgstr "Сканкунии самтдор барои 3 ё 5 пахшкунӣ"
+
+#: ../settings_scanner_dialog.ui.h:5
+msgid "Scanner Settings"
+msgstr "Танзимоти сканер"
+
+#: ../settings_scanner_dialog.ui.h:6
+msgctxt "Label of the close button of the scanner settings dialog."
+msgid "_Close"
+msgstr ""
+
+#: ../settings_scanner_dialog.ui.h:7
+msgid "Select a scanning _profile:"
+msgstr "Профили сканкуниро _интихоб кунед:"
+
+#: ../settings_scanner_dialog.ui.h:8
+msgid "_Step interval:"
+msgstr "_Фосилаи қадам:"
+
+#: ../settings_scanner_dialog.ui.h:9
+msgid "Sc_an cycles:"
+msgstr "Д_авраҳои сканкунӣ:"
+
+#: ../settings_scanner_dialog.ui.h:10
+msgid ""
+"The time the scanner rests on a key or group before moving to the next. (in "
+"seconds)"
+msgstr ""
+"Вақте, ки дар давоми он сканер дар гурӯҳи тугмаҳо меистад, пеш аз оне, ки ба "
+"навбатӣ гузарад. (дар сонияҳо)"
+
+#: ../settings_scanner_dialog.ui.h:11
+msgid ""
+"The number of times the scanner cycles through the entire keyboard before it "
+"stops."
+msgstr ""
+"Миқдори маротибаҳои давраҳои сканкунии пахшкуниҳои тугмаҳои клавиатура пеш "
+"аз истодани он."
+
+#: ../settings_scanner_dialog.ui.h:12
+msgid "Step _only during switch down"
+msgstr "Қадам _танҳо ҳангоми гузариш ба поён"
+
+#: ../settings_scanner_dialog.ui.h:13
+msgid "Progress the highlight only while the switch is held down."
+msgstr "Равшании пасзамина танҳо ҳангоми дар поён будани калид."
+
+#: ../settings_scanner_dialog.ui.h:14
+msgid "_Forward interval:"
+msgstr "_Фосилаи ҳаракати пеш:"
+
+#: ../settings_scanner_dialog.ui.h:15
+msgid "_Backtrack interval:"
+msgstr "_Фосилаи ҳаракати қафо:"
+
+#: ../settings_scanner_dialog.ui.h:16
+msgid ""
+"The time the scanner rests on a key  while progressing forward. (in seconds)"
+msgstr ""
+"Вақте, ки дар давоми он сканкунии пахшкуниҳои тугмаҳо ҳангоми ҳаракат ба пеш "
+"меистад. (дар сонияҳо)"
+
+#: ../settings_scanner_dialog.ui.h:17
+msgid ""
+"The time the scanner rests on a key  while moving backwards. (in seconds)"
+msgstr ""
+"Вақте, ки дар давоми он сканкунии пахшкуниҳои тугмаҳо ҳангоми ҳаракат ба "
+"қафо меистад. (дар сонияҳо)"
+
+#: ../settings_scanner_dialog.ui.h:18
+msgid "Backtrack _steps:"
+msgstr "Қадамҳои _ҳаракат ба қафо:"
+
+#: ../settings_scanner_dialog.ui.h:19
+msgid "The number of keys the scanner steps back before moving forward again."
+msgstr ""
+"Миқдори тугмаҳое, ки сканкунӣ пеш аз ҳаракати дубораи пеш ба қафо меравад."
+
+#: ../settings_scanner_dialog.ui.h:20
+msgid "_Alternate switch actions"
+msgstr "_Амалҳои иловагии калид"
+
+#: ../settings_scanner_dialog.ui.h:21
+msgid ""
+"Swap the scan actions after every key activation. The Step action will "
+"become the Activate action and vice versa."
+msgstr ""
+"Иваз кардани амалҳои сканкунӣ баъд аз ҳар як фаъолшавии тугма. Амали \"Қадам"
+"\" ба амали \"Фаъол кардан\" табдил меёбад, ва баръакс."
+
+#: ../settings_scanner_dialog.ui.h:22
+msgid "Profiles"
+msgstr "Профилҳо"
+
+#: ../settings_scanner_dialog.ui.h:23
+msgid "_Select an input device:"
+msgstr "_Дастгоҳи вурудро интихоб кунед:"
+
+#: ../settings_scanner_dialog.ui.h:24
+msgid "_Use this device only for scanning"
+msgstr "_Ин дастгоҳро танҳо барои сканкунӣ истифода баред"
+
+#: ../settings_scanner_dialog.ui.h:25
+msgid ""
+"The selected device should not control the system mouse cursor or the "
+"keyboard caret."
+msgstr ""
+"Дастгоҳи интихобшуда бояд нишондиҳандаи муш ё клавиатураи системаро идора "
+"накунад."
+
+#: ../settings_scanner_dialog.ui.h:26
+msgid "Input Device"
+msgstr "Дастгоҳи вуруд"
+
+#: ../settings_theme_dialog.ui.h:1
+msgid "Customize Theme"
+msgstr "Фармоиш додани мавзӯъ"
+
+#: ../settings_theme_dialog.ui.h:2
+msgctxt "Label of the revert button of the theme settings dialog."
+msgid "_Revert"
+msgstr ""
+
+#: ../settings_theme_dialog.ui.h:3
+msgctxt "Label of the close button of the theme settings dialog."
+msgid "_Close"
+msgstr ""
+
+#: ../settings_theme_dialog.ui.h:4
+msgid "Color Sche_me"
+msgstr "Схемаи _рангҳо"
+
+#: ../settings_theme_dialog.ui.h:5 ../settings.ui.h:82
+msgid "_Background:"
+msgstr "_Пасзамина:"
+
+#. Key style with simple gradients
+#: ../settings_theme_dialog.ui.h:6 ../Onboard/settings.py:1621
+msgid "Gradient"
+msgstr "Градиент"
+
+#: ../settings_theme_dialog.ui.h:7
+msgid "_Angle:"
+msgstr "_Кунҷ:"
+
+#: ../settings_theme_dialog.ui.h:8
+msgid "Light Direction"
+msgstr "Самти равшанӣ"
+
+#: ../settings_theme_dialog.ui.h:9 ../settings.ui.h:28
+msgid "Keyboard"
+msgstr "Клавиатура"
+
+#: ../settings_theme_dialog.ui.h:10
+msgid "_Style:"
+msgstr "_Сабк:"
+
+#: ../settings_theme_dialog.ui.h:11
+msgid "R_oundness:"
+msgstr "М_удавварӣ:"
+
+#: ../settings_theme_dialog.ui.h:12
+msgid "S_ize:"
+msgstr "_Андоза:"
+
+#: ../settings_theme_dialog.ui.h:13
+msgid "B_order width:"
+msgstr "П_аҳноии марз:"
+
+#: ../settings_theme_dialog.ui.h:14
+msgid "Key Style"
+msgstr "Сабки тугма"
+
+#: ../settings_theme_dialog.ui.h:15
+msgid "_Key:"
+msgstr "_Калид:"
+
+#: ../settings_theme_dialog.ui.h:16
+msgid "_Border:"
+msgstr "_Марз:"
+
+#: ../settings_theme_dialog.ui.h:17
+msgid "Gradients"
+msgstr "Градиентҳо"
+
+#: ../settings_theme_dialog.ui.h:18
+msgid "_Strength:"
+msgstr "_Қувва:"
+
+#: ../settings_theme_dialog.ui.h:19
+msgid "Shadow"
+msgstr "Соя"
+
+#: ../settings_theme_dialog.ui.h:20
+msgid "Keys"
+msgstr "Тугмаҳо"
+
+#: ../settings_theme_dialog.ui.h:21
+msgid "_Font:"
+msgstr "_Шрифт:"
+
+#: ../settings_theme_dialog.ui.h:22
+msgid "_Attributes:"
+msgstr "_Сифатҳо:"
+
+#: ../settings_theme_dialog.ui.h:23
+msgid "Font"
+msgstr "Шрифт"
+
+#: ../settings_theme_dialog.ui.h:24
+msgid "I_ndependent size"
+msgstr "А_ндозаи мустақил"
+
+#: ../settings_theme_dialog.ui.h:25
+msgid "_Super key:"
+msgstr "_Тугмаи Super:"
+
+#: ../settings_theme_dialog.ui.h:26
+msgid "Label Override"
+msgstr "Аз нав таъин кардани барчасп"
+
+#: ../settings_theme_dialog.ui.h:27
+msgid "Labels"
+msgstr "Барчапспҳо"
+
+#: ../Onboard/Appearance.py:130
+#, python-brace-format
+msgid "Color scheme for theme '{filename}' not found"
+msgstr "Схемаи рангҳо барои мавзӯи \"{filename}\" ёфт нашуд"
+
+#: ../Onboard/Appearance.py:350
+#, python-brace-format
+msgid "Error loading theme '{filename}'. {exception}: {cause}"
+msgstr ""
+"Ҳангоми боркунии мавзӯи \"{filename}\" хетогӣ ба вуҷуд омад. {exception}: "
+"{cause}"
+
+#: ../Onboard/Appearance.py:424
+msgid "Error saving "
+msgstr "Ҳангоми захиракунӣ хатогӣ ба вуҷуд омад "
+
+#: ../Onboard/Appearance.py:842
+#, python-brace-format
+msgid ""
+"Loading legacy color scheme format '{old_format}', please consider upgrading "
+"to current format '{new_format}': '{filename}'"
+msgstr ""
+"Боркунии формати кӯҳнаи схемаи рангҳои \"{old_format}\", лутфан, ба формати "
+"ҷории \"{new_format}\": \"{filename}\" навсозӣ кунед"
+
+#: ../Onboard/Appearance.py:862
+#, python-brace-format
+msgid "Error loading color scheme '{filename}'. {exception}: {cause}"
+msgstr ""
+"Ҳангоми захиракунии схемаи рангҳои \"{filename}\" хатогӣ ба вуҷуд омад. "
+"{exception}: {cause}"
+
+#: ../Onboard/Appearance.py:939 ../Onboard/Appearance.py:1071
+msgid ""
+"Duplicate key_id '{}' found in color scheme file. Key_ids must occur only "
+"once."
+msgstr ""
+"Дар файли схемаи рангҳои \"{}\" key_id-и такрорӣ пайдо карда шуд. Key_id-ҳо "
+"бояд танҳо як маротиба ба вуҷуд оянд."
+
+#. Title of the snippets dialog for existing snippets
+#: ../Onboard/KeyboardWidget.py:1590
+msgid "Edit snippet #{}"
+msgstr "Таҳрир кардани порча #{}"
+
+#. Title of the snippets dialog for new snippets
+#: ../Onboard/KeyboardWidget.py:1594
+msgid "New snippet"
+msgstr "Порчаи нав"
+
+#. Message in the snippets dialog for new snippets
+#: ../Onboard/KeyboardWidget.py:1596
+msgid "Enter a new snippet for button #{}:"
+msgstr "Ворид кардани порчаи нав барои тугмаи #{}:"
+
+#. Translators: cancel button of the snippets dialog. It used to
+#. be stock item STOCK_CANCEL until Gtk 3.10 deprecated those.
+#. Translators: cancel button of "New Input Device" dialog. It used to be
+#. stock item STOCK_CANCEL until Gtk 3.10 deprecated those.
+#: ../Onboard/KeyboardWidget.py:1606 ../Onboard/WindowUtils.py:1144
+msgid "_Cancel"
+msgstr "_Бекор кардан"
+
+#: ../Onboard/KeyboardWidget.py:1607
+msgid "_Save snippet"
+msgstr "_Захира кардани порча"
+
+#: ../Onboard/KeyboardWidget.py:1627
+msgid "_Button label:"
+msgstr "_Барчаспи тугма:"
+
+#: ../Onboard/KeyboardWidget.py:1631
+msgid "S_nippet:"
+msgstr "П_орча:"
+
+#: ../Onboard/KeyboardWidget.py:1801
+msgid "Other _Languages"
+msgstr "Забонҳои _дигар"
+
+#: ../Onboard/KeyboardWidget.py:1845
+msgid "_Remove suggestion…"
+msgstr "_Тоза кардани пешниҳод…"
 
 #. Default dialog title: name of the application
-#: ../Onboard/WindowUtils.py:1108 ../Onboard/KbdWindow.py:108
-#: ../data/onboard.desktop.in.h:1 ../Onboard/KeyboardWidget.py:1892
+#: ../Onboard/KeyboardWidget.py:1892 ../Onboard/WindowUtils.py:1108
+#: ../data/onboard.desktop.in.h:1 ../Onboard/KbdWindow.py:108
 #: ../data/onboard-autostart.desktop.in.h:1
 msgid "Onboard"
 msgstr "Onboard"
 
-#: ../Onboard/WindowUtils.py:1128
-msgid "New Input Device"
-msgstr "Дастгоҳи нави вуруд"
+#: ../Onboard/KeyboardWidget.py:1901
+msgid "Remove word suggestion"
+msgstr "Тоза кардани пешниҳоди калима"
 
-#: ../Onboard/WindowUtils.py:1129
-msgid "Onboard has detected a new input device"
-msgstr "Onboard дастгоҳи нави вурудро пайдо кард"
+#: ../Onboard/KeyboardWidget.py:1912
+msgid "Remove '{}' everywhere."
+msgstr "Тоза кардани '{}' аз ҳама ҷо."
 
-#: ../Onboard/WindowUtils.py:1138
-msgid "Do you want to use this device for keyboard scanning?"
-msgstr ""
-"Шумо мехоҳед, ки ин дастгоҳро барои сканкунии клавиатура истифода баред?"
+#: ../Onboard/KeyboardWidget.py:1922
+msgid "This will only affect learned suggestions."
+msgstr "Ин танҳо ба пешниходҳои омӯхта таъсир мерасонад."
 
-#. Translators: cancel button of "New Input Device" dialog. It used to be
-#. stock item STOCK_CANCEL until Gtk 3.10 deprecated those.
-#. Translators: cancel button of the snippets dialog. It used to
-#. be stock item STOCK_CANCEL until Gtk 3.10 deprecated those.
-#: ../Onboard/WindowUtils.py:1144 ../Onboard/KeyboardWidget.py:1606
-msgid "_Cancel"
-msgstr "_Бекор кардан"
+#: ../Onboard/KeyboardWidget.py:1962
+msgid "Remove '{}' only where it occures at text begin."
+msgstr "Тоза кардани '{}' танҳо дар пайдоиши он дар аввали матн."
 
-#: ../Onboard/WindowUtils.py:1145
-msgid "Use device"
-msgstr "Истифодаи дастгоҳ"
+#: ../Onboard/KeyboardWidget.py:1965
+msgid "Remove '{}' only where it occures at sentence begin."
+msgstr "Тоза кардани '{}' танҳо дар пайдоиши он дар аввали ҷумла."
+
+#: ../Onboard/KeyboardWidget.py:1968
+msgid "Remove '{}' only where it occures after numbers."
+msgstr "Тоза кардани '{}' танҳо дар пайдоиши он баъди рақамҳо."
+
+#: ../Onboard/KeyboardWidget.py:1971
+msgid "Remove '{}' only where it occures after '{}'."
+msgstr "Тоза кардани '{}' танҳо дар пайдоиши он баъди '{}'."
 
 #: ../Onboard/Timer.py:160 ../Onboard/pypredict/tools/filter.py:382
-#: ../Onboard/LanguageSupport.py:173 ../Onboard/SpellChecker.py:634
-#: ../Onboard/SpellChecker.py:670 ../Onboard/SpellChecker.py:709
-#: ../Onboard/SpellChecker.py:723 ../Onboard/pypredict/tools/train.py:227
+#: ../Onboard/LanguageSupport.py:173 ../Onboard/pypredict/tools/train.py:227
+#: ../Onboard/SpellChecker.py:634 ../Onboard/SpellChecker.py:670
+#: ../Onboard/SpellChecker.py:709 ../Onboard/SpellChecker.py:723
 msgid "Failed to execute '{}', {}"
 msgstr "Иҷрои \"{}\", {} бо нокомӣ дучор шуд"
 
-#: ../Onboard/WordSuggestions.py:2692
+#: ../Onboard/settings.py:316
+msgid "Onboard Preferences"
+msgstr "Бартариҳои Onboard"
+
+#. touch_feedback_size_label: 0=auto, i.e. let Onboard guess
+#. the size of the label popup.
+#: ../Onboard/settings.py:675
+msgid "auto"
+msgstr ""
+
+#: ../Onboard/settings.py:751
+msgid "Copy layout '{}' to this new name:"
+msgstr "Нусха бардоштани тарҳбандии '{}' ба ин номи нав:"
+
+#: ../Onboard/settings.py:764
+msgid "Delete layout '{}'?"
+msgstr "Тарҳбандии '{}'-ро нест мекунед?"
+
+#: ../Onboard/settings.py:812
+msgid "System settings not found ({}): {}"
+msgstr "Танзимоти система ёфт нашуд ({}): {}"
+
+#: ../Onboard/settings.py:835
+msgid "Core layouts"
+msgstr "Тарҳбандиҳои асосӣ"
+
+#: ../Onboard/settings.py:836
+msgid "Contributions"
+msgstr "Саҳмгузорон"
+
+#: ../Onboard/settings.py:837
+msgid "My layouts"
+msgstr ""
+
+#: ../Onboard/settings.py:872
+msgid "Author: {}"
+msgstr "Муаллиф: {}"
+
+#: ../Onboard/settings.py:876
+msgid "About Layout"
+msgstr "Дар бораи тарҳбандӣ"
+
+#: ../Onboard/settings.py:981
+msgid "Enter a name for the new theme:"
+msgstr "Номеро барои мавзӯи нав ворид кунед:"
+
+#: ../Onboard/settings.py:989
+#, python-brace-format
 msgid ""
-"<big>Onboard failed to open learned word suggestions.</big>\n"
+"This theme file already exists.\n"
+"'{filename}'\n"
 "\n"
-"The error was:\n"
-"<tt>{}</tt>\n"
-"\n"
-"Revert word suggestions to the last backup (recommended)?"
+"Overwrite it?"
 msgstr ""
-"<big>Onboard пешниҳодҳои калимаҳои ҷамъшударо кушода натавонист.</big>\n"
+"Ин мавзӯъ аллакай вуҷуд дорад.\n"
+"\"{filename}\"\n"
 "\n"
-"Паёми хато:\n"
-"<tt>{}</tt>\n"
-"\n"
-"Пешниҳодҳои калимаҳоро ба нусхаи эҳтиётии охирин бармегардед (тавсия дода "
-"мешавад)?"
+"Онро рӯйҳамнависӣ мекунед?"
 
-#: ../Onboard/WordSuggestions.py:2711
-msgid ""
-"<big>Onboard failed to open learned word suggestions.</big>\n"
-"\n"
-"The error was:\n"
-"<tt>{}</tt>\n"
-"\n"
-"The suggestions have to be reset, but the erroneous file will remain at \n"
-"'{}'"
+#: ../Onboard/settings.py:1006
+msgid "Reset selected theme to Onboard defaults?"
+msgstr "Мавзӯи интихобшударо ба пешфарзҳои Onboard дубора танзим мекунед?"
+
+#: ../Onboard/settings.py:1008
+msgid "Delete selected theme?"
+msgstr "Мавзӯи интихобшударо нест мекунед?"
+
+#. Translators: reset button of Preferences->Theme.
+#: ../Onboard/settings.py:1137
+msgid "_Reset"
+msgstr "_Танзими дубора"
+
+#. Translators: delete button of Preferences->Theme. It used to be
+#. stock item STOCK_DELETE until Gtk 3.10 deprecated those.
+#: ../Onboard/settings.py:1141
+msgid "_Delete"
+msgstr "_Нест кардан"
+
+#. Translators: header of a tree view column with toggles to ignore
+#. keyboard devices (Preferences->Auto-show->External Keyboards).
+#: ../Onboard/settings.py:1278
+msgid "Ignore"
 msgstr ""
-"<big>Onboard пешниҳодҳои калимаҳои ҷамъшударо кушода натавонист.</big>\n"
-"\n"
-"Паёми хато:\n"
-"<tt>{}</tt>\n"
-"\n"
-"Пешниҳодҳо бояд дубора танзим карда шаванд, вале файли хатогӣ дар макони "
-"зерин мемонад \n"
-"'{}'"
 
-#: ../data/onboard-settings.desktop.in.h:1
-msgid "Onboard Settings"
-msgstr "Танзимоти Onboard"
-
-#: ../data/onboard-settings.desktop.in.h:2
-msgid "Onboard onscreen keyboard settings"
-msgstr "Танзимоти клавиатураи экрании Onboard"
-
-#: ../data/onboard-settings.desktop.in.h:3
-msgid "Change Onboard settings"
-msgstr "Тағйир додани танзимоти Onboard"
-
-#: ../Onboard/KbdWindow.py:202
-msgid "no window transparency available; screen doesn't support alpha channels"
+#. Translators: header of a tree view column with device names
+#. (Preferences->Auto-show->External Keyboards).
+#: ../Onboard/settings.py:1282
+msgid "Device"
 msgstr ""
-"ягон шаффофии равзана дастрас нест; экран каналҳои алфаро дастгирӣ намекунад"
+
+#. Key style with flat fill- and border colors
+#: ../Onboard/settings.py:1619
+msgid "Flat"
+msgstr "Ҳамвор"
+
+#. Key style for dish-like key caps
+#: ../Onboard/settings.py:1623
+msgid "Dish"
+msgstr "Табақ"
+
+#: ../Onboard/settings.py:1672 ../Onboard/settings.py:1729
+msgid "Default"
+msgstr "Пешфарз"
+
+#: ../Onboard/settings.py:1713
+msgid "Bold"
+msgstr "Пурранг"
+
+#: ../Onboard/settings.py:1715
+msgid "Italic"
+msgstr "Хам"
+
+#: ../Onboard/settings.py:1717
+msgid "Condensed"
+msgstr "Зичшуда"
+
+#: ../Onboard/settings.py:1730
+msgid ""
+msgstr ""
+
+#: ../Onboard/settings.py:1730
+msgid "Ubuntu Logo"
+msgstr "Тамғаи Ubuntu"
+
+#: ../Onboard/settings.py:1864
+msgid "Step"
+msgstr "Қадам"
+
+#: ../Onboard/settings.py:1865
+msgid "Left"
+msgstr "Чап"
+
+#: ../Onboard/settings.py:1866
+msgid "Right"
+msgstr "Рост"
+
+#: ../Onboard/settings.py:1867
+msgid "Up"
+msgstr "Боло"
+
+#: ../Onboard/settings.py:1868
+msgid "Down"
+msgstr "Поён"
+
+#: ../Onboard/settings.py:1869
+msgid "Activate"
+msgstr "Фаъол кардан"
+
+#: ../Onboard/settings.py:2038
+msgid "Action:"
+msgstr "Амал:"
+
+#: ../Onboard/settings.py:2202
+msgid "Disabled"
+msgstr "Ғайрифаъолшуда"
+
+#: ../Onboard/settings.py:2208
+msgid "Button"
+msgstr "Тугма"
+
+#: ../Onboard/settings.py:2263 ../Onboard/settings.py:2308
+msgid "Press a button..."
+msgstr "Тугмаеро пахш кунед..."
+
+#: ../Onboard/settings.py:2310
+msgid "Press a key..."
+msgstr "Тугмаеро пахш кунед..."
+
+#: ../Onboard/Indicator.py:56
+msgid "_Show Onboard"
+msgstr "_Намоиш додани Onboard"
+
+#: ../Onboard/Indicator.py:57
+msgid "_Hide Onboard"
+msgstr "_Пинҳон кардани Onboard"
+
+#. Translators: label of a menu item. It used to be stock item
+#. STOCK_PREFERENCES until Gtk 3.10 deprecated those.
+#: ../Onboard/Indicator.py:83
+msgid "_Preferences"
+msgstr "_Хусусиятҳо"
+
+#: ../Onboard/Indicator.py:91
+msgid "_Help"
+msgstr ""
+
+#. Translators: label of a menu item. It used to be stock item
+#. STOCK_QUIT until Gtk 3.10 deprecated those.
+#: ../Onboard/Indicator.py:102
+msgid "_Quit"
+msgstr "_Хуруҷ"
+
+#: ../Onboard/Indicator.py:228 ../Onboard/Indicator.py:231
+msgid "Onboard on-screen keyboard"
+msgstr "Клавиатураи экрании Onboard"
+
+#: ../Onboard/utils.py:1535
+msgid "failed to create directory '{}': {}"
+msgstr "қатъи эҷодкунии директорияи '{}': {}"
+
+#: ../settings_docking_dialog.ui.h:1
+msgid "Top"
+msgstr "Боло"
+
+#: ../settings_docking_dialog.ui.h:2
+msgid "Bottom"
+msgstr "Поён"
+
+#: ../settings_docking_dialog.ui.h:3
+msgid "Active Monitor"
+msgstr "Монитори фаъол"
+
+#: ../settings_docking_dialog.ui.h:4
+msgid "Primary Monitor"
+msgstr "Монитори ибтидоӣ"
+
+#: ../settings_docking_dialog.ui.h:5
+msgid "Monitor 0"
+msgstr "Минитори 0"
+
+#: ../settings_docking_dialog.ui.h:6
+msgid "Monitor 1"
+msgstr "Минитори 1"
+
+#: ../settings_docking_dialog.ui.h:7
+msgid "Monitor 2"
+msgstr "Минитори 2"
+
+#: ../settings_docking_dialog.ui.h:8
+msgid "Monitor 3"
+msgstr "Минитори 3"
+
+#: ../settings_docking_dialog.ui.h:9
+msgid "Monitor 4"
+msgstr "Минитори 4"
+
+#: ../settings_docking_dialog.ui.h:10
+msgid "Monitor 5"
+msgstr "Минитори 5"
+
+#: ../settings_docking_dialog.ui.h:11
+msgid "Monitor 6"
+msgstr "Минитори 6"
+
+#: ../settings_docking_dialog.ui.h:12
+msgid "Monitor 7"
+msgstr "Минитори 7"
+
+#: ../settings_docking_dialog.ui.h:13
+msgid "Monitor 8"
+msgstr "Минитори 8"
+
+#: ../settings_docking_dialog.ui.h:14
+msgid "Docking settings"
+msgstr "Танзимоти васлкунӣ"
+
+#: ../settings_docking_dialog.ui.h:15
+msgctxt "Label of the close button of the docking settings dialog."
+msgid "_Close"
+msgstr ""
+
+#: ../settings_docking_dialog.ui.h:16
+msgid "Shrink workarea"
+msgstr "Кучак кардани ноҳияи корӣ"
+
+#: ../settings_docking_dialog.ui.h:17
+msgid "Shrink the available space for maximized windows."
+msgstr "Кучак кардани фазои дастрас барои равзанаҳои густаришдодашуда."
+
+#: ../settings_docking_dialog.ui.h:18
+msgid "Expand on landscape screens"
+msgstr "Густариш додан дар экранҳои уфуқӣ"
+
+#: ../settings_docking_dialog.ui.h:19
+msgid "Expand keyboard to the width of the workarea."
+msgstr "Густариш додани клавиатура ба паҳноии ноҳияи корӣ."
+
+#: ../settings_docking_dialog.ui.h:20
+msgid "Expand on portrait screens"
+msgstr "Густариш додан дар экранҳои амудӣ"
+
+#: ../settings_docking_dialog.ui.h:21
+msgid "Dock to screen edge:"
+msgstr "Васл кардан ба канори экран:"
+
+#: ../settings_docking_dialog.ui.h:22
+msgid "Dock to monitor:"
+msgstr "Мустақар кардан ба монитор:"
 
 #: ../settings.ui.h:1
 msgid "Key-repeat"
@@ -229,10 +786,6 @@ msgstr "Мавзӯъ"
 #: ../settings.ui.h:27 ../data/layoutstrings.py:88 ../data/layoutstrings.py:340
 msgid "Snippets"
 msgstr "Порчаҳо"
-
-#: ../settings.ui.h:28 ../settings_theme_dialog.ui.h:9
-msgid "Keyboard"
-msgstr "Клавиатура"
 
 #: ../settings.ui.h:29
 msgid "Auto-show"
@@ -458,10 +1011,6 @@ msgid "Transparency of the whole keyboard window. Requires compositing."
 msgstr ""
 "Шаффофӣ барои тамоми равзанаи клавиатура. Дастгирии мизи кории таркибӣ лозим "
 "аст."
-
-#: ../settings.ui.h:82 ../settings_theme_dialog.ui.h:5
-msgid "_Background:"
-msgstr "_Пасзамина:"
 
 #: ../settings.ui.h:83
 msgid "Transparency of the keyboard background"
@@ -1040,462 +1589,21 @@ msgstr ""
 msgid "Hover Click"
 msgstr "Зеркунӣ дар боло нигаҳ доштан"
 
-#: ../settings_scanner_dialog.ui.h:1
-msgid "Automatic scan for 1 switch"
-msgstr "Сканкунии худкор барои 1 пахшкунӣ"
-
-#: ../settings_scanner_dialog.ui.h:2
-msgid "Critical overscan for 1 switch"
-msgstr "Сканкунии дубораи танқидӣ барои 1 пахшкунӣ"
-
-#: ../settings_scanner_dialog.ui.h:3
-msgid "Step scan for 2 switches"
-msgstr "Сканкунии қадамӣ барои 2 пахшкунӣ"
-
-#: ../settings_scanner_dialog.ui.h:4
-msgid "Directed scan for 3 or 5 switches"
-msgstr "Сканкунии самтдор барои 3 ё 5 пахшкунӣ"
-
-#: ../settings_scanner_dialog.ui.h:5
-msgid "Scanner Settings"
-msgstr "Танзимоти сканер"
-
-#: ../settings_scanner_dialog.ui.h:6
-msgctxt "Label of the close button of the scanner settings dialog."
-msgid "_Close"
-msgstr ""
-
-#: ../settings_scanner_dialog.ui.h:7
-msgid "Select a scanning _profile:"
-msgstr "Профили сканкуниро _интихоб кунед:"
-
-#: ../settings_scanner_dialog.ui.h:8
-msgid "_Step interval:"
-msgstr "_Фосилаи қадам:"
-
-#: ../settings_scanner_dialog.ui.h:9
-msgid "Sc_an cycles:"
-msgstr "Д_авраҳои сканкунӣ:"
-
-#: ../settings_scanner_dialog.ui.h:10
-msgid ""
-"The time the scanner rests on a key or group before moving to the next. (in "
-"seconds)"
-msgstr ""
-"Вақте, ки дар давоми он сканер дар гурӯҳи тугмаҳо меистад, пеш аз оне, ки ба "
-"навбатӣ гузарад. (дар сонияҳо)"
-
-#: ../settings_scanner_dialog.ui.h:11
-msgid ""
-"The number of times the scanner cycles through the entire keyboard before it "
-"stops."
-msgstr ""
-"Миқдори маротибаҳои давраҳои сканкунии пахшкуниҳои тугмаҳои клавиатура пеш "
-"аз истодани он."
-
-#: ../settings_scanner_dialog.ui.h:12
-msgid "Step _only during switch down"
-msgstr "Қадам _танҳо ҳангоми гузариш ба поён"
-
-#: ../settings_scanner_dialog.ui.h:13
-msgid "Progress the highlight only while the switch is held down."
-msgstr "Равшании пасзамина танҳо ҳангоми дар поён будани калид."
-
-#: ../settings_scanner_dialog.ui.h:14
-msgid "_Forward interval:"
-msgstr "_Фосилаи ҳаракати пеш:"
-
-#: ../settings_scanner_dialog.ui.h:15
-msgid "_Backtrack interval:"
-msgstr "_Фосилаи ҳаракати қафо:"
-
-#: ../settings_scanner_dialog.ui.h:16
-msgid ""
-"The time the scanner rests on a key  while progressing forward. (in seconds)"
-msgstr ""
-"Вақте, ки дар давоми он сканкунии пахшкуниҳои тугмаҳо ҳангоми ҳаракат ба пеш "
-"меистад. (дар сонияҳо)"
-
-#: ../settings_scanner_dialog.ui.h:17
-msgid ""
-"The time the scanner rests on a key  while moving backwards. (in seconds)"
-msgstr ""
-"Вақте, ки дар давоми он сканкунии пахшкуниҳои тугмаҳо ҳангоми ҳаракат ба "
-"қафо меистад. (дар сонияҳо)"
-
-#: ../settings_scanner_dialog.ui.h:18
-msgid "Backtrack _steps:"
-msgstr "Қадамҳои _ҳаракат ба қафо:"
-
-#: ../settings_scanner_dialog.ui.h:19
-msgid "The number of keys the scanner steps back before moving forward again."
-msgstr ""
-"Миқдори тугмаҳое, ки сканкунӣ пеш аз ҳаракати дубораи пеш ба қафо меравад."
-
-#: ../settings_scanner_dialog.ui.h:20
-msgid "_Alternate switch actions"
-msgstr "_Амалҳои иловагии калид"
-
-#: ../settings_scanner_dialog.ui.h:21
-msgid ""
-"Swap the scan actions after every key activation. The Step action will "
-"become the Activate action and vice versa."
-msgstr ""
-"Иваз кардани амалҳои сканкунӣ баъд аз ҳар як фаъолшавии тугма. Амали \"Қадам"
-"\" ба амали \"Фаъол кардан\" табдил меёбад, ва баръакс."
-
-#: ../settings_scanner_dialog.ui.h:22
-msgid "Profiles"
-msgstr "Профилҳо"
-
-#: ../settings_scanner_dialog.ui.h:23
-msgid "_Select an input device:"
-msgstr "_Дастгоҳи вурудро интихоб кунед:"
-
-#: ../settings_scanner_dialog.ui.h:24
-msgid "_Use this device only for scanning"
-msgstr "_Ин дастгоҳро танҳо барои сканкунӣ истифода баред"
-
-#: ../settings_scanner_dialog.ui.h:25
-msgid ""
-"The selected device should not control the system mouse cursor or the "
-"keyboard caret."
-msgstr ""
-"Дастгоҳи интихобшуда бояд нишондиҳандаи муш ё клавиатураи системаро идора "
-"накунад."
-
-#: ../settings_scanner_dialog.ui.h:26
-msgid "Input Device"
-msgstr "Дастгоҳи вуруд"
-
-#: ../data/onboard.desktop.in.h:2 ../data/onboard-autostart.desktop.in.h:2
-msgid "Onboard onscreen keyboard"
-msgstr "Клавиатураи экрании Onboard"
-
-#: ../data/onboard.desktop.in.h:3 ../data/onboard-autostart.desktop.in.h:3
-msgid "Flexible onscreen keyboard"
-msgstr ""
-
-#. Title of the snippets dialog for existing snippets
-#: ../Onboard/KeyboardWidget.py:1590
-msgid "Edit snippet #{}"
-msgstr "Таҳрир кардани порча #{}"
-
-#. Title of the snippets dialog for new snippets
-#: ../Onboard/KeyboardWidget.py:1594
-msgid "New snippet"
-msgstr "Порчаи нав"
-
-#. Message in the snippets dialog for new snippets
-#: ../Onboard/KeyboardWidget.py:1596
-msgid "Enter a new snippet for button #{}:"
-msgstr "Ворид кардани порчаи нав барои тугмаи #{}:"
-
-#: ../Onboard/KeyboardWidget.py:1607
-msgid "_Save snippet"
-msgstr "_Захира кардани порча"
-
-#: ../Onboard/KeyboardWidget.py:1627
-msgid "_Button label:"
-msgstr "_Барчаспи тугма:"
-
-#: ../Onboard/KeyboardWidget.py:1631
-msgid "S_nippet:"
-msgstr "П_орча:"
-
-#: ../Onboard/KeyboardWidget.py:1801
-msgid "Other _Languages"
-msgstr "Забонҳои _дигар"
-
-#: ../Onboard/KeyboardWidget.py:1845
-msgid "_Remove suggestion…"
-msgstr "_Тоза кардани пешниҳод…"
-
-#: ../Onboard/KeyboardWidget.py:1901
-msgid "Remove word suggestion"
-msgstr "Тоза кардани пешниҳоди калима"
-
-#: ../Onboard/KeyboardWidget.py:1912
-msgid "Remove '{}' everywhere."
-msgstr "Тоза кардани '{}' аз ҳама ҷо."
-
-#: ../Onboard/KeyboardWidget.py:1922
-msgid "This will only affect learned suggestions."
-msgstr "Ин танҳо ба пешниходҳои омӯхта таъсир мерасонад."
-
-#: ../Onboard/KeyboardWidget.py:1962
-msgid "Remove '{}' only where it occures at text begin."
-msgstr "Тоза кардани '{}' танҳо дар пайдоиши он дар аввали матн."
-
-#: ../Onboard/KeyboardWidget.py:1965
-msgid "Remove '{}' only where it occures at sentence begin."
-msgstr "Тоза кардани '{}' танҳо дар пайдоиши он дар аввали ҷумла."
-
-#: ../Onboard/KeyboardWidget.py:1968
-msgid "Remove '{}' only where it occures after numbers."
-msgstr "Тоза кардани '{}' танҳо дар пайдоиши он баъди рақамҳо."
-
-#: ../Onboard/KeyboardWidget.py:1971
-msgid "Remove '{}' only where it occures after '{}'."
-msgstr "Тоза кардани '{}' танҳо дар пайдоиши он баъди '{}'."
-
-#: ../settings_docking_dialog.ui.h:1
-msgid "Top"
-msgstr "Боло"
-
-#: ../settings_docking_dialog.ui.h:2
-msgid "Bottom"
-msgstr "Поён"
-
-#: ../settings_docking_dialog.ui.h:3
-msgid "Active Monitor"
-msgstr "Монитори фаъол"
-
-#: ../settings_docking_dialog.ui.h:4
-msgid "Primary Monitor"
-msgstr "Монитори ибтидоӣ"
-
-#: ../settings_docking_dialog.ui.h:5
-msgid "Monitor 0"
-msgstr "Минитори 0"
-
-#: ../settings_docking_dialog.ui.h:6
-msgid "Monitor 1"
-msgstr "Минитори 1"
-
-#: ../settings_docking_dialog.ui.h:7
-msgid "Monitor 2"
-msgstr "Минитори 2"
-
-#: ../settings_docking_dialog.ui.h:8
-msgid "Monitor 3"
-msgstr "Минитори 3"
-
-#: ../settings_docking_dialog.ui.h:9
-msgid "Monitor 4"
-msgstr "Минитори 4"
-
-#: ../settings_docking_dialog.ui.h:10
-msgid "Monitor 5"
-msgstr "Минитори 5"
-
-#: ../settings_docking_dialog.ui.h:11
-msgid "Monitor 6"
-msgstr "Минитори 6"
-
-#: ../settings_docking_dialog.ui.h:12
-msgid "Monitor 7"
-msgstr "Минитори 7"
-
-#: ../settings_docking_dialog.ui.h:13
-msgid "Monitor 8"
-msgstr "Минитори 8"
-
-#: ../settings_docking_dialog.ui.h:14
-msgid "Docking settings"
-msgstr "Танзимоти васлкунӣ"
-
-#: ../settings_docking_dialog.ui.h:15
-msgctxt "Label of the close button of the docking settings dialog."
-msgid "_Close"
-msgstr ""
-
-#: ../settings_docking_dialog.ui.h:16
-msgid "Shrink workarea"
-msgstr "Кучак кардани ноҳияи корӣ"
-
-#: ../settings_docking_dialog.ui.h:17
-msgid "Shrink the available space for maximized windows."
-msgstr "Кучак кардани фазои дастрас барои равзанаҳои густаришдодашуда."
-
-#: ../settings_docking_dialog.ui.h:18
-msgid "Expand on landscape screens"
-msgstr "Густариш додан дар экранҳои уфуқӣ"
-
-#: ../settings_docking_dialog.ui.h:19
-msgid "Expand keyboard to the width of the workarea."
-msgstr "Густариш додани клавиатура ба паҳноии ноҳияи корӣ."
-
-#: ../settings_docking_dialog.ui.h:20
-msgid "Expand on portrait screens"
-msgstr "Густариш додан дар экранҳои амудӣ"
-
-#: ../settings_docking_dialog.ui.h:21
-msgid "Dock to screen edge:"
-msgstr "Васл кардан ба канори экран:"
-
-#: ../settings_docking_dialog.ui.h:22
-msgid "Dock to monitor:"
-msgstr "Мустақар кардан ба монитор:"
-
-#: ../Onboard/Indicator.py:56
-msgid "_Show Onboard"
-msgstr "_Намоиш додани Onboard"
-
-#: ../Onboard/Indicator.py:57
-msgid "_Hide Onboard"
-msgstr "_Пинҳон кардани Onboard"
-
-#. Translators: label of a menu item. It used to be stock item
-#. STOCK_PREFERENCES until Gtk 3.10 deprecated those.
-#: ../Onboard/Indicator.py:83
-msgid "_Preferences"
-msgstr "_Хусусиятҳо"
-
-#: ../Onboard/Indicator.py:91
-msgid "_Help"
-msgstr ""
-
-#. Translators: label of a menu item. It used to be stock item
-#. STOCK_QUIT until Gtk 3.10 deprecated those.
-#: ../Onboard/Indicator.py:102
-msgid "_Quit"
-msgstr "_Хуруҷ"
-
-#: ../Onboard/Indicator.py:228 ../Onboard/Indicator.py:231
-msgid "Onboard on-screen keyboard"
-msgstr "Клавиатураи экрании Onboard"
-
-#: ../Onboard/OnboardGtk.py:429
-msgid ""
-"Onboard is configured to appear with the dialog to unlock the screen; for "
-"example to dismiss the password-protected screensaver.\n"
-"\n"
-"However the system is not configured anymore to use Onboard to unlock the "
-"screen. A possible reason can be that another application configured the "
-"system to use something else.\n"
-"\n"
-"Would you like to reconfigure the system to show Onboard when unlocking the "
-"screen?"
-msgstr ""
-"Onboard барои пайдо шудан бо равзанаи кушодани экран конфигуратсия карда "
-"шудааст; масалан, барои пӯшидани пардаи экрани бо парол муҳофизатшуда.\n"
-"\n"
-"Аммо система дигар барои истифодаи Onboard барои кушодани экран "
-"конфигуратсия нашудааст. Сабаби эҳтимолӣ метавонад барномаи дигаре бошад, ки "
-"системаро барои истифодаи ягон чизи дигар конфигуратсия кардааст.\n"
-"\n"
-"Шумо мехоҳед, ки системаро барои намоиш додани Onboard ҳангоми кушодани "
-"экран конфигуратсия кунед?"
-
-#: ../Onboard/OnboardGtk.py:448
-msgid ""
-"Onboard is configured to appear with the dialog to unlock the screen; for "
-"example to dismiss the password-protected screensaver.\n"
-"\n"
-"However this function is disabled in the system.\n"
-"\n"
-"Would you like to activate it?"
-msgstr ""
-"Onboard барои пайдо шудан бо равзанаи кушодани экран конфигуратсия карда "
-"шудааст; масалан, барои пӯшидани пардаи экрани бо парол муҳофизатшуда.\n"
-"\n"
-"Аммо, ин функсия дар система ғайрифаъол карда шудааст.\n"
-"\n"
-"Шумо мехоҳед, ки онро фаъол кунед?"
-
-#: ../settings_theme_dialog.ui.h:1
-msgid "Customize Theme"
-msgstr "Фармоиш додани мавзӯъ"
-
-#: ../settings_theme_dialog.ui.h:2
-msgctxt "Label of the revert button of the theme settings dialog."
-msgid "_Revert"
-msgstr ""
-
-#: ../settings_theme_dialog.ui.h:3
-msgctxt "Label of the close button of the theme settings dialog."
-msgid "_Close"
-msgstr ""
-
-#: ../settings_theme_dialog.ui.h:4
-msgid "Color Sche_me"
-msgstr "Схемаи _рангҳо"
-
-#. Key style with simple gradients
-#: ../settings_theme_dialog.ui.h:6 ../Onboard/settings.py:1621
-msgid "Gradient"
-msgstr "Градиент"
-
-#: ../settings_theme_dialog.ui.h:7
-msgid "_Angle:"
-msgstr "_Кунҷ:"
-
-#: ../settings_theme_dialog.ui.h:8
-msgid "Light Direction"
-msgstr "Самти равшанӣ"
-
-#: ../settings_theme_dialog.ui.h:10
-msgid "_Style:"
-msgstr "_Сабк:"
-
-#: ../settings_theme_dialog.ui.h:11
-msgid "R_oundness:"
-msgstr "М_удавварӣ:"
-
-#: ../settings_theme_dialog.ui.h:12
-msgid "S_ize:"
-msgstr "_Андоза:"
-
-#: ../settings_theme_dialog.ui.h:13
-msgid "B_order width:"
-msgstr "П_аҳноии марз:"
-
-#: ../settings_theme_dialog.ui.h:14
-msgid "Key Style"
-msgstr "Сабки тугма"
-
-#: ../settings_theme_dialog.ui.h:15
-msgid "_Key:"
-msgstr "_Калид:"
-
-#: ../settings_theme_dialog.ui.h:16
-msgid "_Border:"
-msgstr "_Марз:"
-
-#: ../settings_theme_dialog.ui.h:17
-msgid "Gradients"
-msgstr "Градиентҳо"
-
-#: ../settings_theme_dialog.ui.h:18
-msgid "_Strength:"
-msgstr "_Қувва:"
-
-#: ../settings_theme_dialog.ui.h:19
-msgid "Shadow"
-msgstr "Соя"
-
-#: ../settings_theme_dialog.ui.h:20
-msgid "Keys"
-msgstr "Тугмаҳо"
-
-#: ../settings_theme_dialog.ui.h:21
-msgid "_Font:"
-msgstr "_Шрифт:"
-
-#: ../settings_theme_dialog.ui.h:22
-msgid "_Attributes:"
-msgstr "_Сифатҳо:"
-
-#: ../settings_theme_dialog.ui.h:23
-msgid "Font"
-msgstr "Шрифт"
-
-#: ../settings_theme_dialog.ui.h:24
-msgid "I_ndependent size"
-msgstr "А_ндозаи мустақил"
-
-#: ../settings_theme_dialog.ui.h:25
-msgid "_Super key:"
-msgstr "_Тугмаи Super:"
-
-#: ../settings_theme_dialog.ui.h:26
-msgid "Label Override"
-msgstr "Аз нав таъин кардани барчасп"
-
-#: ../settings_theme_dialog.ui.h:27
-msgid "Labels"
-msgstr "Барчапспҳо"
+#: ../data/onboard-settings.desktop.in.h:1
+msgid "Onboard Settings"
+msgstr "Танзимоти Onboard"
+
+#: ../data/onboard-settings.desktop.in.h:2
+msgid "Onboard onscreen keyboard settings"
+msgstr "Танзимоти клавиатураи экрании Onboard"
+
+#: ../data/onboard-settings.desktop.in.h:3
+msgid "Change Onboard settings"
+msgstr "Тағйир додани танзимоти Onboard"
+
+#: ../Onboard/WPEngine.py:483
+msgid "Failed to load language model '{}': {} ({})"
+msgstr "Боркунии намунаи забони '{}' қатъ шудааст: {} ({})"
 
 #. translators: this is a 'tooltip' of the key_template 'hoverclick' in keyboard layout 'key_defs.xml'
 #: ../data/layoutstrings.py:35 ../data/layoutstrings.py:193
@@ -2073,6 +2181,245 @@ msgstr "Пешниҳодҳои санҷиши имло"
 msgid "Sub-, Superscripts; Fractions"
 msgstr "Зер-, Зернигоштҳо; Касрҳо"
 
+#: ../Onboard/OnboardGtk.py:429
+msgid ""
+"Onboard is configured to appear with the dialog to unlock the screen; for "
+"example to dismiss the password-protected screensaver.\n"
+"\n"
+"However the system is not configured anymore to use Onboard to unlock the "
+"screen. A possible reason can be that another application configured the "
+"system to use something else.\n"
+"\n"
+"Would you like to reconfigure the system to show Onboard when unlocking the "
+"screen?"
+msgstr ""
+"Onboard барои пайдо шудан бо равзанаи кушодани экран конфигуратсия карда "
+"шудааст; масалан, барои пӯшидани пардаи экрани бо парол муҳофизатшуда.\n"
+"\n"
+"Аммо система дигар барои истифодаи Onboard барои кушодани экран "
+"конфигуратсия нашудааст. Сабаби эҳтимолӣ метавонад барномаи дигаре бошад, ки "
+"системаро барои истифодаи ягон чизи дигар конфигуратсия кардааст.\n"
+"\n"
+"Шумо мехоҳед, ки системаро барои намоиш додани Onboard ҳангоми кушодани "
+"экран конфигуратсия кунед?"
+
+#: ../Onboard/OnboardGtk.py:448
+msgid ""
+"Onboard is configured to appear with the dialog to unlock the screen; for "
+"example to dismiss the password-protected screensaver.\n"
+"\n"
+"However this function is disabled in the system.\n"
+"\n"
+"Would you like to activate it?"
+msgstr ""
+"Onboard барои пайдо шудан бо равзанаи кушодани экран конфигуратсия карда "
+"шудааст; масалан, барои пӯшидани пардаи экрани бо парол муҳофизатшуда.\n"
+"\n"
+"Аммо, ин функсия дар система ғайрифаъол карда шудааст.\n"
+"\n"
+"Шумо мехоҳед, ки онро фаъол кунед?"
+
+#: ../Onboard/Config.py:235
+msgid "Layout file ({}) or name"
+msgstr "Файл ({}) ё номи тарҳбандӣ"
+
+#: ../Onboard/Config.py:238
+msgid "Theme file (.theme) or name"
+msgstr "Файл (.theme) ё номи мавзӯъname"
+
+#: ../Onboard/Config.py:240
+msgid "Window size, widthxheight"
+msgstr "Андозаи равзана, widthxheight"
+
+#: ../Onboard/Config.py:241
+msgid "Window x position"
+msgstr "Ҷойгиршавии равзана x"
+
+#: ../Onboard/Config.py:242
+msgid "Window y position"
+msgstr "Ҷойгиршавии равзанаи y"
+
+#: ../Onboard/Config.py:247
+msgid "Start in XEmbed mode, e.g. for gnome-screensaver"
+msgstr "Оғоз кардан дар ҳолати XEmbed, масалан барои gnome-screensaver"
+
+#: ../Onboard/Config.py:250
+msgid "Allow multiple Onboard instances"
+msgstr "Иҷозат додани якчанд ҳолати Onboard"
+
+#: ../Onboard/Config.py:253
+msgid ""
+"Silently fail to start in the given desktop environments. DESKTOPS is a "
+"comma-separated list of XDG desktop names, e.g. GNOME for GNOME Shell."
+msgstr ""
+"Нокомии ором ҳангоми оғози муҳитҳои додашудаи мизи корӣ. DESKTOPS - ин "
+"рӯйхати бо вергулҳо ҷудошудаи номҳои мизи кории XDG мебошад, масалан GNOME "
+"барои GNOME Shell."
+
+#: ../Onboard/Config.py:259
+msgid ""
+"Delay showing the initial keyboard window by STARTUP_DELAY seconds (default "
+"0.0)."
+msgstr ""
+
+#: ../Onboard/Config.py:263
+msgid "Keep aspect ratio when resizing the window"
+msgstr "Нигоҳ доштани таносуб ҳангоми тағйир додани андозаи равзана"
+
+#: ../Onboard/Config.py:265
+msgid ""
+"Override auto-detection and manually select quirks\n"
+"QUIRKS={metacity|compiz|mutter}"
+msgstr ""
+"Бекор кардани ташхиси худкор ва интихоб кардани дастии ҳолати мувофиқат\n"
+"QUIRKS={metacity|compiz|mutter}"
+
+#: ../Onboard/Config.py:380
+msgid "Migrating user directory '{}' to '{}'."
+msgstr "Интиқолдиҳии директорияи корбари \"{}\" ба \"{}\"."
+
+#. honor XDG spec
+#. python >2.5
+#: ../Onboard/Config.py:388
+msgid "failed to migrate user directory. "
+msgstr "интиқолдиҳии директорияи корбарӣ қатъ шудааст. "
+
+#: ../Onboard/Config.py:867
+#, python-brace-format
+msgid "layout '{filename}' does not exist"
+msgstr "тарҳбандии \"{filename}\" вуҷуд надорад"
+
+#: ../Onboard/Config.py:908
+#, python-brace-format
+msgid "theme '{filename}' does not exist"
+msgstr "мавзӯи \"{filename}\" вуҷуд надорад"
+
+#: ../Onboard/Config.py:933
+msgid "Loading theme from '{}'"
+msgstr "Боркунии мавзӯъ аз \"{}\""
+
+#: ../Onboard/Config.py:937
+msgid "Unable to read theme '{}'"
+msgstr "Мавзӯи \"{}\" хонда нашуд"
+
+#: ../Onboard/Config.py:1143
+msgid ""
+"Enabling auto-show requires Gnome Accessibility.\n"
+"\n"
+"Onboard can turn on accessiblity now, however it is recommended that you log "
+"out and back in for it to reach its full potential.\n"
+"\n"
+"Enable accessibility now?"
+msgstr ""
+"Фаъолкунии намоишдиҳии худкор \"Қобилияти дастрасии Gnome\"-ро талаб "
+"мекунад.\n"
+"\n"
+"Onboard can turn on accessiblity now, however it is recommended that you log "
+"out and back in for it to reach its full potential.\n"
+"\n"
+"Enable accessibility now?"
+
+#: ../Onboard/Config.py:1902
+#, python-brace-format
+msgid "color scheme '{filename}' does not exist"
+msgstr "схемаи рангҳои \"{filename}\" вуҷуд надорад"
+
+#: ../Onboard/WindowUtils.py:1128
+msgid "New Input Device"
+msgstr "Дастгоҳи нави вуруд"
+
+#: ../Onboard/WindowUtils.py:1129
+msgid "Onboard has detected a new input device"
+msgstr "Onboard дастгоҳи нави вурудро пайдо кард"
+
+#: ../Onboard/WindowUtils.py:1138
+msgid "Do you want to use this device for keyboard scanning?"
+msgstr ""
+"Шумо мехоҳед, ки ин дастгоҳро барои сканкунии клавиатура истифода баред?"
+
+#: ../Onboard/WindowUtils.py:1145
+msgid "Use device"
+msgstr "Истифодаи дастгоҳ"
+
+#: ../data/onboard.desktop.in.h:2 ../data/onboard-autostart.desktop.in.h:2
+msgid "Onboard onscreen keyboard"
+msgstr "Клавиатураи экрании Onboard"
+
+#: ../data/onboard.desktop.in.h:3 ../data/onboard-autostart.desktop.in.h:3
+msgid "Flexible onscreen keyboard"
+msgstr ""
+
+#: ../Onboard/KbdWindow.py:202
+msgid "no window transparency available; screen doesn't support alpha channels"
+msgstr ""
+"ягон шаффофии равзана дастрас нест; экран каналҳои алфаро дастгирӣ намекунад"
+
+#. ##############
+#: ../Onboard/SnippetView.py:39
+msgid "<Enter label>"
+msgstr "<Барчаспро ворид кунед>"
+
+#: ../Onboard/SnippetView.py:40
+msgid "<Enter text>"
+msgstr "<Матнро ворид кунед>"
+
+#: ../Onboard/SnippetView.py:52
+msgid "Button Number"
+msgstr "Рақами тугма"
+
+#: ../Onboard/SnippetView.py:59
+msgid "Button Label"
+msgstr "Барчаспи тугма"
+
+#: ../Onboard/SnippetView.py:68
+msgid "Snippet Text"
+msgstr "Матни порча"
+
+#: ../Onboard/SnippetView.py:113
+msgid "Must be an integer number"
+msgstr "Бояд рақами яклухт бошад"
+
+#: ../Onboard/SnippetView.py:122
+#, python-format
+msgid "Snippet %d is already in use."
+msgstr "Порчаи %d аллакай истифода мешавад."
+
+#: ../Onboard/WordSuggestions.py:2692
+msgid ""
+"<big>Onboard failed to open learned word suggestions.</big>\n"
+"\n"
+"The error was:\n"
+"<tt>{}</tt>\n"
+"\n"
+"Revert word suggestions to the last backup (recommended)?"
+msgstr ""
+"<big>Onboard пешниҳодҳои калимаҳои ҷамъшударо кушода натавонист.</big>\n"
+"\n"
+"Паёми хато:\n"
+"<tt>{}</tt>\n"
+"\n"
+"Пешниҳодҳои калимаҳоро ба нусхаи эҳтиётии охирин бармегардед (тавсия дода "
+"мешавад)?"
+
+#: ../Onboard/WordSuggestions.py:2711
+msgid ""
+"<big>Onboard failed to open learned word suggestions.</big>\n"
+"\n"
+"The error was:\n"
+"<tt>{}</tt>\n"
+"\n"
+"The suggestions have to be reset, but the erroneous file will remain at \n"
+"'{}'"
+msgstr ""
+"<big>Onboard пешниҳодҳои калимаҳои ҷамъшударо кушода натавонист.</big>\n"
+"\n"
+"Паёми хато:\n"
+"<tt>{}</tt>\n"
+"\n"
+"Пешниҳодҳо бояд дубора танзим карда шаванд, вале файли хатогӣ дар макони "
+"зерин мемонад \n"
+"'{}'"
+
 #: ../Onboard/LayoutLoaderSVG.py:164
 msgid ""
 "Loading legacy layout, format '{}'. Please consider upgrading to current "
@@ -2107,111 +2454,6 @@ msgstr ""
 #: ../Onboard/LayoutLoaderSVG.py:1000
 msgid "copying svg file '{}' to '{}'"
 msgstr "нусхабардории файли svg-и \"{}\" ба \"{}\""
-
-#: ../Onboard/Config.py:236
-msgid "Layout file ({}) or name"
-msgstr "Файл ({}) ё номи тарҳбандӣ"
-
-#: ../Onboard/Config.py:239
-msgid "Theme file (.theme) or name"
-msgstr "Файл (.theme) ё номи мавзӯъname"
-
-#: ../Onboard/Config.py:241
-msgid "Window size, widthxheight"
-msgstr "Андозаи равзана, widthxheight"
-
-#: ../Onboard/Config.py:242
-msgid "Window x position"
-msgstr "Ҷойгиршавии равзана x"
-
-#: ../Onboard/Config.py:243
-msgid "Window y position"
-msgstr "Ҷойгиршавии равзанаи y"
-
-#: ../Onboard/Config.py:248
-msgid "Start in XEmbed mode, e.g. for gnome-screensaver"
-msgstr "Оғоз кардан дар ҳолати XEmbed, масалан барои gnome-screensaver"
-
-#: ../Onboard/Config.py:251
-msgid "Allow multiple Onboard instances"
-msgstr "Иҷозат додани якчанд ҳолати Onboard"
-
-#: ../Onboard/Config.py:254
-msgid ""
-"Silently fail to start in the given desktop environments. DESKTOPS is a "
-"comma-separated list of XDG desktop names, e.g. GNOME for GNOME Shell."
-msgstr ""
-"Нокомии ором ҳангоми оғози муҳитҳои додашудаи мизи корӣ. DESKTOPS - ин "
-"рӯйхати бо вергулҳо ҷудошудаи номҳои мизи кории XDG мебошад, масалан GNOME "
-"барои GNOME Shell."
-
-#: ../Onboard/Config.py:260
-msgid ""
-"Delay showing the initial keyboard window by STARTUP_DELAY seconds (default "
-"0.0)."
-msgstr ""
-
-#: ../Onboard/Config.py:264
-msgid "Keep aspect ratio when resizing the window"
-msgstr "Нигоҳ доштани таносуб ҳангоми тағйир додани андозаи равзана"
-
-#: ../Onboard/Config.py:266
-msgid ""
-"Override auto-detection and manually select quirks\n"
-"QUIRKS={metacity|compiz|mutter}"
-msgstr ""
-"Бекор кардани ташхиси худкор ва интихоб кардани дастии ҳолати мувофиқат\n"
-"QUIRKS={metacity|compiz|mutter}"
-
-#: ../Onboard/Config.py:381
-msgid "Migrating user directory '{}' to '{}'."
-msgstr "Интиқолдиҳии директорияи корбари \"{}\" ба \"{}\"."
-
-#. honor XDG spec
-#. python >2.5
-#: ../Onboard/Config.py:389
-msgid "failed to migrate user directory. "
-msgstr "интиқолдиҳии директорияи корбарӣ қатъ шудааст. "
-
-#: ../Onboard/Config.py:868
-#, python-brace-format
-msgid "layout '{filename}' does not exist"
-msgstr "тарҳбандии \"{filename}\" вуҷуд надорад"
-
-#: ../Onboard/Config.py:909
-#, python-brace-format
-msgid "theme '{filename}' does not exist"
-msgstr "мавзӯи \"{filename}\" вуҷуд надорад"
-
-#: ../Onboard/Config.py:934
-msgid "Loading theme from '{}'"
-msgstr "Боркунии мавзӯъ аз \"{}\""
-
-#: ../Onboard/Config.py:938
-msgid "Unable to read theme '{}'"
-msgstr "Мавзӯи \"{}\" хонда нашуд"
-
-#: ../Onboard/Config.py:1144
-msgid ""
-"Enabling auto-show requires Gnome Accessibility.\n"
-"\n"
-"Onboard can turn on accessiblity now, however it is recommended that you log "
-"out and back in for it to reach its full potential.\n"
-"\n"
-"Enable accessibility now?"
-msgstr ""
-"Фаъолкунии намоишдиҳии худкор \"Қобилияти дастрасии Gnome\"-ро талаб "
-"мекунад.\n"
-"\n"
-"Onboard can turn on accessiblity now, however it is recommended that you log "
-"out and back in for it to reach its full potential.\n"
-"\n"
-"Enable accessibility now?"
-
-#: ../Onboard/Config.py:1926
-#, python-brace-format
-msgid "color scheme '{filename}' does not exist"
-msgstr "схемаи рангҳои \"{filename}\" вуҷуд надорад"
 
 #: ../Onboard/ConfigUtils.py:81
 msgid "gsettings schema for '{}' is not installed"
@@ -2293,248 +2535,6 @@ msgstr ""
 #: ../Onboard/ConfigUtils.py:732
 msgid "Failed to get gsettings value. "
 msgstr "Қимати gsettings гирифта нашуд. "
-
-#: ../Onboard/Appearance.py:130
-#, python-brace-format
-msgid "Color scheme for theme '{filename}' not found"
-msgstr "Схемаи рангҳо барои мавзӯи \"{filename}\" ёфт нашуд"
-
-#: ../Onboard/Appearance.py:350
-#, python-brace-format
-msgid "Error loading theme '{filename}'. {exception}: {cause}"
-msgstr ""
-"Ҳангоми боркунии мавзӯи \"{filename}\" хетогӣ ба вуҷуд омад. {exception}: "
-"{cause}"
-
-#: ../Onboard/Appearance.py:424
-msgid "Error saving "
-msgstr "Ҳангоми захиракунӣ хатогӣ ба вуҷуд омад "
-
-#: ../Onboard/Appearance.py:842
-#, python-brace-format
-msgid ""
-"Loading legacy color scheme format '{old_format}', please consider upgrading "
-"to current format '{new_format}': '{filename}'"
-msgstr ""
-"Боркунии формати кӯҳнаи схемаи рангҳои \"{old_format}\", лутфан, ба формати "
-"ҷории \"{new_format}\": \"{filename}\" навсозӣ кунед"
-
-#: ../Onboard/Appearance.py:862
-#, python-brace-format
-msgid "Error loading color scheme '{filename}'. {exception}: {cause}"
-msgstr ""
-"Ҳангоми захиракунии схемаи рангҳои \"{filename}\" хатогӣ ба вуҷуд омад. "
-"{exception}: {cause}"
-
-#: ../Onboard/Appearance.py:939 ../Onboard/Appearance.py:1071
-msgid ""
-"Duplicate key_id '{}' found in color scheme file. Key_ids must occur only "
-"once."
-msgstr ""
-"Дар файли схемаи рангҳои \"{}\" key_id-и такрорӣ пайдо карда шуд. Key_id-ҳо "
-"бояд танҳо як маротиба ба вуҷуд оянд."
-
-#: ../Onboard/settings.py:316
-msgid "Onboard Preferences"
-msgstr "Бартариҳои Onboard"
-
-#. touch_feedback_size_label: 0=auto, i.e. let Onboard guess
-#. the size of the label popup.
-#: ../Onboard/settings.py:675
-msgid "auto"
-msgstr ""
-
-#: ../Onboard/settings.py:751
-msgid "Copy layout '{}' to this new name:"
-msgstr "Нусха бардоштани тарҳбандии '{}' ба ин номи нав:"
-
-#: ../Onboard/settings.py:764
-msgid "Delete layout '{}'?"
-msgstr "Тарҳбандии '{}'-ро нест мекунед?"
-
-#: ../Onboard/settings.py:812
-msgid "System settings not found ({}): {}"
-msgstr "Танзимоти система ёфт нашуд ({}): {}"
-
-#: ../Onboard/settings.py:835
-msgid "Core layouts"
-msgstr "Тарҳбандиҳои асосӣ"
-
-#: ../Onboard/settings.py:836
-msgid "Contributions"
-msgstr "Саҳмгузорон"
-
-#: ../Onboard/settings.py:837
-msgid "My layouts"
-msgstr ""
-
-#: ../Onboard/settings.py:872
-msgid "Author: {}"
-msgstr "Муаллиф: {}"
-
-#: ../Onboard/settings.py:876
-msgid "About Layout"
-msgstr "Дар бораи тарҳбандӣ"
-
-#: ../Onboard/settings.py:981
-msgid "Enter a name for the new theme:"
-msgstr "Номеро барои мавзӯи нав ворид кунед:"
-
-#: ../Onboard/settings.py:989
-#, python-brace-format
-msgid ""
-"This theme file already exists.\n"
-"'{filename}'\n"
-"\n"
-"Overwrite it?"
-msgstr ""
-"Ин мавзӯъ аллакай вуҷуд дорад.\n"
-"\"{filename}\"\n"
-"\n"
-"Онро рӯйҳамнависӣ мекунед?"
-
-#: ../Onboard/settings.py:1006
-msgid "Reset selected theme to Onboard defaults?"
-msgstr "Мавзӯи интихобшударо ба пешфарзҳои Onboard дубора танзим мекунед?"
-
-#: ../Onboard/settings.py:1008
-msgid "Delete selected theme?"
-msgstr "Мавзӯи интихобшударо нест мекунед?"
-
-#. Translators: reset button of Preferences->Theme.
-#: ../Onboard/settings.py:1137
-msgid "_Reset"
-msgstr "_Танзими дубора"
-
-#. Translators: delete button of Preferences->Theme. It used to be
-#. stock item STOCK_DELETE until Gtk 3.10 deprecated those.
-#: ../Onboard/settings.py:1141
-msgid "_Delete"
-msgstr "_Нест кардан"
-
-#. Translators: header of a tree view column with toggles to ignore
-#. keyboard devices (Preferences->Auto-show->External Keyboards).
-#: ../Onboard/settings.py:1278
-msgid "Ignore"
-msgstr ""
-
-#. Translators: header of a tree view column with device names
-#. (Preferences->Auto-show->External Keyboards).
-#: ../Onboard/settings.py:1282
-msgid "Device"
-msgstr ""
-
-#. Key style with flat fill- and border colors
-#: ../Onboard/settings.py:1619
-msgid "Flat"
-msgstr "Ҳамвор"
-
-#. Key style for dish-like key caps
-#: ../Onboard/settings.py:1623
-msgid "Dish"
-msgstr "Табақ"
-
-#: ../Onboard/settings.py:1672 ../Onboard/settings.py:1729
-msgid "Default"
-msgstr "Пешфарз"
-
-#: ../Onboard/settings.py:1713
-msgid "Bold"
-msgstr "Пурранг"
-
-#: ../Onboard/settings.py:1715
-msgid "Italic"
-msgstr "Хам"
-
-#: ../Onboard/settings.py:1717
-msgid "Condensed"
-msgstr "Зичшуда"
-
-#: ../Onboard/settings.py:1730
-msgid ""
-msgstr ""
-
-#: ../Onboard/settings.py:1730
-msgid "Ubuntu Logo"
-msgstr "Тамғаи Ubuntu"
-
-#: ../Onboard/settings.py:1864
-msgid "Step"
-msgstr "Қадам"
-
-#: ../Onboard/settings.py:1865
-msgid "Left"
-msgstr "Чап"
-
-#: ../Onboard/settings.py:1866
-msgid "Right"
-msgstr "Рост"
-
-#: ../Onboard/settings.py:1867
-msgid "Up"
-msgstr "Боло"
-
-#: ../Onboard/settings.py:1868
-msgid "Down"
-msgstr "Поён"
-
-#: ../Onboard/settings.py:1869
-msgid "Activate"
-msgstr "Фаъол кардан"
-
-#: ../Onboard/settings.py:2038
-msgid "Action:"
-msgstr "Амал:"
-
-#: ../Onboard/settings.py:2202
-msgid "Disabled"
-msgstr "Ғайрифаъолшуда"
-
-#: ../Onboard/settings.py:2208
-msgid "Button"
-msgstr "Тугма"
-
-#: ../Onboard/settings.py:2263 ../Onboard/settings.py:2308
-msgid "Press a button..."
-msgstr "Тугмаеро пахш кунед..."
-
-#: ../Onboard/settings.py:2310
-msgid "Press a key..."
-msgstr "Тугмаеро пахш кунед..."
-
-#. ##############
-#: ../Onboard/SnippetView.py:39
-msgid "<Enter label>"
-msgstr "<Барчаспро ворид кунед>"
-
-#: ../Onboard/SnippetView.py:40
-msgid "<Enter text>"
-msgstr "<Матнро ворид кунед>"
-
-#: ../Onboard/SnippetView.py:52
-msgid "Button Number"
-msgstr "Рақами тугма"
-
-#: ../Onboard/SnippetView.py:59
-msgid "Button Label"
-msgstr "Барчаспи тугма"
-
-#: ../Onboard/SnippetView.py:68
-msgid "Snippet Text"
-msgstr "Матни порча"
-
-#: ../Onboard/SnippetView.py:113
-msgid "Must be an integer number"
-msgstr "Бояд рақами яклухт бошад"
-
-#: ../Onboard/SnippetView.py:122
-#, python-format
-msgid "Snippet %d is already in use."
-msgstr "Порчаи %d аллакай истифода мешавад."
-
-#: ../Onboard/utils.py:1535
-msgid "failed to create directory '{}': {}"
-msgstr "қатъи эҷодкунии директорияи '{}': {}"
 
 #~ msgid "Reset"
 #~ msgstr "Бозсозӣ"

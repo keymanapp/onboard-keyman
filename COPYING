@@ -341,7 +341,11 @@ License: GPL-3+
 
 Files: onboard-defaults.conf.example
 Copyright: 2011-2014, 2016-2017, marmuta <marmvta@gmail.com>
-  2011, 2012, Francesco Fumanti <francesco.fumanti@gmx.net>
+  2011, 2012, 2017, Francesco Fumanti <francesco.fumanti@gmx.net>
+License: GPL-3+
+
+Files: onboard-default-settings.gschema.override.example
+Copyright: 2017, marmuta <marmvta@gmail.com>
 License: GPL-3+
 
 Files: onboard-settings
@@ -396,6 +400,10 @@ Files: themes/Aubergine.colors
   themes/Typist.colors
 Copyright: 2011-2014, marmuta <marmvta@gmail.com>
   2011, Alan Bell <alanbell@ubuntu.com>
+License: GPL-3+
+
+Files: tools/install_gsettings_schema
+Copyright: 2015, 2017, marmuta <marmvta@gmail.com>
 License: GPL-3+
 
 Files: tools/licensing
