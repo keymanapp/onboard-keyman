@@ -6,6 +6,6 @@ Exec=onboard
 Terminal=false
 Type=Application
 Categories=Utility;Accessibility;
-MimeType=application/x-onboard;
+_Keywords=onscreen;keyboard;accessibility;utility;
 Icon=onboard
 X-Ubuntu-Gettext-Domain=onboard
