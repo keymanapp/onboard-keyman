@@ -1,0 +1,76 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="topic" style="task"
+      id="layouts-replace-character">
+
+  <info>
+    <link type="guide" xref="layouts-index#topics"/>
+    <link type="seealso" xref="layouts-specification"/>
+    <link type="seealso" xref="layouts-create-copy"/>
+
+    <desc>Replace the character typed by a key of the layout.</desc>
+
+    <credit type="author">
+      <name>Francesco Fumanti</name>
+      <email>francesco.fumanti@gmx.net</email>
+      <years>2016</years>
+    </credit>
+
+    <license href="http://www.gnu.org/licenses/gpl.html">
+      <p>This work is licensed under the
+      <link href="http://www.gnu.org/licenses/gpl.html">GNU General Public License version 3 or any later version</link>.</p>
+    </license>
+
+
+  </info>
+
+  <title>Replace character of key</title>
+
+  <p>The following explains how to replace the character typed by a key of a layout shipping with <app>Onboard</app>.</p>
+
+  <steps>
+    <item><p>Start by creating a copy of the layout that you want to modify. You can do it for example by following the <link xref="layouts-create-copy" /> instructions.</p></item>
+    <item><p>Open the <file>svg files</file> that were created by copying the layout with the <app>Inkscape</app> application.</p></item>
+    <item><p>Locate the key you want to edit on the images opened in <app>Inkscape</app>.</p></item>
+    <item><p>Click on the key and open the <gui>Properties</gui> pane of the object in <app>Inkscape</app> to get the <em>id</em> of the key.</p></item>
+    <item><p>Open the <file>.onboard</file> file, that was created when you copied the layout in the first step of these instructions in a <app>text editor</app>. It is located alongside the <file>svg files</file> that you opened to get the key <em>id</em>.</p></item>
+    <item><p>Locate the <em>&lt;key ... /&gt;</em> containing the <em>id</em> you determined by using the svg files.</p></item>
+    <item><p>Keep the <em>id</em> attribute of the key and edit the <em>group</em>, <em>char</em>, <em>label</em> and <em>tooltips</em> attribute according to your needs. Here is for example the definition of a key typing the smiling face emoticon:</p><code>&lt;key group="symbol" id="EM01" char="☺" label="☺" tooltip="Smiling face" /&gt;</code></item>
+  </steps>
+
+  <p>Meaning of the attributes:</p>
+
+  <terms>
+    <item>
+      <title>group</title>
+      <p>This <em>group</em> attribute is related to the themes. The colour <app>Onboard</app> uses to display the key for example depends on the group, it belongs to.</p>
+    </item>
+    <item>
+      <title>id</title>
+      <p>The <em>id</em> attribute relates the definition of the key in the .onboard file to the key in the corresponding svg file.</p>
+    </item>
+    <item>
+      <title>char</title>
+      <p>The <em>char</em> attribute defines what gets typed by clicking on the key.</p>
+    </item>
+    <item>
+      <title>label</title>
+      <p>The <em>label</em> attribute defines what <app>Onboard</app> shows on the on-screen keyboard for the key.</p>
+    </item>
+    <item>
+      <title>tooltip</title>
+      <p>The <em>tooltip</em> attribute defines the text of the tooltip shown when the pointer hovers over the key.</p>
+    </item>
+  </terms>
+
+  <note>
+    <p>By using the <em>char</em> attribute in the key tag the character typed by the key is fixed. Instead of using the <em>char</em> attribute, you can also use the <em>keysym</em> attribute. It behaves like the <em>char</em> attribute, but expects the numerical value of the char in decimal or hexadecimal format.</p>
+  </note>
+
+  <note style="important">
+    <p>Finally, there is a third attribute to define what the key types. By replacing the <em>char</em> or <em>keysym</em> attribute with the <em>keycode</em> attribute which receives a numerical value in decimal format, the character typed is not fix anymore. In fact, the <em>keycode</em> identifies a keyboard key of the system and what gets typed depends on the keyboard language configured for the desktop session.</p>
+    <p>You might have a look at the <file>key_defs.xml</file> file shipping with <app>Onboard</app> for more information.</p>
+  </note>
+
+</page>
+
+

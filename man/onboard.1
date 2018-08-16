@@ -1,0 +1,80 @@
+'\" -*- coding: utf-8 -*-
+.if \n(.g .ds T< \\FC
+.if \n(.g .ds T> \\F[\n[.fam]]
+.de URL
+\\$2 \(la\\$1\(ra\\$3
+..
+.if \n(.g .mso www.tmac
+.TH onboard 1 "Aug 2016" "Version 1.4.0" "X11 application"
+.SH NAME
+onboard \- On-screen Keyboard
+.SH SYNOPSIS
+'nh
+.fi
+.ad l
+\fBonboard\fR \kx
+.if (\nx>(\n(.l/2)) .nr x (\n(.l/5)
+'in \n(.iu+\nxu
+[
+\fIoptions\fR
+]
+'in \n(.iu-\nxu
+.ad b
+'hy
+.SH DESCRIPTION
+\fBonboard\fR  is an on-screen keyboard that can be useful for tablet PC
+users, as well as  for mobility impaired people.
+.PP
+\fBonboard\fR supports macros, easy layout creation and word suggestion.
+
+.SH OPTIONS
+\fBonboard\fR accepts the following command-line options:
+.TP
+\*(T<\fB\-h, \-\-help\fR\*(T>
+Display a help with all available command line options and exit.
+.TP
+\*(T<\fB\-l <LAYOUT>, \-\-layout=<LAYOUT>\fR\*(T>
+Layout file (.onboard) or name
+.TP
+\*(T<\fB\-t <THEME>, \-\-theme=<THEME>\fR\*(T>
+Theme file (.theme) or name
+.TP
+\*(T<\fB\-x <X>\fR\*(T>
+Window x position
+.TP
+\*(T<\fB\-y <Y>\fR\*(T>
+Window y position
+.TP
+\*(T<\fB\-s <SIZE>, \-\-size=<SIZE>\fR\*(T>
+Window size, widthxheight
+.TP
+\*(T<\fB\-e, \-\-xid\fR\*(T>
+Start in XEmbed mode, e.g. for gnome-screensaver
+.TP
+\*(T<\fB\-a, \-\-keep\-aspect\fR\*(T>
+Keep aspect ratio when resizing the window
+.TP
+\*(T<\fB\-d <DEBUG>, \-\-debug=<DEBUG>\fR\*(T>
+<DEBUG>={notset|debug|info|warning|error|critical}
+.TP
+\*(T<\fB\-m, \-\-allow\-multiple\-instances\fR\*(T>
+Allow multiple Onboard instances
+.TP
+\*(T<\fB\-q <QUIRKS>, \-\-quirks=<QUIRKS>\fR\*(T>
+Override auto-detection and manually select quirks
+QUIRKS={metacity|compiz|mutter}
+.TP
+\*(T<\fB\--not-show-in=<DESKTOPS>\fR\*(T>
+Silently fail to start in the given desktop
+environments. <DESKTOPS> is a comma-separated list of
+XDG desktop names, e.g. GNOME for GNOME Shell.
+.TP
+\*(T<\fB\-g, \-\-log\-learning\fR\*(T>
+log all learned text; off by default
+.SH "SEE ALSO"
+\fB/usr/share/doc/onboard\fR
+.SH AUTHOR
+This manual has been written by
+Mike Gabriel <mike.gabriel@das-netzwerkteam.de> by using the options
+from Config.py (see COPYING file for authors of options).
+It is distributed under the GPL-3+ license.

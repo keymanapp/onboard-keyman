@@ -1,0 +1,30 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="topic" style="task"
+      id="dm-lightdm">
+
+  <info>
+    <link type="guide" xref="dm-index#display-managers"/>
+    <link type="seealso" xref="dm-gdm"/>
+
+    <desc>Use Onboard with the LightDM display manager</desc>
+
+    <credit type="author">
+      <name>Francesco Fumanti</name>
+      <email>francesco.fumanti@gmx.net</email>
+      <years>2016</years>
+    </credit>
+
+    <license href="http://www.gnu.org/licenses/gpl.html">
+      <p>This work is licensed under the
+      <link href="http://www.gnu.org/licenses/gpl.html">GNU General Public License version 3 or any later version</link>.</p>
+    </license>
+
+
+  </info>
+
+  <title>Use <app>Onboard</app> with the <app>LightDM</app> display manager</title>
+
+  <p><app>Onboard</app> works out of the box with the <app>LightDM</app> display manager in conjunction of the <app>Unity-Greeter</app> on a default Ubuntu installation.</p>
+  <p>The user only has to start the on-screen keyboard by using the appropriate menu in the accessibility indicator of the <app>Unity-Greeter</app>.</p>
+
+</page>

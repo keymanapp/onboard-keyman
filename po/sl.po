@@ -1,0 +1,3103 @@
+# Slovenian translation for Onboard
+#
+# Copyright:
+#   Original strings: See files they were extracted from
+#   Translations: Rosetta Contributers
+#
+# License:
+#   Original strings: GPL-3+ license
+#   Translations: BSD-3-clause license
+#
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2011.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: onboard\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-02-14 20:56+0100\n"
+"PO-Revision-Date: 2013-10-01 18:43+0000\n"
+"Last-Translator: Sasa Batistic <Unknown>\n"
+"Language-Team: Slovenian <sl@li.org>\n"
+"Language: sl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2017-02-14 14:04+0000\n"
+"X-Generator: Launchpad (build 18326)\n"
+
+#: ../Onboard/WPEngine.py:483
+msgid "Failed to load language model '{}': {} ({})"
+msgstr "Nalaganje jezikovnega modela '{}': {} ({}) je spodletelo."
+
+#. Default dialog title: name of the application
+#: ../Onboard/WindowUtils.py:1108 ../Onboard/KbdWindow.py:108
+#: ../data/onboard.desktop.in.h:1 ../Onboard/KeyboardWidget.py:1892
+#: ../data/onboard-autostart.desktop.in.h:1
+msgid "Onboard"
+msgstr "Onboard"
+
+#: ../Onboard/WindowUtils.py:1128
+msgid "New Input Device"
+msgstr "Nova vhodna naprava"
+
+#: ../Onboard/WindowUtils.py:1129
+msgid "Onboard has detected a new input device"
+msgstr "Onboard je zaznal novo vhodno napravo"
+
+#: ../Onboard/WindowUtils.py:1138
+msgid "Do you want to use this device for keyboard scanning?"
+msgstr "Ali želite uporabiti to napravo za branje tipkovnice?"
+
+#. Translators: cancel button of "New Input Device" dialog. It used to be
+#. stock item STOCK_CANCEL until Gtk 3.10 deprecated those.
+#. Translators: cancel button of the snippets dialog. It used to
+#. be stock item STOCK_CANCEL until Gtk 3.10 deprecated those.
+#: ../Onboard/WindowUtils.py:1144 ../Onboard/KeyboardWidget.py:1606
+msgid "_Cancel"
+msgstr "_Prekliči"
+
+#: ../Onboard/WindowUtils.py:1145
+msgid "Use device"
+msgstr "Uporabi napravo"
+
+#: ../Onboard/Timer.py:160 ../Onboard/pypredict/tools/filter.py:382
+#: ../Onboard/LanguageSupport.py:173 ../Onboard/SpellChecker.py:634
+#: ../Onboard/SpellChecker.py:670 ../Onboard/SpellChecker.py:709
+#: ../Onboard/SpellChecker.py:723 ../Onboard/pypredict/tools/train.py:227
+msgid "Failed to execute '{}', {}"
+msgstr "Izvajanje '{}' je spodletelo, {}"
+
+#: ../Onboard/WordSuggestions.py:2692
+msgid ""
+"<big>Onboard failed to open learned word suggestions.</big>\n"
+"\n"
+"The error was:\n"
+"<tt>{}</tt>\n"
+"\n"
+"Revert word suggestions to the last backup (recommended)?"
+msgstr ""
+"<big>Onboard je spodletelo pri odpiranju naučenih predlogov besed.</big>\n"
+"\n"
+"Napaka je bila:\n"
+"<tt>{}</tt>\n"
+"\n"
+"Povrni predloge besed na zadnjo varnostno kopijo (priporočljivo)?"
+
+#: ../Onboard/WordSuggestions.py:2711
+msgid ""
+"<big>Onboard failed to open learned word suggestions.</big>\n"
+"\n"
+"The error was:\n"
+"<tt>{}</tt>\n"
+"\n"
+"The suggestions have to be reset, but the erroneous file will remain at \n"
+"'{}'"
+msgstr ""
+"<big>Onboard je spodletelo pri odpiranju naučenih predlogov besed.</big>\n"
+"\n"
+"Napaka je bila:\n"
+"<tt>{}</tt>\n"
+"\n"
+"Predlogi morajo biti ponastavljeni, ampak napačna datoteka bo ostala na \n"
+"'{}'"
+
+#: ../data/onboard-settings.desktop.in.h:1
+msgid "Onboard Settings"
+msgstr "Nastavitve Onboard"
+
+#: ../data/onboard-settings.desktop.in.h:2
+msgid "Onboard onscreen keyboard settings"
+msgstr "Nastavitve zaslonske tipkovnice Onboard"
+
+#: ../data/onboard-settings.desktop.in.h:3
+msgid "Change Onboard settings"
+msgstr "Spremeni nastavitve Onboard"
+
+#: ../Onboard/KbdWindow.py:202
+msgid "no window transparency available; screen doesn't support alpha channels"
+msgstr "prozornost okna ni na voljo, zaslon ne podpira kanalov alfa"
+
+#: ../settings.ui.h:1
+msgid "Key-repeat"
+msgstr "Ponavljanje tipke"
+
+#: ../settings.ui.h:2
+msgid "International character selection"
+msgstr "Izbira mednarodnih znakov"
+
+#: ../settings.ui.h:3
+msgid "never"
+msgstr "nikoli"
+
+#: ../settings.ui.h:4
+msgid "1 minute"
+msgstr "1 minuta"
+
+#: ../settings.ui.h:5
+msgid "5 minutes"
+msgstr "5 minut"
+
+#: ../settings.ui.h:6
+msgid "10 minutes"
+msgstr "10 minut"
+
+#: ../settings.ui.h:7
+msgid "30 minutes"
+msgstr "30 minut"
+
+#: ../settings.ui.h:8
+msgid "1 hour"
+msgstr "1 ura"
+
+#: ../settings.ui.h:9
+msgid "3 hours"
+msgstr "3 ure"
+
+#: ../settings.ui.h:10
+msgid "forever"
+msgstr "trajno"
+
+#: ../settings.ui.h:11
+msgid "GTK"
+msgstr "GTK"
+
+#: ../settings.ui.h:12
+msgid "XInput"
+msgstr "XInput"
+
+#: ../settings.ui.h:13
+msgid "Auto"
+msgstr "Samodejno"
+
+#: ../settings.ui.h:14
+msgid "XTest"
+msgstr "XTest"
+
+#: ../settings.ui.h:15
+msgid "uinput"
+msgstr ""
+
+#: ../settings.ui.h:16
+msgid "AT-SPI"
+msgstr "AT-SPI"
+
+#: ../settings.ui.h:17
+msgid "Remember nothing"
+msgstr "Ne zapomni si ničesar"
+
+#: ../settings.ui.h:18
+msgid "Don't remember new words"
+msgstr "Ne zapomni si novih besed"
+
+#: ../settings.ui.h:19
+msgid "None"
+msgstr "Brez"
+
+#: ../settings.ui.h:20
+msgid "Movement only"
+msgstr "Samo premik"
+
+#: ../settings.ui.h:21
+msgid "Corners"
+msgstr "Oglišča"
+
+#: ../settings.ui.h:22
+msgid "All corners and edges"
+msgstr "Vsi koti in robovi"
+
+#: ../settings.ui.h:23
+msgid "General"
+msgstr "Splošno"
+
+#: ../settings.ui.h:24
+msgid "Window"
+msgstr "Okno"
+
+#: ../settings.ui.h:25
+msgid "Layout"
+msgstr "Razporeditev"
+
+#: ../settings.ui.h:26
+msgid "Theme"
+msgstr "Tema"
+
+#. translators: this is a 'tooltip' of the key_template 'layer2' in keyboard layout 'key_defs.xml'
+#: ../settings.ui.h:27 ../data/layoutstrings.py:88 ../data/layoutstrings.py:340
+msgid "Snippets"
+msgstr "Delčki"
+
+#: ../settings.ui.h:28 ../settings_theme_dialog.ui.h:9
+msgid "Keyboard"
+msgstr "Tipkovnica"
+
+#: ../settings.ui.h:29
+msgid "Auto-show"
+msgstr ""
+
+#: ../settings.ui.h:30
+msgid "Typing Assistance"
+msgstr "Pomoč pri tipkanju"
+
+#: ../settings.ui.h:31
+msgid "Universal Access"
+msgstr "Splošni dostop"
+
+#: ../settings.ui.h:32
+msgid "Only move when necessary"
+msgstr ""
+
+#: ../settings.ui.h:33
+msgid "Follow the active window"
+msgstr ""
+
+#: ../settings.ui.h:34
+msgid "Latch, then lock"
+msgstr "Zapahni, potem zakleni"
+
+#: ../settings.ui.h:35
+msgid "Latch, double-click to lock"
+msgstr "Zapahni, dvoklik za zaklepanje"
+
+#: ../settings.ui.h:36
+msgid "Latch only"
+msgstr "Samo zapahni"
+
+#: ../settings.ui.h:37
+msgid "Lock only"
+msgstr "Samo zakleni"
+
+#: ../settings.ui.h:38
+msgid "Push button"
+msgstr "Pritisni na gumb"
+
+#: ../settings.ui.h:39
+msgid "none"
+msgstr "brez"
+
+#: ../settings.ui.h:40
+msgid "single-touch"
+msgstr "enodotičnost"
+
+#: ../settings.ui.h:41
+msgid "multi-touch"
+msgstr "večdotičnost"
+
+#: ../settings.ui.h:42
+msgctxt "Label of the main close button of the preferences dialog."
+msgid "_Close"
+msgstr "_Zapri"
+
+#: ../settings.ui.h:43
+msgid "_Auto-show when editing text"
+msgstr "S_amodejno prikaži med urejanjem besedila"
+
+#: ../settings.ui.h:44
+msgid ""
+"Show Onboard when there is a recognized text window in focus. Requires Gnome "
+"Accessibility."
+msgstr ""
+"Pokaži Onboard, ko je prepoznano osredotočeno besedilno okno. Zahtevana je "
+"dostopnost Gnome."
+
+#: ../settings.ui.h:45
+msgid "Start Onboard _hidden"
+msgstr "Zaženi Onboard _skrit"
+
+#: ../settings.ui.h:46
+msgid "Start Onboard hidden."
+msgstr "Zaženi Onboard _skrit."
+
+#: ../settings.ui.h:47
+msgid "Show/Hide options"
+msgstr "Pokaži/skrij možnosti"
+
+#: ../settings.ui.h:48
+msgid "Show floating _icon when Onboard is hidden"
+msgstr "Prikaži lebdečo _ikono, ko je Onboard skrit"
+
+#: ../settings.ui.h:49
+msgid ""
+"Show a floating icon on the desktop when Onboard is hidden. A click on the "
+"icon makes Onboard reappear."
+msgstr ""
+"Pokaže lebdečo ikono na namizju, ki je program Onboard skrit. Klik na ikono "
+"povzroči, da se program Onboard ponovno pojavi."
+
+#: ../settings.ui.h:50
+msgid "Show when _unlocking the screen"
+msgstr "Pokaži, ko bo_zaslon odklenjen"
+
+#: ../settings.ui.h:51
+msgid ""
+"Show Onboard when the dialog to unlock the screen appears; this way Onboard "
+"can be used for example to enter the password to dismiss the screensaver "
+"when it is set to ask for it."
+msgstr ""
+"Pokaži Onboard, ko se pojavi pogovorno okno za zaklep zaslona. Na ta način "
+"lahko Onboard uporabite na primer za vnos gesla za odklep računalnika, ko je "
+"vklopljen ohranjevalnik zaslona."
+
+#: ../settings.ui.h:52
+msgid "Show _tooltips"
+msgstr "Pokaži o_rodne namige"
+
+#: ../settings.ui.h:53
+msgid "Show tooltips for the keyboard&apos;s buttons."
+msgstr "Pokaži orodne namige za gumbe tipkovnice."
+
+#: ../settings.ui.h:54
+msgid "Show tooltips for the keyboard's buttons."
+msgstr "Pokaži orodne namige za gumbe tipkovnice."
+
+#: ../settings.ui.h:55
+msgid "_Show status icon"
+msgstr "_Pokaži ikono stanja"
+
+#: ../settings.ui.h:56
+msgid "Show the status item. A click on that icon hides or shows Onboard."
+msgstr "Pokaži predmet stanja. Klik na ikono pokaže ali skrije Onboard."
+
+#: ../settings.ui.h:57
+msgid "Status icon _provider:"
+msgstr ""
+
+#: ../settings.ui.h:58
+msgid ""
+"<b>AppIndicator</b> (default) is recommended for broadest compatibility. A "
+"middle click on the icon shows the keyboard. In KDE Plasma a left click does "
+"the same.\n"
+"\n"
+"<b>GtkStatusIcon</b> isn't supported well anymore by various desktop "
+"environments, but generally allows to show the keyboard on left click.\n"
+"\n"
+"Requires restart."
+msgstr ""
+
+#: ../settings.ui.h:63
+msgid "Desktop Integration"
+msgstr "Vključitev v namizje"
+
+#: ../settings.ui.h:64
+msgid "Dock to screen edge"
+msgstr "Usidraj na rob zaslona"
+
+#: ../settings.ui.h:65
+msgid "Dock the keyboard to the edge of the screen."
+msgstr "Sidraj tipkovnico na rob zaslona."
+
+#: ../settings.ui.h:66
+msgctxt "Label of settings button on preferences page Window."
+msgid "_Settings"
+msgstr "_Nastavitve"
+
+#: ../settings.ui.h:67
+msgid "Docking"
+msgstr "Sidranje"
+
+#: ../settings.ui.h:68
+msgid "Show window _decoration"
+msgstr "Pokaži _okraske okna"
+
+#: ../settings.ui.h:69
+msgid "Show window caption and frame."
+msgstr "Pokaži napis in okvir okna."
+
+#: ../settings.ui.h:70
+msgid "Show always on visible _workspace"
+msgstr "Vedno pokaži na dejavni _delovni površini"
+
+#: ../settings.ui.h:71
+msgid "&quot;Sticky&quot; mode for keyboard and floating icon."
+msgstr "&quot;Lepljivi&quot; način za tipkovnico in lebdečo ikono."
+
+#: ../settings.ui.h:72
+msgid "\"Sticky\" mode for keyboard and floating icon."
+msgstr "\"Lepljivi\" način za tipkovnico in lebdečo ikono."
+
+#: ../settings.ui.h:73
+msgid "_Force window to top"
+msgstr "_Prisili okno na vrh"
+
+#: ../settings.ui.h:74
+msgid "Try harder to keep Onboard above anything on-screen."
+msgstr ""
+"Bolj se potrudi pri poskusu obdržanja programa Onboard nad vsem na zaslonu."
+
+#: ../settings.ui.h:75
+msgid "Keep _aspect ratio"
+msgstr "Obdrži razmerje"
+
+#: ../settings.ui.h:76
+msgid "Constrain window size to the layout&apos;s aspect ratio."
+msgstr "Omeji velikost okna glede na razmerje velikosti razporeditve"
+
+#: ../settings.ui.h:77
+msgid "Constrain window size to the layout's aspect ratio."
+msgstr "Omeji velikost okna na razmerje razvrstitve."
+
+#: ../settings.ui.h:78
+msgid "Floating Window Options"
+msgstr "Možnosti lebdečih oken"
+
+#: ../settings.ui.h:79
+msgid "Window options"
+msgstr "Možnosti oken"
+
+#: ../settings.ui.h:80
+msgid "Wind_ow:"
+msgstr "_Okno:"
+
+#: ../settings.ui.h:81
+msgid "Transparency of the whole keyboard window. Requires compositing."
+msgstr "Prozornost celotnega okna tipkovnice. Zahteva sestavljanje."
+
+#: ../settings.ui.h:82 ../settings_theme_dialog.ui.h:5
+msgid "_Background:"
+msgstr "Oza_dje:"
+
+#: ../settings.ui.h:83
+msgid "Transparency of the keyboard background"
+msgstr "Prozornost ozadja tipkovnice"
+
+#: ../settings.ui.h:84
+msgid "_No background"
+msgstr "_Brez ozadja"
+
+#: ../settings.ui.h:85
+msgid "Show the desktop through the gaps between keys."
+msgstr "Pokaži namizje s presledki med tipkami."
+
+#: ../settings.ui.h:86
+msgid "Transparency"
+msgstr "Prozornost"
+
+#: ../settings.ui.h:87
+msgid "Set _transparency to"
+msgstr "Nastavi _prozornost na"
+
+#: ../settings.ui.h:88
+msgid "Enable inactive transparency. Requires compositing."
+msgstr "Omogoči vzajemno prozornost. Zahteva sestavljanje."
+
+#: ../settings.ui.h:89
+msgid ""
+"Transparency when the pointer leaves the keyboard. Requires compositing."
+msgstr "Prozornost, ko kazalec zapusti tipkovnico. Zahteva sestavljanje."
+
+#: ../settings.ui.h:90
+msgid "after"
+msgstr "za"
+
+#: ../settings.ui.h:91
+msgid "Delay in seconds until the inactive transparency takes effect."
+msgstr "Zamik v sekundah preden ima nedejavna prozornost učinek."
+
+#: ../settings.ui.h:92
+msgid "seconds"
+msgstr "sekund"
+
+#: ../settings.ui.h:93
+msgid "When Inactive"
+msgstr "Ko je računalnik nedejaven"
+
+#: ../settings.ui.h:94
+msgid "_Window handles of the keyboard window:"
+msgstr ""
+
+#: ../settings.ui.h:95
+msgid "_Window handles of the floating icon:"
+msgstr ""
+
+#: ../settings.ui.h:96
+msgid "Resize Protection"
+msgstr "Zaščita proti spreminjanju velikosti"
+
+#: ../settings.ui.h:97
+msgid "Name"
+msgstr "Ime"
+
+#: ../settings.ui.h:98
+msgid "Description"
+msgstr "Opis"
+
+#: ../settings.ui.h:99
+msgctxt "Label of new layout button on preferences page Layout."
+msgid "_New"
+msgstr "_Nov"
+
+#: ../settings.ui.h:100
+msgctxt "Label of delete layout button on preferences page Layout."
+msgid "_Delete"
+msgstr "_Izbriši"
+
+#: ../settings.ui.h:101
+msgctxt "Label of open folder button on preferences page Layout."
+msgid "_Open layouts folder"
+msgstr "_Odpri mapo razporeditev"
+
+#: ../settings.ui.h:102
+msgctxt "Label of about layout button on preferences page Layout."
+msgid "_About"
+msgstr "_O programu"
+
+#: ../settings.ui.h:103
+msgctxt "Label of new theme button on preferences page Theme."
+msgid "_New"
+msgstr "_Nova"
+
+#: ../settings.ui.h:104
+msgctxt "Label of delete theme  button on preferences page Theme."
+msgid "_Delete"
+msgstr "_Izbriši"
+
+#: ../settings.ui.h:105
+msgctxt "Label of customize theme button on preferences page Theme."
+msgid "C_ustomize theme"
+msgstr "P_rilagodi temo"
+
+#: ../settings.ui.h:106
+msgid "Follow _system theme"
+msgstr "Sledi sistemski temi"
+
+#: ../settings.ui.h:107
+msgid "Remember what Onboard theme was last used for every system theme."
+msgstr "Zapomni si nazadnje uporabljeno temo Onboard za vsako sistemsko temo."
+
+#: ../settings.ui.h:108
+msgid ""
+"Snippets are pieces of text which are entered when the corresponding button "
+"in Onboard is pressed."
+msgstr ""
+"Delčki so deli besedila, ki so vneseni, ko pritisnete ustrezno tipko na "
+"Onboardu."
+
+#: ../settings.ui.h:109
+msgctxt "Label of add snippet button on preferences page Snippets."
+msgid "_Add"
+msgstr "_Dodaj"
+
+#: ../settings.ui.h:110
+msgctxt "Label of remove snippet button on preferences page Snippets."
+msgid "_Remove"
+msgstr "_Odstrani"
+
+#: ../settings.ui.h:111
+msgid "Play sound"
+msgstr "Predvajaj zvok"
+
+#: ../settings.ui.h:112
+msgid "Play click sound on keypress."
+msgstr "Predvajaj zvok klika ob pritisku na tipko."
+
+#: ../settings.ui.h:113
+msgid "Place sound in space"
+msgstr ""
+
+#: ../settings.ui.h:114
+msgid ""
+"Place sound in space between speakers depending on the key's position on "
+"screen"
+msgstr ""
+
+#: ../settings.ui.h:115
+msgid "Show label popups"
+msgstr "Pokaži pojavne oznake"
+
+#: ../settings.ui.h:116
+msgid "Show label popups above pressed keys."
+msgstr "Pokaži pojavne oznake nad pritisnjenimi tipkami."
+
+#: ../settings.ui.h:117
+msgid "Popup size:"
+msgstr ""
+
+#: ../settings.ui.h:118
+msgid "Key-press Feedback"
+msgstr "Odziv pritiska na tipko"
+
+#: ../settings.ui.h:119
+msgid "Show secondary labels"
+msgstr "Pokaži drugotne oznake"
+
+#: ../settings.ui.h:120
+msgid "Show characters reachable with or without the shift key."
+msgstr "Pokaži znake, dosegljive z ali brez tipke shift."
+
+#: ../settings.ui.h:121
+msgid "Key Labels"
+msgstr "Oznake tipk"
+
+#: ../settings.ui.h:122
+msgid "Upper case on right click"
+msgstr ""
+
+#: ../settings.ui.h:123
+msgid "Temporarily enable SHIFT when clicking with the secondary button."
+msgstr "Ko klikneš s sekundarnim gumbom začasno omogoči SHIFT."
+
+#: ../settings.ui.h:124
+msgid "Key Behaviour"
+msgstr ""
+
+#: ../settings.ui.h:125
+msgid "_Long press action:"
+msgstr "Dejanje _dolgega pritiska:"
+
+#: ../settings.ui.h:126
+msgid ""
+"Choose between key-repeat or long-press menus. Mainly affects alpha-numeric "
+"keys."
+msgstr ""
+"Izberite med meniji s ponovitvijo tipk ali z dolgim pritiskom. Večinoma "
+"vpliva na alfanumerične tipke."
+
+#: ../settings.ui.h:127
+msgid "Modifier _behavior:"
+msgstr "Obnašanje _spremenilnika"
+
+#: ../settings.ui.h:128
+msgid "Behavior of modifier and layer keys."
+msgstr "Obnašanje spremenilnih tipk in tipk plasti."
+
+#: ../settings.ui.h:129
+msgid "Modifier auto-release delay in seconds:"
+msgstr "Zakasnitev samodejne sprostitve spremenilne tipke v sekundah:"
+
+#: ../settings.ui.h:130
+msgid ""
+"Seconds of inactivity until active modifiers and layer keys are released. 0 "
+"to disable."
+msgstr ""
+"Sekunde nedejavnosti dokler dejavne spremenilne tipke in tipke plasti niso "
+"sproščene. Z ničlo (0) onemogočite nastavitev."
+
+#: ../settings.ui.h:131
+msgid "Modifier auto-release after hide in seconds:"
+msgstr ""
+
+#: ../settings.ui.h:132
+msgid ""
+"Time after hiding the keyboard in seconds until latched and locked modifiers "
+"and layer keys are released automatically. Leave at 0.0 to not automatically "
+"release them."
+msgstr ""
+
+#: ../settings.ui.h:133
+msgid "0,00"
+msgstr "0,00"
+
+#: ../settings.ui.h:134
+msgid "Key Behavior"
+msgstr "Obnašanje tipke"
+
+#: ../settings.ui.h:135
+msgid "_Touch input:"
+msgstr "_Vnos z dotikom:"
+
+#: ../settings.ui.h:136
+msgid "_Input event source:"
+msgstr "Vir dogodka _vnosa:"
+
+#: ../settings.ui.h:137
+msgid ""
+"Choose &apos;XInput&apos; for more reliable typing into text entries with "
+"pop-up selections. The &apos;GTK&apos; option offers better compatibility, "
+"but typing may fail in the presence of pointer grabs, e.g. with open pop-up "
+"windows."
+msgstr ""
+"Izberite &apos;XInput&apos; za zanesljivejše tipkanje v besedilne vnose s "
+"pojavnimi izbirami. Možnost &apos;GTK&apos; ponuja boljšo združljivost, toda "
+"tipkanje lahko ob prisotnosti grabitev kazalca spodleti, npr. s pojavnimi "
+"okni."
+
+#: ../settings.ui.h:138
+msgid ""
+"Choose 'XInput' for more reliable typing into text entries with pop-up "
+"selections. The 'GTK' option offers better compatibility, but typing may "
+"fail in the presence of pointer grabs, e.g. with open pop-up windows."
+msgstr ""
+"Izberite 'XInput' za zanesljivejše  tipkanje v besedilne vnose s pojavnimi "
+"izbirami. Možnost 'GTK' ponuja boljšo združljivost, toda tipkanje lahko ob "
+"prisotnosti grabitev kazalca spodleti, npr. s pojavnimi okni."
+
+#: ../settings.ui.h:139
+msgid "Input Options"
+msgstr "Vnosne možnosti"
+
+#: ../settings.ui.h:140
+msgid "Delay between keystrokes in milliseconds:"
+msgstr "Zakasnitev med pritiski tipk v milisekundah:"
+
+#: ../settings.ui.h:141
+msgid ""
+"Increase this if key-strokes get lost when inserting word suggestions or "
+"snippets into Firefox or other Gtk-2 applications. Has no effect on Gtk-3 "
+"applications."
+msgstr ""
+"Povečajte, če se pritiski tipk med vstavljanjem predlogov besed ali izrezkov "
+"v Firefox ali druge programe Gtk-2 izgubijo. Nima učinka na programe Gtk-3."
+
+#: ../settings.ui.h:142
+msgid "Key-stroke generator"
+msgstr ""
+
+#: ../settings.ui.h:143
+msgid ""
+"<b>Auto</b>: let Onboard decide, recommended.\n"
+"\n"
+"<b>XTest</b> is the default for all X based desktop environments.\n"
+"\n"
+"<b>uinput</b> should be available on all linux-based systems, including X, "
+"Wayland and MIR-based desktops, but requires write permission for /dev/"
+"uinput.\n"
+"\n"
+"<b>AT-SPI</b> has limited support for key-stroke generation, and is only "
+"recommended for testing."
+msgstr ""
+
+#: ../settings.ui.h:150
+msgid "Key-stroke Generation"
+msgstr ""
+
+#: ../settings.ui.h:151
+msgid "Advanced"
+msgstr "Napredno"
+
+#: ../settings.ui.h:152
+msgid ""
+"Show Onboard when there is a recognized text entry in focus. Requires Gnome "
+"Accessibility."
+msgstr ""
+
+#: ../settings.ui.h:153
+msgid "Keyboard movement strategy:"
+msgstr ""
+
+#: ../settings.ui.h:154
+msgid "Chose how the keyboard window moves when a text entry is activated."
+msgstr ""
+"Izberite kako se premika okno tipkovnice, ko je aktivno polje za vnos "
+"besedila."
+
+#: ../settings.ui.h:155
+msgid "_Hide when typing on a physical keyboard"
+msgstr ""
+
+#: ../settings.ui.h:156
+msgid ""
+"Hide Onboard when any key is pressed on a physical keyboard. Requires input "
+"event source \"XInput\"."
+msgstr ""
+"Skrij Onboard, ko je pritisnjena katerakoli tipka na fizični tipkovnici. "
+"Zahteva vir vhodnega dogodka \"XInput\"."
+
+#: ../settings.ui.h:157
+msgid "Stay hidden:"
+msgstr "Pusti skrito:"
+
+#: ../settings.ui.h:158
+msgid ""
+"Once hidden by a physical key-press, auto-show is paused. Select the pause "
+"duration here."
+msgstr ""
+"Ko je skrita s pritiskom na fizično tipko, je samodejno prikazovanje v "
+"premoru. Tu izberite trajanje premora."
+
+#: ../settings.ui.h:159
+msgid "Auto-show only in tablet mode"
+msgstr ""
+
+#: ../settings.ui.h:160
+msgid ""
+"Requires driver support for SW_TABLET_MODE and a running instance of acpid."
+msgstr ""
+
+#: ../settings.ui.h:161
+msgid ""
+"Alternatively, some devices generate key events on entering and leaving "
+"tablet mode. Run 'xinput test-xi2 3 ' to find these key presses and enter "
+"their 'detail' values below."
+msgstr ""
+
+#: ../settings.ui.h:162
+msgid "Hotkey received when entering tablet mode:"
+msgstr ""
+
+#: ../settings.ui.h:163
+msgid "Hotkey received when leaving tablet mode:"
+msgstr ""
+
+#: ../settings.ui.h:164
+msgid "File that contains the current device state:"
+msgstr ""
+
+#: ../settings.ui.h:165
+msgid "Regular expression to match for tablet-mode:"
+msgstr ""
+
+#: ../settings.ui.h:166
+msgid "Convertible Devices"
+msgstr ""
+
+#: ../settings.ui.h:167
+msgid "Don't auto-show while external keyboards are connected"
+msgstr ""
+
+#: ../settings.ui.h:168
+msgid "Detected keyboard devices:"
+msgstr ""
+
+#: ../settings.ui.h:169
+msgid ""
+"Check 'Ignore' for devices that are always connected and should not block "
+"auto-show."
+msgstr ""
+
+#: ../settings.ui.h:170
+msgid "External Keyboards"
+msgstr ""
+
+#: ../settings.ui.h:171
+msgid "Show _suggestions"
+msgstr "Pokaži _predloge"
+
+#: ../settings.ui.h:172
+msgid "Enable word completion and prediction."
+msgstr "Omogoči dopolnjevanje besed in predvidevanje."
+
+#: ../settings.ui.h:173
+msgid "Show spelling suggestions"
+msgstr "Pokaži predloge črkovanja"
+
+#: ../settings.ui.h:174
+msgid "Check spelling of the word at or before the cursor."
+msgstr "Preveri črkovanje besede ob ali pred kazalko."
+
+#: ../settings.ui.h:175
+msgid "_Learn from typed text"
+msgstr "_Učenje iz natipkanega besedila"
+
+#: ../settings.ui.h:176
+msgid ""
+"Remember new words, their recency and frequency to improve the suggestions "
+"over time."
+msgstr ""
+"Beleži nove besede, njihovo nedavno in pogosto uporabo za izboljševanje "
+"predlaganja čez čas."
+
+#: ../settings.ui.h:177
+msgid "Insert word _separators"
+msgstr "Vnesi _ločilnike besed"
+
+#: ../settings.ui.h:178
+msgid ""
+"Add and remove spaces when inserting word suggestions followed by "
+"punctuation characters."
+msgstr ""
+"Dodaj in odstrani presledke, kadar se vnaša predloge besed, ki jim sledijo "
+"ločila."
+
+#: ../settings.ui.h:179
+msgid "Options"
+msgstr "Možnosti"
+
+#: ../settings.ui.h:180
+msgid "Show more suggestions arrow"
+msgstr ""
+
+#: ../settings.ui.h:181
+msgid "Step forward and backward through the available suggestions."
+msgstr ""
+
+#: ../settings.ui.h:182
+msgid "Show button to pause learning"
+msgstr "Pokaži gumb za premor učenja"
+
+#: ../settings.ui.h:183
+msgid "Words typed while this button is pressed won't be remembered."
+msgstr ""
+"Besede, ki so natipkane, medtem ko je pritisnjen ta gumb, ne bodo zapomnjene."
+
+#: ../settings.ui.h:184
+msgid "Show lan_guage switcher"
+msgstr "Pokaži preklopnik _jezikov"
+
+#: ../settings.ui.h:185
+msgid "Show a button for language selection."
+msgstr "Pokaže gumb za izbiro jezikov."
+
+#: ../settings.ui.h:186
+msgid "Buttons"
+msgstr "Gumbi"
+
+#: ../settings.ui.h:187
+msgid "Word Suggestions"
+msgstr "Predlaganje besed"
+
+#: ../settings.ui.h:188
+msgid "Auto-capitalize while typing"
+msgstr "Samodejno spremeni v velike začetnice med tipkanjem"
+
+#: ../settings.ui.h:189
+msgid "Automatically capitalize sentence begins and name words."
+msgstr "Samodejno spremeni velike začetnice povedim in imenom."
+
+#: ../settings.ui.h:190
+msgid "Auto-correct spelling"
+msgstr "Samodejno popravi črkovanje"
+
+#: ../settings.ui.h:191
+msgid "Automatically correct the last word."
+msgstr "Samodejno popravi zadnjo besedo."
+
+#: ../settings.ui.h:192
+msgid "The spell check engine to use."
+msgstr "Uporaba pogona za preverjanje črkovanja."
+
+#: ../settings.ui.h:193
+msgid "Spell-check backend:"
+msgstr "Zaledje preverjanja črkovanja:"
+
+#: ../settings.ui.h:194
+msgid "Auto-correction"
+msgstr "Samodejno popravljanje"
+
+#: ../settings.ui.h:195
+msgid "While  learning is paused:"
+msgstr "Ko je učenje v premoru:"
+
+#: ../settings.ui.h:196
+msgid "Learning"
+msgstr "Učenje"
+
+#: ../settings.ui.h:197
+msgid "Enable  keyboard _scanning"
+msgstr "Omogoči branje _tipkovnice"
+
+#: ../settings.ui.h:198
+msgctxt ""
+"Label of keyboard scanning settings button on preferences page Universal "
+"Access."
+msgid "Sc_anner Settings"
+msgstr "Nastavitve optične_ga bralnika"
+
+#: ../settings.ui.h:199
+msgid "Keyboard Scanning"
+msgstr "Branje tipkovnice"
+
+#: ../settings.ui.h:200
+msgid "_Delay:"
+msgstr "_Zakasnitev:"
+
+#: ../settings.ui.h:201
+msgid "_Motion threshold:"
+msgstr "_Prag premikanja:"
+
+#: ../settings.ui.h:202
+msgid "Time in seconds before a click is triggered."
+msgstr "Čas v sekundah pred sproženjem klika."
+
+#: ../settings.ui.h:203
+msgid "Distance in pixels before movement will be recognized."
+msgstr "Razdalja v točkah preden je zaznano gibanje."
+
+#: ../settings.ui.h:204
+msgid "Hide hover click window"
+msgstr "Skrij okno klika z lebdenjem"
+
+#: ../settings.ui.h:205
+msgid "Hide the system-provided hover click window while Onboard is running."
+msgstr ""
+"Skrij sistemsko zagotovljeno okno lebdečega klika, medtem ko se Onboard "
+"izvaja."
+
+#: ../settings.ui.h:206
+msgid "Enable click type window on exit"
+msgstr "Omogoči okno vrste klika ob izhodu."
+
+#: ../settings.ui.h:207
+msgid ""
+"Always enable the system-provided hover click window when exiting Onboard."
+msgstr ""
+"Vedno omogoči sistemsko zagotovljeno okno lebdečega klika ob končanju "
+"Onboard."
+
+#: ../settings.ui.h:208
+msgid "Hover Click"
+msgstr "Klik z lebdenjem"
+
+#: ../settings_scanner_dialog.ui.h:1
+msgid "Automatic scan for 1 switch"
+msgstr "Samodejno branje za stikalo 1"
+
+#: ../settings_scanner_dialog.ui.h:2
+msgid "Critical overscan for 1 switch"
+msgstr "Kritični pregled čez vso vsebino za stikalo 1"
+
+#: ../settings_scanner_dialog.ui.h:3
+msgid "Step scan for 2 switches"
+msgstr "Branje korakov za dve stikali"
+
+#: ../settings_scanner_dialog.ui.h:4
+msgid "Directed scan for 3 or 5 switches"
+msgstr "Neposredno branje za 3 do 5 stikal"
+
+#: ../settings_scanner_dialog.ui.h:5
+msgid "Scanner Settings"
+msgstr "Nastavitve bralnika"
+
+#: ../settings_scanner_dialog.ui.h:6
+msgctxt "Label of the close button of the scanner settings dialog."
+msgid "_Close"
+msgstr "_Zapri"
+
+#: ../settings_scanner_dialog.ui.h:7
+msgid "Select a scanning _profile:"
+msgstr "Izberite _profil bralnika:"
+
+#: ../settings_scanner_dialog.ui.h:8
+msgid "_Step interval:"
+msgstr "_Razmik korakov:"
+
+#: ../settings_scanner_dialog.ui.h:9
+msgid "Sc_an cycles:"
+msgstr "Cikli bra_nja:"
+
+#: ../settings_scanner_dialog.ui.h:10
+msgid ""
+"The time the scanner rests on a key or group before moving to the next. (in "
+"seconds)"
+msgstr ""
+"Čas čakanja preiskovanja na ključu ali skupini pred premikom na naslednjega. "
+"(v sekundah)"
+
+#: ../settings_scanner_dialog.ui.h:11
+msgid ""
+"The number of times the scanner cycles through the entire keyboard before it "
+"stops."
+msgstr ""
+"Število ponovitev, kolikokrat bralnik preleti skozi vso tipkovnico, preden "
+"se ustavi."
+
+#: ../settings_scanner_dialog.ui.h:12
+msgid "Step _only during switch down"
+msgstr "K_orak le med pritiskom tipke"
+
+#: ../settings_scanner_dialog.ui.h:13
+msgid "Progress the highlight only while the switch is held down."
+msgstr "Obravnavaj poudarek samo, ko je stikalo pritisnjeno."
+
+#: ../settings_scanner_dialog.ui.h:14
+msgid "_Forward interval:"
+msgstr "Čakanje pred korakom _naprej:"
+
+#: ../settings_scanner_dialog.ui.h:15
+msgid "_Backtrack interval:"
+msgstr "Čakanje pred korakom n_azaj:"
+
+#: ../settings_scanner_dialog.ui.h:16
+msgid ""
+"The time the scanner rests on a key  while progressing forward. (in seconds)"
+msgstr ""
+"Koliko časa bralnik ostane na tipki, preden napreduje naprej. (v sekundah)"
+
+#: ../settings_scanner_dialog.ui.h:17
+msgid ""
+"The time the scanner rests on a key  while moving backwards. (in seconds)"
+msgstr ""
+"Koliko časa bralnik ostane na tipki, preden se prestavi nazaj. (v sekundah)"
+
+#: ../settings_scanner_dialog.ui.h:18
+msgid "Backtrack _steps:"
+msgstr "Sledi kora_kom nazaj:"
+
+#: ../settings_scanner_dialog.ui.h:19
+msgid "The number of keys the scanner steps back before moving forward again."
+msgstr ""
+"Število tipk, pri katerih bralnik gre korak nazaj, predno se premakne spet "
+"naprej."
+
+#: ../settings_scanner_dialog.ui.h:20
+msgid "_Alternate switch actions"
+msgstr "N_adomesti dejavnosti stikala"
+
+#: ../settings_scanner_dialog.ui.h:21
+msgid ""
+"Swap the scan actions after every key activation. The Step action will "
+"become the Activate action and vice versa."
+msgstr ""
+"Zamenjaj dejanja preiskovanja po vsaki omogočitvi ključev. Dejanje koraka bo "
+"postalo dejanje omogočitve in  obratno."
+
+#: ../settings_scanner_dialog.ui.h:22
+msgid "Profiles"
+msgstr "Profili"
+
+#: ../settings_scanner_dialog.ui.h:23
+msgid "_Select an input device:"
+msgstr "_Izberite vhodno napravo:"
+
+#: ../settings_scanner_dialog.ui.h:24
+msgid "_Use this device only for scanning"
+msgstr "_Uporabi to napravo samo za branje"
+
+#: ../settings_scanner_dialog.ui.h:25
+msgid ""
+"The selected device should not control the system mouse cursor or the "
+"keyboard caret."
+msgstr ""
+"Izbrana naprava ne sme nadzorovati sistemskega kazalca miške ali kazalke "
+"tipkovnice."
+
+#: ../settings_scanner_dialog.ui.h:26
+msgid "Input Device"
+msgstr "Vhodna naprava"
+
+#: ../data/onboard.desktop.in.h:2 ../data/onboard-autostart.desktop.in.h:2
+msgid "Onboard onscreen keyboard"
+msgstr "Onboard zaslonska tipkovnica"
+
+#: ../data/onboard.desktop.in.h:3 ../data/onboard-autostart.desktop.in.h:3
+msgid "Flexible onscreen keyboard"
+msgstr "Prilagodljiva zaslonska tipkovnica"
+
+#. Title of the snippets dialog for existing snippets
+#: ../Onboard/KeyboardWidget.py:1590
+msgid "Edit snippet #{}"
+msgstr "Uredi izrezek #{}"
+
+#. Title of the snippets dialog for new snippets
+#: ../Onboard/KeyboardWidget.py:1594
+msgid "New snippet"
+msgstr "Nov izrezek"
+
+#. Message in the snippets dialog for new snippets
+#: ../Onboard/KeyboardWidget.py:1596
+msgid "Enter a new snippet for button #{}:"
+msgstr "Vnesite novi izrezek za gumb #{}:"
+
+#: ../Onboard/KeyboardWidget.py:1607
+msgid "_Save snippet"
+msgstr "_Shrani izrezek"
+
+#: ../Onboard/KeyboardWidget.py:1627
+msgid "_Button label:"
+msgstr "Oznaka _gumba:"
+
+#: ../Onboard/KeyboardWidget.py:1631
+msgid "S_nippet:"
+msgstr "_Košček:"
+
+#: ../Onboard/KeyboardWidget.py:1801
+msgid "Other _Languages"
+msgstr "Drugi _jeziki"
+
+#: ../Onboard/KeyboardWidget.py:1845
+msgid "_Remove suggestion…"
+msgstr "_Odstrani predlog ..."
+
+#: ../Onboard/KeyboardWidget.py:1901
+msgid "Remove word suggestion"
+msgstr "Odstrani predlog besede"
+
+#: ../Onboard/KeyboardWidget.py:1912
+msgid "Remove '{}' everywhere."
+msgstr "Povsod odstrani '{}' ."
+
+#: ../Onboard/KeyboardWidget.py:1922
+msgid "This will only affect learned suggestions."
+msgstr "To bo vplivalo samo na naučene predloge."
+
+#: ../Onboard/KeyboardWidget.py:1962
+msgid "Remove '{}' only where it occures at text begin."
+msgstr "Odstrani '{}' samo za začetku besedila."
+
+#: ../Onboard/KeyboardWidget.py:1965
+msgid "Remove '{}' only where it occures at sentence begin."
+msgstr "Odstrani '{}' samo za začetku stavka."
+
+#: ../Onboard/KeyboardWidget.py:1968
+msgid "Remove '{}' only where it occures after numbers."
+msgstr "Odstrani '{}' samo, če se pojavi za številkami."
+
+#: ../Onboard/KeyboardWidget.py:1971
+msgid "Remove '{}' only where it occures after '{}'."
+msgstr "Odstrani '{}' samo, če se pojavi za '{}'."
+
+#: ../settings_docking_dialog.ui.h:1
+msgid "Top"
+msgstr "Zgoraj"
+
+#: ../settings_docking_dialog.ui.h:2
+msgid "Bottom"
+msgstr "Spodaj"
+
+#: ../settings_docking_dialog.ui.h:3
+msgid "Active Monitor"
+msgstr "Dejaven zaslon"
+
+#: ../settings_docking_dialog.ui.h:4
+msgid "Primary Monitor"
+msgstr "Primarni zaslon"
+
+#: ../settings_docking_dialog.ui.h:5
+msgid "Monitor 0"
+msgstr "Zaslon 0"
+
+#: ../settings_docking_dialog.ui.h:6
+msgid "Monitor 1"
+msgstr "Zaslon 1"
+
+#: ../settings_docking_dialog.ui.h:7
+msgid "Monitor 2"
+msgstr "Zaslon 2"
+
+#: ../settings_docking_dialog.ui.h:8
+msgid "Monitor 3"
+msgstr "Zaslon 3"
+
+#: ../settings_docking_dialog.ui.h:9
+msgid "Monitor 4"
+msgstr "Zaslon 4"
+
+#: ../settings_docking_dialog.ui.h:10
+msgid "Monitor 5"
+msgstr "Zaslon 5"
+
+#: ../settings_docking_dialog.ui.h:11
+msgid "Monitor 6"
+msgstr "Zaslon 6"
+
+#: ../settings_docking_dialog.ui.h:12
+msgid "Monitor 7"
+msgstr "Zaslon 7"
+
+#: ../settings_docking_dialog.ui.h:13
+msgid "Monitor 8"
+msgstr "Zaslon 8"
+
+#: ../settings_docking_dialog.ui.h:14
+msgid "Docking settings"
+msgstr "Nastavitve sidranja"
+
+#: ../settings_docking_dialog.ui.h:15
+msgctxt "Label of the close button of the docking settings dialog."
+msgid "_Close"
+msgstr "_Zapri"
+
+#: ../settings_docking_dialog.ui.h:16
+msgid "Shrink workarea"
+msgstr "Skrči delovno področje"
+
+#: ../settings_docking_dialog.ui.h:17
+msgid "Shrink the available space for maximized windows."
+msgstr "Skrči razpoložljiv prostor za razpeta okna"
+
+#: ../settings_docking_dialog.ui.h:18
+msgid "Expand on landscape screens"
+msgstr "Razširi na ležečih zaslonih"
+
+#: ../settings_docking_dialog.ui.h:19
+msgid "Expand keyboard to the width of the workarea."
+msgstr "Razširi tipkovnico na širino delovnega področja"
+
+#: ../settings_docking_dialog.ui.h:20
+msgid "Expand on portrait screens"
+msgstr "Razširi na pokončnih zaslonih"
+
+#: ../settings_docking_dialog.ui.h:21
+msgid "Dock to screen edge:"
+msgstr "Sidraj na rob zaslona:"
+
+#: ../settings_docking_dialog.ui.h:22
+msgid "Dock to monitor:"
+msgstr "Usidraj v zaslon:"
+
+#: ../Onboard/Indicator.py:56
+msgid "_Show Onboard"
+msgstr "_Pokaži Onboard"
+
+#: ../Onboard/Indicator.py:57
+msgid "_Hide Onboard"
+msgstr "_Skrij Onboard"
+
+#. Translators: label of a menu item. It used to be stock item
+#. STOCK_PREFERENCES until Gtk 3.10 deprecated those.
+#: ../Onboard/Indicator.py:83
+msgid "_Preferences"
+msgstr "_Nastavitve"
+
+#: ../Onboard/Indicator.py:91
+msgid "_Help"
+msgstr ""
+
+#. Translators: label of a menu item. It used to be stock item
+#. STOCK_QUIT until Gtk 3.10 deprecated those.
+#: ../Onboard/Indicator.py:102
+msgid "_Quit"
+msgstr "I_zhod"
+
+#: ../Onboard/Indicator.py:228 ../Onboard/Indicator.py:231
+msgid "Onboard on-screen keyboard"
+msgstr "Zaslonska tipkovnica Onboard"
+
+#: ../Onboard/OnboardGtk.py:429
+msgid ""
+"Onboard is configured to appear with the dialog to unlock the screen; for "
+"example to dismiss the password-protected screensaver.\n"
+"\n"
+"However the system is not configured anymore to use Onboard to unlock the "
+"screen. A possible reason can be that another application configured the "
+"system to use something else.\n"
+"\n"
+"Would you like to reconfigure the system to show Onboard when unlocking the "
+"screen?"
+msgstr ""
+"Onboard je nastavljen tako, da se pojavi pogovorno okno za odklepanje "
+"zaslona; na primer, da odklene z geslom zaščiten ohranjevalnik zaslona.\n"
+"\n"
+"Sistem ni več nastavljen tako, da uporabi Onboard za odklepanje zaslona. "
+"Razlog za to je morda, da je drug pogram nastavil sistem, da uporabi nekaj "
+"drugega.\n"
+"\n"
+"Ali bi radi znova nastavili sistem, da ob odklepanju zaslona prikaže Onboard?"
+
+#: ../Onboard/OnboardGtk.py:448
+msgid ""
+"Onboard is configured to appear with the dialog to unlock the screen; for "
+"example to dismiss the password-protected screensaver.\n"
+"\n"
+"However this function is disabled in the system.\n"
+"\n"
+"Would you like to activate it?"
+msgstr ""
+"Onboard je nastavljen tako, da se pojavi s pogovornim oknom za odkepanje "
+"zaslona; na primer, za končanje ohranjevalnika zaslona, zaščitenega z "
+"geslom\n"
+"\n"
+"Ta možnost je na vašem sistemu onemogočena.\n"
+"\n"
+"Ali bi jo radi omogočili?"
+
+#: ../settings_theme_dialog.ui.h:1
+msgid "Customize Theme"
+msgstr "Prilagodi temo"
+
+#: ../settings_theme_dialog.ui.h:2
+msgctxt "Label of the revert button of the theme settings dialog."
+msgid "_Revert"
+msgstr "_Povrni"
+
+#: ../settings_theme_dialog.ui.h:3
+msgctxt "Label of the close button of the theme settings dialog."
+msgid "_Close"
+msgstr "_Zapri"
+
+#: ../settings_theme_dialog.ui.h:4
+msgid "Color Sche_me"
+msgstr "Barva she_ma"
+
+#. Key style with simple gradients
+#: ../settings_theme_dialog.ui.h:6 ../Onboard/settings.py:1621
+msgid "Gradient"
+msgstr "Preliv"
+
+#: ../settings_theme_dialog.ui.h:7
+msgid "_Angle:"
+msgstr "_Kot:"
+
+#: ../settings_theme_dialog.ui.h:8
+msgid "Light Direction"
+msgstr "Smer svetlobe"
+
+#: ../settings_theme_dialog.ui.h:10
+msgid "_Style:"
+msgstr "_Slog:"
+
+#: ../settings_theme_dialog.ui.h:11
+msgid "R_oundness:"
+msgstr "_Okroglost:"
+
+#: ../settings_theme_dialog.ui.h:12
+msgid "S_ize:"
+msgstr "Vel_ikost:"
+
+#: ../settings_theme_dialog.ui.h:13
+msgid "B_order width:"
+msgstr "Širina _obrobe:"
+
+#: ../settings_theme_dialog.ui.h:14
+msgid "Key Style"
+msgstr "Slog ključa"
+
+#: ../settings_theme_dialog.ui.h:15
+msgid "_Key:"
+msgstr "_Ključ:"
+
+#: ../settings_theme_dialog.ui.h:16
+msgid "_Border:"
+msgstr "Ro_b:"
+
+#: ../settings_theme_dialog.ui.h:17
+msgid "Gradients"
+msgstr "Prelivi"
+
+#: ../settings_theme_dialog.ui.h:18
+msgid "_Strength:"
+msgstr "_Moč:"
+
+#: ../settings_theme_dialog.ui.h:19
+msgid "Shadow"
+msgstr "Senca"
+
+#: ../settings_theme_dialog.ui.h:20
+msgid "Keys"
+msgstr "Tipke"
+
+#: ../settings_theme_dialog.ui.h:21
+msgid "_Font:"
+msgstr "_Pisava:"
+
+#: ../settings_theme_dialog.ui.h:22
+msgid "_Attributes:"
+msgstr "_Atributi:"
+
+#: ../settings_theme_dialog.ui.h:23
+msgid "Font"
+msgstr "Pisava"
+
+#: ../settings_theme_dialog.ui.h:24
+msgid "I_ndependent size"
+msgstr "_Neodvisna velikost"
+
+#: ../settings_theme_dialog.ui.h:25
+msgid "_Super key:"
+msgstr "Tipka _super:"
+
+#: ../settings_theme_dialog.ui.h:26
+msgid "Label Override"
+msgstr "Prepis oznake"
+
+#: ../settings_theme_dialog.ui.h:27
+msgid "Labels"
+msgstr "Oznake"
+
+#. translators: this is a 'tooltip' of the key_template 'hoverclick' in keyboard layout 'key_defs.xml'
+#: ../data/layoutstrings.py:35 ../data/layoutstrings.py:193
+msgid "Activate Hover Click"
+msgstr "Omogoči klik z lebdenjem"
+
+#: ../data/layoutstrings.py:36
+msgid "Alphanumeric keys"
+msgstr "Črkovno številčne tipke"
+
+#. translators: very short label of the left Alt key
+#: ../data/layoutstrings.py:38
+msgid "Alt"
+msgstr "Alt"
+
+#. translators: very short label of the Alt Gr key
+#: ../data/layoutstrings.py:40
+msgid "Alt Gr"
+msgstr "Alt Gr"
+
+#. translators: very short label of the CAPS LOCK key
+#: ../data/layoutstrings.py:42
+msgid "CAPS"
+msgstr "CAPS"
+
+#. translators: very short label of the Ctrl key
+#: ../data/layoutstrings.py:44
+msgid "Ctrl"
+msgstr "Ctrl"
+
+#. translators: very short label of the DELETE key
+#: ../data/layoutstrings.py:46
+msgid "Del"
+msgstr "Del"
+
+#. translators: this is a 'tooltip' of the key_template 'doubleclick' in keyboard layout 'key_defs.xml'
+#: ../data/layoutstrings.py:47 ../data/layoutstrings.py:220
+msgid "Double click"
+msgstr "Dvojni klik"
+
+#. translators: this is a 'tooltip' of the key_template 'dragclick' in keyboard layout 'key_defs.xml'
+#: ../data/layoutstrings.py:48 ../data/layoutstrings.py:223
+msgid "Drag click"
+msgstr "Klik z vlečenjem"
+
+#. translators: very short label of the numpad END key
+#: ../data/layoutstrings.py:50
+msgid "End"
+msgstr "End"
+
+#. translators: very short label of the numpad ENTER key
+#: ../data/layoutstrings.py:52
+msgid "Ent"
+msgstr "Ent"
+
+#. translators: very short label of the ESCAPE key
+#: ../data/layoutstrings.py:54
+msgid "Esc"
+msgstr "Esc"
+
+#: ../data/layoutstrings.py:55
+msgid "Function keys"
+msgstr "Funkcijske tipke"
+
+#: ../data/layoutstrings.py:56
+msgid "Number block and function keys"
+msgstr "Številčni blok in funkcijske tipke"
+
+#. translators: this is a 'tooltip' of the key_template 'hide' in keyboard layout 'key_defs.xml'
+#: ../data/layoutstrings.py:57 ../data/layoutstrings.py:247
+msgid "Hide Onboard"
+msgstr "Skrij Onboard"
+
+#. translators: this is a 'tooltip' of the key 'pause-learning.wordlist' in keyboard layout 'word_suggestions.xml'
+#: ../data/layoutstrings.py:58 ../data/layoutstrings.py:292
+msgid "Pause learning"
+msgstr "Premor od učenja"
+
+#. translators: very short label of the HOME key
+#: ../data/layoutstrings.py:60
+msgid "Hm"
+msgstr "Home"
+
+#. translators: very short label of the INSERT key
+#: ../data/layoutstrings.py:62
+msgid "Ins"
+msgstr "Ins"
+
+#. translators: this is a 'tooltip' of the key_template 'layer0' in keyboard layout 'key_defs.xml'
+#: ../data/layoutstrings.py:63 ../data/layoutstrings.py:265
+msgid "Main keyboard"
+msgstr "Glavna tipkovnica"
+
+#. translators: very short label of the Menu key
+#: ../data/layoutstrings.py:65
+msgid "Menu"
+msgstr "Meni"
+
+#. translators: this is a 'tooltip' of the key_template 'middleclick' in keyboard layout 'key_defs.xml'
+#: ../data/layoutstrings.py:66 ../data/layoutstrings.py:274
+msgid "Middle click"
+msgstr "Srednji klik"
+
+#. translators: this is a 'tooltip' of the key_template 'move' in keyboard layout 'key_defs.xml'
+#: ../data/layoutstrings.py:67 ../data/layoutstrings.py:283
+msgid "Move Onboard"
+msgstr "Premakni Onboard"
+
+#. translators: very short label of the NUMLOCK key
+#: ../data/layoutstrings.py:69
+msgid "Nm&#10;Lk"
+msgstr "Nm&#10;Lk"
+
+#. translators: this is a 'tooltip' of the key_template 'layer1' in keyboard layout 'key_defs.xml'
+#: ../data/layoutstrings.py:70 ../data/layoutstrings.py:289
+msgid "Number block and snippets"
+msgstr "Številčni blok in koščki"
+
+#. translators: very short label of the PAUSE key
+#: ../data/layoutstrings.py:72
+msgid "Pause"
+msgstr "Pause"
+
+#. translators: very short label of the PAGE DOWN key
+#: ../data/layoutstrings.py:74
+msgid "Pg&#10;Dn"
+msgstr "Pg&#10;Dn"
+
+#. translators: very short label of the PAGE UP key
+#: ../data/layoutstrings.py:76
+msgid "Pg&#10;Up"
+msgstr "Pg&#10;Up"
+
+#. translators: very short label of the Preferences button
+#. translators: this is a 'tooltip' of the key_template 'settings' in keyboard layout 'key_defs.xml'
+#: ../data/layoutstrings.py:78 ../data/layoutstrings.py:298
+msgid "Preferences"
+msgstr "Možnosti"
+
+#. translators: very short label of the PRINT key
+#: ../data/layoutstrings.py:80
+msgid "Prnt"
+msgstr "PrntScrn"
+
+#. translators: very short label of the Quit button
+#: ../data/layoutstrings.py:82
+msgid "Quit"
+msgstr "Končaj"
+
+#. translators: very short label of the RETURN key
+#: ../data/layoutstrings.py:84
+msgid "Return"
+msgstr "Enter"
+
+#. translators: this is a 'tooltip' of the key_template 'secondaryclick' in keyboard layout 'key_defs.xml'
+#: ../data/layoutstrings.py:85 ../data/layoutstrings.py:313
+msgid "Right click"
+msgstr "Desni klik"
+
+#. translators: very short label of the SCROLL key
+#: ../data/layoutstrings.py:87
+msgid "Scroll"
+msgstr "Scroll Lock"
+
+#: ../data/layoutstrings.py:89
+msgid "Space"
+msgstr "Preslednica"
+
+#. translators: this is a 'tooltip' of the key_template 'showclick' in keyboard layout 'key_defs.xml'
+#: ../data/layoutstrings.py:90 ../data/layoutstrings.py:364
+msgid "Toggle click helpers"
+msgstr "Pomočniki preklopa klika"
+
+#. translators: very short label of the TAB key
+#: ../data/layoutstrings.py:92
+msgid "Tab"
+msgstr "Tabulator"
+
+#. translators: very short label of the default SUPER key
+#: ../data/layoutstrings.py:94
+msgid "Win"
+msgstr "Win"
+
+#. translators: description of unicode character U+2602
+#. translators: this is a 'tooltip' of the key 'DB05' in keyboard layout 'Small.onboard'
+#: ../data/layoutstrings.py:96 ../data/layoutstrings.py:367
+msgid "Umbrella"
+msgstr "Dežnik"
+
+#. translators: description of unicode character U+2606
+#. translators: this is a 'tooltip' of the key 'DB07' in keyboard layout 'Small.onboard'
+#: ../data/layoutstrings.py:98 ../data/layoutstrings.py:373
+msgid "White star"
+msgstr "Bela zvezda"
+
+#. translators: description of unicode character U+260F
+#. translators: this is a 'tooltip' of the key 'DB03' in keyboard layout 'Small.onboard'
+#: ../data/layoutstrings.py:100 ../data/layoutstrings.py:379
+msgid "White telephone"
+msgstr "Bel telefon"
+
+#. translators: description of unicode character U+2615
+#: ../data/layoutstrings.py:102
+msgid "Hot beverage"
+msgstr "Vroča pijača"
+
+#. translators: description of unicode character U+2620
+#: ../data/layoutstrings.py:104
+msgid "Skull and crossbones"
+msgstr "Lobanja in prekrižane kosti"
+
+#. translators: description of unicode character U+2622
+#. translators: this is a 'tooltip' of the key 'DB09' in keyboard layout 'Small.onboard'
+#: ../data/layoutstrings.py:106 ../data/layoutstrings.py:310
+msgid "Radioactive sign"
+msgstr "Znak za radioaktivnost"
+
+#. translators: description of unicode character U+262E
+#. translators: this is a 'tooltip' of the key 'DB06' in keyboard layout 'Small.onboard'
+#: ../data/layoutstrings.py:108 ../data/layoutstrings.py:295
+msgid "Peace symbol"
+msgstr "Simbol miru"
+
+#. translators: description of unicode character U+262F
+#. translators: this is a 'tooltip' of the key 'DB08' in keyboard layout 'Small.onboard'
+#: ../data/layoutstrings.py:110 ../data/layoutstrings.py:385
+msgid "Yin yang"
+msgstr "Jin jang"
+
+#. translators: description of unicode character U+2639
+#. translators: this is a 'tooltip' of the key 'DC01' in keyboard layout 'Small.onboard'
+#: ../data/layoutstrings.py:112 ../data/layoutstrings.py:238
+msgid "Frowning face"
+msgstr "Namrščen obraz"
+
+#. translators: description of unicode character U+263A
+#. translators: this is a 'tooltip' of the key 'DD01' in keyboard layout 'Small.onboard'
+#: ../data/layoutstrings.py:114 ../data/layoutstrings.py:322
+msgid "Smiling face"
+msgstr "Nasmejan obraz"
+
+#. translators: description of unicode character U+263C
+#. translators: this is a 'tooltip' of the key 'DD10' in keyboard layout 'Small.onboard'
+#: ../data/layoutstrings.py:116 ../data/layoutstrings.py:376
+msgid "White sun with rays"
+msgstr "Belo sonce z žarki"
+
+#. translators: description of unicode character U+263E
+#. translators: this is a 'tooltip' of the key 'DC10' in keyboard layout 'Small.onboard'
+#: ../data/layoutstrings.py:118 ../data/layoutstrings.py:262
+msgid "Last quarter moon"
+msgstr "Zadnja četrtina lune"
+
+#. translators: description of unicode character U+2640
+#. translators: this is a 'tooltip' of the key 'DD09' in keyboard layout 'Small.onboard'
+#: ../data/layoutstrings.py:120 ../data/layoutstrings.py:235
+msgid "Female sign"
+msgstr "Znak za žensko"
+
+#. translators: description of unicode character U+2642
+#. translators: this is a 'tooltip' of the key 'DC09' in keyboard layout 'Small.onboard'
+#: ../data/layoutstrings.py:122 ../data/layoutstrings.py:268
+msgid "Male sign"
+msgstr "Znak za moškega"
+
+#. translators: description of unicode character U+2661
+#. translators: this is a 'tooltip' of the key 'DB01' in keyboard layout 'Small.onboard'
+#: ../data/layoutstrings.py:124 ../data/layoutstrings.py:370
+msgid "White heart suit"
+msgstr "Belo srce"
+
+#. translators: description of unicode character U+2662
+#: ../data/layoutstrings.py:126
+msgid "White diamond suit"
+msgstr "Bel karo"
+
+#. translators: description of unicode character U+2664
+#: ../data/layoutstrings.py:128
+msgid "White spade suit"
+msgstr "Bel pik"
+
+#. translators: description of unicode character U+2667
+#: ../data/layoutstrings.py:130
+msgid "White club suit"
+msgstr "Bel križ"
+
+#. translators: description of unicode character U+266B
+#. translators: this is a 'tooltip' of the key 'DB02' in keyboard layout 'Small.onboard'
+#: ../data/layoutstrings.py:132 ../data/layoutstrings.py:205
+msgid "Beamed eighth note"
+msgstr "Sijoča osminka"
+
+#. translators: description of unicode character U+2709
+#. translators: this is a 'tooltip' of the key 'DB04' in keyboard layout 'Small.onboard'
+#: ../data/layoutstrings.py:134 ../data/layoutstrings.py:226
+msgid "Envelope"
+msgstr "Ovojnica"
+
+#. translators: description of unicode character U+270C
+#: ../data/layoutstrings.py:136
+msgid "Victory hand"
+msgstr "Roka zmage"
+
+#. translators: description of unicode character U+270D
+#: ../data/layoutstrings.py:138
+msgid "Writing hand"
+msgstr "Roka, ki piše"
+
+#. translators: description of unicode character U+1F604
+#. translators: this is a 'tooltip' of the key 'DD03' in keyboard layout 'Small.onboard'
+#: ../data/layoutstrings.py:140 ../data/layoutstrings.py:331
+msgid "Smiling face with open mouth and smiling eyes"
+msgstr "Smejoč se obraz z odprtimi usti in smejočimi očmi"
+
+#. translators: description of unicode character U+1F607
+#. translators: this is a 'tooltip' of the key 'DD08' in keyboard layout 'Small.onboard'
+#: ../data/layoutstrings.py:142 ../data/layoutstrings.py:325
+msgid "Smiling face with halo"
+msgstr "Obraz z nasmehom in svetniškim sijem"
+
+#. translators: description of unicode character U+1F608
+#. translators: this is a 'tooltip' of the key 'DC08' in keyboard layout 'Small.onboard'
+#: ../data/layoutstrings.py:144 ../data/layoutstrings.py:328
+msgid "Smiling face with horns"
+msgstr "Obraz z nasmehom in rogovi"
+
+#. translators: description of unicode character U+1F609
+#. translators: this is a 'tooltip' of the key 'DD04' in keyboard layout 'Small.onboard'
+#: ../data/layoutstrings.py:146 ../data/layoutstrings.py:382
+msgid "Winking face"
+msgstr "Mežikajoč obraz"
+
+#. translators: description of unicode character U+1F60A
+#. translators: this is a 'tooltip' of the key 'DD02' in keyboard layout 'Small.onboard'
+#: ../data/layoutstrings.py:148 ../data/layoutstrings.py:334
+msgid "Smiling face with smiling eyes"
+msgstr "Obraz z nasmehom in smejočimi se očmi"
+
+#. translators: description of unicode character U+1F60B
+#. translators: this is a 'tooltip' of the key 'DC07' in keyboard layout 'Small.onboard'
+#: ../data/layoutstrings.py:150 ../data/layoutstrings.py:229
+msgid "Face savouring delicious food"
+msgstr "Obraz, ki okuša okusno hrano"
+
+#. translators: description of unicode character U+1F60D
+#: ../data/layoutstrings.py:152
+msgid "Smiling face with heart-shaped eyes"
+msgstr "Obraz z nasmehom in očmi v obliki srca"
+
+#. translators: description of unicode character U+1F60E
+#. translators: this is a 'tooltip' of the key 'DD07' in keyboard layout 'Small.onboard'
+#: ../data/layoutstrings.py:154 ../data/layoutstrings.py:337
+msgid "Smiling face with sunglasses"
+msgstr "Obraz z nasmehom in sončnimi očali"
+
+#. translators: description of unicode character U+1F60F
+#: ../data/layoutstrings.py:156
+msgid "Smirking face"
+msgstr "Muzajoči se obraz"
+
+#. translators: description of unicode character U+1F610
+#: ../data/layoutstrings.py:158
+msgid "Neutral face"
+msgstr "Ravnodušen obraz"
+
+#. translators: description of unicode character U+1F612
+#: ../data/layoutstrings.py:160
+msgid "Unamused face"
+msgstr "Nezadovoljen obraz"
+
+#. translators: description of unicode character U+1F616
+#. translators: this is a 'tooltip' of the key 'DC05' in keyboard layout 'Small.onboard'
+#: ../data/layoutstrings.py:162 ../data/layoutstrings.py:208
+msgid "Confounded face"
+msgstr "Zbegan obraz"
+
+#. translators: description of unicode character U+1F618
+#: ../data/layoutstrings.py:164
+msgid "Face throwing a kiss"
+msgstr "Obraz, ki pošilja poljub"
+
+#. translators: description of unicode character U+1F61A
+#. translators: this is a 'tooltip' of the key 'DD06' in keyboard layout 'Small.onboard'
+#: ../data/layoutstrings.py:166 ../data/layoutstrings.py:259
+msgid "Kissing face with closed eyes"
+msgstr "Obraz, ki pošilja poljube z zaprtimi očmi"
+
+#. translators: description of unicode character U+1F61C
+#. translators: this is a 'tooltip' of the key 'DD05' in keyboard layout 'Small.onboard'
+#: ../data/layoutstrings.py:168 ../data/layoutstrings.py:232
+msgid "Face with stuck-out tongue and winking eye"
+msgstr "Mežikajoč obraz, ki kaže jezik"
+
+#. translators: description of unicode character U+1F61D
+#: ../data/layoutstrings.py:170
+msgid "Face with stuck-out tongue and tightly closed eyes"
+msgstr "Obraz s tesno zaprtimi očmi, ki kaže jezik"
+
+#. translators: description of unicode character U+1F61E
+#: ../data/layoutstrings.py:172
+msgid "Disappointed face"
+msgstr "Razočaran obraz"
+
+#. translators: description of unicode character U+1F620
+#. translators: this is a 'tooltip' of the key 'DC02' in keyboard layout 'Small.onboard'
+#: ../data/layoutstrings.py:174 ../data/layoutstrings.py:196
+msgid "Angry face"
+msgstr "Jezen obraz"
+
+#. translators: description of unicode character U+1F621
+#: ../data/layoutstrings.py:176
+msgid "Pouting face"
+msgstr "Kujajoči se obraz"
+
+#. translators: description of unicode character U+1F622
+#. translators: this is a 'tooltip' of the key 'DC03' in keyboard layout 'Small.onboard'
+#: ../data/layoutstrings.py:178 ../data/layoutstrings.py:211
+msgid "Crying face"
+msgstr "Jokajoči se obraz"
+
+#. translators: description of unicode character U+1F623
+#: ../data/layoutstrings.py:180
+msgid "Persevering face"
+msgstr "Trmast obraz"
+
+#. translators: description of unicode character U+1F629
+#: ../data/layoutstrings.py:182
+msgid "Weary face"
+msgstr "Izčrpan obraz"
+
+#. translators: description of unicode character U+1F62B
+#. translators: this is a 'tooltip' of the key 'DC06' in keyboard layout 'Small.onboard'
+#: ../data/layoutstrings.py:184 ../data/layoutstrings.py:361
+msgid "Tired face"
+msgstr "Utrujen obraz"
+
+#. translators: description of unicode character U+1F632
+#. translators: this is a 'tooltip' of the key 'DC04' in keyboard layout 'Small.onboard'
+#: ../data/layoutstrings.py:186 ../data/layoutstrings.py:202
+msgid "Astonished face"
+msgstr "Osupel obraz"
+
+#. translators: description of unicode character U+1F633
+#: ../data/layoutstrings.py:188
+msgid "Flushed face"
+msgstr "Polit obraz"
+
+#. translators: description of unicode character U+1F635
+#: ../data/layoutstrings.py:190
+msgid "Dizzy face"
+msgstr "Omotičen obraz"
+
+#. translators: this is a 'tooltip' of the key_template 'layer4' in keyboard layout 'Whiteboard.onboard'
+#: ../data/layoutstrings.py:199
+msgid "Arrows"
+msgstr "Puščice"
+
+#. translators: this is a 'tooltip' of the key_template 'layer5' in keyboard layout 'Whiteboard.onboard'
+#: ../data/layoutstrings.py:214
+msgid "Custom"
+msgstr "Po meri"
+
+#. translators: this is a 'summary' of the keyboard layout 'Full Keyboard.onboard'
+#: ../data/layoutstrings.py:217
+msgid "Desktop keyboard with edit and function keys"
+msgstr "Namizna tipkovnica z urejevalnimi in zmožnostnimi tipkami"
+
+#. translators: this is a 'tooltip' of the key_template 'layer0' in keyboard layout 'Whiteboard.onboard'
+#: ../data/layoutstrings.py:241
+msgid "Greek"
+msgstr "grška"
+
+#. translators: this is a 'summary' of the keyboard layout 'Grid.onboard'
+#: ../data/layoutstrings.py:244
+msgid "Grid of keys, suitable for keyboard scanning"
+msgstr "Mreža tipk, ki je primerna za preiskovanje tipkovnice"
+
+#. translators: this is a 'tooltip' of the key 'hide' in keyboard layout 'Whiteboard_wide.onboard'
+#: ../data/layoutstrings.py:250
+msgid "Hide keyboard"
+msgstr "Skrij tipkovnico"
+
+#. translators: this is a 'description' of the keyboard layout 'Whiteboard.onboard'
+#: ../data/layoutstrings.py:253
+msgid ""
+"Keyboard layout with Greek literals, arrows and more, for math and physics "
+"education on an interactive Whiteboard."
+msgstr ""
+"Razporeditev tipkovnice z grškimi črkami, puščicami in več za poučevanje "
+"matematike in fizike na interaktivni tabli."
+
+#. translators: this is a 'description' of the keyboard layout 'Whiteboard_wide.onboard'
+#: ../data/layoutstrings.py:256
+msgid ""
+"Keyboard layout with Greek literals, arrows and more, for math and physics "
+"education on an interactive Whiteboard.\n"
+"This layout places all keys on a single, very wide layer."
+msgstr ""
+"Razporeditev tipkovnice z grškimi črkami, puščicami in več za poučevanje "
+"matematike in fizike na interaktivni tabli.\n"
+"Ta razporeditev postavi vse tipke na eno samo in zelo široko plast."
+
+#. translators: this is a 'summary' of the keyboard layout 'Compact.onboard'
+#: ../data/layoutstrings.py:271
+msgid "Medium size desktop keyboard"
+msgstr "Srednja velikost namizne tipkovnice"
+
+#. translators: this is a 'summary' of the keyboard layout 'Phone.onboard'
+#: ../data/layoutstrings.py:277
+msgid "Mobile keyboard for small screens"
+msgstr "Mobilna tipkovnica za majhne zaslone"
+
+#. translators: this is a 'tooltip' of the key 'expand-corrections' in keyboard layout 'word_suggestions.xml'
+#: ../data/layoutstrings.py:280
+msgid "More suggestions"
+msgstr "Več predlogov"
+
+#. translators: this is a 'tooltip' of the key 'move' in keyboard layout 'Whiteboard_wide.onboard'
+#: ../data/layoutstrings.py:286
+msgid "Move keyboard"
+msgstr "Premakni tipkovnico"
+
+#. translators: this is a 'tooltip' of the key 'previous-predictions.wordlist' in keyboard layout 'word_suggestions.xml'
+#: ../data/layoutstrings.py:301
+msgid "Previous suggestions"
+msgstr ""
+
+#. translators: this is a 'tooltip' of the key 'quit' in keyboard layout 'Whiteboard.onboard'
+#: ../data/layoutstrings.py:304
+msgid "Quit Keyboard"
+msgstr "Končaj tipkovnico"
+
+#. translators: this is a 'tooltip' of the key_template 'quit' in keyboard layout 'key_defs.xml'
+#: ../data/layoutstrings.py:307
+msgid "Quit Onboard"
+msgstr "Končaj Onboard"
+
+#. translators: this is a 'tooltip' of the key_template 'layer2' in keyboard layout 'Whiteboard.onboard'
+#: ../data/layoutstrings.py:316
+msgid "Set and Settings"
+msgstr "Nastavitve"
+
+#. translators: this is a 'tooltip' of the key 'settings' in keyboard layout 'Whiteboard_wide.onboard'
+#: ../data/layoutstrings.py:319
+msgid "Settings"
+msgstr "Nastavitve"
+
+#. translators: this is a 'summary' of the keyboard layout 'Small.onboard'
+#: ../data/layoutstrings.py:343
+msgid "Space efficient desktop keyboard"
+msgstr "Prostorsko zmogljiva namizna tipkovnica"
+
+#. translators: this is a 'tooltip' of the key_template 'layer3' in keyboard layout 'Whiteboard.onboard'
+#: ../data/layoutstrings.py:346
+msgid "Special Characters"
+msgstr "Posebni znaki"
+
+#. translators: this is a 'summary' of the keyboard layout 'Whiteboard_wide.onboard'
+#: ../data/layoutstrings.py:349
+msgid "Special characters for interactive whiteboards, wide"
+msgstr "Posebni znaki za odzivne bele table, široka"
+
+#. translators: this is a 'summary' of the keyboard layout 'Whiteboard.onboard'
+#: ../data/layoutstrings.py:352
+msgid "Special characters for interactive whiteboards"
+msgstr "Posebni znaki za interaktivne table"
+
+#. translators: this is a 'tooltip' of the key 'correction' in keyboard layout 'word_suggestions.xml'
+#: ../data/layoutstrings.py:355
+msgid "Spelling suggestion"
+msgstr "Predlogi za črkovanje"
+
+#. translators: this is a 'tooltip' of the key_template 'layer1' in keyboard layout 'Whiteboard.onboard'
+#: ../data/layoutstrings.py:358
+msgid "Sub-, Superscripts; Fractions"
+msgstr "Števec, imenovalec; Ulomki"
+
+#: ../Onboard/LayoutLoaderSVG.py:164
+msgid ""
+"Loading legacy layout, format '{}'. Please consider upgrading to current "
+"format '{}'"
+msgstr ""
+"Nalaganje stare razporeditve, oblika \"{}\". Razmislite o nadgradnji na "
+"trenutno obliko \"{}\""
+
+#: ../Onboard/LayoutLoaderSVG.py:403
+msgid "Ignoring key '{}'. No svg filename defined."
+msgstr "Preziranje ključa '{}'. Ime datoteke svg ni določeno."
+
+#: ../Onboard/LayoutLoaderSVG.py:624
+msgid "Snippet {}"
+msgstr "Košček {}"
+
+#. i18n: full string is "Snippet n, unassigned"
+#: ../Onboard/LayoutLoaderSVG.py:628
+msgid ", unassigned"
+msgstr ", nedoločeno"
+
+#: ../Onboard/LayoutLoaderSVG.py:937
+msgid "copying layout '{}' to '{}'"
+msgstr "kopiranje razporeditve '{}' v '{}'"
+
+#: ../Onboard/LayoutLoaderSVG.py:957
+msgid "copy_layouts failed, unsupported layout format '{}'."
+msgstr "ukaz copy_layouts je spodletel, nepodprta vrsta razporeditve '{}'."
+
+#: ../Onboard/LayoutLoaderSVG.py:1000
+msgid "copying svg file '{}' to '{}'"
+msgstr "kopiranje datoteke svg '{}' v '{}'"
+
+#: ../Onboard/Config.py:236
+msgid "Layout file ({}) or name"
+msgstr "Datoteka postavitve ({}) ali ime"
+
+#: ../Onboard/Config.py:239
+msgid "Theme file (.theme) or name"
+msgstr "Datoteka teme (.theme) ali ime"
+
+#: ../Onboard/Config.py:241
+msgid "Window size, widthxheight"
+msgstr "Velikost okna, širinaxvišina"
+
+#: ../Onboard/Config.py:242
+msgid "Window x position"
+msgstr "Položaj okna X"
+
+#: ../Onboard/Config.py:243
+msgid "Window y position"
+msgstr "Položaj okna Y"
+
+#: ../Onboard/Config.py:248
+msgid "Start in XEmbed mode, e.g. for gnome-screensaver"
+msgstr "Zaženi v načinu XEmbed, npr. za gnome-screensaver"
+
+#: ../Onboard/Config.py:251
+msgid "Allow multiple Onboard instances"
+msgstr "Dovoli več primerkov Onboard"
+
+#: ../Onboard/Config.py:254
+msgid ""
+"Silently fail to start in the given desktop environments. DESKTOPS is a "
+"comma-separated list of XDG desktop names, e.g. GNOME for GNOME Shell."
+msgstr ""
+"Silently ni mogoče zagnati na podanih namiznih okoljih. DESKTOPS je z vejico "
+"ločen seznam namiznih imen XDG, na primer GNOME za GNOME Shell."
+
+#: ../Onboard/Config.py:260
+msgid ""
+"Delay showing the initial keyboard window by STARTUP_DELAY seconds (default "
+"0.0)."
+msgstr ""
+
+#: ../Onboard/Config.py:264
+msgid "Keep aspect ratio when resizing the window"
+msgstr "Obdrži razmerje, ko se spreminja velikost okna"
+
+#: ../Onboard/Config.py:266
+msgid ""
+"Override auto-detection and manually select quirks\n"
+"QUIRKS={metacity|compiz|mutter}"
+msgstr ""
+"Prepis samodejnega zaznavanja in ročen izbor izrisovanja\n"
+"QUIRKS={metacity|compiz|mutter}"
+
+#: ../Onboard/Config.py:381
+msgid "Migrating user directory '{}' to '{}'."
+msgstr "Selitev uporabniške mape '{}' v '{}'."
+
+#. honor XDG spec
+#. python >2.5
+#: ../Onboard/Config.py:389
+msgid "failed to migrate user directory. "
+msgstr "ni mogoče preseliti uporabniške mape. "
+
+#: ../Onboard/Config.py:868
+#, python-brace-format
+msgid "layout '{filename}' does not exist"
+msgstr "razporeditev '{filename}' ne obstaja"
+
+#: ../Onboard/Config.py:909
+#, python-brace-format
+msgid "theme '{filename}' does not exist"
+msgstr "tema '{filename}' ne obstaja"
+
+#: ../Onboard/Config.py:934
+msgid "Loading theme from '{}'"
+msgstr "Nalaganje teme iz '{}'"
+
+#: ../Onboard/Config.py:938
+msgid "Unable to read theme '{}'"
+msgstr "Teme '{} ni mogoče brati"
+
+#: ../Onboard/Config.py:1144
+msgid ""
+"Enabling auto-show requires Gnome Accessibility.\n"
+"\n"
+"Onboard can turn on accessiblity now, however it is recommended that you log "
+"out and back in for it to reach its full potential.\n"
+"\n"
+"Enable accessibility now?"
+msgstr ""
+"Omogočanje samodejnega prikazovanja zahteva dostopnost Gnome-a.\n"
+"\n"
+"Onboard lahko sedaj vklopi dostopnost, vendar vam priporočamo, da se za "
+"doseg njenega polnega potenciala.\n"
+"\n"
+"Ali želite dostopnost omogočiti zdaj?"
+
+#: ../Onboard/Config.py:1926
+#, python-brace-format
+msgid "color scheme '{filename}' does not exist"
+msgstr "barvna shema '{filename}' ne obstaja"
+
+#: ../Onboard/ConfigUtils.py:81
+msgid "gsettings schema for '{}' is not installed"
+msgstr "shema gsettings za '{}' ni nameščena"
+
+#. assume filename is just a basename instead of a full file path
+#: ../Onboard/ConfigUtils.py:439
+#, python-brace-format
+msgid "{description} '{filename}' not found yet, retrying in default paths"
+msgstr ""
+"{description} '{filename}' še ni najdeno, ponovno poizkušanje v privzetih "
+"poteh"
+
+#: ../Onboard/ConfigUtils.py:448
+#, python-brace-format
+msgid "unable to locate '{filename}', loading default {description} instead"
+msgstr ""
+"ni mogoče najti '{filename}', namesto tega bo naložen privzet {description}"
+
+#: ../Onboard/ConfigUtils.py:457 ../Onboard/ConfigUtils.py:513
+#, python-brace-format
+msgid "failed to find {description} '{filename}'"
+msgstr "iskanje {description} '{filename}' je spodletelo"
+
+#: ../Onboard/ConfigUtils.py:461 ../Onboard/ConfigUtils.py:517
+#, python-brace-format
+msgid "{description} '{filepath}' found."
+msgstr "{description} '{filepath}' je bil najden."
+
+#. assume filename is just a basename instead of a full file path
+#: ../Onboard/ConfigUtils.py:496
+#, python-brace-format
+msgid "{description} '{filename}' not found yet, searching in paths {paths}"
+msgstr "{description} '{filename}' še ni bila najdena, iskanje v poteh {paths}"
+
+#: ../Onboard/ConfigUtils.py:591
+#, python-brace-format
+msgid "Looking for system defaults in {paths}"
+msgstr "Iskanje sistemskih nastavitev v {paths}"
+
+#: ../Onboard/ConfigUtils.py:602
+msgid "Failed to read system defaults. "
+msgstr "Napaka med branjem privzetih sistemskih nastavitev. "
+
+#: ../Onboard/ConfigUtils.py:606
+msgid "No system defaults found."
+msgstr "Nobene privzete sistemske nastavitve ni bilo mogoče najti."
+
+#: ../Onboard/ConfigUtils.py:608
+#, python-brace-format
+msgid "Loading system defaults from {filename}"
+msgstr "Iskanje sistemskih nastavitev v {filename}"
+
+#: ../Onboard/ConfigUtils.py:632
+msgid "Found system default '[{}] {}={}'"
+msgstr "Najdene so bile sistemske privzete nastavitve  '[{}] {}={}'"
+
+#: ../Onboard/ConfigUtils.py:649
+msgid "System defaults: Unknown key '{}' in section '{}'"
+msgstr "Privzete sistemske vrednosti: neznana tipka '{}' v odseku '{}'"
+
+#: ../Onboard/ConfigUtils.py:656
+msgid "System defaults: Invalid enum value for key '{}' in section '{}': {}"
+msgstr ""
+"Privzeto sistemsko: neveljavna vrednost vrste naštevanja za ključ '{}' v "
+"odseku '{}': {}"
+
+#: ../Onboard/ConfigUtils.py:669
+msgid ""
+"System defaults: Invalid value for key '{}' in section '{}'\n"
+"  {}"
+msgstr ""
+"Privzete sistemske vrednosti: neveljavna vrednost za ključ '{}' v odseku "
+"'{}'\n"
+"  {}"
+
+#: ../Onboard/ConfigUtils.py:732
+msgid "Failed to get gsettings value. "
+msgstr "Vrednosti gsettings ni bilo mogoče dobiti. "
+
+#: ../Onboard/Appearance.py:130
+#, python-brace-format
+msgid "Color scheme for theme '{filename}' not found"
+msgstr "Barvne sheme za temo '{filename}' ni bilo mogoče najti"
+
+#: ../Onboard/Appearance.py:350
+#, python-brace-format
+msgid "Error loading theme '{filename}'. {exception}: {cause}"
+msgstr "Napaka med nalaganjem teme '{filename}'. {exception}: {cause}"
+
+#: ../Onboard/Appearance.py:424
+msgid "Error saving "
+msgstr "Napaka med shranjevanjem "
+
+#: ../Onboard/Appearance.py:842
+#, python-brace-format
+msgid ""
+"Loading legacy color scheme format '{old_format}', please consider upgrading "
+"to current format '{new_format}': '{filename}'"
+msgstr ""
+"Nalaganje oblike stare barvne sheme '{old_format}', prosimo, razmislite o "
+"nadgradnji na novejšo obliko '{new_format}': '{filename}'"
+
+#: ../Onboard/Appearance.py:862
+#, python-brace-format
+msgid "Error loading color scheme '{filename}'. {exception}: {cause}"
+msgstr "Napaka med nalaganjem barvne sheme '{filename}'. {exception}: {cause}"
+
+#: ../Onboard/Appearance.py:939 ../Onboard/Appearance.py:1071
+msgid ""
+"Duplicate key_id '{}' found in color scheme file. Key_ids must occur only "
+"once."
+msgstr ""
+"V datoteki barvne sheme je bil najden podvojen key_id '{}'. Key_id se mora "
+"pojaviti le enkrat."
+
+#: ../Onboard/settings.py:316
+msgid "Onboard Preferences"
+msgstr "Možnosti Onboard"
+
+#. touch_feedback_size_label: 0=auto, i.e. let Onboard guess
+#. the size of the label popup.
+#: ../Onboard/settings.py:675
+msgid "auto"
+msgstr ""
+
+#: ../Onboard/settings.py:751
+msgid "Copy layout '{}' to this new name:"
+msgstr "Kopiraj razporeditev '{}' v novo ime:"
+
+#: ../Onboard/settings.py:764
+msgid "Delete layout '{}'?"
+msgstr "Izbriši razporeditev '{}'?"
+
+#: ../Onboard/settings.py:812
+msgid "System settings not found ({}): {}"
+msgstr "Sistemskih nastavitev ni mogoče najti ({}):{}"
+
+#: ../Onboard/settings.py:835
+msgid "Core layouts"
+msgstr "Glavne razporeditve"
+
+#: ../Onboard/settings.py:836
+msgid "Contributions"
+msgstr "Prispevki"
+
+#: ../Onboard/settings.py:837
+msgid "My layouts"
+msgstr ""
+
+#: ../Onboard/settings.py:872
+msgid "Author: {}"
+msgstr "Avtor: {}"
+
+#: ../Onboard/settings.py:876
+msgid "About Layout"
+msgstr "O razporeditvi"
+
+#: ../Onboard/settings.py:981
+msgid "Enter a name for the new theme:"
+msgstr "Vnesite ime za novo temo:"
+
+#: ../Onboard/settings.py:989
+#, python-brace-format
+msgid ""
+"This theme file already exists.\n"
+"'{filename}'\n"
+"\n"
+"Overwrite it?"
+msgstr ""
+"Ta datoteka teme že obstaja.\n"
+"'{filename}'\n"
+"\n"
+"Ali jo želite prepisati?"
+
+#: ../Onboard/settings.py:1006
+msgid "Reset selected theme to Onboard defaults?"
+msgstr "Ali želite izbrano temo ponastaviti na privzete vrednosti Onboard?"
+
+#: ../Onboard/settings.py:1008
+msgid "Delete selected theme?"
+msgstr "Ali želite izbrisati izbrano temo?"
+
+#. Translators: reset button of Preferences->Theme.
+#: ../Onboard/settings.py:1137
+msgid "_Reset"
+msgstr "_Ponastavi"
+
+#. Translators: delete button of Preferences->Theme. It used to be
+#. stock item STOCK_DELETE until Gtk 3.10 deprecated those.
+#: ../Onboard/settings.py:1141
+msgid "_Delete"
+msgstr "_Izbriši"
+
+#. Translators: header of a tree view column with toggles to ignore
+#. keyboard devices (Preferences->Auto-show->External Keyboards).
+#: ../Onboard/settings.py:1278
+msgid "Ignore"
+msgstr ""
+
+#. Translators: header of a tree view column with device names
+#. (Preferences->Auto-show->External Keyboards).
+#: ../Onboard/settings.py:1282
+msgid "Device"
+msgstr ""
+
+#. Key style with flat fill- and border colors
+#: ../Onboard/settings.py:1619
+msgid "Flat"
+msgstr "Plosko"
+
+#. Key style for dish-like key caps
+#: ../Onboard/settings.py:1623
+msgid "Dish"
+msgstr "Upognjeno"
+
+#: ../Onboard/settings.py:1672 ../Onboard/settings.py:1729
+msgid "Default"
+msgstr "Privzeto"
+
+#: ../Onboard/settings.py:1713
+msgid "Bold"
+msgstr "Krepko"
+
+#: ../Onboard/settings.py:1715
+msgid "Italic"
+msgstr "Ležeče"
+
+#: ../Onboard/settings.py:1717
+msgid "Condensed"
+msgstr "Zgoščeno"
+
+#: ../Onboard/settings.py:1730
+msgid ""
+msgstr ""
+
+#: ../Onboard/settings.py:1730
+msgid "Ubuntu Logo"
+msgstr "Logotip Ubuntu"
+
+#: ../Onboard/settings.py:1864
+msgid "Step"
+msgstr "Korak"
+
+#: ../Onboard/settings.py:1865
+msgid "Left"
+msgstr "Levo"
+
+#: ../Onboard/settings.py:1866
+msgid "Right"
+msgstr "Desno"
+
+#: ../Onboard/settings.py:1867
+msgid "Up"
+msgstr "Zgoraj"
+
+#: ../Onboard/settings.py:1868
+msgid "Down"
+msgstr "Spodaj"
+
+#: ../Onboard/settings.py:1869
+msgid "Activate"
+msgstr "Omogoči"
+
+#: ../Onboard/settings.py:2038
+msgid "Action:"
+msgstr "Dejanje:"
+
+#: ../Onboard/settings.py:2202
+msgid "Disabled"
+msgstr "Onemogočeno"
+
+#: ../Onboard/settings.py:2208
+msgid "Button"
+msgstr "Gumb"
+
+#: ../Onboard/settings.py:2263 ../Onboard/settings.py:2308
+msgid "Press a button..."
+msgstr "Pritisnite gumb ..."
+
+#: ../Onboard/settings.py:2310
+msgid "Press a key..."
+msgstr "Pritisnite tipko ..."
+
+#. ##############
+#: ../Onboard/SnippetView.py:39
+msgid "<Enter label>"
+msgstr "<Vnesite oznako>"
+
+#: ../Onboard/SnippetView.py:40
+msgid "<Enter text>"
+msgstr "<Vnesite besedilo>"
+
+#: ../Onboard/SnippetView.py:52
+msgid "Button Number"
+msgstr "Številka gumba"
+
+#: ../Onboard/SnippetView.py:59
+msgid "Button Label"
+msgstr "Oznaka gumba"
+
+#: ../Onboard/SnippetView.py:68
+msgid "Snippet Text"
+msgstr "Izrezek besedila"
+
+#: ../Onboard/SnippetView.py:113
+msgid "Must be an integer number"
+msgstr "Mora biti celo število"
+
+#: ../Onboard/SnippetView.py:122
+#, python-format
+msgid "Snippet %d is already in use."
+msgstr "Košček %d je že v uporabi."
+
+#: ../Onboard/utils.py:1535
+msgid "failed to create directory '{}': {}"
+msgstr "ni mogoče ustvariti mape '{}': {}"
+
+#~ msgid "Quit onBoard"
+#~ msgstr "Zapri onBoard"
+
+#~ msgid ""
+#~ "Switch\n"
+#~ "Buttons"
+#~ msgstr ""
+#~ "Zamenjaj\n"
+#~ "Gumbe"
+
+#~ msgid "Show settings"
+#~ msgstr "Pokaži nastavitve"
+
+#~ msgid "Personalise current layout"
+#~ msgstr "Prilagodi trenutno postavitev"
+
+#~ msgid "Open layout folder"
+#~ msgstr "Odpri mapo postavitve"
+
+#~ msgid "Change onBoard settings"
+#~ msgstr "Spremeni nastavitve onBoard"
+
+#~ msgid "onBoard Settings"
+#~ msgstr "Nastavitve onBoard"
+
+#~ msgid "onBoard onscreen keyboard settings"
+#~ msgstr "Nastavitve zaslonske tipkovnice onBoard"
+
+#~ msgid "Show onboard when _unlocking the screen"
+#~ msgstr "Prikaži onBoard med _odklepanjem zaslona"
+
+#~ msgid "onBoard"
+#~ msgstr "onBoard"
+
+#~ msgid "onBoard onscreen keyboard"
+#~ msgstr "Zaslonska tipkovnica onBoard"
+
+#~ msgid "Show floating _icon when onboard is hidden"
+#~ msgstr "Prikaži plavajočo _ikono, ko je onboard skrit"
+
+#~ msgid "Enter text for snippet"
+#~ msgstr "Vnesite besedilo za delček"
+
+#~ msgid ""
+#~ "Onboard is configured to appear with the dialog to unlock the screen; for "
+#~ "example to dismiss the password-protected screensaver.\n"
+#~ "\n"
+#~ "However the system is not configured anymore to use onboard to unlock the "
+#~ "screen. A possible reason can be that another application configured the "
+#~ "system to use something else.\n"
+#~ "\n"
+#~ "Would you like to reconfigure the system to show onboard when unlocking "
+#~ "the screen?"
+#~ msgstr ""
+#~ "Onboard je nastavljen tako, da se pojavi z oknom za odkepanje zaslona; na "
+#~ "primer, za končanje ohranjevalnika zaslona, zaščitenega z geslom\n"
+#~ "\n"
+#~ "Sistem ni več nastavljen tako, da za odklepanje zaslona uporablja "
+#~ "onboard. Obstaja možnost, da je drug program sistem nastavil za uporabo "
+#~ "česa drugega.\n"
+#~ "\n"
+#~ "Ali bi radi znova nastavili sistem za prikaz onboarda pri odklepanju "
+#~ "zaslona?"
+
+#~ msgid ""
+#~ "<b><i>Scanning mode only works with layouts which are designed for the "
+#~ "purpose.</i></b>"
+#~ msgstr ""
+#~ "<b><i>Način preiskovanja deluje le z razporeditvami, ki so zasnovane za "
+#~ "ta namen.</i></b>"
+
+#~ msgid "Interval"
+#~ msgstr "Območje"
+
+#~ msgid "Scanning mode"
+#~ msgstr "Način preiskovanja"
+
+#~ msgid "Personalise _current layout"
+#~ msgstr "Poosebi _trenutno razporeditev"
+
+#~ msgid "Startup Option"
+#~ msgstr "Možnost zagona"
+
+#~ msgid "_Open custom layouts folder"
+#~ msgstr "_Odpri mapo razporeditev po meri"
+
+#~ msgid " - middle/right click buttons disabled"
+#~ msgstr " - srednji/desni klik je onemogočen"
+
+#~ msgid "Xlib unavailable%s\n"
+#~ msgstr "Xlib ni na voljo%s\n"
+
+#~ msgid "XInput extension unavailable%s\n"
+#~ msgstr "Razširitev XInput ni na voljo%s\n"
+
+#~ msgid "Please enter a new snippet for this button."
+#~ msgstr "Vnesite nov izrezek za ta gumb."
+
+#~ msgid "Button label"
+#~ msgstr "Oznaka gumba"
+
+#~ msgid "<enter text>"
+#~ msgstr "<vnesi besedilo>"
+
+#~ msgid "Snippet assigned to button %d"
+#~ msgstr "Izrezek dodeljen gumbu %d"
+
+#~ msgid "Customize theme"
+#~ msgstr "Prilagodi temo"
+
+#~ msgid "Please enter a name for the new theme"
+#~ msgstr "Vnesite ime za novo temo"
+
+#~ msgid "Delete"
+#~ msgstr "Izbriši"
+
+#~ msgid "-"
+#~ msgstr "-"
+
+#~ msgid "    "
+#~ msgstr "    "
+
+#~ msgid "Attributes"
+#~ msgstr "Atributi"
+
+#~ msgid "Border"
+#~ msgstr "Obroba"
+
+#~ msgid "Color Scheme"
+#~ msgstr "Barvna shema"
+
+#~ msgid "Direction"
+#~ msgstr "Smer"
+
+#~ msgid "Independent size"
+#~ msgstr "Neodvisna velikost"
+
+#~ msgid "Key"
+#~ msgstr "Tipka"
+
+#~ msgid "Key style"
+#~ msgstr "Slog tipke"
+
+#~ msgid "Label font"
+#~ msgstr "Oznaka pisave"
+
+#~ msgid "Label override"
+#~ msgstr "Prepisovanje oznake"
+
+#~ msgid "Roundness"
+#~ msgstr "Zaobljenost"
+
+#~ msgid "Super key label"
+#~ msgstr "Oznaka tipke super"
+
+#~ msgid "Failed to load Onboard icon"
+#~ msgstr "Napaka med nalaganjem ikone Onboard"
+
+#~ msgid "Start onboard _minimized"
+#~ msgstr "onBoard zaženi po_manjšano."
+
+#~ msgid "Units for canvas height and width must currently be px (pixels)."
+#~ msgstr ""
+#~ "Enote za višino in širino platna morajo biti v slikovnih točkah (px)."
+
+#~ msgid "Layouts"
+#~ msgstr "Postavitve"
+
+#~ msgid "Scanning"
+#~ msgstr "Preiskovanje"
+
+#~ msgid ""
+#~ "Show a floating icon on the desktop when onboard is hidden. A click on "
+#~ "the icon makes onboard reappear."
+#~ msgstr ""
+#~ "Pokaži plavajočo ikono na namizju, ko je onboard skrit. Klik na ikono "
+#~ "povzroči, da se onboard ponovno pojavi."
+
+#~ msgid "Start onboard hidden."
+#~ msgstr "onBoard zaženi prikrito."
+
+#~ msgid "Snippet"
+#~ msgstr "Delček"
+
+#~ msgid ""
+#~ "Pg\n"
+#~ "Up"
+#~ msgstr ""
+#~ "Pg\n"
+#~ "Up"
+
+#~ msgid ""
+#~ "Pg\n"
+#~ "Dn"
+#~ msgstr ""
+#~ "Pg\n"
+#~ "Dn"
+
+#~ msgid ""
+#~ "Nm\n"
+#~ "Lk"
+#~ msgstr ""
+#~ "Nm\n"
+#~ "Lk"
+
+#~ msgid "ESC"
+#~ msgstr "ESC"
+
+#~ msgid "%s appears in scanning definition only"
+#~ msgstr "%s se pojavi le v preiskovanju definicije"
+
+#~ msgid "Show the status item. A click on that icon hides or shows onboard."
+#~ msgstr "Prikaži predmet stanja. Klik na ikono skrije ali prikaže onboard."
+
+#~ msgid ""
+#~ "Middle\n"
+#~ "Click"
+#~ msgstr ""
+#~ "Srednji\n"
+#~ "klik"
+
+#~ msgid ""
+#~ "Right\n"
+#~ "Click"
+#~ msgstr ""
+#~ "Desni\n"
+#~ "klik"
+
+#~ msgid ""
+#~ "Show onboard when the dialog to unlock the screen appears; this way "
+#~ "onboard can be used for example to enter the password to dismiss the "
+#~ "screensaver when it is set to ask for it."
+#~ msgstr ""
+#~ "Prikaži onboard, ko se pojavi pogovorno okno za odklep zaslona; onboard "
+#~ "je na ta način mogoče uporabiti npr. za vnašanje gesla, ki konča "
+#~ "ohranjevalnik zaslona, kadar ga le-ta zahteva."
+
+#~ msgid ""
+#~ "Some password dialogs disable the area around them, making it impossible "
+#~ "to click on onboard. By activating this option, these dialogs behave as "
+#~ "normal windows and the area around the dialog remains active. This option "
+#~ "is also available in the Assistive Technologies control panel."
+#~ msgstr ""
+#~ "Nekatera pogovorna okna z gesli onemogočijo področje okrog njih, kar "
+#~ "naredi klikanje na onboard nemogoče. Izbrana možnost določi, da se ta "
+#~ "pogovorna okna obnašajo kot običajna okna in področje okoli pogovornih "
+#~ "oken ostane dejavno. Ta možnost je na voljo tudi v nadzorni plošči "
+#~ "Pomožne tehnologije."
+
+#~ msgid "_Password dialogs as normal windows"
+#~ msgstr "_Pogovorna okna za geslo kot običajna okna"
+
+#~ msgid "Option When Hidden"
+#~ msgstr "Možnost ob skritju"
+
+#~ msgid "Looking for system defaults in %s"
+#~ msgstr "Iskanje privzetih sistemskih nastavitev v %s"
+
+#~ msgid "Loading system defaults from %s."
+#~ msgstr "Nalaganje privzetih sistemskih nastavitev iz %s."
+
+#~ msgid "Can't find file '%s'. Retrying as %s basename."
+#~ msgstr ""
+#~ "Datoteke '%s' ni mogoče najti. Ponovno poizkušanje z %s kot osnovnim "
+#~ "imenom"
+
+#~ msgid "Can't load basename '%s' loading default %s instead"
+#~ msgstr "Ni mogoče naložiti osnovnega imena '%s', nalaganje privzetega %s"
+
+#~ msgid "Unable to find %s '%s'"
+#~ msgstr "%s '%s' ni mogoče najti"
+
+#~ msgid "Show Onboard when _unlocking the screen"
+#~ msgstr "Prikaži Onboard, med _odklepanjem zaslona"
+
+#~ msgid "Start Onboard _minimized"
+#~ msgstr "Zaženi Onboard _skrčen"
+
+#~ msgid "Themes"
+#~ msgstr "Teme"
+
+#~ msgid ""
+#~ "The theme file already exists.\n"
+#~ "'%s'\n"
+#~ "\n"
+#~ "Overwrite it anyway?"
+#~ msgstr ""
+#~ "Datoteka teme že obstaja.\n"
+#~ "'%s'\n"
+#~ "\n"
+#~ "Ali jo želite vseeno prepisati?"
+
+#~ msgid "Delete selected theme file?"
+#~ msgstr "Ali želite izbrisati izbrano datoteko teme?"
+
+#~ msgid "Color scheme for theme '%s' not found"
+#~ msgstr "Barvne sheme za temo '%s' ni mogoče najti"
+
+#~ msgid "Always enable the click-type window on exit"
+#~ msgstr "Vedno omogoči okno za tipkanje s klikanjem ob končanju"
+
+#~ msgid "Background"
+#~ msgstr "Ozadje"
+
+#~ msgid ""
+#~ "Always enable the system provided click-type window when exiting Onboard."
+#~ msgstr ""
+#~ "Ob končanju progama vedno omogoči sistemsko zagotovljeno okno za tipkanje "
+#~ "s klikanjem."
+
+#~ msgid "On Inactivity"
+#~ msgstr "Ob nedejavnosti"
+
+#~ msgid "Enable _scanning mode"
+#~ msgstr "Omogoči način _preiskovanja"
+
+#~ msgid "Hide click-type window"
+#~ msgstr "Skrij okno tipkanja s klikanjem"
+
+#~ msgid "Hide the system provided click-type window while Onboard is running."
+#~ msgstr "Skrije sistemsko okno tipkanja s klikanjem, ko se Onboard izvaja."
+
+#~ msgid "I_nterval:"
+#~ msgstr "_Interval:"
+
+#~ msgid "Show tool-tips for the keyboard's buttons."
+#~ msgstr "Pokaži orodne namige za gumbe tipkovnice."
+
+#~ msgid "Startup Options"
+#~ msgstr "Zagonske možnosti"
+
+#~ msgid ""
+#~ "Scanning mode only works with layouts which are designed for the purpose."
+#~ msgstr ""
+#~ "Način preiskovanja deluje le z razporeditvami, ki so zasnovane za ta "
+#~ "namen."
+
+#~ msgid "Show _tool-tips"
+#~ msgstr "Pokaži _orodne namige"
+
+#~ msgid "Universal Access Settings"
+#~ msgstr "Nastavitve splošnega dostopa"
+
+#~ msgid "unable to locate '%s', loading default %s instead"
+#~ msgstr "'%s' ni mogoče najti, namesto tega bo naložen privzet %s"
+
+#~ msgid "%s '%s' not found yet, retrying in default paths"
+#~ msgstr "%s '%s' še ni bil najden, ponovno poizkušanje na privzetih poteh"
+
+#~ msgid "theme '%s' does not exist"
+#~ msgstr "tema '%s' ne obstaja"
+
+#~ msgid "layout '%s' does not exist"
+#~ msgstr "razporedite '%s' ne obstaja"
+
+#~ msgid "{} '{}' found."
+#~ msgstr "{} '{}' je bil najden"
+
+#~ msgid "Found system default '{}={}'"
+#~ msgstr "Najdena je bila sistemska privzeta vrednost '{}={}'"
+
+#~ msgid "color scheme '%s' does not exist"
+#~ msgstr "barvna shema '%s' ne obstaja"
+
+#~ msgid "setting keyboard transparency to {}%"
+#~ msgstr "nastavljanje prozornosti tipkovnice na {}%"
+
+#~ msgid "Failed to load Onboard icon."
+#~ msgstr "Nalaganje ikone Onboard je spodletelo."
+
+#~ msgid "failed to find %s '%s'"
+#~ msgstr "iskanje %s '%s' je spodletelo"
+
+#~ msgid "<enter label>"
+#~ msgstr "<vnesite oznako>"
+
+#~ msgid "Enter a new snippet for this button:"
+#~ msgstr "Vnesite nov košček za ta gumb:"
+
+#~ msgid "_Direction:"
+#~ msgstr "_Smer:"
+
+#~ msgid "Ignoring key '{}'. Not found in '{}'."
+#~ msgstr "Preziranje ključa '{}'. V '{}' ga ni bilo mogoče najti."
+
+#~ msgid "Releasing still pressed key '{}'"
+#~ msgstr "Spuščanje še pritisnjene tipke '{}'"
+
+#~ msgid "Window Options"
+#~ msgstr "Možnosti okna"
+
+#~ msgid "screen changed, supports_alpha={}"
+#~ msgstr "zaslon je bil spremenjen, supports_alpha={}"
+
+#~ msgid "No file manager to open layout folder"
+#~ msgstr "Ni upravljalnika datotek za odprtje mape razporeditev"
+
+#~ msgid "Style"
+#~ msgstr "Slog"
+
+#~ msgid "Failed to migrate user directory. "
+#~ msgstr "Napaka med selitvijo uporabniške mape. "
+
+#~ msgid "launching '{}'"
+#~ msgstr "zaganjanje '{}'"
+
+#~ msgid "Refreshing pango layout, new font dpi setting is '{}'"
+#~ msgstr "Osveževanje razporeditve pango, nova nastavitev pisave '{}'"
+
+#~ msgid "_Show icon in system tray to hide/show onboard"
+#~ msgstr "_Pokaži ikono za skritje/prikaz tipkovnice v sistemskem pladnju"
+
+#~ msgid "Corners only"
+#~ msgstr "Samo koti"
+
+#~ msgid ""
+#~ "Loading legacy layout format '{}'. Please consider upgrading to current "
+#~ "format '{}'"
+#~ msgstr ""
+#~ "Nalaganje starejše oblike razporeditve '{}'. Nadgradite na trenutno "
+#~ "obliko '{}'"
+
+#~ msgid "Show/Hide Options"
+#~ msgstr "Pokaži/skrij možnosti"
+
+#~ msgid "Enable Hover Click window on _exit"
+#~ msgstr "Omogoči okno klika ob pr_ehodu ob končanju"
+
+#~ msgid "_Universal Access Panel"
+#~ msgstr "Pult _splošnega dostopa"
+
+#~ msgid ""
+#~ "The time the scanner rests on a key or group  before moving to the next. "
+#~ "(in seconds)"
+#~ msgstr ""
+#~ "Čas, v katerem bralnik stoji na tipki ali skupini, preden se premakne na "
+#~ "naslednjo. (v sekundah)"
+
+#~ msgid ""
+#~ "Swap the scan actions after every key activation. The Step acticon will "
+#~ "become the Activate action and vice versa."
+#~ msgstr ""
+#~ "Preklopi dejavnosti branja po omogočanju vsake tipke. Dejanje koraka bo "
+#~ "postalo dejanje omogočanja in obratno."
+
+#~ msgid "Reset"
+#~ msgstr "Ponastavi"
+
+#~ msgid "_Hide Hover Click window"
+#~ msgstr "Skrij okno klika ob pre_hodu"
+
+#~ msgid "Double-click to lock"
+#~ msgstr "Dvokliknite za zaklepanje"
+
+#~ msgid "1"
+#~ msgstr "1"
+
+#~ msgid "Press & release - hold for key-repeat"
+#~ msgstr "Pritisni in spusti - držite za ponovitev tipke"
+
+#~ msgid "Multi-touch"
+#~ msgstr "Več dotikov"
+
+#~ msgid "Single-touch"
+#~ msgstr "En dotik"
+
+#~ msgid "Lock"
+#~ msgstr "Zakleni"
+
+#~ msgid "Latch"
+#~ msgstr "Latch"
+
+#~ msgid "Window management"
+#~ msgstr "Upravljanje okna"
+
+#~ msgid "Keyboard options"
+#~ msgstr "Možnosti tipkovnice"
+
+#~ msgid "Modifier auto-_release delay:"
+#~ msgstr "Urejevalnik zakasnitve _samodejnega spusta:"
+
+#~ msgid "_Touch input (requires restart):"
+#~ msgstr "Vhod _dotika (zahteva ponovni zagon):"
+
+#~ msgid "Release - hold for long press"
+#~ msgstr "Spusti - držite za dolg pritisk"
+
+#~ msgid "_Docking settings"
+#~ msgstr "Nastavitve _sidranja"
+
+#~ msgid "Enable docking"
+#~ msgstr "Omogoči sidranje"
+
+#~ msgid "Send _key strokes on:"
+#~ msgstr "Pošlji pritiske _tipk na:"
+
+#~ msgid ""
+#~ "Choose between key-repeat or long-press menus. Only affects alpha-numeric "
+#~ "keys."
+#~ msgstr ""
+#~ "Izberite med meniji s ponavljanjem pritiska tipk ali dolgimi pritiski. "
+#~ "Vpliva le na alfanumerične tipke."
+
+#~ msgid "Key-stroke _generation:"
+#~ msgstr "_Ustvarjanje pritiskov tipk:"
+
+#~ msgid "Cycle"
+#~ msgstr "Krog"
+
+#~ msgid "Error loading "
+#~ msgstr "Napaka med nalaganjem "
+
+#~ msgid "_Frame resize handles:"
+#~ msgstr "Ročniki za spreminjanje velikosti _okvirja:"
+
+#~ msgid "_Personalize"
+#~ msgstr "_Poosebi"
+
+#~ msgid "Atspi unavailable, auto-hide won't be available"
+#~ msgstr "ATSPI ni na voljo, samodejno skrivanje ne bo dosegljivo"
+
+#~ msgid "Enter name for personalised layout"
+#~ msgstr "Vnesite ime za osebno razporeditev"
+
+#~ msgid "Add Layout"
+#~ msgstr "Dodaj razporeditev"
+
+#~ msgid "Onboard layout files"
+#~ msgstr "Datoteke razporeditve Onboard"
+
+#~ msgid "All files"
+#~ msgstr "Vse datoteke"
+
+#~ msgid "Atspi unavailable, word prediction may not be fully functional"
+#~ msgstr ""
+#~ "Atspi ni na voljo, predvidevanje besed morda ne bo delovalo popolnoma"
+
+#~ msgid "international character selection"
+#~ msgstr "izbira mednarodnih znakov"
+
+#~ msgid "latch, double-click to lock"
+#~ msgstr "zadrži, dvoklikni za zaklep"
+
+#~ msgid "lock only"
+#~ msgstr "samo zakleni"
+
+#~ msgid "latch only"
+#~ msgstr "samo zadrži"
+
+#~ msgid "key-repeat"
+#~ msgstr "ponavljanje tipk"
+
+#~ msgid "latch, then lock"
+#~ msgstr "zadrži, nato zakleni"
+
+#~ msgid "Atspi unavailable, word suggestions not fully functional"
+#~ msgstr "Atspi ni na voljo, predlaganje besed ne deluje popolnoma"
+
+#~ msgid "_Languages"
+#~ msgstr "_Jeziki"
+
+#~ msgid "_System Language"
+#~ msgstr "_Sistemski jezik"
+
+#~ msgid "Modifier auto-release delay:"
+#~ msgstr "Zakasnitev samodejne spustitve spremenilne tipke:"
+
+#~ msgid "column"
+#~ msgstr "stolpec"
+
+#~ msgid "_Settings"
+#~ msgstr "Na_stavitve"
+
+#~ msgid "_Open layouts folder"
+#~ msgstr "_Odpri mapo razporeditev"
+
+#~ msgid "C_ustomize theme"
+#~ msgstr "P_rilagodi temo"
+
+#~ msgid "Sc_anner Settings"
+#~ msgstr "Nastavitve bralnik_a"
+
+#~ msgid "Flexible onscreen keyboard for GNOME"
+#~ msgstr "Prilagodljiva zaslonska tipkovnica za GNOME"
+
+#~ msgid "User layouts"
+#~ msgstr "Razporeditve uporabnika"
+
+#~ msgid "_Window handles:"
+#~ msgstr "_Ročniki oken:"

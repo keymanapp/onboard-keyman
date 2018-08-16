@@ -1,0 +1,45 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="topic" style="task"
+      id="dm-gdm">
+
+  <info>
+    <link type="guide" xref="dm-index#display-managers"/>
+    <link type="seealso" xref="dm-lightdm"/>
+
+    <desc>Set custom system defaults that are used by Onboard the first time it is launched.</desc>
+
+    <credit type="author">
+      <name>Francesco Fumanti</name>
+      <email>francesco.fumanti@gmx.net</email>
+      <years>2016</years>
+    </credit>
+
+    <license href="http://www.gnu.org/licenses/gpl.html">
+      <p>This work is licensed under the
+      <link href="http://www.gnu.org/licenses/gpl.html">GNU General Public License version 3 or any later version</link>.</p>
+    </license>
+
+
+  </info>
+
+  <title>Use <app>Onboard</app> with the <app>GNOME Display Manager</app> (GDM)</title>
+
+  <p>How to start <app>Onboard</app> at the <app>GDM</app> login screen depends on the version of <app>GDM</app> that you are running:</p>
+
+  <terms>
+    <item>
+      <title><app>GDM</app> up to version 2.20</title>
+      <p>The older <app>GDM</app> offered the possibility to link the start of applications to determined keystrokes or mouse gestures. The latter are of particular interest for the start of an onscreen keyboard and you can find detailed information about how to set up <app>GDM</app> to start Onboard in <link href="https://help.ubuntu.com/community/Accessibility/OnboardAndMousetweaksAtGDM">this webpage</link>.</p>
+    </item>
+    <item>
+      <title><app>GDM</app> 2.30 and above</title>
+      <p>The newer versions of <app>GDM</app> offer the possibility to display an <gui>accessibility icon</gui> in the <gui>panel</gui> at the bottom of the screen. By clicking on the <gui>accessibility icon</gui>, an <gui>accessibility dialog</gui> will appear. This <gui>accessibility dialog</gui> has <gui>checkboxes</gui> for the various accessibility tools. A click on the <gui>checkbox</gui> corresponding to the onscreen keyboard will make the onscreen keyboard appear and it will continue to get started with <app>GDM</app> until the user disables the <gui>checkbox</gui>.</p>
+      <note style="advanced"><p>If the <gui>accessibility icon</gui> is not available in the bottom panel or if a different onscreen keyboard gets started than the one that you would like to use, please have a look at the following page with detailed information about how to <link href="http://library.gnome.org/admin/gdm/stable/configuration.html.en#accessibilityconfiguration">configure the new <app>GDM</app></link>.</p></note>
+    </item>
+    <item>
+      <title><app>GDM3</app></title>
+      <p>The information about how to use <app>Onboard</app> with <app>GDM3</app> is not available yet; sorry.</p>
+    </item>
+  </terms>
+
+</page>

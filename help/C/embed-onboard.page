@@ -1,0 +1,37 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="topic" style="task"
+      id="embed-onboard">
+
+  <info>
+    <link type="guide" xref="index#prefs"/>
+    <link type="seealso" xref="snippet-definition"/>
+
+    <desc>Make <app>Onboard</app> appear when unlocking the screen.</desc>
+
+    <credit type="author">
+      <name>Francesco Fumanti</name>
+      <email>francesco.fumanti@gmx.net</email>
+      <years>2016</years>
+    </credit>
+
+    <license href="http://www.gnu.org/licenses/gpl.html">
+      <p>This work is licensed under the
+      <link href="http://www.gnu.org/licenses/gpl.html">GNU General Public License version 3 or any later version</link>.</p>
+    </license>
+
+
+  </info>
+
+  <title>Embed <app>Onboard</app></title>
+
+  <p>In the <gui>General</gui> tab of the <app>Preferences</app> dialog, there is an option called <gui>Show Onboard when unlocking the screen</gui>. By activating this option, <app>Onboard</app> will configure the <app>Unlock Screen</app> application to show the <app>Onboard</app> on-screen keyboard when the dialog to unlock the computer appears. This way, the user can type the password to unlock the screen even if he cannot use a hardware keyboard.</p>
+
+  <note style="warning">
+    <p>If another on-screen keyboard is set to appear with the <app>Unlock Screen</app> dialog and the embedding option gets activated in <app>Onboard</app>, <app>Onboard</app> will simply overwrite the setting and set itself to appear with the <app>Unlock Screen</app> dialog.</p>
+  </note>
+<!--
+  <note style="bug">
+    <p>This function is broken since the switch of the <app>Unlock Screen</app> dialog to gsettings.</p>
+  </note>
+-->
+</page>

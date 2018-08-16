@@ -1,0 +1,57 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="topic"
+      id="key-behaviours">
+
+  <info>
+    <link type="guide" xref="index#usage"/>
+    <link type="seealso" xref="switch-layer"/>
+    <link type="seealso" xref="snippet-usage"/>
+    <link type="seealso" xref="switch-click-type"/>
+    <link type="seealso" xref="hover-click"/>
+
+    <desc>Type, latch, lock, switch layer,...</desc>
+
+    <credit type="author">
+      <name>Francesco Fumanti</name>
+      <email>francesco.fumanti@gmx.net</email>
+      <years>2016</years>
+    </credit>
+
+    <license href="http://www.gnu.org/licenses/gpl.html">
+      <p>This work is licensed under the
+      <link href="http://www.gnu.org/licenses/gpl.html">GNU General Public License version 3 or any later version</link>.</p>
+    </license>
+
+
+  </info>
+
+  <title>Key behaviours</title>
+
+  <p>The keys on the layers of <app>Onboard</app> do not all behave the same way. How each key behaves depends on its definition in the keyboard layout file.</p>
+
+  <p>We distinguish the following behaviours:</p>
+
+  <terms>
+    <item>
+      <title>Immediate keys</title>
+      <p>Typical examples of such keys on the <em>Compact Onboard</em> layout are the keys with letters.</p>
+  <p>A <key>left mouse button click</key> on such a key sends the corresponding letter to the system on <key>mouse button release</key>. This way, if the <key>left mouse button down</key> happened on a wrong <gui>key</gui>, the user has the possibility to slide to the correct <gui>key</gui> before he releases the <key>mouse button</key>.</p>
+  <p>A <key>left mouse button down and hold</key> on most keys without moving the mouse either repeats the clicked character until released or opens a <gui>popup</gui> where the user can choose an alternative. Most of the time, the alternative is the clicked letter with a diacritical mark. The behaviour of the <key>left mouse button down and hold</key> depends on a setting in <gui>Preferences of Onboard</gui>; by default <app>Onboard</app> is configured to show the popup.</p>
+   </item>
+    <item>
+      <title>Locking keys</title>
+      <p>On the <em>Compact Onboard</em> layout, the <key>Caps Lock</key> modifier is a locking key.</p>
+  <p>A click with the <key>left mouse button</key> on the key activates it. The <key>Caps Lock</key> modifier remains locked in its active state until the user clicks a second time with the <key>left mouse button</key> on it.</p>
+   </item>
+    <item>
+      <title>Latching and locking keys</title>
+      <p>Examples of such keys are  most <key>modifier</key> keys or the <key>layer buttons</key> to switch the layout to a different layer.</p>
+  <p>By default, a <key>left mouse button</key> click on such a key latches the key. This means that the key remains active until another <key>left mouse button</key> click occurs elsewhere. If for example the user clicks on the <key>Shift</key> modifier, it remains active until he clicks for example on a <key>letter</key> key.</p>
+
+  <p>However, if the user clicks another time on the <key>modifier</key> that has just been latched, the <key>modifier</key> gets locked: the <key>modifier</key> remains active regardless of where the user clicks. To release the <key>modifier</key> the user has to click another time on it. For example, if the user clicks two consecutive times on the <key>Shift</key> modifier, the <key>Shift</key> modifier gets locked. This is among others useful when typing a word with only capital letters in order to not having to reactivate the <key>Shift</key> modifier after typing each letter. Once he is done with writing the word in capital letters, he can click on the <key>Shift</key>  modifier to release it.</p>
+
+ <p>The default behaviour of the <key>modifiers</key> on consecutive <key>left mouse button</key> clicks is to cycle through the states of latched, locked and inactive as described above. However, this behaviour can be changed in the <gui>Preferences of Onboard</gui>. It is for example possible to set the <key>modifiers</key> to lock on a double click instead of cycling.</p>
+</item>
+  </terms>
+
+</page>

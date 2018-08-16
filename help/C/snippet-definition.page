@@ -1,0 +1,39 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="topic" style="task"
+      id="snippet-definition">
+
+  <info>
+    <link type="guide" xref="index#prefs"/>
+    <link type="seealso" xref="embed-onboard"/>
+
+    <desc>Create a snippet and give it a name.</desc>
+
+    <credit type="author">
+      <name>Francesco Fumanti</name>
+      <email>francesco.fumanti@gmx.net</email>
+      <years>2016</years>
+    </credit>
+
+    <license href="http://www.gnu.org/licenses/gpl.html">
+      <p>This work is licensed under the
+      <link href="http://www.gnu.org/licenses/gpl.html">GNU General Public License version 3 or any later version</link>.</p>
+    </license>
+
+
+  </info>
+
+  <title>Define a snippet</title>
+
+  <p>To define a new <em>snippet</em> and give it a name, you can do the following:</p>
+  <steps>
+    <item><p>Open the <app>Preferences</app> dialog by using its <gui>desktop icon</gui>, by clicking on the <key>Preferences button</key> on <app>Onboard</app>'s layout or by choosing the appropriate <gui>menu</gui> from the <gui>indicator icon</gui>.</p></item>
+    <item><p>Select the <gui>Snippets</gui> tab by clicking on it.</p></item>
+    <item><p>Click on the <key>Add</key> button to add a new <em>snippet</em> definition or click on the <key>Remove</key> button to delete the selected <em>snippet</em>.</p></item>
+    <item><p>Double click in the <gui>label</gui> or <gui>text</gui> column of a <em>snippet</em> to edit its name or its text.</p></item>
+  </steps>
+
+  <note><p>There is also a more direct way to define a <em>snippet</em>: simply perform a <key>left mouse button</key> click and hold on a <key>snippet button</key> and a little <gui>dialog</gui> will appear to define title and text of the corresponding <em>snippet</em>.</p></note>
+
+  <p>For information about <em>snippets</em> and how to use a <em>snippet</em>, please have a look at the <link xref="snippet-usage" /> page.</p>
+
+</page>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg id="svg4494" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="16" width="16" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/">
+ <metadata id="metadata4499">
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title>move.svg</dc:title>
+    <cc:license rdf:resource="https://www.gnu.org/licenses/gpl.txt"/>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Onboard Devel Team at https://launchpad.net/~onboard</dc:title>
+     </cc:Agent>
+    </dc:creator>
+    <dc:rights>
+     <cc:Agent>
+      <dc:title>GPL-3+ license</dc:title>
+     </cc:Agent>
+    </dc:rights>
+    <dc:publisher>
+     <cc:Agent>
+      <dc:title>Onboard Devel Team</dc:title>
+     </cc:Agent>
+    </dc:publisher>
+    <dc:source>https://launchpad.net/onboard</dc:source>
+    <dc:relation>This file is part of Onboard</dc:relation>
+    <dc:contributor>
+     <cc:Agent>
+      <dc:title>Copyright © 2016, Francesco Fumanti &lt;francesco.fumanti@gmx.net&gt;
+Copyright © 2011-2012, marmuta &lt;marmvta@gmail.com&gt;</dc:title>
+     </cc:Agent>
+    </dc:contributor>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <g id="layer1">
+  <path id="path4504" style="stroke-linejoin:round;stroke:#000;stroke-linecap:round;stroke-width:.6;fill:none" d="m7 7v-4h-2l3-2"/>
+  <use id="use5070" xlink:href="#path4504" transform="matrix(-1,0,0,1,16,0)" height="16" width="16" y="0" x="0"/>
+  <use id="use5072" xlink:href="#path4504" transform="matrix(0,-1,1,0,0,16)" height="16" width="16" y="0" x="0"/>
+  <use id="use5074" xlink:href="#path4504" transform="matrix(0,1,1,0,0,0)" height="16" width="16" y="0" x="0"/>
+  <use id="use5076" xlink:href="#use5072" transform="matrix(-1,0,0,1,16,0)" height="16" width="16" y="0" x="0"/>
+  <use id="use5078" xlink:href="#use5074" transform="matrix(-1,0,0,1,16,0)" height="16" width="16" y="0" x="0"/>
+  <use id="use5080" xlink:href="#path4504" transform="matrix(1,0,0,-1,0,16)" height="16" width="16" y="0" x="0"/>
+  <use id="use5082" xlink:href="#use5070" transform="matrix(1,0,0,-1,0,16)" height="16" width="16" y="0" x="0"/>
+ </g>
+</svg>

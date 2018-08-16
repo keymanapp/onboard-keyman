@@ -1,0 +1,55 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="topic" style="task"
+      id="themes-index">
+
+  <info>
+    <link type="guide" xref="index#advanced"/>
+    <link type="seealso" xref="layouts-index"/>
+    <link type="seealso" xref="custom-defaults"/>
+
+    <desc>Instructions about how to create a custom theme.</desc>
+
+    <credit type="author">
+      <name>Francesco Fumanti</name>
+      <email>francesco.fumanti@gmx.net</email>
+      <years>2016</years>
+    </credit>
+
+    <license href="http://www.gnu.org/licenses/gpl.html">
+      <p>This work is licensed under the
+      <link href="http://www.gnu.org/licenses/gpl.html">GNU General Public License version 3 or any later version</link>.</p>
+    </license>
+
+
+  </info>
+
+  <title>Theme creation and customisation</title>
+
+  <section id="theme-intro">
+    <title>Introduction</title>
+    <p>The look of a layout in <app>Onboard</app> is specified through themes. They specify among others the colors used by the onscreen keyboard, whether the keys are flat or have a gradient, whether the keys should have rounded corners, etc. The themes however, do not specify size and position of the keys; these are specified in the <file>layout</file> files. You can learn more about layouts in the <link xref="layouts-index" /> page.</p>
+    <p>A theme consists of two xml files:</p>
+    <list>
+      <item><p>The xml file with <file>.theme</file> as extension contains information among others about key style, key stroke, label overrides, what font to use and a reference to the xml file with the color information. </p></item>
+      <item><p>The xml file with <file>.colors</file> as extension contains the information about what colors to use for the different keys.</p></item>
+    </list>
+    <p>In the two following sections, you can find brief descriptions of the structure of both both files.</p>
+    <p>If you want to use custom themes with <app>Onboard</app>, simply put them into the <file>themes</file> directory in the <file>.onboard</file> of your home folder and <app>Onboard</app> will automatically pick them up.</p>
+  </section>
+
+  <section id="theme-theme">
+    <title>Structure of the a <file>.theme</file> file</title>
+    <p>The xml structure of the a <file>.theme</file> file is quite simple and should not need any explanation to get understood as the tags used in the file are quite descriptive. I invite you to have a look at the <file>Ambiance.theme</file> file shipping with Onboard: it contains all the tags to use in a <file>.theme</file> xml file.</p>
+  </section>
+
+  <section id="theme-colors">
+    <title>Structure of the a <file>.colors</file> file</title>
+    <p>The xml structure of the a <file>.colors</file> file is quite straightforward:</p>
+    <list>
+      <item><p>There are &lt;pane&gt; tags defining color and opacity of the different panes.</p></item>
+      <item><p>There are &lt;key_group&gt; tags that define also defining various color properties for the keys that are member of the &lt;key_group&gt;. To add a key to a &lt;key_group&gt;, simply add it between the opening and closing tags of the &lt;key_group&gt;. If a key is listed in more than one &lt;key_group&gt;, it will get the colors of the last &lt;key_group&gt; that has the key in its key list.</p></item>
+    </list>
+    <p>I invite you to have a look at the <file>Aubergine.colors</file> file shipping with Onboard as a sample of a <file>.colors</file> xml file.</p>
+  </section>
+
+</page>

@@ -1,0 +1,70 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="topic"
+      id="introduction">
+
+  <info>
+    <link type="guide" xref="index"/>
+
+    <desc>Introduction to the <app>Onboard</app> on-screen keyboard.</desc>
+
+    <credit type="author">
+      <name>Francesco Fumanti</name>
+      <email>francesco.fumanti@gmx.net</email>
+      <years>2016</years>
+    </credit>
+
+    <license href="http://www.gnu.org/licenses/gpl.html">
+      <p>This work is licensed under the
+      <link href="http://www.gnu.org/licenses/gpl.html">GNU General Public License version 3 or any later version</link>.</p>
+    </license>
+
+
+  </info>
+
+  <title>Introduction</title>
+
+  <p><app>Onboard</app> is an on-screen keyboard built for a wide range of situations where a hardware keyboard cannot be used. It aims to support Tablet users, mobility impaired users and Desktop users that have a need for on-screen input.</p>
+
+  <figure>
+    <title><gui>Onboard</gui> on-screen keyboard window</title>
+    <desc><app>Onboard</app> using the Compact layout, the Nightshade theme, word suggestions and the hover click with the Swiss French system language.</desc>
+    <media type="image" src="figures/onboard_compact_nightshade_prediction.png" mime="image/png" style="right">
+    <p>Picture of the keyboard window of <app>Onboard</app> the Compact layout, the Nightshade theme, the typing assistance and the hover click.</p>
+    </media>
+  </figure>
+
+  <p><app>Onboard</app> has been designed with simplicity in mind and its basic features can be used out of the box. More advanced abilities can be enabled in preferences.</p>
+
+<p>General features:</p>
+<list>
+  <item><p><app>Onboard</app> supports <keyseq><key>modifier</key><key>mouse click</key></keyseq> combinations.</p></item>
+  <item><p>The window of the on-screen keyboard can be resized and placed anywhere on screen.</p></item>
+  <item><p>The keyboard can be docked at the bottom screen edge, ready to slide in on demand.</p></item>
+<item><p>User-defined snippets of text can be inserted on click of a button.</p></item>
+  <item><p><app>Onboard</app> offers several layouts with different numbers of keys. There is for example a layout with less, but bigger keys for tablets.</p></item>
+  <item><p>Several themes are available that control the shape and colours of the keys.</p></item>
+  <item><p><app>Onboard</app> follows the keyboard language set for the system keyboard. If the user changes the keyboard language during his session, <app>Onboard</app> automatically adapts to the new language.</p></item>
+     <item><p><app>Onboard</app> offers an option to make it appear when unlocking the screen.</p></item>
+ </list>
+
+<p>Advanced features:</p>
+<list>
+  <item><p><app>Onboard</app> can be set to appear and disappear automatically when the focus is on an editable item.</p></item>
+  <item><p><app>Onboard's</app> word suggestions support word prediction, spell-checking and auto-capitalization.</p></item>
+  <item><p>Advanced users can create custom layouts with xml and svg files.</p></item>
+  <item><p>Advanced users can define custom color schemes with xml files.</p></item>
+  <item><p>For distributions <app>Onboard</app> offers a configuration file to define default settings and branding.</p></item>
+ </list>
+  
+<p>Accessibility features:</p>
+<list>
+  <item><p><app>Onboard</app> can be used to turn a <key>left click</key> into a <key>middle click</key>, <key>right click</key>, <key>double click</key> or <key>drag click</key>.</p></item>
+  <item><p><app>Onboard</app> can control the hover click ability provided by the <app>mousetweaks</app> software.</p></item>
+  <item><p><app>Onboard</app> supports keyboard scanning, configurable for one to five physical switches.</p></item>
+ </list>
+
+<note style="advanced">
+  <p>Note that some features like auto-show and word suggestions need the GNOME Assistive Technology Framework to run. The first time these features are enabled, <app>Onboard</app> will ask for permission to activate it.</p>
+</note>
+
+</page>

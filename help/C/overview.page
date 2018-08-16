@@ -1,0 +1,159 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="topic"
+      id="overview">
+
+  <info>
+    <desc>Learn about <app>Onboard</app> keys.</desc>
+
+    <link type="guide" xref="index"/>
+
+    <credit type="author">
+      <name>marmuta</name>
+      <email>marmvta@gmail.com</email>
+      <years>2016</years>
+    </credit>
+
+    <license href="http://www.gnu.org/licenses/gpl.html">
+      <p>This work is licensed under the
+      <link href="http://www.gnu.org/licenses/gpl.html">GNU General Public License version 3 or any later version</link>.</p>
+    </license>
+  </info>
+
+  <title>Quick overview</title>
+
+  <p>These are the default behaviours of <app>Onboard's</app> keys. Note, that many of them can be modified in Preferences.</p>
+  <section id="character_keys">
+    <title>Character keys</title>
+    <p>
+        <media type="image" mime="image/png" src="figures/character-keys.png"/>
+    </p>
+    <list>
+      <item><p>Press to insert the shown character</p></item>
+      <item><p>Long-press to open a selection of related characters.</p></item>
+      <item><p>Right click to insert the character in upper case.</p></item>
+    </list>
+    <p>
+    Long-press popups are not only available for many letters, but also for digits, 
+    currency symbols and others.
+    </p>
+  </section>
+
+  <section id="modifier_keys">
+    <title>Modifier keys</title>
+    <p>
+        <media type="image" mime="image/png" src="figures/shift-key.png"/>
+        <media type="image" mime="image/png" src="figures/ctrl-key.png"/>
+        <media type="image" mime="image/png" src="figures/alt-key.png"/>
+        <media type="image" mime="image/png" src="figures/altgr-key.png"/>
+    </p>
+    <p>Keys <key>SHIFT</key>, <key>CTRL</key>, <key>ALT</key>, <key>Alt-Gr</key>:</p>
+    <list>
+      <item><p>Press once to activate for the next typed character only</p></item>
+      <item><p>Press a second time to keep it active</p></item>
+      <item><p>Press a third time to deactivate</p></item>
+      <item><p>Press and hold: on a multi-touch enabled device these keys 
+              can be held down with one finger while typing characters with another.</p></item>
+    </list>
+    <p>Keys <key>CAPS</key>, <key>NumLock</key>:</p>
+    <list>
+      <item><p>Press to toggle.</p></item>
+    </list>
+    <p>Note: <key>NumLock</key> will be remembered across restarts of Onboard.</p>
+  </section>
+
+  <section id="layer_buttons">
+    <title>Layer Buttons</title>
+      <p>
+        <media type="image" mime="image/png" src="figures/layer2-button.png"/>
+        <media type="image" mime="image/png" src="figures/layer3-button.png"/>
+        <media type="image" mime="image/png" src="figures/layer2-Small-button.png"/>
+    </p>
+    <p>Use Layer Buttons to switch to additional, less frequently used keys.</p>
+    <list>
+      <item><p>Press once to activate for the next typed character only</p></item>
+      <item><p>Press a second time to keep it active for longer</p></item>
+      <item><p>Press a third time or press any other layer button to deactivate</p></item>
+    </list>
+  </section>
+
+  <section id="word_suggestions">
+    <title>Word Suggestions</title>
+      <p> Word Suggestions can be enabled on preferences page "Typing Assistance".</p>
+      <p> Spelling suggestions like <media type="image" mime="image/png" src="figures/correction-button.png"/>
+          are displayed whenever Onboard detects a potentially
+          misspelled word at or before the caret.</p>
+      <list>
+        <item><p>Press the suggestion to replace the misspelled word</p></item>
+        <item><p>Press the arrow to show more spelling suggestions</p></item>
+      </list>
+      <p> Word completions and predictions:</p>
+      <media type="image" mime="image/png" src="figures/prediction-buttons.png"/>
+      <p>  </p>
+      <list>
+        <item><p>Press any of suggestions to insert the word at the caret</p></item>
+        <item><p>Long-press any to show a popup menu for that suggestions</p></item>
+      </list>
+      <p>The popup menu currently allows to remove erroneous suggestions.</p>
+  </section>
+
+  <section id="click_type_buttons">
+    <title>Click Type Buttons</title>
+      <p>
+        <media type="image" mime="image/png" src="figures/middle-click-button.png"/>
+        <media type="image" mime="image/png" src="figures/right-click-button.png"/>
+        <media type="image" mime="image/png" src="figures/double-click-button.png"/>
+        <media type="image" mime="image/png" src="figures/drag-click-button.png"/>
+      </p>
+      <p>
+        <link xref="switch-click-type">Click Type Buttons</link> are useful for people who can only perform single left clicks or taps.
+        They are not visible by default but can be shown easily by pressing the button with the left leaning arrow
+        <media type="image" mime="image/png" src="figures/click-helpers-button.png"/>.
+        Note, that in some of <app>Onboard's</app> smaller layouts this button is only reachable by long-pressing <key>Return</key>.</p>
+      <p>
+        Press <media type="image" mime="image/png" src="figures/middle-click-button.png"/>, then click anywhere on screen to perform a middle click.
+      </p>
+      <p>
+        Press <media type="image" mime="image/png" src="figures/right-click-button.png"/>, then click anywhere on screen to perform a right click.
+      </p>
+      <p>
+        Press <media type="image" mime="image/png" src="figures/double-click-button.png"/>, then click anywhere on screen to perform a double click.
+      </p>
+      <p>
+        Press <media type="image" mime="image/png" src="figures/drag-click-button.png"/>, then click anywhere on screen to start a drag operation. Click a second time to stop.
+      </p>
+
+      <p>Any of these actions can be cancelled by pressing the initiating button a second time.</p>
+  </section>
+
+  <section id="hover_type_button">
+    <title>Hover Click Button</title>
+      <p>
+        <media type="image" mime="image/png" src="figures/hover-click-button.png"/>
+    </p>
+    <p>This button enables the <link xref="hover-click">Hover Click</link> feature of <app>mousetweaks</app>.</p>
+    <list>
+      <item><p>Press once to turn Hover Click on</p></item>
+      <item><p>Press again to turn it off</p></item>
+      <item><p>Hover over it for a while and it will turn on as well.</p></item>
+    </list>
+    <p>Hover Click settings can be changed on preferences page "Accessibility".</p>
+    <p>Note, that the path to the Hover Click button is hover-enabled as well. Onboard's floating icon and the left-leaning arrow button  <media type="image" mime="image/png" src="figures/click-helpers-button.png"/> can be activated by hovering, too.</p>
+  </section>
+
+  <section id="snippet_buttons">
+    <title>Snippet Buttons</title>
+      <p>
+        <media type="image" mime="image/png" src="figures/snippet-buttons.png"/>
+    </p>
+    <p><link xref="snippet-usage">Snippet Buttons</link> insert arbitrary strings of text.
+        Switch to the snippets layer with <media type="image" mime="image/png" src="figures/layer3-button.png"/> to see them.
+    </p>
+    <list>
+      <item><p>Press the button to insert an existing snippet, or, if still undefined, create a new one.</p></item>
+      <item><p>Long-press to edit a snippet</p></item>
+    </list>
+    <p>An overview of all snippets can also be found on preferences page "Snippets".</p>
+    <p>See also <link xref="snippet-definition"/>.</p>
+  </section>
+</page>
+

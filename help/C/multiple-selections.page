@@ -1,0 +1,40 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="topic" style="task"
+      id="multiple-selections">
+
+  <info>
+    <link type="guide" xref="index#tips"/>
+    <link type="seealso" xref="password-dialogs"/>
+    <link type="seealso" xref="dm-index"/>
+
+    <desc>Select several items or a range of items.</desc>
+
+    <credit type="author">
+      <name>Francesco Fumanti</name>
+      <email>francesco.fumanti@gmx.net</email>
+      <years>2016</years>
+    </credit>
+
+    <license href="http://www.gnu.org/licenses/gpl.html">
+      <p>This work is licensed under the
+      <link href="http://www.gnu.org/licenses/gpl.html">GNU General Public License version 3 or any later version</link>.</p>
+    </license>
+
+
+  </info>
+
+  <title>Select multiple items</title>
+
+  <p>The procedure available with a hardware keyboard to select multiple items or a range of items is also available with <app>Onboard</app>. For example, similar to a hardware keyboard, you can:</p>
+  <terms>
+    <item>
+      <title>Selection of multiple items</title>
+      <p>Activate the <key>Ctrl</key> modifier by clicking on it; then click on the items you want to select, one after the other; a click on an already selected item deselects it again.</p><p>After selecting all the items you want to select, you can perform another click on the <key>Ctrl</key> modifier to release it; this will not have any effect on the selected items.</p>
+    </item>
+    <item>
+      <title>Selction of a range of items</title>
+      <p>Select the first item of the range of items that you want to select, activate the <key>Shift</key> modifier and click on the last item of the range you want to select: this way, all the items between the first and the last item of the range will get selected. </p><p>Afterwards, you can perform another click on the <key>Shift</key> modifier to release it; this will not have any effect on the range of selected items.</p>
+    </item>
+  </terms>
+
+</page>

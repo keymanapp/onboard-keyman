@@ -1,0 +1,2804 @@
+# Chinese (Simplified) translation for Onboard
+#
+# Copyright:
+#   Original strings: See files they were extracted from
+#   Translations: Rosetta Contributers
+#
+# License:
+#   Original strings: GPL-3+ license
+#   Translations: BSD-3-clause license
+#
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2011.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: onboard\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-02-14 20:56+0100\n"
+"PO-Revision-Date: 2012-06-30 17:16+0000\n"
+"Last-Translator: Francesco Fumanti <Unknown>\n"
+"Language-Team: Chinese (Simplified) <zh_CN@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2017-02-14 14:04+0000\n"
+"X-Generator: Launchpad (build 18326)\n"
+
+#: ../Onboard/WPEngine.py:483
+msgid "Failed to load language model '{}': {} ({})"
+msgstr "无法加载语言模型 '{}': {} ({})"
+
+#. Default dialog title: name of the application
+#: ../Onboard/WindowUtils.py:1108 ../Onboard/KbdWindow.py:108
+#: ../data/onboard.desktop.in.h:1 ../Onboard/KeyboardWidget.py:1892
+#: ../data/onboard-autostart.desktop.in.h:1
+msgid "Onboard"
+msgstr "Onboard"
+
+#: ../Onboard/WindowUtils.py:1128
+msgid "New Input Device"
+msgstr "新的输入设备"
+
+#: ../Onboard/WindowUtils.py:1129
+msgid "Onboard has detected a new input device"
+msgstr "Onboard 检测到一个新的输入设备"
+
+#: ../Onboard/WindowUtils.py:1138
+msgid "Do you want to use this device for keyboard scanning?"
+msgstr "确定使用这个设备扫描键盘？"
+
+#. Translators: cancel button of "New Input Device" dialog. It used to be
+#. stock item STOCK_CANCEL until Gtk 3.10 deprecated those.
+#. Translators: cancel button of the snippets dialog. It used to
+#. be stock item STOCK_CANCEL until Gtk 3.10 deprecated those.
+#: ../Onboard/WindowUtils.py:1144 ../Onboard/KeyboardWidget.py:1606
+msgid "_Cancel"
+msgstr ""
+
+#: ../Onboard/WindowUtils.py:1145
+msgid "Use device"
+msgstr "使用设备"
+
+#: ../Onboard/Timer.py:160 ../Onboard/pypredict/tools/filter.py:382
+#: ../Onboard/LanguageSupport.py:173 ../Onboard/SpellChecker.py:634
+#: ../Onboard/SpellChecker.py:670 ../Onboard/SpellChecker.py:709
+#: ../Onboard/SpellChecker.py:723 ../Onboard/pypredict/tools/train.py:227
+msgid "Failed to execute '{}', {}"
+msgstr "执行 '{}', {} 失败"
+
+#: ../Onboard/WordSuggestions.py:2692
+msgid ""
+"<big>Onboard failed to open learned word suggestions.</big>\n"
+"\n"
+"The error was:\n"
+"<tt>{}</tt>\n"
+"\n"
+"Revert word suggestions to the last backup (recommended)?"
+msgstr ""
+"<big>Onboard 无法打开已学习到的单词建议</big>\n"
+"\n"
+"错误为\n"
+"<tt>{}</tt>\n"
+"\n"
+"是否将单词建议内容回滚为最近备份（推荐）？"
+
+#: ../Onboard/WordSuggestions.py:2711
+msgid ""
+"<big>Onboard failed to open learned word suggestions.</big>\n"
+"\n"
+"The error was:\n"
+"<tt>{}</tt>\n"
+"\n"
+"The suggestions have to be reset, but the erroneous file will remain at \n"
+"'{}'"
+msgstr ""
+"<big>Onboard 无法打开已学习到的单词建议</big>\n"
+"\n"
+"错误为：\n"
+"<tt>{}</tt>\n"
+"\n"
+"必须重置单词建议设置，错误文件将被保存在 \n"
+"'{}'"
+
+#: ../data/onboard-settings.desktop.in.h:1
+msgid "Onboard Settings"
+msgstr "Onboard 设置"
+
+#: ../data/onboard-settings.desktop.in.h:2
+msgid "Onboard onscreen keyboard settings"
+msgstr "Onboard 屏幕键盘设置"
+
+#: ../data/onboard-settings.desktop.in.h:3
+msgid "Change Onboard settings"
+msgstr "更改 Onboard 设置"
+
+#: ../Onboard/KbdWindow.py:202
+msgid "no window transparency available; screen doesn't support alpha channels"
+msgstr "无法使窗口透明；屏幕不支持 Alpha 通道"
+
+#: ../settings.ui.h:1
+msgid "Key-repeat"
+msgstr ""
+
+#: ../settings.ui.h:2
+msgid "International character selection"
+msgstr ""
+
+#: ../settings.ui.h:3
+msgid "never"
+msgstr ""
+
+#: ../settings.ui.h:4
+msgid "1 minute"
+msgstr ""
+
+#: ../settings.ui.h:5
+msgid "5 minutes"
+msgstr ""
+
+#: ../settings.ui.h:6
+msgid "10 minutes"
+msgstr ""
+
+#: ../settings.ui.h:7
+msgid "30 minutes"
+msgstr ""
+
+#: ../settings.ui.h:8
+msgid "1 hour"
+msgstr ""
+
+#: ../settings.ui.h:9
+msgid "3 hours"
+msgstr ""
+
+#: ../settings.ui.h:10
+msgid "forever"
+msgstr ""
+
+#: ../settings.ui.h:11
+msgid "GTK"
+msgstr "GTK"
+
+#: ../settings.ui.h:12
+msgid "XInput"
+msgstr "XInput"
+
+#: ../settings.ui.h:13
+msgid "Auto"
+msgstr ""
+
+#: ../settings.ui.h:14
+msgid "XTest"
+msgstr "XTest"
+
+#: ../settings.ui.h:15
+msgid "uinput"
+msgstr ""
+
+#: ../settings.ui.h:16
+msgid "AT-SPI"
+msgstr "AT-SPI"
+
+#: ../settings.ui.h:17
+msgid "Remember nothing"
+msgstr ""
+
+#: ../settings.ui.h:18
+msgid "Don't remember new words"
+msgstr ""
+
+#: ../settings.ui.h:19
+msgid "None"
+msgstr "无"
+
+#: ../settings.ui.h:20
+msgid "Movement only"
+msgstr ""
+
+#: ../settings.ui.h:21
+msgid "Corners"
+msgstr ""
+
+#: ../settings.ui.h:22
+msgid "All corners and edges"
+msgstr "所有边角"
+
+#: ../settings.ui.h:23
+msgid "General"
+msgstr "常规"
+
+#: ../settings.ui.h:24
+msgid "Window"
+msgstr "窗口"
+
+#: ../settings.ui.h:25
+msgid "Layout"
+msgstr "布局"
+
+#: ../settings.ui.h:26
+msgid "Theme"
+msgstr "主题"
+
+#. translators: this is a 'tooltip' of the key_template 'layer2' in keyboard layout 'key_defs.xml'
+#: ../settings.ui.h:27 ../data/layoutstrings.py:88 ../data/layoutstrings.py:340
+msgid "Snippets"
+msgstr "片断"
+
+#: ../settings.ui.h:28 ../settings_theme_dialog.ui.h:9
+msgid "Keyboard"
+msgstr "键盘"
+
+#: ../settings.ui.h:29
+msgid "Auto-show"
+msgstr ""
+
+#: ../settings.ui.h:30
+msgid "Typing Assistance"
+msgstr "输入助手"
+
+#: ../settings.ui.h:31
+msgid "Universal Access"
+msgstr "通用访问"
+
+#: ../settings.ui.h:32
+msgid "Only move when necessary"
+msgstr ""
+
+#: ../settings.ui.h:33
+msgid "Follow the active window"
+msgstr ""
+
+#: ../settings.ui.h:34
+msgid "Latch, then lock"
+msgstr ""
+
+#: ../settings.ui.h:35
+msgid "Latch, double-click to lock"
+msgstr ""
+
+#: ../settings.ui.h:36
+msgid "Latch only"
+msgstr ""
+
+#: ../settings.ui.h:37
+msgid "Lock only"
+msgstr ""
+
+#: ../settings.ui.h:38
+msgid "Push button"
+msgstr ""
+
+#: ../settings.ui.h:39
+msgid "none"
+msgstr "无"
+
+#: ../settings.ui.h:40
+msgid "single-touch"
+msgstr "单点触摸"
+
+#: ../settings.ui.h:41
+msgid "multi-touch"
+msgstr "多点触摸"
+
+#: ../settings.ui.h:42
+msgctxt "Label of the main close button of the preferences dialog."
+msgid "_Close"
+msgstr ""
+
+#: ../settings.ui.h:43
+msgid "_Auto-show when editing text"
+msgstr "编辑文字时自动显示(_A)"
+
+#: ../settings.ui.h:44
+msgid ""
+"Show Onboard when there is a recognized text window in focus. Requires Gnome "
+"Accessibility."
+msgstr "当焦点窗口中存在可识别文本时，需要 GNOME 辅助功能。"
+
+#: ../settings.ui.h:45
+msgid "Start Onboard _hidden"
+msgstr "启动后自动隐藏"
+
+#: ../settings.ui.h:46
+msgid "Start Onboard hidden."
+msgstr "Onboard 启动后自动隐藏。"
+
+#: ../settings.ui.h:47
+msgid "Show/Hide options"
+msgstr "显示 / 隐藏选项"
+
+#: ../settings.ui.h:48
+msgid "Show floating _icon when Onboard is hidden"
+msgstr "当 Onboard 隐藏时显示浮动图标(_I)"
+
+#: ../settings.ui.h:49
+msgid ""
+"Show a floating icon on the desktop when Onboard is hidden. A click on the "
+"icon makes Onboard reappear."
+msgstr "当 Onboard 隐藏时在桌面上显示浮动图标。单击该图标可重新显示 Onboard。"
+
+#: ../settings.ui.h:50
+msgid "Show when _unlocking the screen"
+msgstr "解锁屏幕时显示(_U)"
+
+#: ../settings.ui.h:51
+msgid ""
+"Show Onboard when the dialog to unlock the screen appears; this way Onboard "
+"can be used for example to enter the password to dismiss the screensaver "
+"when it is set to ask for it."
+msgstr ""
+"当出现解锁屏幕的对话时显示 Onboard。这样 Onboard 可以在必要时用于输入密码或退"
+"出屏幕保护程序。"
+
+#: ../settings.ui.h:52
+msgid "Show _tooltips"
+msgstr "显示工具提示(_T)"
+
+#: ../settings.ui.h:53
+msgid "Show tooltips for the keyboard&apos;s buttons."
+msgstr "显示键盘按键的工具提示。"
+
+#: ../settings.ui.h:54
+msgid "Show tooltips for the keyboard's buttons."
+msgstr "显示键盘按键的工具提示。"
+
+#: ../settings.ui.h:55
+msgid "_Show status icon"
+msgstr "显示状态图标(_S)"
+
+#: ../settings.ui.h:56
+msgid "Show the status item. A click on that icon hides or shows Onboard."
+msgstr "显示状态项。单击该图标可隐藏或显示 Onboard。"
+
+#: ../settings.ui.h:57
+msgid "Status icon _provider:"
+msgstr ""
+
+#: ../settings.ui.h:58
+msgid ""
+"<b>AppIndicator</b> (default) is recommended for broadest compatibility. A "
+"middle click on the icon shows the keyboard. In KDE Plasma a left click does "
+"the same.\n"
+"\n"
+"<b>GtkStatusIcon</b> isn't supported well anymore by various desktop "
+"environments, but generally allows to show the keyboard on left click.\n"
+"\n"
+"Requires restart."
+msgstr ""
+
+#: ../settings.ui.h:63
+msgid "Desktop Integration"
+msgstr "桌面集成"
+
+#: ../settings.ui.h:64
+msgid "Dock to screen edge"
+msgstr "固定到屏幕边缘"
+
+#: ../settings.ui.h:65
+msgid "Dock the keyboard to the edge of the screen."
+msgstr "将键盘固定到屏幕边缘"
+
+#: ../settings.ui.h:66
+msgctxt "Label of settings button on preferences page Window."
+msgid "_Settings"
+msgstr ""
+
+#: ../settings.ui.h:67
+msgid "Docking"
+msgstr "固定"
+
+#: ../settings.ui.h:68
+msgid "Show window _decoration"
+msgstr "显示窗口装饰(_D)"
+
+#: ../settings.ui.h:69
+msgid "Show window caption and frame."
+msgstr "显示窗口标题和边框。"
+
+#: ../settings.ui.h:70
+msgid "Show always on visible _workspace"
+msgstr "总在可见的工作区显示(_W)"
+
+#: ../settings.ui.h:71
+msgid "&quot;Sticky&quot; mode for keyboard and floating icon."
+msgstr "&quot;吸附模式&quot;用于键盘和浮动图标。"
+
+#: ../settings.ui.h:72
+msgid "\"Sticky\" mode for keyboard and floating icon."
+msgstr "吸附模式用于键盘和浮动图标。"
+
+#: ../settings.ui.h:73
+msgid "_Force window to top"
+msgstr "常居顶端(_F)"
+
+#: ../settings.ui.h:74
+msgid "Try harder to keep Onboard above anything on-screen."
+msgstr "尽更大努力保持 Onboard 在屏幕最上层。"
+
+#: ../settings.ui.h:75
+msgid "Keep _aspect ratio"
+msgstr "保持宽高比(_A)"
+
+#: ../settings.ui.h:76
+msgid "Constrain window size to the layout&apos;s aspect ratio."
+msgstr "根据布局和纵横比保持窗口尺寸"
+
+#: ../settings.ui.h:77
+msgid "Constrain window size to the layout's aspect ratio."
+msgstr "将窗口尺寸限为布局的宽高比。"
+
+#: ../settings.ui.h:78
+msgid "Floating Window Options"
+msgstr "浮动窗口选项"
+
+#: ../settings.ui.h:79
+msgid "Window options"
+msgstr "窗口选项"
+
+#: ../settings.ui.h:80
+msgid "Wind_ow:"
+msgstr "窗口(_O)："
+
+#: ../settings.ui.h:81
+msgid "Transparency of the whole keyboard window. Requires compositing."
+msgstr "透明化整个键盘窗口。需要窗口混成。"
+
+#: ../settings.ui.h:82 ../settings_theme_dialog.ui.h:5
+msgid "_Background:"
+msgstr "背景(_B)："
+
+#: ../settings.ui.h:83
+msgid "Transparency of the keyboard background"
+msgstr "键盘背景的透明度"
+
+#: ../settings.ui.h:84
+msgid "_No background"
+msgstr "没有背景(_N)"
+
+#: ../settings.ui.h:85
+msgid "Show the desktop through the gaps between keys."
+msgstr "在键之间的空隙处显示桌面。"
+
+#: ../settings.ui.h:86
+msgid "Transparency"
+msgstr "透明度"
+
+#: ../settings.ui.h:87
+msgid "Set _transparency to"
+msgstr "设置透明度为"
+
+#: ../settings.ui.h:88
+msgid "Enable inactive transparency. Requires compositing."
+msgstr "启用非活动状态半透明显示。需要窗口混成。"
+
+#: ../settings.ui.h:89
+msgid ""
+"Transparency when the pointer leaves the keyboard. Requires compositing."
+msgstr "当鼠标指针离开时透明化键盘。需要开启窗口混成。"
+
+#: ../settings.ui.h:90
+msgid "after"
+msgstr "之后"
+
+#: ../settings.ui.h:91
+msgid "Delay in seconds until the inactive transparency takes effect."
+msgstr "在非活动透明生效前延迟的描述。"
+
+#: ../settings.ui.h:92
+msgid "seconds"
+msgstr "秒"
+
+#: ../settings.ui.h:93
+msgid "When Inactive"
+msgstr "不活动时"
+
+#: ../settings.ui.h:94
+msgid "_Window handles of the keyboard window:"
+msgstr ""
+
+#: ../settings.ui.h:95
+msgid "_Window handles of the floating icon:"
+msgstr ""
+
+#: ../settings.ui.h:96
+msgid "Resize Protection"
+msgstr "缩放保护"
+
+#: ../settings.ui.h:97
+msgid "Name"
+msgstr "名称"
+
+#: ../settings.ui.h:98
+msgid "Description"
+msgstr "介绍"
+
+#: ../settings.ui.h:99
+msgctxt "Label of new layout button on preferences page Layout."
+msgid "_New"
+msgstr ""
+
+#: ../settings.ui.h:100
+msgctxt "Label of delete layout button on preferences page Layout."
+msgid "_Delete"
+msgstr ""
+
+#: ../settings.ui.h:101
+msgctxt "Label of open folder button on preferences page Layout."
+msgid "_Open layouts folder"
+msgstr ""
+
+#: ../settings.ui.h:102
+msgctxt "Label of about layout button on preferences page Layout."
+msgid "_About"
+msgstr ""
+
+#: ../settings.ui.h:103
+msgctxt "Label of new theme button on preferences page Theme."
+msgid "_New"
+msgstr ""
+
+#: ../settings.ui.h:104
+msgctxt "Label of delete theme  button on preferences page Theme."
+msgid "_Delete"
+msgstr ""
+
+#: ../settings.ui.h:105
+msgctxt "Label of customize theme button on preferences page Theme."
+msgid "C_ustomize theme"
+msgstr ""
+
+#: ../settings.ui.h:106
+msgid "Follow _system theme"
+msgstr "使用系统主题(_S)"
+
+#: ../settings.ui.h:107
+msgid "Remember what Onboard theme was last used for every system theme."
+msgstr "记住与每个系统主题所对应使用的 Onboard 主题。"
+
+#: ../settings.ui.h:108
+msgid ""
+"Snippets are pieces of text which are entered when the corresponding button "
+"in Onboard is pressed."
+msgstr "片断是 Onboard 中按下相应按钮时输入的一段文本。"
+
+#: ../settings.ui.h:109
+msgctxt "Label of add snippet button on preferences page Snippets."
+msgid "_Add"
+msgstr ""
+
+#: ../settings.ui.h:110
+msgctxt "Label of remove snippet button on preferences page Snippets."
+msgid "_Remove"
+msgstr ""
+
+#: ../settings.ui.h:111
+msgid "Play sound"
+msgstr "播放声音"
+
+#: ../settings.ui.h:112
+msgid "Play click sound on keypress."
+msgstr "在按键时播放音效。"
+
+#: ../settings.ui.h:113
+msgid "Place sound in space"
+msgstr ""
+
+#: ../settings.ui.h:114
+msgid ""
+"Place sound in space between speakers depending on the key's position on "
+"screen"
+msgstr ""
+
+#: ../settings.ui.h:115
+msgid "Show label popups"
+msgstr "显示弹窗标签"
+
+#: ../settings.ui.h:116
+msgid "Show label popups above pressed keys."
+msgstr "在所按下的键上方显示弹窗标签。"
+
+#: ../settings.ui.h:117
+msgid "Popup size:"
+msgstr ""
+
+#: ../settings.ui.h:118
+msgid "Key-press Feedback"
+msgstr "按键反馈"
+
+#: ../settings.ui.h:119
+msgid "Show secondary labels"
+msgstr "显示二级标签"
+
+#: ../settings.ui.h:120
+msgid "Show characters reachable with or without the shift key."
+msgstr "显示可用字符。"
+
+#: ../settings.ui.h:121
+msgid "Key Labels"
+msgstr "按键标签"
+
+#: ../settings.ui.h:122
+msgid "Upper case on right click"
+msgstr ""
+
+#: ../settings.ui.h:123
+msgid "Temporarily enable SHIFT when clicking with the secondary button."
+msgstr ""
+
+#: ../settings.ui.h:124
+msgid "Key Behaviour"
+msgstr ""
+
+#: ../settings.ui.h:125
+msgid "_Long press action:"
+msgstr "长按动作(_L)："
+
+#: ../settings.ui.h:126
+msgid ""
+"Choose between key-repeat or long-press menus. Mainly affects alpha-numeric "
+"keys."
+msgstr "在重复按键或长按菜单中选择。主要影响键盘和数字按键。"
+
+#: ../settings.ui.h:127
+msgid "Modifier _behavior:"
+msgstr "修饰键行为(_B)："
+
+#: ../settings.ui.h:128
+msgid "Behavior of modifier and layer keys."
+msgstr "修饰按键和层级按键行为。"
+
+#: ../settings.ui.h:129
+msgid "Modifier auto-release delay in seconds:"
+msgstr ""
+
+#: ../settings.ui.h:130
+msgid ""
+"Seconds of inactivity until active modifiers and layer keys are released. 0 "
+"to disable."
+msgstr "修饰键或层级键松开前的静默时间。0 为禁用此功能。"
+
+#: ../settings.ui.h:131
+msgid "Modifier auto-release after hide in seconds:"
+msgstr ""
+
+#: ../settings.ui.h:132
+msgid ""
+"Time after hiding the keyboard in seconds until latched and locked modifiers "
+"and layer keys are released automatically. Leave at 0.0 to not automatically "
+"release them."
+msgstr ""
+
+#: ../settings.ui.h:133
+msgid "0,00"
+msgstr ""
+
+#: ../settings.ui.h:134
+msgid "Key Behavior"
+msgstr "按键行为"
+
+#: ../settings.ui.h:135
+msgid "_Touch input:"
+msgstr ""
+
+#: ../settings.ui.h:136
+msgid "_Input event source:"
+msgstr "输入来源 (I)："
+
+#: ../settings.ui.h:137
+msgid ""
+"Choose &apos;XInput&apos; for more reliable typing into text entries with "
+"pop-up selections. The &apos;GTK&apos; option offers better compatibility, "
+"but typing may fail in the presence of pointer grabs, e.g. with open pop-up "
+"windows."
+msgstr ""
+"选择 &apos;XInput&apos; 以便更可靠地进行输入和文字选择操作。而 &apos;"
+"GTK&apos; 选项拥有更好的兼容性，但是在进行打开弹出窗口等操作时可能会失效。"
+
+#: ../settings.ui.h:138
+msgid ""
+"Choose 'XInput' for more reliable typing into text entries with pop-up "
+"selections. The 'GTK' option offers better compatibility, but typing may "
+"fail in the presence of pointer grabs, e.g. with open pop-up windows."
+msgstr ""
+"选择 XInput 以便更可靠地进行输入和文字选择操作。而 GTK 选项拥有更好的兼容性，"
+"但是在进行打开弹出窗口等操作时可能会失效。"
+
+#: ../settings.ui.h:139
+msgid "Input Options"
+msgstr "输入选项"
+
+#: ../settings.ui.h:140
+msgid "Delay between keystrokes in milliseconds:"
+msgstr ""
+
+#: ../settings.ui.h:141
+msgid ""
+"Increase this if key-strokes get lost when inserting word suggestions or "
+"snippets into Firefox or other Gtk-2 applications. Has no effect on Gtk-3 "
+"applications."
+msgstr ""
+
+#: ../settings.ui.h:142
+msgid "Key-stroke generator"
+msgstr ""
+
+#: ../settings.ui.h:143
+msgid ""
+"<b>Auto</b>: let Onboard decide, recommended.\n"
+"\n"
+"<b>XTest</b> is the default for all X based desktop environments.\n"
+"\n"
+"<b>uinput</b> should be available on all linux-based systems, including X, "
+"Wayland and MIR-based desktops, but requires write permission for /dev/"
+"uinput.\n"
+"\n"
+"<b>AT-SPI</b> has limited support for key-stroke generation, and is only "
+"recommended for testing."
+msgstr ""
+
+#: ../settings.ui.h:150
+msgid "Key-stroke Generation"
+msgstr ""
+
+#: ../settings.ui.h:151
+msgid "Advanced"
+msgstr "高级选项"
+
+#: ../settings.ui.h:152
+msgid ""
+"Show Onboard when there is a recognized text entry in focus. Requires Gnome "
+"Accessibility."
+msgstr ""
+
+#: ../settings.ui.h:153
+msgid "Keyboard movement strategy:"
+msgstr ""
+
+#: ../settings.ui.h:154
+msgid "Chose how the keyboard window moves when a text entry is activated."
+msgstr ""
+
+#: ../settings.ui.h:155
+msgid "_Hide when typing on a physical keyboard"
+msgstr ""
+
+#: ../settings.ui.h:156
+msgid ""
+"Hide Onboard when any key is pressed on a physical keyboard. Requires input "
+"event source \"XInput\"."
+msgstr ""
+
+#: ../settings.ui.h:157
+msgid "Stay hidden:"
+msgstr ""
+
+#: ../settings.ui.h:158
+msgid ""
+"Once hidden by a physical key-press, auto-show is paused. Select the pause "
+"duration here."
+msgstr ""
+
+#: ../settings.ui.h:159
+msgid "Auto-show only in tablet mode"
+msgstr ""
+
+#: ../settings.ui.h:160
+msgid ""
+"Requires driver support for SW_TABLET_MODE and a running instance of acpid."
+msgstr ""
+
+#: ../settings.ui.h:161
+msgid ""
+"Alternatively, some devices generate key events on entering and leaving "
+"tablet mode. Run 'xinput test-xi2 3 ' to find these key presses and enter "
+"their 'detail' values below."
+msgstr ""
+
+#: ../settings.ui.h:162
+msgid "Hotkey received when entering tablet mode:"
+msgstr ""
+
+#: ../settings.ui.h:163
+msgid "Hotkey received when leaving tablet mode:"
+msgstr ""
+
+#: ../settings.ui.h:164
+msgid "File that contains the current device state:"
+msgstr ""
+
+#: ../settings.ui.h:165
+msgid "Regular expression to match for tablet-mode:"
+msgstr ""
+
+#: ../settings.ui.h:166
+msgid "Convertible Devices"
+msgstr ""
+
+#: ../settings.ui.h:167
+msgid "Don't auto-show while external keyboards are connected"
+msgstr ""
+
+#: ../settings.ui.h:168
+msgid "Detected keyboard devices:"
+msgstr ""
+
+#: ../settings.ui.h:169
+msgid ""
+"Check 'Ignore' for devices that are always connected and should not block "
+"auto-show."
+msgstr ""
+
+#: ../settings.ui.h:170
+msgid "External Keyboards"
+msgstr ""
+
+#: ../settings.ui.h:171
+msgid "Show _suggestions"
+msgstr "显示建议 (_S)"
+
+#: ../settings.ui.h:172
+msgid "Enable word completion and prediction."
+msgstr "打开自动补全和联想输入。"
+
+#: ../settings.ui.h:173
+msgid "Show spelling suggestions"
+msgstr "显示拼写建议"
+
+#: ../settings.ui.h:174
+msgid "Check spelling of the word at or before the cursor."
+msgstr "检查鼠标位置及其之前的拼写。"
+
+#: ../settings.ui.h:175
+msgid "_Learn from typed text"
+msgstr "学习已输入的文本内容 (_L)"
+
+#: ../settings.ui.h:176
+msgid ""
+"Remember new words, their recency and frequency to improve the suggestions "
+"over time."
+msgstr "记住新词组及其频率和输入时间，以提高自动联想精确度。"
+
+#: ../settings.ui.h:177
+msgid "Insert word _separators"
+msgstr "插入分词符 (S)"
+
+#: ../settings.ui.h:178
+msgid ""
+"Add and remove spaces when inserting word suggestions followed by "
+"punctuation characters."
+msgstr "当插入的拼写后存在标点符号时自动添加或移除空格。"
+
+#: ../settings.ui.h:179
+msgid "Options"
+msgstr "选项"
+
+#: ../settings.ui.h:180
+msgid "Show more suggestions arrow"
+msgstr ""
+
+#: ../settings.ui.h:181
+msgid "Step forward and backward through the available suggestions."
+msgstr ""
+
+#: ../settings.ui.h:182
+msgid "Show button to pause learning"
+msgstr "显示停止学习按钮"
+
+#: ../settings.ui.h:183
+msgid "Words typed while this button is pressed won't be remembered."
+msgstr "按下该键后，系统将不会记忆您输入的词汇"
+
+#: ../settings.ui.h:184
+msgid "Show lan_guage switcher"
+msgstr "显示语言切换器 (_G)"
+
+#: ../settings.ui.h:185
+msgid "Show a button for language selection."
+msgstr "显示语言选择按钮"
+
+#: ../settings.ui.h:186
+msgid "Buttons"
+msgstr "按钮"
+
+#: ../settings.ui.h:187
+msgid "Word Suggestions"
+msgstr "词组建议"
+
+#: ../settings.ui.h:188
+msgid "Auto-capitalize while typing"
+msgstr "输入时自动首字母大写"
+
+#: ../settings.ui.h:189
+msgid "Automatically capitalize sentence begins and name words."
+msgstr "自动大写句首字母和专有名词。"
+
+#: ../settings.ui.h:190
+msgid "Auto-correct spelling"
+msgstr "自动纠正拼写"
+
+#: ../settings.ui.h:191
+msgid "Automatically correct the last word."
+msgstr "自动纠正最近输入的词。"
+
+#: ../settings.ui.h:192
+msgid "The spell check engine to use."
+msgstr "所使用的拼写检查引擎。"
+
+#: ../settings.ui.h:193
+msgid "Spell-check backend:"
+msgstr "拼写检查后端："
+
+#: ../settings.ui.h:194
+msgid "Auto-correction"
+msgstr "自动纠正"
+
+#: ../settings.ui.h:195
+msgid "While  learning is paused:"
+msgstr ""
+
+#: ../settings.ui.h:196
+msgid "Learning"
+msgstr ""
+
+#: ../settings.ui.h:197
+msgid "Enable  keyboard _scanning"
+msgstr "启用键盘扫描(_S)"
+
+#: ../settings.ui.h:198
+msgctxt ""
+"Label of keyboard scanning settings button on preferences page Universal "
+"Access."
+msgid "Sc_anner Settings"
+msgstr ""
+
+#: ../settings.ui.h:199
+msgid "Keyboard Scanning"
+msgstr "键盘扫描"
+
+#: ../settings.ui.h:200
+msgid "_Delay:"
+msgstr "延迟 (_D)"
+
+#: ../settings.ui.h:201
+msgid "_Motion threshold:"
+msgstr "动作阈值 (M)："
+
+#: ../settings.ui.h:202
+msgid "Time in seconds before a click is triggered."
+msgstr "触发按键之前的秒数。"
+
+#: ../settings.ui.h:203
+msgid "Distance in pixels before movement will be recognized."
+msgstr "触发动作识别的像素数。"
+
+#: ../settings.ui.h:204
+msgid "Hide hover click window"
+msgstr "隐藏悬停按键窗口"
+
+#: ../settings.ui.h:205
+msgid "Hide the system-provided hover click window while Onboard is running."
+msgstr "Onboard 运行时隐藏系统提供的悬停单击窗口。"
+
+#: ../settings.ui.h:206
+msgid "Enable click type window on exit"
+msgstr "退出时打开按键输入窗口"
+
+#: ../settings.ui.h:207
+msgid ""
+"Always enable the system-provided hover click window when exiting Onboard."
+msgstr "退出 Onboard 时总是启动系统提供的悬停单击窗口。"
+
+#: ../settings.ui.h:208
+msgid "Hover Click"
+msgstr "悬停单击"
+
+#: ../settings_scanner_dialog.ui.h:1
+msgid "Automatic scan for 1 switch"
+msgstr "当使用一个开关时自动扫描按键"
+
+#: ../settings_scanner_dialog.ui.h:2
+msgid "Critical overscan for 1 switch"
+msgstr "使用一个开关时记录扫描历史"
+
+#: ../settings_scanner_dialog.ui.h:3
+msgid "Step scan for 2 switches"
+msgstr "当使用两个开关操作时进行步进扫描"
+
+#: ../settings_scanner_dialog.ui.h:4
+msgid "Directed scan for 3 or 5 switches"
+msgstr "当使用三到五个开关时进行定向扫描"
+
+#: ../settings_scanner_dialog.ui.h:5
+msgid "Scanner Settings"
+msgstr "扫描仪设置"
+
+#: ../settings_scanner_dialog.ui.h:6
+msgctxt "Label of the close button of the scanner settings dialog."
+msgid "_Close"
+msgstr ""
+
+#: ../settings_scanner_dialog.ui.h:7
+msgid "Select a scanning _profile:"
+msgstr "选择扫描配置："
+
+#: ../settings_scanner_dialog.ui.h:8
+msgid "_Step interval:"
+msgstr "步骤间隔(_S)："
+
+#: ../settings_scanner_dialog.ui.h:9
+msgid "Sc_an cycles:"
+msgstr "扫描周期(_A)："
+
+#: ../settings_scanner_dialog.ui.h:10
+msgid ""
+"The time the scanner rests on a key or group before moving to the next. (in "
+"seconds)"
+msgstr "扫描器停留在一个按键或键组上的秒数"
+
+#: ../settings_scanner_dialog.ui.h:11
+msgid ""
+"The number of times the scanner cycles through the entire keyboard before it "
+"stops."
+msgstr "扫描器停止前扫描键盘的周期数。"
+
+#: ../settings_scanner_dialog.ui.h:12
+msgid "Step _only during switch down"
+msgstr "仅在开关被按下时前进扫描 (_O)"
+
+#: ../settings_scanner_dialog.ui.h:13
+msgid "Progress the highlight only while the switch is held down."
+msgstr "仅在开关被持续按下时前进扫描"
+
+#: ../settings_scanner_dialog.ui.h:14
+msgid "_Forward interval:"
+msgstr "前进间隔(_F)："
+
+#: ../settings_scanner_dialog.ui.h:15
+msgid "_Backtrack interval:"
+msgstr "后退间隔(_B)："
+
+#: ../settings_scanner_dialog.ui.h:16
+msgid ""
+"The time the scanner rests on a key  while progressing forward. (in seconds)"
+msgstr "扫描器前进时在每个键上停留的时间。(单位：秒)"
+
+#: ../settings_scanner_dialog.ui.h:17
+msgid ""
+"The time the scanner rests on a key  while moving backwards. (in seconds)"
+msgstr "扫描器后退时在每个键上停留的时间。(单位：秒)"
+
+#: ../settings_scanner_dialog.ui.h:18
+msgid "Backtrack _steps:"
+msgstr "回溯步数(_S):"
+
+#: ../settings_scanner_dialog.ui.h:19
+msgid "The number of keys the scanner steps back before moving forward again."
+msgstr "扫描器继续前进之前后退的键数"
+
+#: ../settings_scanner_dialog.ui.h:20
+msgid "_Alternate switch actions"
+msgstr "交换切换动作(_A)"
+
+#: ../settings_scanner_dialog.ui.h:21
+msgid ""
+"Swap the scan actions after every key activation. The Step action will "
+"become the Activate action and vice versa."
+msgstr "每次按键激活后切换扫描动作。移动操作将变为激活操作，反之亦然。"
+
+#: ../settings_scanner_dialog.ui.h:22
+msgid "Profiles"
+msgstr "配置"
+
+#: ../settings_scanner_dialog.ui.h:23
+msgid "_Select an input device:"
+msgstr "选择输入设备(_S)："
+
+#: ../settings_scanner_dialog.ui.h:24
+msgid "_Use this device only for scanning"
+msgstr "仅将此设备用于扫描(_U)"
+
+#: ../settings_scanner_dialog.ui.h:25
+msgid ""
+"The selected device should not control the system mouse cursor or the "
+"keyboard caret."
+msgstr "选中的设备不应控制系统鼠标或键盘光标。"
+
+#: ../settings_scanner_dialog.ui.h:26
+msgid "Input Device"
+msgstr "输入设备"
+
+#: ../data/onboard.desktop.in.h:2 ../data/onboard-autostart.desktop.in.h:2
+msgid "Onboard onscreen keyboard"
+msgstr "Onboard 屏幕键盘"
+
+#: ../data/onboard.desktop.in.h:3 ../data/onboard-autostart.desktop.in.h:3
+msgid "Flexible onscreen keyboard"
+msgstr ""
+
+#. Title of the snippets dialog for existing snippets
+#: ../Onboard/KeyboardWidget.py:1590
+msgid "Edit snippet #{}"
+msgstr ""
+
+#. Title of the snippets dialog for new snippets
+#: ../Onboard/KeyboardWidget.py:1594
+msgid "New snippet"
+msgstr "新的片段"
+
+#. Message in the snippets dialog for new snippets
+#: ../Onboard/KeyboardWidget.py:1596
+msgid "Enter a new snippet for button #{}:"
+msgstr ""
+
+#: ../Onboard/KeyboardWidget.py:1607
+msgid "_Save snippet"
+msgstr "保存片段(_S)"
+
+#: ../Onboard/KeyboardWidget.py:1627
+msgid "_Button label:"
+msgstr "按钮标签(_B)："
+
+#: ../Onboard/KeyboardWidget.py:1631
+msgid "S_nippet:"
+msgstr "片段(_N)："
+
+#: ../Onboard/KeyboardWidget.py:1801
+msgid "Other _Languages"
+msgstr "其他语言 (_L)"
+
+#: ../Onboard/KeyboardWidget.py:1845
+msgid "_Remove suggestion…"
+msgstr ""
+
+#: ../Onboard/KeyboardWidget.py:1901
+msgid "Remove word suggestion"
+msgstr ""
+
+#: ../Onboard/KeyboardWidget.py:1912
+msgid "Remove '{}' everywhere."
+msgstr ""
+
+#: ../Onboard/KeyboardWidget.py:1922
+msgid "This will only affect learned suggestions."
+msgstr ""
+
+#: ../Onboard/KeyboardWidget.py:1962
+msgid "Remove '{}' only where it occures at text begin."
+msgstr ""
+
+#: ../Onboard/KeyboardWidget.py:1965
+msgid "Remove '{}' only where it occures at sentence begin."
+msgstr ""
+
+#: ../Onboard/KeyboardWidget.py:1968
+msgid "Remove '{}' only where it occures after numbers."
+msgstr ""
+
+#: ../Onboard/KeyboardWidget.py:1971
+msgid "Remove '{}' only where it occures after '{}'."
+msgstr ""
+
+#: ../settings_docking_dialog.ui.h:1
+msgid "Top"
+msgstr "顶部"
+
+#: ../settings_docking_dialog.ui.h:2
+msgid "Bottom"
+msgstr "底部"
+
+#: ../settings_docking_dialog.ui.h:3
+msgid "Active Monitor"
+msgstr ""
+
+#: ../settings_docking_dialog.ui.h:4
+msgid "Primary Monitor"
+msgstr ""
+
+#: ../settings_docking_dialog.ui.h:5
+msgid "Monitor 0"
+msgstr ""
+
+#: ../settings_docking_dialog.ui.h:6
+msgid "Monitor 1"
+msgstr ""
+
+#: ../settings_docking_dialog.ui.h:7
+msgid "Monitor 2"
+msgstr ""
+
+#: ../settings_docking_dialog.ui.h:8
+msgid "Monitor 3"
+msgstr ""
+
+#: ../settings_docking_dialog.ui.h:9
+msgid "Monitor 4"
+msgstr ""
+
+#: ../settings_docking_dialog.ui.h:10
+msgid "Monitor 5"
+msgstr ""
+
+#: ../settings_docking_dialog.ui.h:11
+msgid "Monitor 6"
+msgstr ""
+
+#: ../settings_docking_dialog.ui.h:12
+msgid "Monitor 7"
+msgstr ""
+
+#: ../settings_docking_dialog.ui.h:13
+msgid "Monitor 8"
+msgstr ""
+
+#: ../settings_docking_dialog.ui.h:14
+msgid "Docking settings"
+msgstr "贴靠设置"
+
+#: ../settings_docking_dialog.ui.h:15
+msgctxt "Label of the close button of the docking settings dialog."
+msgid "_Close"
+msgstr ""
+
+#: ../settings_docking_dialog.ui.h:16
+msgid "Shrink workarea"
+msgstr "缩小工作区"
+
+#: ../settings_docking_dialog.ui.h:17
+msgid "Shrink the available space for maximized windows."
+msgstr "当窗口最大化时缩小占用空间"
+
+#: ../settings_docking_dialog.ui.h:18
+msgid "Expand on landscape screens"
+msgstr "屏幕处于横向状态时扩展键盘"
+
+#: ../settings_docking_dialog.ui.h:19
+msgid "Expand keyboard to the width of the workarea."
+msgstr "将键盘扩展到工作区宽度"
+
+#: ../settings_docking_dialog.ui.h:20
+msgid "Expand on portrait screens"
+msgstr "屏幕处于纵向状态时扩展键盘"
+
+#: ../settings_docking_dialog.ui.h:21
+msgid "Dock to screen edge:"
+msgstr "贴靠到屏幕边缘："
+
+#: ../settings_docking_dialog.ui.h:22
+msgid "Dock to monitor:"
+msgstr ""
+
+#: ../Onboard/Indicator.py:56
+msgid "_Show Onboard"
+msgstr "显示 Onboard(_S)"
+
+#: ../Onboard/Indicator.py:57
+msgid "_Hide Onboard"
+msgstr "隐藏 Onboard(_H)"
+
+#. Translators: label of a menu item. It used to be stock item
+#. STOCK_PREFERENCES until Gtk 3.10 deprecated those.
+#: ../Onboard/Indicator.py:83
+msgid "_Preferences"
+msgstr ""
+
+#: ../Onboard/Indicator.py:91
+msgid "_Help"
+msgstr ""
+
+#. Translators: label of a menu item. It used to be stock item
+#. STOCK_QUIT until Gtk 3.10 deprecated those.
+#: ../Onboard/Indicator.py:102
+msgid "_Quit"
+msgstr "退出(_Q)"
+
+#: ../Onboard/Indicator.py:228 ../Onboard/Indicator.py:231
+msgid "Onboard on-screen keyboard"
+msgstr "Onboard 屏幕键盘"
+
+#: ../Onboard/OnboardGtk.py:429
+msgid ""
+"Onboard is configured to appear with the dialog to unlock the screen; for "
+"example to dismiss the password-protected screensaver.\n"
+"\n"
+"However the system is not configured anymore to use Onboard to unlock the "
+"screen. A possible reason can be that another application configured the "
+"system to use something else.\n"
+"\n"
+"Would you like to reconfigure the system to show Onboard when unlocking the "
+"screen?"
+msgstr ""
+"Onboard 可以用来显示对话框以解锁屏幕。例如用来取消带密码的屏幕保护程序等。\n"
+"\n"
+"但是当前系统配置下 Onboard 无法用于解锁屏幕，这可能是因为有另一个程序对系统进"
+"行了与 Onboard 相冲突的配置。\n"
+"\n"
+"是否要重新配置系统，以便使用 Onboard 解锁屏幕？"
+
+#: ../Onboard/OnboardGtk.py:448
+msgid ""
+"Onboard is configured to appear with the dialog to unlock the screen; for "
+"example to dismiss the password-protected screensaver.\n"
+"\n"
+"However this function is disabled in the system.\n"
+"\n"
+"Would you like to activate it?"
+msgstr ""
+"Onboard 被设置成随解锁屏幕对话框一起显示，例如通过这种方式可以解除受密码保护"
+"的屏保。\n"
+"\n"
+"但是当前系统禁用了这个功能。\n"
+"\n"
+"您希望激活这个功能吗？"
+
+#: ../settings_theme_dialog.ui.h:1
+msgid "Customize Theme"
+msgstr "自定义主题"
+
+#: ../settings_theme_dialog.ui.h:2
+msgctxt "Label of the revert button of the theme settings dialog."
+msgid "_Revert"
+msgstr ""
+
+#: ../settings_theme_dialog.ui.h:3
+msgctxt "Label of the close button of the theme settings dialog."
+msgid "_Close"
+msgstr ""
+
+#: ../settings_theme_dialog.ui.h:4
+msgid "Color Sche_me"
+msgstr "色彩方案(_M)"
+
+#. Key style with simple gradients
+#: ../settings_theme_dialog.ui.h:6 ../Onboard/settings.py:1621
+msgid "Gradient"
+msgstr "渐变"
+
+#: ../settings_theme_dialog.ui.h:7
+msgid "_Angle:"
+msgstr "角度 (_A)："
+
+#: ../settings_theme_dialog.ui.h:8
+msgid "Light Direction"
+msgstr "光线方向"
+
+#: ../settings_theme_dialog.ui.h:10
+msgid "_Style:"
+msgstr "样式(_S)："
+
+#: ../settings_theme_dialog.ui.h:11
+msgid "R_oundness:"
+msgstr "圆度(_O)"
+
+#: ../settings_theme_dialog.ui.h:12
+msgid "S_ize:"
+msgstr "大小(_I)："
+
+#: ../settings_theme_dialog.ui.h:13
+msgid "B_order width:"
+msgstr "边框宽度 (_O)："
+
+#: ../settings_theme_dialog.ui.h:14
+msgid "Key Style"
+msgstr "按键风格"
+
+#: ../settings_theme_dialog.ui.h:15
+msgid "_Key:"
+msgstr "按键(_K):"
+
+#: ../settings_theme_dialog.ui.h:16
+msgid "_Border:"
+msgstr "边缘(_B):"
+
+#: ../settings_theme_dialog.ui.h:17
+msgid "Gradients"
+msgstr "渐变"
+
+#: ../settings_theme_dialog.ui.h:18
+msgid "_Strength:"
+msgstr "强度 (_S)："
+
+#: ../settings_theme_dialog.ui.h:19
+msgid "Shadow"
+msgstr "阴影"
+
+#: ../settings_theme_dialog.ui.h:20
+msgid "Keys"
+msgstr "按键"
+
+#: ../settings_theme_dialog.ui.h:21
+msgid "_Font:"
+msgstr "字体(_F)："
+
+#: ../settings_theme_dialog.ui.h:22
+msgid "_Attributes:"
+msgstr "属性(_A)："
+
+#: ../settings_theme_dialog.ui.h:23
+msgid "Font"
+msgstr "字体"
+
+#: ../settings_theme_dialog.ui.h:24
+msgid "I_ndependent size"
+msgstr "独立大小(_N)"
+
+#: ../settings_theme_dialog.ui.h:25
+msgid "_Super key:"
+msgstr "_Super 键"
+
+#: ../settings_theme_dialog.ui.h:26
+msgid "Label Override"
+msgstr "标签覆盖"
+
+#: ../settings_theme_dialog.ui.h:27
+msgid "Labels"
+msgstr "标签"
+
+#. translators: this is a 'tooltip' of the key_template 'hoverclick' in keyboard layout 'key_defs.xml'
+#: ../data/layoutstrings.py:35 ../data/layoutstrings.py:193
+msgid "Activate Hover Click"
+msgstr "激活悬停单击"
+
+#: ../data/layoutstrings.py:36
+msgid "Alphanumeric keys"
+msgstr "数字和字母键"
+
+#. translators: very short label of the left Alt key
+#: ../data/layoutstrings.py:38
+msgid "Alt"
+msgstr "Alt"
+
+#. translators: very short label of the Alt Gr key
+#: ../data/layoutstrings.py:40
+msgid "Alt Gr"
+msgstr "Alt Gr"
+
+#. translators: very short label of the CAPS LOCK key
+#: ../data/layoutstrings.py:42
+msgid "CAPS"
+msgstr "CAPS"
+
+#. translators: very short label of the Ctrl key
+#: ../data/layoutstrings.py:44
+msgid "Ctrl"
+msgstr "Ctrl"
+
+#. translators: very short label of the DELETE key
+#: ../data/layoutstrings.py:46
+msgid "Del"
+msgstr "Del"
+
+#. translators: this is a 'tooltip' of the key_template 'doubleclick' in keyboard layout 'key_defs.xml'
+#: ../data/layoutstrings.py:47 ../data/layoutstrings.py:220
+msgid "Double click"
+msgstr "双击"
+
+#. translators: this is a 'tooltip' of the key_template 'dragclick' in keyboard layout 'key_defs.xml'
+#: ../data/layoutstrings.py:48 ../data/layoutstrings.py:223
+msgid "Drag click"
+msgstr "拖拽点击"
+
+#. translators: very short label of the numpad END key
+#: ../data/layoutstrings.py:50
+msgid "End"
+msgstr "End"
+
+#. translators: very short label of the numpad ENTER key
+#: ../data/layoutstrings.py:52
+msgid "Ent"
+msgstr "回车"
+
+#. translators: very short label of the ESCAPE key
+#: ../data/layoutstrings.py:54
+msgid "Esc"
+msgstr "Esc 键"
+
+#: ../data/layoutstrings.py:55
+msgid "Function keys"
+msgstr "功能键"
+
+#: ../data/layoutstrings.py:56
+msgid "Number block and function keys"
+msgstr "数字键盘和功能键"
+
+#. translators: this is a 'tooltip' of the key_template 'hide' in keyboard layout 'key_defs.xml'
+#: ../data/layoutstrings.py:57 ../data/layoutstrings.py:247
+msgid "Hide Onboard"
+msgstr "隐藏 Onboard"
+
+#. translators: this is a 'tooltip' of the key 'pause-learning.wordlist' in keyboard layout 'word_suggestions.xml'
+#: ../data/layoutstrings.py:58 ../data/layoutstrings.py:292
+msgid "Pause learning"
+msgstr "停止学习"
+
+#. translators: very short label of the HOME key
+#: ../data/layoutstrings.py:60
+msgid "Hm"
+msgstr "Home"
+
+#. translators: very short label of the INSERT key
+#: ../data/layoutstrings.py:62
+msgid "Ins"
+msgstr "Ins"
+
+#. translators: this is a 'tooltip' of the key_template 'layer0' in keyboard layout 'key_defs.xml'
+#: ../data/layoutstrings.py:63 ../data/layoutstrings.py:265
+msgid "Main keyboard"
+msgstr "主键盘"
+
+#. translators: very short label of the Menu key
+#: ../data/layoutstrings.py:65
+msgid "Menu"
+msgstr "菜单键"
+
+#. translators: this is a 'tooltip' of the key_template 'middleclick' in keyboard layout 'key_defs.xml'
+#: ../data/layoutstrings.py:66 ../data/layoutstrings.py:274
+msgid "Middle click"
+msgstr "中键单击"
+
+#. translators: this is a 'tooltip' of the key_template 'move' in keyboard layout 'key_defs.xml'
+#: ../data/layoutstrings.py:67 ../data/layoutstrings.py:283
+msgid "Move Onboard"
+msgstr "移动 Onboard"
+
+#. translators: very short label of the NUMLOCK key
+#: ../data/layoutstrings.py:69
+msgid "Nm&#10;Lk"
+msgstr "Nm&#10;Lk"
+
+#. translators: this is a 'tooltip' of the key_template 'layer1' in keyboard layout 'key_defs.xml'
+#: ../data/layoutstrings.py:70 ../data/layoutstrings.py:289
+msgid "Number block and snippets"
+msgstr "数字键盘和片段"
+
+#. translators: very short label of the PAUSE key
+#: ../data/layoutstrings.py:72
+msgid "Pause"
+msgstr "Pause"
+
+#. translators: very short label of the PAGE DOWN key
+#: ../data/layoutstrings.py:74
+msgid "Pg&#10;Dn"
+msgstr "Pg&#10;Dn"
+
+#. translators: very short label of the PAGE UP key
+#: ../data/layoutstrings.py:76
+msgid "Pg&#10;Up"
+msgstr "Pg&#10;Up"
+
+#. translators: very short label of the Preferences button
+#. translators: this is a 'tooltip' of the key_template 'settings' in keyboard layout 'key_defs.xml'
+#: ../data/layoutstrings.py:78 ../data/layoutstrings.py:298
+msgid "Preferences"
+msgstr "首选项"
+
+#. translators: very short label of the PRINT key
+#: ../data/layoutstrings.py:80
+msgid "Prnt"
+msgstr "Print"
+
+#. translators: very short label of the Quit button
+#: ../data/layoutstrings.py:82
+msgid "Quit"
+msgstr "退出"
+
+#. translators: very short label of the RETURN key
+#: ../data/layoutstrings.py:84
+msgid "Return"
+msgstr "回车"
+
+#. translators: this is a 'tooltip' of the key_template 'secondaryclick' in keyboard layout 'key_defs.xml'
+#: ../data/layoutstrings.py:85 ../data/layoutstrings.py:313
+msgid "Right click"
+msgstr "右击"
+
+#. translators: very short label of the SCROLL key
+#: ../data/layoutstrings.py:87
+msgid "Scroll"
+msgstr "Scroll"
+
+#: ../data/layoutstrings.py:89
+msgid "Space"
+msgstr "空格"
+
+#. translators: this is a 'tooltip' of the key_template 'showclick' in keyboard layout 'key_defs.xml'
+#: ../data/layoutstrings.py:90 ../data/layoutstrings.py:364
+msgid "Toggle click helpers"
+msgstr "切换单击帮助程序"
+
+#. translators: very short label of the TAB key
+#: ../data/layoutstrings.py:92
+msgid "Tab"
+msgstr "Tab"
+
+#. translators: very short label of the default SUPER key
+#: ../data/layoutstrings.py:94
+msgid "Win"
+msgstr "Win"
+
+#. translators: description of unicode character U+2602
+#. translators: this is a 'tooltip' of the key 'DB05' in keyboard layout 'Small.onboard'
+#: ../data/layoutstrings.py:96 ../data/layoutstrings.py:367
+msgid "Umbrella"
+msgstr "小伞"
+
+#. translators: description of unicode character U+2606
+#. translators: this is a 'tooltip' of the key 'DB07' in keyboard layout 'Small.onboard'
+#: ../data/layoutstrings.py:98 ../data/layoutstrings.py:373
+msgid "White star"
+msgstr "白色五角星"
+
+#. translators: description of unicode character U+260F
+#. translators: this is a 'tooltip' of the key 'DB03' in keyboard layout 'Small.onboard'
+#: ../data/layoutstrings.py:100 ../data/layoutstrings.py:379
+msgid "White telephone"
+msgstr "白色电话"
+
+#. translators: description of unicode character U+2615
+#: ../data/layoutstrings.py:102
+msgid "Hot beverage"
+msgstr "热饮"
+
+#. translators: description of unicode character U+2620
+#: ../data/layoutstrings.py:104
+msgid "Skull and crossbones"
+msgstr "骷髅"
+
+#. translators: description of unicode character U+2622
+#. translators: this is a 'tooltip' of the key 'DB09' in keyboard layout 'Small.onboard'
+#: ../data/layoutstrings.py:106 ../data/layoutstrings.py:310
+msgid "Radioactive sign"
+msgstr "辐射"
+
+#. translators: description of unicode character U+262E
+#. translators: this is a 'tooltip' of the key 'DB06' in keyboard layout 'Small.onboard'
+#: ../data/layoutstrings.py:108 ../data/layoutstrings.py:295
+msgid "Peace symbol"
+msgstr "和平"
+
+#. translators: description of unicode character U+262F
+#. translators: this is a 'tooltip' of the key 'DB08' in keyboard layout 'Small.onboard'
+#: ../data/layoutstrings.py:110 ../data/layoutstrings.py:385
+msgid "Yin yang"
+msgstr "阴阳"
+
+#. translators: description of unicode character U+2639
+#. translators: this is a 'tooltip' of the key 'DC01' in keyboard layout 'Small.onboard'
+#: ../data/layoutstrings.py:112 ../data/layoutstrings.py:238
+msgid "Frowning face"
+msgstr "皱眉"
+
+#. translators: description of unicode character U+263A
+#. translators: this is a 'tooltip' of the key 'DD01' in keyboard layout 'Small.onboard'
+#: ../data/layoutstrings.py:114 ../data/layoutstrings.py:322
+msgid "Smiling face"
+msgstr "笑脸"
+
+#. translators: description of unicode character U+263C
+#. translators: this is a 'tooltip' of the key 'DD10' in keyboard layout 'Small.onboard'
+#: ../data/layoutstrings.py:116 ../data/layoutstrings.py:376
+msgid "White sun with rays"
+msgstr "白色太阳与光线"
+
+#. translators: description of unicode character U+263E
+#. translators: this is a 'tooltip' of the key 'DC10' in keyboard layout 'Small.onboard'
+#: ../data/layoutstrings.py:118 ../data/layoutstrings.py:262
+msgid "Last quarter moon"
+msgstr "半月"
+
+#. translators: description of unicode character U+2640
+#. translators: this is a 'tooltip' of the key 'DD09' in keyboard layout 'Small.onboard'
+#: ../data/layoutstrings.py:120 ../data/layoutstrings.py:235
+msgid "Female sign"
+msgstr "女性"
+
+#. translators: description of unicode character U+2642
+#. translators: this is a 'tooltip' of the key 'DC09' in keyboard layout 'Small.onboard'
+#: ../data/layoutstrings.py:122 ../data/layoutstrings.py:268
+msgid "Male sign"
+msgstr "男性"
+
+#. translators: description of unicode character U+2661
+#. translators: this is a 'tooltip' of the key 'DB01' in keyboard layout 'Small.onboard'
+#: ../data/layoutstrings.py:124 ../data/layoutstrings.py:370
+msgid "White heart suit"
+msgstr "爱心"
+
+#. translators: description of unicode character U+2662
+#: ../data/layoutstrings.py:126
+msgid "White diamond suit"
+msgstr "钻石"
+
+#. translators: description of unicode character U+2664
+#: ../data/layoutstrings.py:128
+msgid "White spade suit"
+msgstr "桃心"
+
+#. translators: description of unicode character U+2667
+#: ../data/layoutstrings.py:130
+msgid "White club suit"
+msgstr "梅花"
+
+#. translators: description of unicode character U+266B
+#. translators: this is a 'tooltip' of the key 'DB02' in keyboard layout 'Small.onboard'
+#: ../data/layoutstrings.py:132 ../data/layoutstrings.py:205
+msgid "Beamed eighth note"
+msgstr "八分音符"
+
+#. translators: description of unicode character U+2709
+#. translators: this is a 'tooltip' of the key 'DB04' in keyboard layout 'Small.onboard'
+#: ../data/layoutstrings.py:134 ../data/layoutstrings.py:226
+msgid "Envelope"
+msgstr "信封"
+
+#. translators: description of unicode character U+270C
+#: ../data/layoutstrings.py:136
+msgid "Victory hand"
+msgstr "胜利"
+
+#. translators: description of unicode character U+270D
+#: ../data/layoutstrings.py:138
+msgid "Writing hand"
+msgstr "手写"
+
+#. translators: description of unicode character U+1F604
+#. translators: this is a 'tooltip' of the key 'DD03' in keyboard layout 'Small.onboard'
+#: ../data/layoutstrings.py:140 ../data/layoutstrings.py:331
+msgid "Smiling face with open mouth and smiling eyes"
+msgstr "大笑"
+
+#. translators: description of unicode character U+1F607
+#. translators: this is a 'tooltip' of the key 'DD08' in keyboard layout 'Small.onboard'
+#: ../data/layoutstrings.py:142 ../data/layoutstrings.py:325
+msgid "Smiling face with halo"
+msgstr "光环笑脸"
+
+#. translators: description of unicode character U+1F608
+#. translators: this is a 'tooltip' of the key 'DC08' in keyboard layout 'Small.onboard'
+#: ../data/layoutstrings.py:144 ../data/layoutstrings.py:328
+msgid "Smiling face with horns"
+msgstr "带角笑脸"
+
+#. translators: description of unicode character U+1F609
+#. translators: this is a 'tooltip' of the key 'DD04' in keyboard layout 'Small.onboard'
+#: ../data/layoutstrings.py:146 ../data/layoutstrings.py:382
+msgid "Winking face"
+msgstr "眯单眼笑脸"
+
+#. translators: description of unicode character U+1F60A
+#. translators: this is a 'tooltip' of the key 'DD02' in keyboard layout 'Small.onboard'
+#: ../data/layoutstrings.py:148 ../data/layoutstrings.py:334
+msgid "Smiling face with smiling eyes"
+msgstr "眯双眼笑脸"
+
+#. translators: description of unicode character U+1F60B
+#. translators: this is a 'tooltip' of the key 'DC07' in keyboard layout 'Small.onboard'
+#: ../data/layoutstrings.py:150 ../data/layoutstrings.py:229
+msgid "Face savouring delicious food"
+msgstr "吐舌笑脸"
+
+#. translators: description of unicode character U+1F60D
+#: ../data/layoutstrings.py:152
+msgid "Smiling face with heart-shaped eyes"
+msgstr "爱心眼笑脸"
+
+#. translators: description of unicode character U+1F60E
+#. translators: this is a 'tooltip' of the key 'DD07' in keyboard layout 'Small.onboard'
+#: ../data/layoutstrings.py:154 ../data/layoutstrings.py:337
+msgid "Smiling face with sunglasses"
+msgstr "墨镜笑脸"
+
+#. translators: description of unicode character U+1F60F
+#: ../data/layoutstrings.py:156
+msgid "Smirking face"
+msgstr "假笑‭笑脸"
+
+#. translators: description of unicode character U+1F610
+#: ../data/layoutstrings.py:158
+msgid "Neutral face"
+msgstr "平静表情"
+
+#. translators: description of unicode character U+1F612
+#: ../data/layoutstrings.py:160
+msgid "Unamused face"
+msgstr "严肃表情"
+
+#. translators: description of unicode character U+1F616
+#. translators: this is a 'tooltip' of the key 'DC05' in keyboard layout 'Small.onboard'
+#: ../data/layoutstrings.py:162 ../data/layoutstrings.py:208
+msgid "Confounded face"
+msgstr "困惑表情"
+
+#. translators: description of unicode character U+1F618
+#: ../data/layoutstrings.py:164
+msgid "Face throwing a kiss"
+msgstr "飞吻表情"
+
+#. translators: description of unicode character U+1F61A
+#. translators: this is a 'tooltip' of the key 'DD06' in keyboard layout 'Small.onboard'
+#: ../data/layoutstrings.py:166 ../data/layoutstrings.py:259
+msgid "Kissing face with closed eyes"
+msgstr "闭眼亲吻"
+
+#. translators: description of unicode character U+1F61C
+#. translators: this is a 'tooltip' of the key 'DD05' in keyboard layout 'Small.onboard'
+#: ../data/layoutstrings.py:168 ../data/layoutstrings.py:232
+msgid "Face with stuck-out tongue and winking eye"
+msgstr "眯眼吐舌"
+
+#. translators: description of unicode character U+1F61D
+#: ../data/layoutstrings.py:170
+msgid "Face with stuck-out tongue and tightly closed eyes"
+msgstr "闭眼吐舌"
+
+#. translators: description of unicode character U+1F61E
+#: ../data/layoutstrings.py:172
+msgid "Disappointed face"
+msgstr "失望表情"
+
+#. translators: description of unicode character U+1F620
+#. translators: this is a 'tooltip' of the key 'DC02' in keyboard layout 'Small.onboard'
+#: ../data/layoutstrings.py:174 ../data/layoutstrings.py:196
+msgid "Angry face"
+msgstr "生气表情"
+
+#. translators: description of unicode character U+1F621
+#: ../data/layoutstrings.py:176
+msgid "Pouting face"
+msgstr "撅嘴表情"
+
+#. translators: description of unicode character U+1F622
+#. translators: this is a 'tooltip' of the key 'DC03' in keyboard layout 'Small.onboard'
+#: ../data/layoutstrings.py:178 ../data/layoutstrings.py:211
+msgid "Crying face"
+msgstr "哭泣表情"
+
+#. translators: description of unicode character U+1F623
+#: ../data/layoutstrings.py:180
+msgid "Persevering face"
+msgstr "坚忍表情"
+
+#. translators: description of unicode character U+1F629
+#: ../data/layoutstrings.py:182
+msgid "Weary face"
+msgstr "厌烦表情"
+
+#. translators: description of unicode character U+1F62B
+#. translators: this is a 'tooltip' of the key 'DC06' in keyboard layout 'Small.onboard'
+#: ../data/layoutstrings.py:184 ../data/layoutstrings.py:361
+msgid "Tired face"
+msgstr "疲倦表情"
+
+#. translators: description of unicode character U+1F632
+#. translators: this is a 'tooltip' of the key 'DC04' in keyboard layout 'Small.onboard'
+#: ../data/layoutstrings.py:186 ../data/layoutstrings.py:202
+msgid "Astonished face"
+msgstr "惊讶表情"
+
+#. translators: description of unicode character U+1F633
+#: ../data/layoutstrings.py:188
+msgid "Flushed face"
+msgstr "激动表情"
+
+#. translators: description of unicode character U+1F635
+#: ../data/layoutstrings.py:190
+msgid "Dizzy face"
+msgstr "眩晕表情"
+
+#. translators: this is a 'tooltip' of the key_template 'layer4' in keyboard layout 'Whiteboard.onboard'
+#: ../data/layoutstrings.py:199
+msgid "Arrows"
+msgstr "箭头"
+
+#. translators: this is a 'tooltip' of the key_template 'layer5' in keyboard layout 'Whiteboard.onboard'
+#: ../data/layoutstrings.py:214
+msgid "Custom"
+msgstr "自定义"
+
+#. translators: this is a 'summary' of the keyboard layout 'Full Keyboard.onboard'
+#: ../data/layoutstrings.py:217
+msgid "Desktop keyboard with edit and function keys"
+msgstr "带有编辑和功能按键的桌面键盘"
+
+#. translators: this is a 'tooltip' of the key_template 'layer0' in keyboard layout 'Whiteboard.onboard'
+#: ../data/layoutstrings.py:241
+msgid "Greek"
+msgstr "希腊语"
+
+#. translators: this is a 'summary' of the keyboard layout 'Grid.onboard'
+#: ../data/layoutstrings.py:244
+msgid "Grid of keys, suitable for keyboard scanning"
+msgstr "按键以网格状排列，以方便键盘扫描"
+
+#. translators: this is a 'tooltip' of the key 'hide' in keyboard layout 'Whiteboard_wide.onboard'
+#: ../data/layoutstrings.py:250
+msgid "Hide keyboard"
+msgstr "隐藏键盘"
+
+#. translators: this is a 'description' of the keyboard layout 'Whiteboard.onboard'
+#: ../data/layoutstrings.py:253
+msgid ""
+"Keyboard layout with Greek literals, arrows and more, for math and physics "
+"education on an interactive Whiteboard."
+msgstr "带有希腊字母的键盘布局，用于数学、物理学等学科的交互式白板演示。"
+
+#. translators: this is a 'description' of the keyboard layout 'Whiteboard_wide.onboard'
+#: ../data/layoutstrings.py:256
+msgid ""
+"Keyboard layout with Greek literals, arrows and more, for math and physics "
+"education on an interactive Whiteboard.\n"
+"This layout places all keys on a single, very wide layer."
+msgstr ""
+"带有希腊字母、箭头和其它符号的键盘布局，用于数学和物理学等学科的交互式白板教"
+"学。\n"
+"此布局中，所有按键位于同一个较宽的层中。"
+
+#. translators: this is a 'summary' of the keyboard layout 'Compact.onboard'
+#: ../data/layoutstrings.py:271
+msgid "Medium size desktop keyboard"
+msgstr "中等尺寸桌面键盘"
+
+#. translators: this is a 'summary' of the keyboard layout 'Phone.onboard'
+#: ../data/layoutstrings.py:277
+msgid "Mobile keyboard for small screens"
+msgstr "适用于小屏幕的移动设备键盘"
+
+#. translators: this is a 'tooltip' of the key 'expand-corrections' in keyboard layout 'word_suggestions.xml'
+#: ../data/layoutstrings.py:280
+msgid "More suggestions"
+msgstr "更多建议"
+
+#. translators: this is a 'tooltip' of the key 'move' in keyboard layout 'Whiteboard_wide.onboard'
+#: ../data/layoutstrings.py:286
+msgid "Move keyboard"
+msgstr "移动键盘"
+
+#. translators: this is a 'tooltip' of the key 'previous-predictions.wordlist' in keyboard layout 'word_suggestions.xml'
+#: ../data/layoutstrings.py:301
+msgid "Previous suggestions"
+msgstr ""
+
+#. translators: this is a 'tooltip' of the key 'quit' in keyboard layout 'Whiteboard.onboard'
+#: ../data/layoutstrings.py:304
+msgid "Quit Keyboard"
+msgstr "退出键盘"
+
+#. translators: this is a 'tooltip' of the key_template 'quit' in keyboard layout 'key_defs.xml'
+#: ../data/layoutstrings.py:307
+msgid "Quit Onboard"
+msgstr "退出 Onboard 屏幕键盘程序"
+
+#. translators: this is a 'tooltip' of the key_template 'layer2' in keyboard layout 'Whiteboard.onboard'
+#: ../data/layoutstrings.py:316
+msgid "Set and Settings"
+msgstr "设置选项"
+
+#. translators: this is a 'tooltip' of the key 'settings' in keyboard layout 'Whiteboard_wide.onboard'
+#: ../data/layoutstrings.py:319
+msgid "Settings"
+msgstr "设置"
+
+#. translators: this is a 'summary' of the keyboard layout 'Small.onboard'
+#: ../data/layoutstrings.py:343
+msgid "Space efficient desktop keyboard"
+msgstr "为桌面键盘留出足够空间"
+
+#. translators: this is a 'tooltip' of the key_template 'layer3' in keyboard layout 'Whiteboard.onboard'
+#: ../data/layoutstrings.py:346
+msgid "Special Characters"
+msgstr "特殊字符"
+
+#. translators: this is a 'summary' of the keyboard layout 'Whiteboard_wide.onboard'
+#: ../data/layoutstrings.py:349
+msgid "Special characters for interactive whiteboards, wide"
+msgstr ""
+
+#. translators: this is a 'summary' of the keyboard layout 'Whiteboard.onboard'
+#: ../data/layoutstrings.py:352
+msgid "Special characters for interactive whiteboards"
+msgstr "为交互式白板提供的特殊字符"
+
+#. translators: this is a 'tooltip' of the key 'correction' in keyboard layout 'word_suggestions.xml'
+#: ../data/layoutstrings.py:355
+msgid "Spelling suggestion"
+msgstr "拼写建议"
+
+#. translators: this is a 'tooltip' of the key_template 'layer1' in keyboard layout 'Whiteboard.onboard'
+#: ../data/layoutstrings.py:358
+msgid "Sub-, Superscripts; Fractions"
+msgstr "Sub-, Superscripts; Fractions"
+
+#: ../Onboard/LayoutLoaderSVG.py:164
+msgid ""
+"Loading legacy layout, format '{}'. Please consider upgrading to current "
+"format '{}'"
+msgstr "加载 '{}' 格式的旧布局文件，请考虑升级至 '{}' 格式文件。"
+
+#: ../Onboard/LayoutLoaderSVG.py:403
+msgid "Ignoring key '{}'. No svg filename defined."
+msgstr "忽略键 '{}'。未定义 svg 文件名。"
+
+#: ../Onboard/LayoutLoaderSVG.py:624
+msgid "Snippet {}"
+msgstr "片段 {}"
+
+#. i18n: full string is "Snippet n, unassigned"
+#: ../Onboard/LayoutLoaderSVG.py:628
+msgid ", unassigned"
+msgstr "，未分配"
+
+#: ../Onboard/LayoutLoaderSVG.py:937
+msgid "copying layout '{}' to '{}'"
+msgstr "复制布局 '{}' 到 '{}'"
+
+#: ../Onboard/LayoutLoaderSVG.py:957
+msgid "copy_layouts failed, unsupported layout format '{}'."
+msgstr "复制布局失败，不支持的布局格式 '{}'。"
+
+#: ../Onboard/LayoutLoaderSVG.py:1000
+msgid "copying svg file '{}' to '{}'"
+msgstr "复制 svg 文件 '{}' 到 '{}'"
+
+#: ../Onboard/Config.py:236
+msgid "Layout file ({}) or name"
+msgstr "键盘布局文件 ({}) 或文件名"
+
+#: ../Onboard/Config.py:239
+msgid "Theme file (.theme) or name"
+msgstr "主题文件 (.theme) 或文件名"
+
+#: ../Onboard/Config.py:241
+msgid "Window size, widthxheight"
+msgstr "窗口尺寸，宽度x高度"
+
+#: ../Onboard/Config.py:242
+msgid "Window x position"
+msgstr "窗口 X 坐标"
+
+#: ../Onboard/Config.py:243
+msgid "Window y position"
+msgstr "窗口 Y 坐标"
+
+#: ../Onboard/Config.py:248
+msgid "Start in XEmbed mode, e.g. for gnome-screensaver"
+msgstr "以 XEmbed 模式启动，即用于 gnome-screensaver"
+
+#: ../Onboard/Config.py:251
+msgid "Allow multiple Onboard instances"
+msgstr "允许多个 Onboard 实例"
+
+#: ../Onboard/Config.py:254
+msgid ""
+"Silently fail to start in the given desktop environments. DESKTOPS is a "
+"comma-separated list of XDG desktop names, e.g. GNOME for GNOME Shell."
+msgstr ""
+"无法在所选择的桌面环境中启动。DESKTOPS 是一个由英文逗号分隔的 XDG 桌面名称列"
+"表，例如 GNOME for GNOME Shell."
+
+#: ../Onboard/Config.py:260
+msgid ""
+"Delay showing the initial keyboard window by STARTUP_DELAY seconds (default "
+"0.0)."
+msgstr ""
+
+#: ../Onboard/Config.py:264
+msgid "Keep aspect ratio when resizing the window"
+msgstr "重设窗口尺寸时保持纵横比"
+
+#: ../Onboard/Config.py:266
+msgid ""
+"Override auto-detection and manually select quirks\n"
+"QUIRKS={metacity|compiz|mutter}"
+msgstr ""
+"手动选择窗口管理器覆盖自动探测结果 \n"
+"QUIRKS={metacity|compiz|mutter}"
+
+#: ../Onboard/Config.py:381
+msgid "Migrating user directory '{}' to '{}'."
+msgstr "正在将用户目录从 '{}' 迁移到'{}'。"
+
+#. honor XDG spec
+#. python >2.5
+#: ../Onboard/Config.py:389
+msgid "failed to migrate user directory. "
+msgstr "无法合并用户词典 "
+
+#: ../Onboard/Config.py:868
+#, python-brace-format
+msgid "layout '{filename}' does not exist"
+msgstr "布局 '{filename}' 不存在"
+
+#: ../Onboard/Config.py:909
+#, python-brace-format
+msgid "theme '{filename}' does not exist"
+msgstr "主题 '{filename}' 不存在"
+
+#: ../Onboard/Config.py:934
+msgid "Loading theme from '{}'"
+msgstr "从 '{}' 加载主题"
+
+#: ../Onboard/Config.py:938
+msgid "Unable to read theme '{}'"
+msgstr "无法读取主题 '{}'"
+
+#: ../Onboard/Config.py:1144
+msgid ""
+"Enabling auto-show requires Gnome Accessibility.\n"
+"\n"
+"Onboard can turn on accessiblity now, however it is recommended that you log "
+"out and back in for it to reach its full potential.\n"
+"\n"
+"Enable accessibility now?"
+msgstr ""
+"自动显示功能需要 GNOME 辅助功能。\n"
+"\n"
+"Onboard 可以立即启动辅助功能，但我们仍然建议您注销并重新登录以确保不受潜在问"
+"题影响。\n"
+"\n"
+"要现在启动辅助功能吗？"
+
+#: ../Onboard/Config.py:1926
+#, python-brace-format
+msgid "color scheme '{filename}' does not exist"
+msgstr "色彩方案 '{filename}' 不存在"
+
+#: ../Onboard/ConfigUtils.py:81
+msgid "gsettings schema for '{}' is not installed"
+msgstr "'{}' 的 gsettings schema 未安装"
+
+#. assume filename is just a basename instead of a full file path
+#: ../Onboard/ConfigUtils.py:439
+#, python-brace-format
+msgid "{description} '{filename}' not found yet, retrying in default paths"
+msgstr "未找到 {description} '{filename}'，重试默认路径"
+
+#: ../Onboard/ConfigUtils.py:448
+#, python-brace-format
+msgid "unable to locate '{filename}', loading default {description} instead"
+msgstr "无法定位 '{filename}'，加载默认值 {description}"
+
+#: ../Onboard/ConfigUtils.py:457 ../Onboard/ConfigUtils.py:513
+#, python-brace-format
+msgid "failed to find {description} '{filename}'"
+msgstr "没有找到 {description} '{filename}'"
+
+#: ../Onboard/ConfigUtils.py:461 ../Onboard/ConfigUtils.py:517
+#, python-brace-format
+msgid "{description} '{filepath}' found."
+msgstr "已找到 {description} '{filepath}'"
+
+#. assume filename is just a basename instead of a full file path
+#: ../Onboard/ConfigUtils.py:496
+#, python-brace-format
+msgid "{description} '{filename}' not found yet, searching in paths {paths}"
+msgstr ""
+
+#: ../Onboard/ConfigUtils.py:591
+#, python-brace-format
+msgid "Looking for system defaults in {paths}"
+msgstr "在 {paths} 中寻找系统默认值"
+
+#: ../Onboard/ConfigUtils.py:602
+msgid "Failed to read system defaults. "
+msgstr "读取系统默认值失败。 "
+
+#: ../Onboard/ConfigUtils.py:606
+msgid "No system defaults found."
+msgstr "没有找到系统默认值"
+
+#: ../Onboard/ConfigUtils.py:608
+#, python-brace-format
+msgid "Loading system defaults from {filename}"
+msgstr "从 {filename} 加载系统默认值"
+
+#: ../Onboard/ConfigUtils.py:632
+msgid "Found system default '[{}] {}={}'"
+msgstr "已找到系统默认值 '[{}] {}={}'"
+
+#: ../Onboard/ConfigUtils.py:649
+msgid "System defaults: Unknown key '{}' in section '{}'"
+msgstr "系统默认值：未知的键 '{}' ('{}' 部分)"
+
+#: ../Onboard/ConfigUtils.py:656
+msgid "System defaults: Invalid enum value for key '{}' in section '{}': {}"
+msgstr "系统默认：按键 '{}' 的值在 '{}': {} 区域中无效"
+
+#: ../Onboard/ConfigUtils.py:669
+msgid ""
+"System defaults: Invalid value for key '{}' in section '{}'\n"
+"  {}"
+msgstr ""
+"系统默认值：无效的键值 '{}' ('{}' 部分)\n"
+"  {}"
+
+#: ../Onboard/ConfigUtils.py:732
+msgid "Failed to get gsettings value. "
+msgstr "获取 gsettings 值失败。 "
+
+#: ../Onboard/Appearance.py:130
+#, python-brace-format
+msgid "Color scheme for theme '{filename}' not found"
+msgstr "主题 '{filename}' 的色彩方案未找到"
+
+#: ../Onboard/Appearance.py:350
+#, python-brace-format
+msgid "Error loading theme '{filename}'. {exception}: {cause}"
+msgstr "加载主题时发生错误 '{filename}'. {exception}: {cause}"
+
+#: ../Onboard/Appearance.py:424
+msgid "Error saving "
+msgstr "保存错误 "
+
+#: ../Onboard/Appearance.py:842
+#, python-brace-format
+msgid ""
+"Loading legacy color scheme format '{old_format}', please consider upgrading "
+"to current format '{new_format}': '{filename}'"
+msgstr ""
+"加载旧配色风格文件 '{old_format}'，建议您升级到当前的新配色风格文件 "
+"'{new_format}': '{filename}'"
+
+#: ../Onboard/Appearance.py:862
+#, python-brace-format
+msgid "Error loading color scheme '{filename}'. {exception}: {cause}"
+msgstr "加载配色方案时发生错误 '{filename}'. {exception}: {cause}"
+
+#: ../Onboard/Appearance.py:939 ../Onboard/Appearance.py:1071
+msgid ""
+"Duplicate key_id '{}' found in color scheme file. Key_ids must occur only "
+"once."
+msgstr "配色风格文件中存在重复的 key_id '{}'，Key_id 应当只出现一次。"
+
+#: ../Onboard/settings.py:316
+msgid "Onboard Preferences"
+msgstr "Onboard 首选项"
+
+#. touch_feedback_size_label: 0=auto, i.e. let Onboard guess
+#. the size of the label popup.
+#: ../Onboard/settings.py:675
+msgid "auto"
+msgstr ""
+
+#: ../Onboard/settings.py:751
+msgid "Copy layout '{}' to this new name:"
+msgstr "复制布局 '{}' 的配置信息："
+
+#: ../Onboard/settings.py:764
+msgid "Delete layout '{}'?"
+msgstr "删除布局 '{}'?"
+
+#: ../Onboard/settings.py:812
+msgid "System settings not found ({}): {}"
+msgstr "未找到系统设置 ({})：{}"
+
+#: ../Onboard/settings.py:835
+msgid "Core layouts"
+msgstr "核心布局"
+
+#: ../Onboard/settings.py:836
+msgid "Contributions"
+msgstr "贡献内容"
+
+#: ../Onboard/settings.py:837
+msgid "My layouts"
+msgstr ""
+
+#: ../Onboard/settings.py:872
+msgid "Author: {}"
+msgstr "作者：{}"
+
+#: ../Onboard/settings.py:876
+msgid "About Layout"
+msgstr "关于布局"
+
+#: ../Onboard/settings.py:981
+msgid "Enter a name for the new theme:"
+msgstr "为新主题输入一个名称："
+
+#: ../Onboard/settings.py:989
+#, python-brace-format
+msgid ""
+"This theme file already exists.\n"
+"'{filename}'\n"
+"\n"
+"Overwrite it?"
+msgstr ""
+"该主题文件已经存在。\n"
+"'{filename}'\n"
+"\n"
+"覆盖它吗？"
+
+#: ../Onboard/settings.py:1006
+msgid "Reset selected theme to Onboard defaults?"
+msgstr "将选中主题重置为 Onboard 默认设置？"
+
+#: ../Onboard/settings.py:1008
+msgid "Delete selected theme?"
+msgstr "删除选中主题？"
+
+#. Translators: reset button of Preferences->Theme.
+#: ../Onboard/settings.py:1137
+msgid "_Reset"
+msgstr ""
+
+#. Translators: delete button of Preferences->Theme. It used to be
+#. stock item STOCK_DELETE until Gtk 3.10 deprecated those.
+#: ../Onboard/settings.py:1141
+msgid "_Delete"
+msgstr ""
+
+#. Translators: header of a tree view column with toggles to ignore
+#. keyboard devices (Preferences->Auto-show->External Keyboards).
+#: ../Onboard/settings.py:1278
+msgid "Ignore"
+msgstr ""
+
+#. Translators: header of a tree view column with device names
+#. (Preferences->Auto-show->External Keyboards).
+#: ../Onboard/settings.py:1282
+msgid "Device"
+msgstr ""
+
+#. Key style with flat fill- and border colors
+#: ../Onboard/settings.py:1619
+msgid "Flat"
+msgstr "平铺"
+
+#. Key style for dish-like key caps
+#: ../Onboard/settings.py:1623
+msgid "Dish"
+msgstr "巧克力键盘"
+
+#: ../Onboard/settings.py:1672 ../Onboard/settings.py:1729
+msgid "Default"
+msgstr "默认"
+
+#: ../Onboard/settings.py:1713
+msgid "Bold"
+msgstr "粗体"
+
+#: ../Onboard/settings.py:1715
+msgid "Italic"
+msgstr "斜体"
+
+#: ../Onboard/settings.py:1717
+msgid "Condensed"
+msgstr "压缩"
+
+#: ../Onboard/settings.py:1730
+msgid ""
+msgstr ""
+
+#: ../Onboard/settings.py:1730
+msgid "Ubuntu Logo"
+msgstr "Ubuntu 标志"
+
+#: ../Onboard/settings.py:1864
+msgid "Step"
+msgstr "步骤"
+
+#: ../Onboard/settings.py:1865
+msgid "Left"
+msgstr "左"
+
+#: ../Onboard/settings.py:1866
+msgid "Right"
+msgstr "右"
+
+#: ../Onboard/settings.py:1867
+msgid "Up"
+msgstr "上"
+
+#: ../Onboard/settings.py:1868
+msgid "Down"
+msgstr "下"
+
+#: ../Onboard/settings.py:1869
+msgid "Activate"
+msgstr "活动"
+
+#: ../Onboard/settings.py:2038
+msgid "Action:"
+msgstr "动作："
+
+#: ../Onboard/settings.py:2202
+msgid "Disabled"
+msgstr "已禁用"
+
+#: ../Onboard/settings.py:2208
+msgid "Button"
+msgstr "按钮"
+
+#: ../Onboard/settings.py:2263 ../Onboard/settings.py:2308
+msgid "Press a button..."
+msgstr "按任意键..."
+
+#: ../Onboard/settings.py:2310
+msgid "Press a key..."
+msgstr "按任意键..."
+
+#. ##############
+#: ../Onboard/SnippetView.py:39
+msgid "<Enter label>"
+msgstr "<输入标签>"
+
+#: ../Onboard/SnippetView.py:40
+msgid "<Enter text>"
+msgstr "<输入文本>"
+
+#: ../Onboard/SnippetView.py:52
+msgid "Button Number"
+msgstr "按钮编号"
+
+#: ../Onboard/SnippetView.py:59
+msgid "Button Label"
+msgstr "按钮标签"
+
+#: ../Onboard/SnippetView.py:68
+msgid "Snippet Text"
+msgstr "文本片段"
+
+#: ../Onboard/SnippetView.py:113
+msgid "Must be an integer number"
+msgstr "必须是整数"
+
+#: ../Onboard/SnippetView.py:122
+#, python-format
+msgid "Snippet %d is already in use."
+msgstr "片段 %d 已被占用。"
+
+#: ../Onboard/utils.py:1535
+msgid "failed to create directory '{}': {}"
+msgstr "无法创建目录  '{}': {}"
+
+#~ msgid ""
+#~ "Switch\n"
+#~ "Buttons"
+#~ msgstr ""
+#~ "切换\n"
+#~ "按钮"
+
+#~ msgid "Show settings"
+#~ msgstr "显示设置内容"
+
+#~ msgid "Personalise current layout"
+#~ msgstr "个性化当前布局"
+
+#~ msgid "Open layout folder"
+#~ msgstr "打开布局文件夹"
+
+#~ msgid "Enter text for snippet"
+#~ msgstr "输入片断文本"
+
+#~ msgid "_Show icon in system tray to hide/show onboard"
+#~ msgstr "在系统托盘中显示图标(_S)"
+
+#~ msgid ""
+#~ "Show on icon in the system tray. A click on that icon hides or shows "
+#~ "onboard."
+#~ msgstr "在系统托盘中显示图标。单击图标可隐藏或显示 onboard。"
+
+#~ msgid "Show floating _icon when onboard is hidden"
+#~ msgstr "onboard 隐藏时显示浮动图标"
+
+#~ msgid "Quit onBoard"
+#~ msgstr "退出 onBoard"
+
+#~ msgid "Start onboard _minimized"
+#~ msgstr "启动时最小化 onboard (_M)"
+
+#~ msgid "onBoard"
+#~ msgstr "onBoard"
+
+#~ msgid "onBoard onscreen keyboard"
+#~ msgstr "onBoard 屏幕键盘"
+
+#~ msgid "onBoard onscreen keyboard settings"
+#~ msgstr "onBoard 屏幕键盘设置"
+
+#~ msgid ""
+#~ "Onboard is configured to appear with the dialog to unlock the screen; for "
+#~ "example to dismiss the password-protected screensaver.\n"
+#~ "\n"
+#~ "However the system is not configured anymore to use onboard to unlock the "
+#~ "screen. A possible reason can be that another application configured the "
+#~ "system to use something else.\n"
+#~ "\n"
+#~ "Would you like to reconfigure the system to show onboard when unlocking "
+#~ "the screen?"
+#~ msgstr ""
+#~ "Onboard 被设置成随解锁屏幕对话框一起显示，例如通过这种方式可以解除受密码保"
+#~ "护的屏保。\n"
+#~ "\n"
+#~ "但是系统并未设置成使用 onboard 来解锁屏幕，一个可能的原因就是其他程序将系"
+#~ "统配置成了使用其他工具。\n"
+#~ "\n"
+#~ "您希望将系统重新设置成在解锁屏幕时显示 onboard 吗？"
+
+#~ msgid "onBoard Settings"
+#~ msgstr "onBoard 设置"
+
+#~ msgid "Change onBoard settings"
+#~ msgstr "改变 onBoard 设置"
+
+#~ msgid "Show onboard when _unlocking the screen"
+#~ msgstr "在解锁屏幕时显示 onboard(_U)"
+
+#~ msgid ""
+#~ "<b><i>Scanning mode only works with layouts which are designed for the "
+#~ "purpose.</i></b>"
+#~ msgstr "<b><i>扫描模式仅在为了这种目的而设计的布局中起作用。</i></b>"
+
+#~ msgid "Interval"
+#~ msgstr "间隔"
+
+#~ msgid "Scanning mode"
+#~ msgstr "扫描模式"
+
+#~ msgid "Personalise _current layout"
+#~ msgstr "个性化当前样式(_C)"
+
+#~ msgid "Startup Option"
+#~ msgstr "启动选项"
+
+#~ msgid "_Open custom layouts folder"
+#~ msgstr "打开自定义布局文件夹(_O)"
+
+#~ msgid " - middle/right click buttons disabled"
+#~ msgstr " - 中/右键点击已禁用"
+
+#~ msgid "Xlib unavailable%s\n"
+#~ msgstr "Xlib 不可用 %s\n"
+
+#~ msgid "XInput extension unavailable%s\n"
+#~ msgstr "XInput 扩展不可用 %s\n"
+
+#~ msgid "Units for canvas height and width must currently be px (pixels)."
+#~ msgstr "画布的高度和宽度必须以 px (pixels) 为单位。"
+
+#~ msgid "Layouts"
+#~ msgstr "布局"
+
+#~ msgid "Scanning"
+#~ msgstr "正在扫描"
+
+#~ msgid ""
+#~ "Show a floating icon on the desktop when onboard is hidden. A click on "
+#~ "the icon makes onboard reappear."
+#~ msgstr "onboard 隐藏时在桌面上显示一个浮动图标。单击它可以显示 onboard。"
+
+#~ msgid "Start onboard hidden."
+#~ msgstr "启动时隐藏 onboard"
+
+#~ msgid "Snippet"
+#~ msgstr "片断"
+
+#~ msgid ""
+#~ "Pg\n"
+#~ "Up"
+#~ msgstr ""
+#~ "Page\n"
+#~ "Up"
+
+#~ msgid ""
+#~ "Pg\n"
+#~ "Dn"
+#~ msgstr ""
+#~ "Page\n"
+#~ "Down"
+
+#~ msgid ""
+#~ "Nm\n"
+#~ "Lk"
+#~ msgstr ""
+#~ "Num\n"
+#~ "Lock"
+
+#~ msgid "ESC"
+#~ msgstr "ESC"
+
+#~ msgid "%s appears in scanning definition only"
+#~ msgstr "%s 只出现在扫描定义中"
+
+#~ msgid "Show the status item. A click on that icon hides or shows onboard."
+#~ msgstr "显示状态栏图标。点击该图标可以显示或隐藏 onboard 。"
+
+#~ msgid ""
+#~ "Middle\n"
+#~ "Click"
+#~ msgstr ""
+#~ "中键\n"
+#~ "单击"
+
+#~ msgid ""
+#~ "Right\n"
+#~ "Click"
+#~ msgstr ""
+#~ "右键\n"
+#~ "单击"
+
+#~ msgid ""
+#~ "Show onboard when the dialog to unlock the screen appears; this way "
+#~ "onboard can be used for example to enter the password to dismiss the "
+#~ "screensaver when it is set to ask for it."
+#~ msgstr ""
+#~ "当解锁屏幕对话框出现时显示 onboard，这样就可以进行诸如(当系统设置为需要密"
+#~ "码来解锁屏幕时)通过 onboard 来输入密码解除屏保之类的操作。"
+
+#~ msgid ""
+#~ "Some password dialogs disable the area around them, making it impossible "
+#~ "to click on onboard. By activating this option, these dialogs behave as "
+#~ "normal windows and the area around the dialog remains active. This option "
+#~ "is also available in the Assistive Technologies control panel."
+#~ msgstr ""
+#~ "一些密码对话框会使其周围的区域失效，以至于无法对 onboard 进行点击操作。激"
+#~ "活这个选项可以使这些密码对话框以普通窗口的形式显示而他周围的区域仍然是可操"
+#~ "作的。此选项也可以通过 “辅助技术” 控制面板进行设置。"
+
+#~ msgid "_Password dialogs as normal windows"
+#~ msgstr "以普通窗口形式显示密码对话框 (_P)"
+
+#~ msgid "Option When Hidden"
+#~ msgstr "隐藏时的选项"
+
+#~ msgid "Window Options"
+#~ msgstr "窗口选项"
+
+#~ msgid "launching '{}'"
+#~ msgstr "启动 '{}'"
+
+#~ msgid "Enter a new snippet for this button:"
+#~ msgstr "为这个按钮设置新的片段："
+
+#~ msgid "Failed to migrate user directory. "
+#~ msgstr "迁移用户目录失败。 "
+
+#~ msgid "Ignoring key '{}'. Not found in '{}'."
+#~ msgstr "忽略键 '{}'。未在 '{}' 中找到。"
+
+#~ msgid "No file manager to open layout folder"
+#~ msgstr "没有可用于打开布局文件夹的文件管理器"
+
+#~ msgid "Corners only"
+#~ msgstr "仅在角处"
+
+#~ msgid "_Universal Access Panel"
+#~ msgstr "通用辅助面板(_U)"
+
+#~ msgid "Show/Hide Options"
+#~ msgstr "显示/隐藏选项"
+
+#~ msgid "Style"
+#~ msgstr "样式"
+
+#~ msgid "_Direction:"
+#~ msgstr "方向(_D)："
+
+#~ msgid "_Hide Hover Click window"
+#~ msgstr "隐藏悬停单击窗口(_H)"
+
+#~ msgid "Enable Hover Click window on _exit"
+#~ msgstr "退出时启用悬停单击窗口(_E)"
+
+#~ msgid "Releasing still pressed key '{}'"
+#~ msgstr "释放仍处于按下状态的 '{}' 键"
+
+#~ msgid "Refreshing pango layout, new font dpi setting is '{}'"
+#~ msgstr "刷新 pango 布局，当前字体 DPI 设置为 '{}'"
+
+#~ msgid "screen changed, supports_alpha={}"
+#~ msgstr "屏幕设置改变，supports_alpha={}"
+
+#~ msgid ""
+#~ "The time the scanner rests on a key or group  before moving to the next. "
+#~ "(in seconds)"
+#~ msgstr "在移动到下一个键或组前扫描器停留的时间(以秒计)。"
+
+#~ msgid ""
+#~ "Swap the scan actions after every key activation. The Step acticon will "
+#~ "become the Activate action and vice versa."
+#~ msgstr ""
+#~ "每次激活按键输入之后对调两个开关的行为。即原先表示“前进”的开关现在表示“激"
+#~ "活”，反之依然。"
+
+#~ msgid "Reset"
+#~ msgstr "重置"
+
+#~ msgid ""
+#~ "Loading legacy layout format '{}'. Please consider upgrading to current "
+#~ "format '{}'"
+#~ msgstr "载入老式布局格式 '{}'。请考虑升级到新的布局格式 '{}'"
+
+#~ msgid "Error loading "
+#~ msgstr "载入出错 "
+
+#~ msgid "_Frame resize handles:"
+#~ msgstr "边框缩放手柄(_F)："
+
+#~ msgid "_Personalize"
+#~ msgstr "个性化(_P)"
+
+#~ msgid "Atspi unavailable, auto-hide won't be available"
+#~ msgstr "Atspi 无法启用，系统将无法自动隐藏键盘。"
+
+#~ msgid "Enter name for personalised layout"
+#~ msgstr "输入个性化布局名称"
+
+#~ msgid "Add Layout"
+#~ msgstr "添加布局"
+
+#~ msgid "Onboard layout files"
+#~ msgstr "Onboard 布局文件"
+
+#~ msgid "All files"
+#~ msgstr "所有文件"
+
+#~ msgid "key-repeat"
+#~ msgstr "按键重复"
+
+#~ msgid "lock only"
+#~ msgstr "仅锁定"
+
+#~ msgid "international character selection"
+#~ msgstr "国际字符选择"
+
+#~ msgid "Atspi unavailable, word prediction may not be fully functional"
+#~ msgstr "Atspi 无法使用，词语联想功能可能无法正常使用"
+
+#~ msgid "1"
+#~ msgstr "1"
+
+#~ msgid "latch, then lock"
+#~ msgstr "先选择，后锁定"
+
+#~ msgid "latch, double-click to lock"
+#~ msgstr "先选择，后双击锁定"
+
+#~ msgid "latch only"
+#~ msgstr "仅选择"
+
+#~ msgid "Key-stroke _generation:"
+#~ msgstr "产生击键动作(_G)："
+
+#~ msgid "Modifier auto-release delay:"
+#~ msgstr "自动松开修饰键时的延迟："
+
+#~ msgid "_Touch input (requires restart):"
+#~ msgstr "触屏输入 (需要重启) (_T)："
+
+#~ msgid "_System Language"
+#~ msgstr "系统语言 (_S)"
+
+#~ msgid "_Languages"
+#~ msgstr "语言 (_L)"
+
+#~ msgid "Atspi unavailable, word suggestions not fully functional"
+#~ msgstr "Atspi 无法使用，词语联想功能无法生效"
+
+#~ msgid "Special characters for interactive Whiteboards, wide"
+#~ msgstr "为交互式白板提供的特殊字符，较宽布局"
+
+#~ msgid " - System Language"
+#~ msgstr " - 系统语言"
+
+#~ msgid "column"
+#~ msgstr "列"
+
+#~ msgid "_Settings"
+#~ msgstr "设置(_S)"
+
+#~ msgid "_Open layouts folder"
+#~ msgstr "打开布局文件夹(_O)"
+
+#~ msgid "C_ustomize theme"
+#~ msgstr "自定义主题(_U)"
+
+#~ msgid "Sc_anner Settings"
+#~ msgstr "扫描设置(_A)"
+
+#~ msgid "Flexible onscreen keyboard for GNOME"
+#~ msgstr "灵活的 GNOME 屏幕键盘"
+
+#~ msgid "User layouts"
+#~ msgstr "用户自定义布局"
