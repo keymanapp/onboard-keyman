@@ -58,6 +58,15 @@ LABEL_MODIFIERS = Modifiers.SHIFT | \
                   Modifiers.NUMLK | \
                   Modifiers.ALTGR
 
+# Keyman uses more modifiers inc MOD3(RCTRL)
+KEYMAN_LABEL_MODIFIERS = Modifiers.SHIFT | \
+                         Modifiers.CAPS | \
+                         Modifiers.CTRL | \
+                         Modifiers.ALT | \
+                         Modifiers.NUMLK | \
+                         Modifiers.MOD3 | \
+                         Modifiers.ALTGR
+
 modifiers = {"shift":1,
              "caps":2,
              "control":4,
