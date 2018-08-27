@@ -509,8 +509,8 @@ class LayoutLoaderSVG:
 
         # get labels
         labels = self._parse_key_labels(attributes, key)
-        print("after translation, before overrides")
-        print(labels)
+        # print("after translation, before overrides")
+        # print(labels)
 
         # Replace label and size group with overrides from
         # theme and/or system defaults.
@@ -523,8 +523,8 @@ class LayoutLoaderSVG:
                 if ogroup:
                     group_name = ogroup[:]
 
-        print("after theme/system overrides")
-        print(labels)
+        # print("after theme/system overrides")
+        # print(labels)
         key.labels = labels
         key.group = group_name
 
@@ -630,8 +630,8 @@ class LayoutLoaderSVG:
                     labels[0] = "No X keyboard found, retrying..."
                 else:
                     labels[0] = "?"
-            print("labels from keymapping")
-            print(labels)
+            # print("labels from keymapping")
+            # print(labels)
 
         # If key is a macro (snippet) generate label from its number.
         elif key.type == KeyCommon.MACRO_TYPE:
@@ -649,9 +649,9 @@ class LayoutLoaderSVG:
         # get labels from the key/template definition in the layout
         layout_labels = self._parse_layout_labels(attributes)
         if layout_labels:
-            print("throwing away labels and using ones from layout")
             labels = layout_labels
-            print(labels)
+            # print("throwing away labels and using ones from layout")
+            # print(labels)
 
         # override with per-keysym labels
         keysym_rules = self._get_keysym_rules(key)
@@ -668,7 +668,6 @@ class LayoutLoaderSVG:
                     vkkeysyms = []
 
                 # replace all labels whith keysyms matching a keysym rule
-                print("replace all labels with keysyms matching a keysym rule")
                 for i, keysym in enumerate(vkkeysyms):
                     attributes = keysym_rules.get(keysym)
                     if attributes:
@@ -676,12 +675,13 @@ class LayoutLoaderSVG:
                         if not label is None:
                             mask = vkmodmasks[i]
                             labels[mask] = label
-                print(labels)
+                # print("replace all labels with keysyms matching a keysym rule")
+                # print(labels)
 
         # Translate labels - Gettext behaves oddly when translating
         # empty strings
-        print("before translation")
-        print(labels)
+        # print("before translation")
+        # print(labels)
 
         return { mask : lab and _(lab) or None
                  for mask, lab in labels.items()}

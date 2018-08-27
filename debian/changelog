@@ -1,7 +1,8 @@
-onboard (1.4.1-4~20180824+1) UNRELEASED; urgency=medium
+onboard (1.4.1-4~20180829+1) UNRELEASED; urgency=medium
 
   * Local build for developing keyman integration
-  * using /usr/local/share/keyman/test.ldml as en-US osk
+  * monitor ibus-kmfl on dbus
+  * when keyman kb name changes change ldml file if it exists 
 
  -- Daniel Glassey <wdg@debian.org>  Fri, 17 Aug 2018 15:49:30 +0700
 

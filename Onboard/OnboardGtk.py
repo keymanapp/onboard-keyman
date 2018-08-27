@@ -48,6 +48,7 @@ except ImportError:
 from Onboard.KbdWindow       import KbdWindow, KbdPlugWindow
 from Onboard.Keyboard        import Keyboard
 from Onboard.KeyboardWidget  import KeyboardWidget
+from Onboard.Keyman          import KeymanDBus
 from Onboard.Indicator       import Indicator
 from Onboard.LayoutLoaderSVG import LayoutLoaderSVG
 from Onboard.Appearance      import ColorScheme
@@ -102,13 +103,14 @@ class OnboardGtk(object):
             except dbus.exceptions.DBusException:
                 err_msg = "D-Bus session bus unavailable"
                 bus = None
-            self.keymandbus = KeymanDBus(bus)
+            self.keymandbus = KeymanDBus()
 
         if not bus:
             _logger.warning(err_msg + "  " +
                             "Onboard will start with reduced functionality. "
                             "Single-instance check, "
-                            "D-Bus service and "
+                            "Keyman support, "
+                            "D-Bus service and  "
                             "hover click are disabled.")
 
         # Yield to GNOME Shell's keyboard before any other D-Bus activity
@@ -288,7 +290,8 @@ class OnboardGtk(object):
         Gdk.event_handler_set(cb_any_event, self)
         # Keyman keyboard changes
         if self.keymandbus:
-            self.do_connect(self.keymandbus, "keyman-changed", self.cb_keyman_changed)
+            self.keymandbus.name_notify_add(self.cb_keyman_changed)
+            # self.do_connect(self.keymandbus, "keyman-changed", self.cb_keyman_changed)
 
         # connect config notifications here to keep config from holding
         # references to keyboard objects.
@@ -562,10 +565,10 @@ class OnboardGtk(object):
         #print("keyboard map change")
         self.reload_layout_delayed()
 
-    def cb_keyman_changed(self, keymandbus):
+    def cb_keyman_changed(self, name):
         """ keyman keyboard change """
-        print("keyman changed")
-        self._keyman_labels = keymandbus.key_labels
+        print("keyman changed to", name)
+        self._keyman_labels = self.keymandbus.key_labels
         self.reload_layout_delayed()
 
     def cb_state_changed(self, keymap):
@@ -711,14 +714,14 @@ class OnboardGtk(object):
                 vk.reload() # reload keyboard names
                 group = vk.get_current_group_name()
                 if self.keymandbus:
-                    if group is None or group == "English (US)":
-                        print("Group None - enable Keyman")
-                        self.keymandbus.name = "HardCoded"
-                        self.keymandbus.set_labels()
-                    else:
-                        print("Not group None")
-                        self.keymandbus.name = "None"
-                        self.keymandbus.unset_labels()
+                    # if group is None or group == "English (US)":
+                    #     print("Group None - enable Keyman")
+                    #     self.keymandbus.name = "HardCoded"
+                    #     self.keymandbus.set_labels()
+                    # else:
+                    #     print("Not group None")
+                    #     self.keymandbus.name = "None"
+                    #     self.keymandbus.unset_labels()
                     self._keyman_labels = self.keymandbus.key_labels
 
                 keyboard_state = (vk.get_layout_as_string(),
@@ -934,101 +937,6 @@ if has_dbus:
                 self._keyboard.auto_show_lock_and_hide(self.LOCK_REASON)
             else:
                 self._keyboard.auto_show_unlock(self.LOCK_REASON)
-
-    class KeymanDBus(GObject.GObject):
-        __gsignals__ = {
-            'keyman-changed': (GObject.SIGNAL_RUN_FIRST, None, ())
-        }
-
-        def __init__(self, bus):
-            GObject.GObject.__init__(self)
-            self.key_labels = None
-            self.keyboard = None
-            self.name = "None"
-            self.bus = bus
-
-        def set_labels(self):
-            self.key_labels = KeymanLabels()
-            self.key_labels.parse_labels("/usr/local/share/keyman/test.ldml")
-
-        def unset_labels(self):
-            self.key_labels = None
-
-        def on_keyboard_changed(keyboardid):
-            #reload_labels()
-            self.emit("keyman-changed", keyboardid)
-
-    def convert_ldml_modifiers_to_onboard(modifiers):
-        list_modifiers = modifiers.split(" ")
-        keyman_modifiers = ()
-        for modifier in list_modifiers:
-            keymanmod = 0
-            keys = modifier.split("+")
-            for key in keys:
-                if "shift" == key:
-                    keymanmod |= Modifiers.SHIFT
-                if "altR" == key:
-                    keymanmod |= Modifiers.ALTGR
-                if "ctrlR" == key:
-                    keymanmod |= Modifiers.MOD3
-                if "ctrlL" == key:
-                    keymanmod |= Modifiers.CTRL
-                if "ctrl" == key:
-                    keymanmod |= Modifiers.CTRL
-                if "altL" == key:
-                    keymanmod |= Modifiers.ALT
-                if "alt" == key:
-                    keymanmod |= Modifiers.ALT
-            keyman_modifiers = keyman_modifiers + (keymanmod,)
-        return keyman_modifiers
-
-    class KeymanLabels():
-        keymankeys = {}
-        # keymanlabels is a dict of modmask : label (and also has "code" : keycode?)
-        # keymankeys is a dict of keycode : keymanlabels
-
-        def parse_labels(self, ldmlfile):
-            tree = etree.parse(ldmlfile)
-            root = tree.getroot()
-            keymaps = tree.findall('keyMap')
-
-            for keymap in keymaps:
-                if keymap.attrib:
-                    # if there is more than one modifier set split it here
-                    # because will need to duplicate the label set
-                    keyman_modifiers = convert_ldml_modifiers_to_onboard(keymap.attrib['modifiers'])
-                else:
-                    print("No modifiers")
-                    keyman_modifiers = (0,)
-                maps = keymap.findall('map')
-                for map in maps:
-                    for keymanmodifier in keyman_modifiers:
-                        iso = "A" + map.attrib['iso']
-                        if iso == "AA03":
-                            iso = "SPCE"
-                        elif iso == "AE00":
-                            iso = "TLDE"
-                        elif iso == "AB00":
-                            iso = "LSGT"
-                        elif iso == "AC12":
-                            iso = "BKSL"
-                        if not iso in self.keymankeys:
-                            self.keymankeys[iso] = { keymanmodifier : map.attrib['to'] } # .encode('utf-8')}
-                        else:
-                            self.keymankeys[iso][keymanmodifier] = map.attrib['to'] # .encode('utf-8')
-
-        def labels_from_id(self, id):
-            if id in self.keymankeys:
-                print("id ", id, "is:")
-                print(self.keymankeys[id])
-                return self.keymankeys[id]
-            else:
-                print("unknown key id: ", id)
-                return {}
-
-
-    #GObject.type_register(KeymanDBus)
-
 
 def cb_any_event(event, onboard):
 
