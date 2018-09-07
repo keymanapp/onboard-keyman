@@ -1,4 +1,4 @@
-onboard (1.4.1-5~20180829+1) UNRELEASED; urgency=medium
+onboard (1.4.1-4+keyman20180829) UNRELEASED; urgency=medium
 
   * Local build for developing keyman integration
   * monitor ibus-kmfl on dbus
