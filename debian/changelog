@@ -1,10 +1,21 @@
-onboard (1.4.1-4~20180829+1) UNRELEASED; urgency=medium
+onboard (1.4.1-5~20180829+1) UNRELEASED; urgency=medium
 
   * Local build for developing keyman integration
   * monitor ibus-kmfl on dbus
   * when keyman kb name changes change ldml file if it exists 
 
  -- Daniel Glassey <wdg@debian.org>  Fri, 17 Aug 2018 15:49:30 +0700
+
+onboard (1.4.1-4) unstable; urgency=medium
+
+  * debian/control:
+    + Drop pkg-mate-team Alioth mailing list from Uploaders: field.
+    + One uploader per line...
+    + Bump Standards-Version: to 4.2.0. No changes needed.
+  * debian/copyright:
+    + Use secure URL in Source: field.
+
+ -- Mike Gabriel <sunweaver@debian.org>  Wed, 22 Aug 2018 12:09:38 +0200
 
 onboard (1.4.1-3) unstable; urgency=medium
 
