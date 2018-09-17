@@ -1,0 +1,14 @@
+.pybuild
+.vscode
+build
+*.debhelper
+*.log
+*.substvars
+.gitignore
+debian/files
+debian/gnome-shell-extension-onboard/
+debian/onboard-common/
+debian/onboard-data/
+debian/onboard/
+debian/tmp/
+po/onboard.pot

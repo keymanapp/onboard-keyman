@@ -1,7 +1,7 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: Onboard
 Upstream-Contact: Onboard devel team (https://launchpad.net/~onboard)
-Source: http://launchpad.net/onboard
+Source: https://launchpad.net/onboard
 
 Files: Onboard/Appearance.py
  Onboard/AtspiStateTracker.py

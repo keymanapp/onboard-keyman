@@ -40,7 +40,7 @@ from Onboard.Layout          import LayoutRoot, LayoutBox, LayoutPanel
 from Onboard.utils           import modifiers, Rect, \
                                     toprettyxml, Version, open_utf8, \
                                     permute_mask, LABEL_MODIFIERS, \
-                                    unicode_str, XDGDirs
+                                    KEYMAN_LABEL_MODIFIERS, unicode_str, XDGDirs
 
 # Layout items that can be created dynamically via the 'class' XML attribute.
 from Onboard.WordSuggestions import WordListPanel
@@ -87,9 +87,11 @@ class LayoutLoaderSVG:
 
     # precalc mask permutations
     _label_modifier_masks = permute_mask(LABEL_MODIFIERS)
+    _keyman_label_modifier_masks = permute_mask(KEYMAN_LABEL_MODIFIERS)
 
     def __init__(self):
         self._vk = None
+        self._keyman_labels = None
         self._svg_cache = {}
         self._format = None   # format of the currently loading layout
         self._layout_filename = ""
@@ -98,14 +100,14 @@ class LayoutLoaderSVG:
         self._layout_regex = re.compile("([^\(]+) (?: \( ([^\)]*) \) )?",
                                         re.VERBOSE)
 
-    def load(self, vk, layout_filename, color_scheme):
+    def load(self, vk, keyman_labels, layout_filename, color_scheme):
         """ Load layout root file. """
         self._system_layout, self._system_variant = \
                                       self._get_system_keyboard_layout(vk)
         _logger.info("current system keyboard layout(variant): '{}'" \
                      .format(self._get_system_layout_string()))
 
-        layout = self._load(vk, layout_filename, color_scheme,
+        layout = self._load(vk, keyman_labels, layout_filename, color_scheme,
                             os.path.dirname(layout_filename))
         if layout:
             # purge attributes only used during loading
@@ -121,9 +123,10 @@ class LayoutLoaderSVG:
         return layout
 
 
-    def _load(self, vk, layout_filename, color_scheme, root_layout_dir, parent_item = None):
+    def _load(self, vk, keyman_labels, layout_filename, color_scheme, root_layout_dir, parent_item = None):
         """ Load or include layout file at any depth level. """
         self._vk = vk
+        self._keyman_labels = keyman_labels
         self._layout_filename = layout_filename
         self._color_scheme = color_scheme
         self._root_layout_dir = root_layout_dir
@@ -239,6 +242,7 @@ class LayoutLoaderSVG:
             filepath = config.find_layout_filename(filename, "layout include")
             _logger.info("Including layout '{}'".format(filename))
             incl_root = LayoutLoaderSVG()._load(self._vk,
+                                                self._keyman_labels,
                                                 filepath,
                                                 self._color_scheme,
                                                 self._root_layout_dir,
@@ -505,6 +509,8 @@ class LayoutLoaderSVG:
 
         # get labels
         labels = self._parse_key_labels(attributes, key)
+        # print("after translation, before overrides")
+        # print(labels)
 
         # Replace label and size group with overrides from
         # theme and/or system defaults.
@@ -517,6 +523,8 @@ class LayoutLoaderSVG:
                 if ogroup:
                     group_name = ogroup[:]
 
+        # print("after theme/system overrides")
+        # print(labels)
         key.labels = labels
         key.group = group_name
 
@@ -603,7 +611,13 @@ class LayoutLoaderSVG:
         # Get labels from keyboard mapping first.
         if key.type == KeyCommon.KEYCODE_TYPE and \
            not key.id in ["BKSP"]:
-            if self._vk: # xkb keyboard found?
+            if self._keyman_labels: # using Keyman keyboard
+                # load the labels from self._keyman_labels
+                vkmodmasks = self._label_modifier_masks
+                if sys.version_info.major == 2:
+                    vkmodmasks = [long(m) for m in vkmodmasks]
+                labels = self._keyman_labels.labels_from_id(key.id)
+            elif self._vk: # xkb keyboard found?
                 vkmodmasks = self._label_modifier_masks
                 if sys.version_info.major == 2:
                     vkmodmasks = [long(m) for m in vkmodmasks]
@@ -616,6 +630,8 @@ class LayoutLoaderSVG:
                     labels[0] = "No X keyboard found, retrying..."
                 else:
                     labels[0] = "?"
+            # print("labels from keymapping")
+            # print(labels)
 
         # If key is a macro (snippet) generate label from its number.
         elif key.type == KeyCommon.MACRO_TYPE:
@@ -634,11 +650,13 @@ class LayoutLoaderSVG:
         layout_labels = self._parse_layout_labels(attributes)
         if layout_labels:
             labels = layout_labels
+            # print("throwing away labels and using ones from layout")
+            # print(labels)
 
         # override with per-keysym labels
         keysym_rules = self._get_keysym_rules(key)
         if key.type == KeyCommon.KEYCODE_TYPE:
-            if self._vk: # xkb keyboard found?
+            if not self._keyman_labels and self._vk: # xkb keyboard found but no keyman one?
                 vkmodmasks = self._label_modifier_masks
                 try:
                     if sys.version_info.major == 2:
@@ -657,9 +675,14 @@ class LayoutLoaderSVG:
                         if not label is None:
                             mask = vkmodmasks[i]
                             labels[mask] = label
+                # print("replace all labels with keysyms matching a keysym rule")
+                # print(labels)
 
         # Translate labels - Gettext behaves oddly when translating
         # empty strings
+        # print("before translation")
+        # print(labels)
+
         return { mask : lab and _(lab) or None
                  for mask, lab in labels.items()}
 
