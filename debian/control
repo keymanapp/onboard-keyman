@@ -20,6 +20,7 @@ Uploaders: Mike Gabriel <sunweaver@debian.org>,
            Jeremy Bicha <jbicha@ubuntu.com>,
            Vangelis Mouhtsis <vangelis@gnugr.org>,
 Standards-Version: 4.4.1
+Rules-Requires-Root: no
 Homepage: https://launchpad.net/onboard
 Vcs-Browser: https://salsa.debian.org/debian-mate-team/onboard
 Vcs-Git: https://salsa.debian.org/debian-mate-team/onboard.git
