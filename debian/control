@@ -46,6 +46,8 @@ Recommends: gir1.2-ayatanaappindicator3-0.1,
             onboard-data (>= ${source:Version}),
             xdg-utils,
 Suggests: mousetweaks (>= 3.3.90),
+Breaks: gnome-shell-extension-onboard,
+Replaces: gnome-shell-extension-onboard,
 Description: Simple On-screen Keyboard
  On-screen Keyboard with macros, easy layout creation and word suggestion.
  .
