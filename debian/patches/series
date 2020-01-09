@@ -1,3 +1,4 @@
 1001_desktop-file-fixes.patch
 1002_build-against-Ayatana-AppIndicator.patch
 0001-Replace-invalid-UTF-8-characters-in-ACPI-events.patch
+1003_disable_onboard_on_gnome.patch
