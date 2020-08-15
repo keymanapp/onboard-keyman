@@ -1,7 +1,7 @@
 Source: onboard
 Section: gnome
 Priority: optional
-Build-Depends: debhelper-compat (= 12),
+Build-Depends: debhelper-compat (= 13),
                dh-python,
                libcanberra-dev,
                libdconf-dev (>= 0.12.0),
