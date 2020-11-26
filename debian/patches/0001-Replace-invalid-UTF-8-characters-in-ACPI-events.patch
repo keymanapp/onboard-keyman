@@ -1,0 +1,26 @@
+From 5d5b22fe8bda15ebc6ed9e9efe6808261d006b5b Mon Sep 17 00:00:00 2001
+From: Balint Reczey <balint.reczey@canonical.com>
+Date: Sun, 12 May 2019 18:25:31 +0200
+Subject: [PATCH] Replace invalid UTF-8 characters in ACPI events
+
+LP: #1808446
+---
+ Onboard/HardwareSensorTracker.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/Onboard/HardwareSensorTracker.py b/Onboard/HardwareSensorTracker.py
+index fe97fe75..9319df95 100644
+--- a/Onboard/HardwareSensorTracker.py
++++ b/Onboard/HardwareSensorTracker.py
+@@ -259,7 +259,7 @@ class AcpidListener:
+             elif self._exit_r in rl:
+                 break
+ 
+-            for event in data.decode("UTF-8").splitlines():
++            for event in data.decode("UTF-8", errors='replace').splitlines():
+ 
+                 _logger.info("AcpidListener: ACPI event: '{}'"
+                              .format(event))
+-- 
+2.17.1
+

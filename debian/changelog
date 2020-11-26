@@ -1,10 +1,39 @@
-onboard (1.4.1-4+keyman20180829) UNRELEASED; urgency=medium
+onboard (1.4.1-5+keyman20201126) UNRELEASED; urgency=medium
 
   * Local build for developing keyman integration
   * monitor ibus-kmfl on dbus
   * when keyman kb name changes change ldml file if it exists 
 
  -- Daniel Glassey <wdg@debian.org>  Fri, 17 Aug 2018 15:49:30 +0700
+
+onboard (1.4.1-5) unstable; urgency=medium
+
+  [ Mike Gabriel ]
+  * debian/control:
+    + Bump Standards-Version: to 4.4.1. No changes needed.
+    + Add Rules-Requires-Root: field and set it to no.
+    + Don't build gnome-shell-extension-onboard anymore. It is broken with
+      recent GNONME and there is no feedback from upstream about the future
+      perspective of the shell extension.
+      NOTE: for now, this is a temporary measure until the Debian maintainer
+      has received feedback from Onboard upstream about this.
+    + Enforce removal of gnome-shell-extension-onboard via B:/R: when upgrading
+      onboard to this package version. (Closes: #891236).
+    + Switch to debhelper-compat notation. Bump DH compat level to version 12.
+  * debian/rules:
+    + Switch from dh_install --fail-missing to dh_missing override.
+    + Don't install gnome-shell extension files for Onboard anymore.
+  * debian/copyright:
+    + Drop COPYING file. Thanks, lintian.
+
+  [ Balint Reczey ]
+  * debian/patches:
+    + Add 0001-Replace-invalid-UTF-8-characters-in-ACPI-events.patch. Resolves
+      UnicodeDecodeError in AcpidListener. (Closes: #936019, LP:#1808446).
+    + Add 1003_disable_onboard_on_gnome.patch. Disable onboard on GNOME.
+      (Closes: #931961, LP:#1721125).
+
+ -- Mike Gabriel <sunweaver@debian.org>  Thu, 09 Jan 2020 11:26:40 +0100
 
 onboard (1.4.1-4) unstable; urgency=medium
 
