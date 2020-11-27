@@ -428,10 +428,6 @@ Files: CHANGELOG
 Copyright: 2014, Francesco Fumanti <francesco.fumanti@gmx.net>
 License: GPL-3+
 
-Files: COPYING
-Copyright: 2016, Francesco Fumanti <francesco.fumanti@gmx.net>
-License: GPL-3+
-
 Files: HACKING
 Copyright: 2016, marmuta <marmvta@gmail.com>
   2009, Francesco Fumanti <francesco.fumanti@gmx.net>
