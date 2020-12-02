@@ -1,7 +1,7 @@
-Source: onboard
+Source: onboard-keyman
 Section: gnome
 Priority: optional
-Build-Depends: debhelper-compat (= 13),
+Build-Depends: debhelper (>= 11),
                dh-python,
                libcanberra-dev,
                libdconf-dev (>= 0.12.0),
@@ -15,17 +15,14 @@ Build-Depends: debhelper-compat (= 13),
                python3-cairo,
                python3-distutils-extra (>= 2.10),
                python3-gi,
-Maintainer: Debian+Ubuntu MATE Packaging Team <debian-mate@lists.debian.org>
-Uploaders: Mike Gabriel <sunweaver@debian.org>,
-           Jeremy Bicha <jbicha@ubuntu.com>,
-           Vangelis Mouhtsis <vangelis@gnugr.org>,
+Maintainer: Eberhard Beilharz <eb1@sil.org>
 Standards-Version: 4.5.0
 Rules-Requires-Root: no
-Homepage: https://launchpad.net/onboard
-Vcs-Browser: https://salsa.debian.org/debian-mate-team/onboard
-Vcs-Git: https://salsa.debian.org/debian-mate-team/onboard.git
+Homepage: https://github.com/keymanapp/onboard-keyman
+Vcs-Browser: https://github.com/keymanapp/onboard-keyman
+Vcs-Git: https://github.com/keymanapp/onboard-keyman
 
-Package: onboard
+Package: onboard-keyman
 Architecture: linux-any
 Depends: gir1.2-gdkpixbuf-2.0,
          gir1.2-glib-2.0,
@@ -33,8 +30,8 @@ Depends: gir1.2-gdkpixbuf-2.0,
          gir1.2-pango-1.0 (>= 1.29.3),
          iso-codes,
          librsvg2-common,
-         onboard-common (<< ${source:Version}.1),
-         onboard-common (>= ${source:Version}),
+         onboard-keyman-common (<< ${source:Version}.1),
+         onboard-keyman-common (>= ${source:Version}),
          python3-cairo,
          python3-dbus,
          python3-gi-cairo,
@@ -43,36 +40,44 @@ Depends: gir1.2-gdkpixbuf-2.0,
          ${shlibs:Depends},
 Recommends: gir1.2-ayatanaappindicator3-0.1,
             gir1.2-atspi-2.0,
-            onboard-data (>= ${source:Version}),
+            keyman,
+            onboard-keyman-data (>= ${source:Version}),
             xdg-utils,
 Suggests: mousetweaks (>= 3.3.90),
-Breaks: gnome-shell-extension-onboard,
-Replaces: gnome-shell-extension-onboard,
+Breaks: gnome-shell-extension-onboard, onboard
+Replaces: gnome-shell-extension-onboard, onboard
+Provides: onboard
 Description: Simple On-screen Keyboard
  On-screen Keyboard with macros, easy layout creation and word suggestion.
  .
  This on-screen keyboard can be useful for tablet PC users, as well as
  for mobility impaired users.
+ .
+ This version of the package works with Keyman for Linux.
 
-Package: onboard-common
+Package: onboard-keyman-common
 Architecture: all
 Depends: python3,
          ${misc:Depends},
-Breaks: onboard (<< 1.3.0-1~),
-Replaces: onboard (<< 1.3.0-1~),
+Breaks: onboard (<< 1.3.0-1~), onboard-common
+Replaces: onboard (<< 1.3.0-1~), onboard-common
+Provides: onboard-common
 Description: Simple On-screen Keyboard (common files)
  On-screen Keyboard with macros, easy layout creation and word suggestion.
  .
  This package ships the architecture independent files of the onboard
  on-screen keyboard.
+ .
+ This version of the package works with Keyman for Linux.
 
-Package: onboard-data
+Package: onboard-keyman-data
 Architecture: all
-Depends: onboard (<< ${source:Version}.1),
-         onboard (>= ${source:Version}),
+Depends: onboard-keyman (<< ${source:Version}.1),
+         onboard-keyman (>= ${source:Version}),
          ${misc:Depends},
-Replaces: onboard-prediction-data  (<< 0.99.0~alpha1~tr1531),
-Breaks: onboard-prediction-data  (<< 0.99.0~alpha1~tr1531),
+Replaces: onboard-prediction-data  (<< 0.99.0~alpha1~tr1531), onboard-data
+Breaks: onboard-prediction-data  (<< 0.99.0~alpha1~tr1531), onboard-data
+Provides: onboard-data
 Description: Language model files for the word suggestion feature of Onboard
  On-screen Keyboard with macros, easy layout creation and word suggestion.
  .
@@ -80,15 +85,5 @@ Description: Language model files for the word suggestion feature of Onboard
  The word suggestion feature of Onboard uses these files (and if available
  also custom user language model files) to compute the word completion
  suggestions and the word prediction suggestions.
-
-#Package: gnome-shell-extension-onboard
-#Architecture: all
-#Depends: ${misc:Depends},
-#         gnome-shell (>= 3.16),
-#         onboard (>= ${source:Version}),
-#Breaks: onboard-common (<< 1.3.0)
-#Replaces: onboard-common (<< 1.3.0)
-#Description: GNOME Shell extension for the on-screen keyboard Onboard
-# This package hides the official GNOME3 keyboard and provides an icon to
-# show/hide Onboard. It is only an initial extension that does not show
-# Onboard for activities and passwords, yet.
+ .
+ This version of the package works with Keyman for Linux.

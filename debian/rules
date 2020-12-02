@@ -14,6 +14,7 @@ override_dh_auto_clean:
 	rm -rf build
 	rm -rf Onboard/osk*.so
 	rm -rf Onboard/pypredict/lm*.so
+	rm -rf .pybuild/
 
 override_dh_install:
 	rm -f debian/tmp/usr/share/onboard/COPYING
@@ -28,6 +29,3 @@ override_dh_install:
 
 override_dh_missing:
 	dh_missing --fail-missing
-
-get-orig-source:
-	uscan --noconf --force-download --rename --download-current-version --destdir=..
