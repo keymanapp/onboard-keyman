@@ -44,11 +44,19 @@ version=$(dpkg-parsechangelog -l onboard-keyman/debian/changelog --show-field=Ve
 onboard_version=$(dpkg-parsechangelog -l onboard-keyman/debian/changelog --show-field=Version | cut -d '-' -f 1)
 echo "Base version: $onboard_version, package version: $version"
 rm -rf onboard-keyman-${onboard_version}
-rm -rf onboard-keyman_*
-cp -a onboard-keyman onboard-keyman-${onboard_version}
-rm -rf onboard-keyman-${onboard_version}/debian
-rm -rf onboard-keyman-${onboard_version}/.git
-tar -czf onboard-keyman_${onboard_version}.orig.tar.gz onboard-keyman-${onboard_version}
+
+if [ -f onboard-keyman_${onboard_version}.orig.tar.gz ]; then
+    # Existing .orig.tar.gz file can be downloaded with `apt source onboard-keyman`
+    # NOTE: this file has to be in the parent directory of the onboard-keyman root
+    echo "Using existing 'onboard-keyman_${onboard_version}.orig.tar.gz' file"
+    tar -xzf onboard-keyman_${onboard_version}.orig.tar.gz
+else
+    rm -rf onboard-keyman_*
+    cp -a onboard-keyman onboard-keyman-${onboard_version}
+    rm -rf onboard-keyman-${onboard_version}/debian
+    rm -rf onboard-keyman-${onboard_version}/.git
+    tar -czf onboard-keyman_${onboard_version}.orig.tar.gz onboard-keyman-${onboard_version}
+fi
 
 cp -a onboard-keyman/debian onboard-keyman-${onboard_version}/
 
