@@ -4,8 +4,8 @@
 # parameters: [UPLOAD="yes"] [DIST="<dist>"] [PPA="keyman"]  [PACKAGEVERSION="<version>"] ./scripts/launchpad.sh
 # UPLOAD="yes"  do the dput for real. Default: no.
 # DIST="<dist>" only upload for this distribution. Multiple distros are possible,
-#               separated by space. Default: "bionic focal groovy"
-# PPA="keyman"  PPA under keymanapp to upload to. Default: keyman-daily.
+#               separated by space. Default: "bionic focal groovy hirsute"
+# PPA="keyman"  PPA under keymanapp to upload to. Default: keyman-alpha.
 # PACKAGEVERSION="<version>" string to append to the package version. Default: 0
 
 set -e
@@ -19,13 +19,13 @@ fi
 if [ "${DIST}" != "" ]; then
     distributions="${DIST}"
 else
-    distributions="bionic focal groovy"
+    distributions="bionic focal groovy hirsute"
 fi
 
 if [ "${PPA}" != "" ]; then
     ppa="ppa:keymanapp/$PPA"
 else
-    ppa="ppa:keymanapp/keyman-daily"
+    ppa="ppa:keymanapp/keyman-alpha"
 fi
 
 if [ "${PACKAGEVERSION}" != "" ]; then
@@ -44,11 +44,19 @@ version=$(dpkg-parsechangelog -l onboard-keyman/debian/changelog --show-field=Ve
 onboard_version=$(dpkg-parsechangelog -l onboard-keyman/debian/changelog --show-field=Version | cut -d '-' -f 1)
 echo "Base version: $onboard_version, package version: $version"
 rm -rf onboard-keyman-${onboard_version}
-rm -rf onboard-keyman_*
-cp -a onboard-keyman onboard-keyman-${onboard_version}
-rm -rf onboard-keyman-${onboard_version}/debian
-rm -rf onboard-keyman-${onboard_version}/.git
-tar -czf onboard-keyman_${onboard_version}.orig.tar.gz onboard-keyman-${onboard_version}
+
+if [ -f onboard-keyman_${onboard_version}.orig.tar.gz ]; then
+    # Existing .orig.tar.gz file can be downloaded with `apt source onboard-keyman`
+    # NOTE: this file has to be in the parent directory of the onboard-keyman root
+    echo "Using existing 'onboard-keyman_${onboard_version}.orig.tar.gz' file"
+    tar -xzf onboard-keyman_${onboard_version}.orig.tar.gz
+else
+    rm -rf onboard-keyman_*
+    cp -a onboard-keyman onboard-keyman-${onboard_version}
+    rm -rf onboard-keyman-${onboard_version}/debian
+    rm -rf onboard-keyman-${onboard_version}/.git
+    tar -czf onboard-keyman_${onboard_version}.orig.tar.gz onboard-keyman-${onboard_version}
+fi
 
 cp -a onboard-keyman/debian onboard-keyman-${onboard_version}/
 

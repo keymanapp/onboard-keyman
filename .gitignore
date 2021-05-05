@@ -12,3 +12,4 @@ debian/onboard-data/
 debian/onboard/
 debian/tmp/
 po/onboard.pot
+__pycache__/
