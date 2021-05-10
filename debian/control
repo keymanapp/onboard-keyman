@@ -1,7 +1,7 @@
 Source: onboard-keyman
 Section: gnome
 Priority: optional
-Build-Depends: debhelper (>= 11),
+Build-Depends: debhelper-compat (= 12),
                dh-python,
                libcanberra-dev,
                libdconf-dev (>= 0.12.0),
@@ -16,7 +16,7 @@ Build-Depends: debhelper (>= 11),
                python3-distutils-extra (>= 2.10),
                python3-gi,
 Maintainer: Eberhard Beilharz <eb1@sil.org>
-Standards-Version: 4.5.0
+Standards-Version: 4.4.1
 Rules-Requires-Root: no
 Homepage: https://github.com/keymanapp/onboard-keyman
 Vcs-Browser: https://github.com/keymanapp/onboard-keyman
