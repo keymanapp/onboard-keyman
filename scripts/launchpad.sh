@@ -19,7 +19,7 @@ fi
 if [ "${DIST}" != "" ]; then
     distributions="${DIST}"
 else
-    distributions="bionic focal groovy hirsute"
+    distributions="bionic focal impish jammy"
 fi
 
 if [ "${PPA}" != "" ]; then

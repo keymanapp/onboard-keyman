@@ -4,12 +4,15 @@ build
 *.debhelper
 *.log
 *.substvars
-.gitignore
+*.so
 debian/files
 debian/gnome-shell-extension-onboard/
 debian/onboard-common/
 debian/onboard-data/
 debian/onboard/
+debian/onboard-keyman-common/
+debian/onboard-keyman-data/
+debian/onboard-keyman/
 debian/tmp/
 po/onboard.pot
 __pycache__/

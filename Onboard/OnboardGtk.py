@@ -34,7 +34,7 @@ from lxml import etree
 
 from Onboard.Version import require_gi_versions
 require_gi_versions()
-from gi.repository import GLib, Gdk, Gtk, GObject
+from gi.repository import GLib, Gdk, Gtk
 
 try:
     import dbus
@@ -43,7 +43,7 @@ try:
     from Onboard.DBusUtils import ServiceBase, dbus_property
     has_dbus = True
 except ImportError:
-   has_dbus = False
+    has_dbus = False
 
 from Onboard.KbdWindow       import KbdWindow, KbdPlugWindow
 from Onboard.Keyboard        import Keyboard
