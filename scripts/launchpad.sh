@@ -4,7 +4,7 @@
 # parameters: [UPLOAD="yes"] [DIST="<dist>"] [PPA="keyman"]  [PACKAGEVERSION="<version>"] ./scripts/launchpad.sh
 # UPLOAD="yes"  do the dput for real. Default: no.
 # DIST="<dist>" only upload for this distribution. Multiple distros are possible,
-#               separated by space. Default: "bionic focal groovy hirsute"
+#               separated by space. Default: "focal groovy hirsute"
 # PPA="keyman"  PPA under keymanapp to upload to. Default: keyman-alpha.
 # PACKAGEVERSION="<version>" string to append to the package version. Default: 0
 
@@ -19,7 +19,7 @@ fi
 if [ "${DIST}" != "" ]; then
     distributions="${DIST}"
 else
-    distributions="bionic focal impish jammy"
+    distributions="focal impish jammy"
 fi
 
 if [ "${PPA}" != "" ]; then
