@@ -448,8 +448,8 @@ class LayoutLoaderSVG:
                 key.modifier = modifiers[value]
             except KeyError as ex:
                 (strerror) = ex
-                raise Exceptions.LayoutFileError("Unrecognized modifier %s in" \
-                    "definition of %s" (strerror, full_id))
+                raise Exceptions.LayoutFileError("Unrecognized modifier {} in " \
+                    "definition of {}".format(strerror, full_id))
 
         value = attributes.get("action")
         if value:
@@ -457,7 +457,7 @@ class LayoutLoaderSVG:
                 key.action = KeyCommon.actions[value]
             except KeyError as ex:
                 (strerror) = ex
-                raise Exceptions.LayoutFileError("Unrecognized key action {} in" \
+                raise Exceptions.LayoutFileError("Unrecognized key action {} in " \
                     "definition of {}".format(strerror, full_id))
 
         if "char" in attributes:
