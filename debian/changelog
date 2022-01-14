@@ -1,10 +1,17 @@
-onboard-keyman (1.4.2+onboard1.4.1-5) UNRELEASED; urgency=medium
+onboard-keyman (1.4.3+onboard1.4.1-5) UNRELEASED; urgency=medium
+
+  * Add missing dependency
+  * Fix error displayed during installation
+
+ -- Eberhard Beilharz <eb1@sil.org>  Fri, 14 Jan 2022 17:25:00 +0100
+
+onboard-keyman (1.4.2+onboard1.4.1-5) unstable; urgency=medium
 
   * debian/control:
     + Standards-Version 4.4.1
     + Add dependency debhelper-compat 12
 
- -- Eberhard Beilharz <eb1@sil.org>  Tue, 11 May 2021 16:37:01 +0200
+ -- Eberhard Beilharz <eb1@sil.org>  Fri, 14 Jan 2022 17:24:43 +0100
 
 onboard-keyman (1.4.1+onboard1.4.1-5) unstable; urgency=medium
 
