@@ -69,7 +69,7 @@ class KeymanDBus(GObject.GObject):
     Keyman D-bus control and signal handling.
     """
     __gsignals__ = {
-        'keyman-changed': (GObject.SIGNAL_RUN_FIRST, None, ())
+        str('keyman-changed'): (GObject.SIGNAL_RUN_FIRST, GObject.TYPE_NONE, ())
     }
 
 #    MOUSE_A11Y_SCHEMA_ID = "org.gnome.desktop.a11y.mouse"
@@ -203,7 +203,7 @@ class KeymanDBus(GObject.GObject):
     # def unset_labels(self):
     #     self.key_labels = None
 
-    def on_keyboard_changed(keyboardid):
+    def on_keyboard_changed(self, keyboardid):
         #reload_labels()
         self.emit("keyman-changed", keyboardid)
 

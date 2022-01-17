@@ -360,6 +360,11 @@ Comment:
  while the original strings remain under the license of the file they
  were extracted from.
 
+Files: .gitignore
+  scripts/launchpad.sh
+Copyright: 2018-2022, SIL International
+License: GPL-3+
+
 Files: setup.py
 Copyright: 2011-2016, marmuta <marmvta@gmail.com>
   2009-2016, Francesco Fumanti <francesco.fumanti@gmx.net>
