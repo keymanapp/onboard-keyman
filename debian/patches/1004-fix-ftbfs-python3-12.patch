@@ -1,0 +1,17 @@
+Description: Drop Wdeclaration-after-statement
+ this is for Arch linux from upstream, so not need forward it
+Last-Update: 2023-12-06
+---
+This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
+--- a/setup.py
++++ b/setup.py
+@@ -229,8 +229,7 @@
+                            define_macros = defines,
+                            extra_compile_args = [
+                                "-Wsign-compare",
+-                               "-Wdeclaration-after-statement",
+-                               "-Werror=declaration-after-statement"],
++                               "-Wdeclaration-after-statement"],
+ 
+                            **pkgconfig('gdk-3.0', 'x11', 'xi', 'xtst', 'xkbfile',
+                                        'dconf', 'libcanberra', 'hunspell',
