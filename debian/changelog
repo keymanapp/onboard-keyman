@@ -1,3 +1,105 @@
+onboard-keyman (1.4.4+onboard1.4.1-5ubuntu3) noble; urgency=medium
+
+  * Build for noble
+
+ -- Eberhard Beilharz <eb1@sil.org>  Wed, 27 Mar 2024 18:57:34 +0100
+
+onboard (1.4.1-5ubuntu2) noble; urgency=medium
+
+  * No-change rebuild with Python 3.12 as default
+
+ -- Graham Inggs <ginggs@ubuntu.com>  Sat, 20 Jan 2024 08:55:17 +0000
+
+onboard (1.4.1-5ubuntu1) noble; urgency=medium
+
+  * Fix FTBFS, build without -Werror=declaration-after-statement.
+  * Only build for the default Python3 version, because pycairo
+    stopped building for all supported Python3 versions.
+
+ -- Matthias Klose <doko@ubuntu.com>  Mon, 01 Jan 2024 13:27:51 +0100
+
+onboard (1.4.1-5build8) noble; urgency=medium
+
+  * No-change rebuild to build with python3.12 as supported.
+
+ -- Matthias Klose <doko@ubuntu.com>  Wed, 01 Nov 2023 17:06:44 +0100
+
+onboard (1.4.1-5build7) lunar; urgency=medium
+
+  * Rebuild to drop Python 3.10 extension
+
+ -- Jeremy Bicha <jbicha@ubuntu.com>  Wed, 01 Mar 2023 12:33:50 -0500
+
+onboard (1.4.1-5build6) lunar; urgency=medium
+
+  * No-change rebuild with Python 3.11 as supported
+
+ -- Graham Inggs <ginggs@ubuntu.com>  Wed, 02 Nov 2022 15:20:02 +0000
+
+onboard (1.4.1-5build5) jammy; urgency=medium
+
+  * No-change rebuild with Python 3.10 only.
+
+ -- Matthias Klose <doko@ubuntu.com>  Thu, 17 Mar 2022 15:06:43 +0100
+
+onboard (1.4.1-5build4) jammy; urgency=medium
+
+  * No-change rebuild to add python3.10.
+
+ -- Matthias Klose <doko@ubuntu.com>  Sun, 17 Oct 2021 12:21:38 +0200
+
+onboard (1.4.1-5build2) hirsute; urgency=medium
+
+  * No-change rebuild to drop python3.8 extensions.
+
+ -- Matthias Klose <doko@ubuntu.com>  Mon, 07 Dec 2020 18:46:37 +0100
+
+onboard (1.4.1-5build1) hirsute; urgency=medium
+
+  * No-change rebuild to build with python3.9 as supported.
+
+ -- Matthias Klose <doko@ubuntu.com>  Sat, 24 Oct 2020 13:08:20 +0200
+
+onboard (1.4.1-5) unstable; urgency=medium
+
+  [ Mike Gabriel ]
+  * debian/control:
+    + Bump Standards-Version: to 4.4.1. No changes needed.
+    + Add Rules-Requires-Root: field and set it to no.
+    + Don't build gnome-shell-extension-onboard anymore. It is broken with
+      recent GNONME and there is no feedback from upstream about the future
+      perspective of the shell extension.
+      NOTE: for now, this is a temporary measure until the Debian maintainer
+      has received feedback from Onboard upstream about this.
+    + Enforce removal of gnome-shell-extension-onboard via B:/R: when upgrading
+      onboard to this package version. (Closes: #891236).
+    + Switch to debhelper-compat notation. Bump DH compat level to version 12.
+  * debian/rules:
+    + Switch from dh_install --fail-missing to dh_missing override.
+    + Don't install gnome-shell extension files for Onboard anymore.
+  * debian/copyright:
+    + Drop COPYING file. Thanks, lintian.
+
+  [ Balint Reczey ]
+  * debian/patches:
+    + Add 0001-Replace-invalid-UTF-8-characters-in-ACPI-events.patch. Resolves
+      UnicodeDecodeError in AcpidListener. (Closes: #936019, LP:#1808446).
+    + Add 1003_disable_onboard_on_gnome.patch. Disable onboard on GNOME.
+      (Closes: #931961, LP:#1721125).
+
+ -- Mike Gabriel <sunweaver@debian.org>  Thu, 09 Jan 2020 11:26:40 +0100
+
+onboard (1.4.1-4) unstable; urgency=medium
+
+  * debian/control:
+    + Drop pkg-mate-team Alioth mailing list from Uploaders: field.
+    + One uploader per line...
+    + Bump Standards-Version: to 4.2.0. No changes needed.
+  * debian/copyright:
+    + Use secure URL in Source: field.
+
+ -- Mike Gabriel <sunweaver@debian.org>  Wed, 22 Aug 2018 12:09:38 +0200
+
 onboard-keyman (1.4.3+onboard1.4.1-5) UNRELEASED; urgency=medium
 
   * Add missing dependency
