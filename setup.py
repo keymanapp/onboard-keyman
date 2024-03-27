@@ -229,8 +229,7 @@ class Extension_osk(Extension):
                            define_macros = defines,
                            extra_compile_args = [
                                "-Wsign-compare",
-                               "-Wdeclaration-after-statement",
-                               "-Werror=declaration-after-statement"],
+                               "-Wdeclaration-after-statement"],
 
                            **pkgconfig('gdk-3.0', 'x11', 'xi', 'xtst', 'xkbfile',
                                        'dconf', 'libcanberra', 'hunspell',

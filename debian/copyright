@@ -1,7 +1,7 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: Onboard
 Upstream-Contact: Onboard devel team (https://launchpad.net/~onboard)
-Source: http://launchpad.net/onboard
+Source: https://launchpad.net/onboard
 
 Files: Onboard/Appearance.py
  Onboard/AtspiStateTracker.py
@@ -426,10 +426,6 @@ License: GPL-3+
 
 Files: CHANGELOG
 Copyright: 2014, Francesco Fumanti <francesco.fumanti@gmx.net>
-License: GPL-3+
-
-Files: COPYING
-Copyright: 2016, Francesco Fumanti <francesco.fumanti@gmx.net>
 License: GPL-3+
 
 Files: HACKING
