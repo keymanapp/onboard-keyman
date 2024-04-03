@@ -1,0 +1,44 @@
+Description: Update list of required packages for unit tests.
+Author: Mike Gabriel <mike.gabriel@das-netzwerkteam.de>
+Forwarded: pending, upstream maintainer is MIA
+Comment:
+ The usability of this package list is debatable as it presumes
+ onboard only being tested/used on Debian and its derivatives.
+
+--- a/setup.py
++++ b/setup.py
+@@ -286,19 +286,27 @@
+ class TestCommand(Command):
+     user_options = [] # required by Command
+ 
+-    depends = ["python3-nose",
++    depends = [
++               "dbus-test-runner",
++               "dconf-cli",
++               "gsettings-desktop-schemas",
+                "hunspell",
+                "hunspell-en-us",
+                "hunspell-de-de",
+-               "myspell-es",
+-               "myspell-pt-pt",
++               "hunspell-es",
++               "hunspell-pt-pt",
+                "hunspell-fr",
+                "hunspell-ru",
+-               "myspell-it",
+-               "myspell-el-gr",
+-               "xautomation",
++               "hunspell-it",
++               "hunspell-el",
++               "mousetweaks",
+                "numlockx",
+-              ]
++               "python3-dbus",
++               "python3-pytest",
++               "xauth",
++               "xautomation",
++               "xvfb",
++               ]
+ 
+     def initialize_options(self):
+         pass

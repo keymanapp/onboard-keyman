@@ -1,0 +1,15 @@
+Description: Python syntax fix
+Author: Mike Gabriel <mike.gabriel@das-netzwerkteam.de>
+Forwarded: pending, upstream maintainer is MIA
+
+--- a/Onboard/LayoutLoaderSVG.py
++++ b/Onboard/LayoutLoaderSVG.py
+@@ -445,7 +445,7 @@
+             except KeyError as ex:
+                 (strerror) = ex
+                 raise Exceptions.LayoutFileError("Unrecognized modifier %s in" \
+-                    "definition of %s" (strerror, full_id))
++                    "definition of %s".format(strerror, full_id))
+ 
+         value = attributes.get("action")
+         if value:

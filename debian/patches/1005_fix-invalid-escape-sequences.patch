@@ -1,0 +1,176 @@
+Description: Use double-backslashes instead of single-backslashes in Python code for normal strings.
+Author: Mike Gabriel <mike.gabriel@das-netzwerkteam.de>
+Forwarded: pending, upstream maintainer is MIA
+
+--- a/Onboard/utils.py
++++ b/Onboard/utils.py
+@@ -169,7 +169,7 @@
+     [('TAB', 5)]
+ 
+     # regex
+-    >>> parse_key_combination(["F\d+"], ["TAB", "F1", "F2", "F3", "F9"])
++    >>> parse_key_combination(["F\\d+"], ["TAB", "F1", "F2", "F3", "F9"])
+     [('F1', 0), ('F2', 0), ('F3', 0), ('F9', 0)]
+     """
+     modifiers = combo[:-1]
+@@ -217,8 +217,8 @@
+ def toprettyxml(domdoc):
+     ugly_xml = domdoc.toprettyxml(indent='  ')
+     # Join lines with text elements with their tag lines
+-    pattern = re.compile('>\n\s+([^<>\s].*?)\n\s+</', re.DOTALL)
+-    pretty_xml = pattern.sub('>\g<1></', ugly_xml)
++    pattern = re.compile('>\n\\s+([^<>\\s].*?)\n\\s+</', re.DOTALL)
++    pretty_xml = pattern.sub('>\\g<1></', ugly_xml)
+ 
+     # Work around http://bugs.python.org/issue5752
+     pretty_xml = re.sub(
+@@ -356,20 +356,20 @@
+     """
+     Converts a list of strings into a dict of tuples.
+     Sample list: ['LWIN:label:super', ...]
+-    ":" in a value must be escaped as "\:"
++    ":" in a value must be escaped as "\\:"
+     "\" in a value must be escaped as "\\"
+     """
+     result = {}
+ 
+     # Awkward fixed regexes; todo: Allow arbirary number of values
+     if num_values == 1:
+-        pattern = re.compile(r"""([^\s:]+)             # name
+-                                 : ((?:\\.|[^\\:])*)   # first value
++        pattern = re.compile(r"""([^\\s:]+)                # name
++                                 : ((?:\\\\.|[^\\\\:])*)   # first value
+                              """, re.VERBOSE)
+     elif num_values == 2:
+-        pattern = re.compile(r"""([^\s:]+)             # name
+-                                 : ((?:\\.|[^\\:])*)   # first value
+-                                 : ((?:\\.|[^\\:])*)   # second value
++        pattern = re.compile(r"""([^\\s:]+)                # name
++                                 : ((?:\\\\.|[^\\\\:])*)   # first value
++                                 : ((?:\\\\.|[^\\\\:])*)   # second value
+                              """, re.VERBOSE)
+     else:
+         assert(False)  # unsupported number of values
+@@ -1540,12 +1540,12 @@
+ 
+ _tag_pattern = re.compile(
+     """(?:
+-            <[\w\-_]+                         # tag
+-            (?:\s+[\w\-_]+=["'][^"']*["'])*  # attributes
++            <[\\w\\-_]+                         # tag
++            (?:\\s+[\\w\\-_]+=["'][^"']*["'])*  # attributes
+             /?>
+         ) |
+         (?:
+-            </?[\w\-_]+>
++            </?[\\w\\-_]+>
+         )
+     """, re.UNICODE|re.DOTALL|re.VERBOSE)
+ 
+--- a/Onboard/pypredict/lm_wrapper.py
++++ b/Onboard/pypredict/lm_wrapper.py
+@@ -301,11 +301,11 @@
+ SENTENCE_PATTERN = re.compile( \
+     """ .*?
+            (?:
+-                 (?:[.;:!?](?:(?=[\s]) | \")) # punctuation
+-               | (?:\\s*\\n\\s*)+(?=[\\n])    # multiples newlines
+-               | <s>                          # sentence end mark
++                 (?:[.;:!?](?:(?=[\\s]) | \")) # punctuation
++               | (?:\\s*\\n\\s*)+(?=[\\n])     # multiples newlines
++               | <s>                           # sentence end mark
+            )
+-         | .+$                                # last sentence fragment
++         | .+$                                 # last sentence fragment
+     """, re.UNICODE|re.DOTALL|re.VERBOSE)
+ 
+ def split_sentences(text, disambiguate=False):
+@@ -324,7 +324,7 @@
+     for match in matches:
+         sentence = match.group()
+         # not only newlines? remove fragments with only double newlines
+-        if True: #not re.match("^\s*\n+\s*$", sentence, re.UNICODE):
++        if True: #not re.match("^\\s*\n+\\s*$", sentence, re.UNICODE):
+             begin = match.start()
+             end   = match.end()
+ 
+@@ -341,7 +341,7 @@
+             sentence = re.sub("<s>", "   ", sentence)
+ 
+             # remove newlines and double spaces - no, invalidates spans
+-            #sentence = re.sub(u"\s+", u" ", sentence)
++            #sentence = re.sub(u"\\s+", u" ", sentence)
+ 
+             # strip whitespace from the cuts, remove carriage returns
+             l = len(sentence)
+@@ -367,27 +367,27 @@
+ 
+ tokenize_pattern = """
+     (                                     # <unk>
+-      (?:^|(?<=\s))
+-        \S*(\S)\\2{{3,}}\S*               # char repeated more than 3 times
++      (?:^|(?<=\\s))
++        \\S*(\\S)\\2{{3,}}\\S*            # char repeated more than 3 times
+         | [-]{{3}}                        # dash repeated more than 2 times
+-      (?=\s|$)
+-      | :[^\s:@]+?@                       # password in URL
++      (?=\\s|$)
++      | :[^\\s:@]+?@                      # password in URL
+     ) |
+     (                                     # <num>
+-      (?:[-+]?\d+(?:[.,]\d+)*)            # anything numeric looking
+-      | (?:[.,]\d+)
++      (?:[-+]?\\d+(?:[.,]\\d+)*)          # anything numeric looking
++      | (?:[.,]\\d+)
+     ) |
+     (                                     # word
+       (?:[-]{{0,2}}                       # allow command line options
+-        [^\W\d]\w*(?:[-'´΄][\w]+)*        # word, not starting with a digit
++        [^\\W\\d]\\w*(?:[-'´΄[\\w]+)*    # word, not starting with a digit
+         [{trailing_characters}'´΄]?)
+       | <unk> | <s> | </s> | <num>        # pass through control words
+       | <bot:[a-z]*>                      # pass through begin of text merkers
+-      | (?:^|(?<=\s))
++      | (?:^|(?<=\\s))
+           (?:
+-            \| {standalone_operators}     # common space delimited operators
++            \\| {standalone_operators}    # common space delimited operators
+           )
+-        (?=\s|$)
++        (?=\\s|$)
+     )
+     """
+ # Don't learn "-" or "--" as standalone tokens...
+@@ -465,10 +465,10 @@
+     """
+     tokens, spans = tokenize_text(text, is_context = True)
+     if not re.match("""
+-                  ^$                             # empty string?
+-                | .*[-'´΄\w]$                    # word at the end?
+-                | (?:^|.*\s)[|]=?$               # recognized operator?
+-                | .*(\S)\\1{3,}$                 # anything repeated > 3 times?
++                  ^$                              # empty string?
++                | .*[-'´΄\\w]$                    # word at the end?
++                | (?:^|.*\\s)[|]=?$               # recognized operator?
++                | .*(\\S)\\1{3,}$                 # anything repeated > 3 times?
+                 """, text, re.UNICODE|re.DOTALL|re.VERBOSE):
+         tokens.append("")
+         tend = len(text)
+@@ -501,7 +501,7 @@
+             continue
+ 
+         if data:  # data section?
+-            result = re.search("ngram (\d+)=\d+", line)
++            result = re.search("ngram (\\d+)=\\d+", line)
+             if result:
+                 if order is None:
+                     order = 0
+@@ -621,7 +621,7 @@
+             context, spans = tokenize_context(". " + inputline) # simulate sentence begin
+             prefix = context[len(context)-1] if context else ""
+             prefix_to_end = sentence[len(inputline)-len(prefix):]
+-            target_word = re.search("^([\w]|[-'])*", prefix_to_end, re.UNICODE).group()
++            target_word = re.search("^([\\w]|[-'])*", prefix_to_end, re.UNICODE).group()
+             choices = query_model.predict(context, limit)
+ 
+             if 0:  # step mode for debugging
