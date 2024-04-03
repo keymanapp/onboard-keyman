@@ -69,10 +69,11 @@ Suggests: mousetweaks (>= 3.3.90),
 Breaks: gnome-shell-extension-onboard,
 Replaces: gnome-shell-extension-onboard,
 Description: Simple On-screen Keyboard
- On-screen Keyboard with macros, easy layout creation and word suggestion.
+ On-screen Keyboard (OSK) with macros, easy layout creation and word
+ suggestion.
  .
- This on-screen keyboard can be useful for tablet PC users, as well as
- for mobility impaired users.
+ This virtual keyboard can be useful for tablet PC users operated via
+ touchscreens, as well as for mobility impaired users.
 
 Package: onboard-common
 Architecture: all
@@ -81,7 +82,8 @@ Depends: python3,
 Breaks: onboard (<< 1.3.0-1~),
 Replaces: onboard (<< 1.3.0-1~),
 Description: Simple On-screen Keyboard (common files)
- On-screen Keyboard with macros, easy layout creation and word suggestion.
+ On-screen Keyboard (OSK) with macros, easy layout creation and word
+ suggestion.
  .
  This package ships the architecture independent files of the onboard
  on-screen keyboard.
@@ -94,7 +96,8 @@ Depends: onboard (<< ${source:Version}.1),
 Replaces: onboard-prediction-data  (<< 0.99.0~alpha1~tr1531),
 Breaks: onboard-prediction-data  (<< 0.99.0~alpha1~tr1531),
 Description: Language model files for the word suggestion feature of Onboard
- On-screen Keyboard with macros, easy layout creation and word suggestion.
+ On-screen Keyboard (OSK) with macros, easy layout creation and word
+ suggestion.
  .
  This package installs default language model files for various languages.
  The word suggestion feature of Onboard uses these files (and if available
