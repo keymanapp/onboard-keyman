@@ -8,3 +8,4 @@
 1007-fix-test-dependencies.patch
 1008_enable-tests-during-build.patch
 1009_regexp-fixes.patch
+1010_arctica-greeter.patch

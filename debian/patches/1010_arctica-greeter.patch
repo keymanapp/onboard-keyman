@@ -1,0 +1,262 @@
+Description: Make onboard know arctica-greeter (rather than unity-greeter).
+Author: Mike Gabriel <mike.gabriel@das-netzwerkteam.de>
+Forwarded: pending, upstream maintainer is MIA
+Comment:
+ This might need more work. And more testing.
+
+--- a/Onboard/Config.py
++++ b/Onboard/Config.py
+@@ -76,7 +76,7 @@
+ SCHEMA_GSS               = "org.gnome.desktop.screensaver"
+ SCHEMA_GDI               = "org.gnome.desktop.interface"
+ SCHEMA_GDA               = "org.gnome.desktop.a11y.applications"
+-SCHEMA_UNITY_GREETER     = "com.canonical.unity-greeter"
++SCHEMA_ARCTICA_GREETER   = "org.ArcticaProject.arctica-greeter"
+ 
+ MODELESS_GKSU_KEY = "/apps/gksu/disable-grab"  # old gconf key, unused
+ 
+@@ -134,7 +134,7 @@
+     # launched by ...
+     (LAUNCHER_NONE,
+      LAUNCHER_GSS,
+-     LAUNCHER_UNITY_GREETER) = range(3)
++     LAUNCHER_ARCTICA_GREETER) = range(3)
+ 
+     # extension of layout files
+     LAYOUT_FILE_EXTENSION = ".onboard"
+@@ -278,7 +278,7 @@
+                          metavar="ARG",
+             help="Simulate being launched by certain XEmbed sockets. \n"
+                  "Use this together with option --xid.               \n"
+-                 "ARG={unity-greeter|gnome-screen-saver}\n")
++                 "ARG={arctica-greeter|gnome-screen-saver}\n")
+ 
+         group.add_option("-g", "--log-learning",
+                   action="store_true", dest="log_learn", default=False,
+@@ -327,13 +327,13 @@
+             if options.launched_by:
+                 if options.launched_by == "gnome-screensaver":
+                     self.launched_by = self.LAUNCHER_GSS
+-                elif options.launched_by == "unity-greeter":
+-                    self.launched_by = self.LAUNCHER_UNITY_GREETER
++                elif options.launched_by == "arctica-greeter":
++                    self.launched_by = self.LAUNCHER_ARCTICA_GREETER
+             else:
+                 if Process.was_launched_by("gnome-screensaver"):
+                     self.launched_by = self.LAUNCHER_GSS
+-                elif "UNITY_GREETER_DBUS_NAME" in os.environ:
+-                    self.launched_by = self.LAUNCHER_UNITY_GREETER
++                elif "ARCTICA_GREETER_DBUS_NAME" in os.environ:
++                    self.launched_by = self.LAUNCHER_ARCTICA_GREETER
+ 
+         self.is_running_from_source = self._is_running_from_source()
+ #        if self.is_running_from_source:
+@@ -635,7 +635,7 @@
+         self.add_key("xembed-aspect-change-range", [0, 1.6])
+         self.add_key("xembed-background-color", "#0000007F")
+         self.add_key("xembed-background-image-enabled", True)
+-        self.add_key("xembed-unity-greeter-offset-x", 85.0)
++        self.add_key("xembed-arctica-greeter-offset-x", 85.0)
+ 
+         self.keyboard          = ConfigKeyboard()
+         self.window            = ConfigWindow()
+@@ -674,12 +674,12 @@
+             _logger.warning("mousetweaks GSettings schema not found, "
+                             "mousetweaks integration disabled.")
+ 
+-        # unity greeter (very optional)
+-        self.unity_greeter = None
+-        if self.launched_by == self.LAUNCHER_UNITY_GREETER:
++        # arctica greeter (very optional)
++        self.arctica_greeter = None
++        if self.launched_by == self.LAUNCHER_ARCTICA_GREETER:
+             try:
+-                self.unity_greeter = ConfigUnityGreeter(self)
+-                self.children.append(self.unity_greeter)
++                self.arctica_greeter = ConfigArcticaGreeter(self)
++                self.children.append(self.arctica_greeter)
+             except (SchemaError, ImportError) as e:
+                 _logger.warning(unicode_str(e))
+ 
+@@ -1354,11 +1354,11 @@
+     def get_desktop_background_filename(self):
+         fn = ""
+ 
+-        # Starting with Vivid's unity greeter try to get the filename
++        # With arctica-greeter try to get the filename
+         # from the greeter's schema.
+-        if self.launched_by == self.LAUNCHER_UNITY_GREETER:
++        if self.launched_by == self.LAUNCHER_ARCTICA_GREETER:
+             fn = self._get_desktop_background_filename_from_schema(
+-                     "com.canonical.unity-greeter", "background")
++                     "org.ArcticaProject.arctica-greeter", "background")
+ 
+         # Elsewhere (old Ubuntu releases, gnome-screen-saver) get it
+         # from the gnome key.
+@@ -1379,7 +1379,7 @@
+             try:
+                 # Valid file URI?
+                 # Prevents error 'not an absolute URI using the "file" scheme'
+-                # when using the unity-greeter schema.
++                # when using the arctica-greeter schema.
+                 if GLib.uri_parse_scheme(fn) == "file":
+                     try:
+                         fn, error = GLib.filename_from_uri(fn)
+@@ -1394,8 +1394,8 @@
+                             .format(fn, unicode_str(ex)))
+         return fn
+ 
+-    def get_xembed_unity_greeter_offset_x(self):
+-        value = self.gskeys["xembed_unity_greeter_offset_x"].value
++    def get_xembed_arctica_greeter_offset_x(self):
++        value = self.gskeys["xembed_arctica_greeter_offset_x"].value
+         if value < 0:
+             value = None
+         return value
+@@ -2004,12 +2004,12 @@
+         self.add_key("screen-keyboard-enabled", False, writable=False)
+ 
+ 
+-class ConfigUnityGreeter(ConfigObject):
+-    """ Key to hide onboard when embedded into unity-greeter """
++class ConfigArcticaGreeter(ConfigObject):
++    """ Key to hide onboard when embedded into arctica-greeter """
+ 
+     def _init_keys(self):
+-        self.schema = SCHEMA_UNITY_GREETER
+-        self.sysdef_section = "unity-greeter"
++        self.schema = SCHEMA_ARCTICA_GREETER
++        self.sysdef_section = "arctica-greeter"
+ 
+         self.add_key("onscreen-keyboard", False)
+ 
+--- a/Onboard/Keyboard.py
++++ b/Onboard/Keyboard.py
+@@ -2698,17 +2698,17 @@
+     id = "hide"
+ 
+     def release(self, view, button, event_type):
+-        if config.unity_greeter:
+-            config.unity_greeter.onscreen_keyboard = False
++        if config.arctica_greeter:
++            config.arctica_greeter.onscreen_keyboard = False
+         else:
+             # No request_keyboard_visible() here, so hide button can
+             # unlock_visibility in case of stuck keys.
+             self.keyboard.set_visible(False)
+ 
+     def update(self):
+-        # insensitive in XEmbed mode except in unity-greeter
++        # insensitive in XEmbed mode except in arctica-greeter
+         self.set_sensitive(not config.xid_mode or
+-                           config.unity_greeter)
++                           config.arctica_greeter)
+ 
+ 
+ class BCShowClick(ButtonController):
+--- a/onboard-defaults.conf.example
++++ b/onboard-defaults.conf.example
+@@ -103,21 +103,21 @@
+ xembed-onboard=True
+ 
+ # Enable aspect correction and fake transparency in gnome-screensaver
+-# and unity-greeter. Remove this key to have Onboard stretch from
++# and arctica-greeter. Remove this key to have Onboard stretch from
+ # side to side again.
+ xembed-aspect-change-range=[0, 1.6]
+ 
+-# Position of the keyboard in unity-greeter in pixels from
++# Position of the keyboard in arctica-greeter in pixels from
+ # the left screen edge. Remove this to center the keyboard.
+-xembed-unity-greeter-offset-x=85.0
++xembed-arctica-greeter-offset-x=85.0
+ 
+ # Color of the background bar that is rendered on top of the
+-# background image in unity-greeter and gnome-screensaver.
++# background image in arctica-greeter and gnome-screensaver.
+ # If not specified, the color is taken from the keyboard's background color.
+ xembed-background-color=#0000007F
+ 
+ # Enable drawing the current GNOME background image as background in
+-# unity-greeter and gnome-screensaver.
++# arctica-greeter and gnome-screensaver.
+ xembed-background-image-enabled=True
+ 
+ # Other available keys:
+--- a/Onboard/KeyboardWidget.py
++++ b/Onboard/KeyboardWidget.py
+@@ -490,14 +490,14 @@
+ 
+     def _get_aspect_corrected_layout_rect(self, rect, base_aspect_rect):
+         """
+-        Aspect correction specifically targets xembedding in unity-greeter
++        Aspect correction specifically targets xembedding in arctica-greeter
+         and gnome-screen-saver. Else we would potentially disrupt embedding
+         in existing kiosk applications.
+         """
+         orientation_co = self.get_kbd_window().get_orientation_config_object()
+         keep_aspect = config.is_keep_frame_aspect_ratio_enabled(orientation_co)
+         xembedding = config.xid_mode
+-        unity_greeter = config.launched_by == config.LAUNCHER_UNITY_GREETER
++        arctica_greeter = config.launched_by == config.LAUNCHER_ARCTICA_GREETER
+ 
+         x_align = 0.5
+         aspect_change_range = (0, 100)
+@@ -512,10 +512,10 @@
+             ra = rect.resize_to_aspect_range(base_aspect_rect,
+                                              aspect_change_range)
+             if xembedding and \
+-               unity_greeter:
++               arctica_greeter:
+                 padding = rect.w - ra.w
+-                offset = config.get_xembed_unity_greeter_offset_x()
+-                # Attempt to left align to unity-greeters password box,
++                offset = config.get_xembed_arctica_greeter_offset_x()
++                # Attempt to left align to arctica-greeter's password box,
+                 # but use the whole width on small screens.
+                 if offset is not None \
+                    and padding > 2 * offset:
+--- a/data/org.onboard.gschema.xml
++++ b/data/org.onboard.gschema.xml
+@@ -106,23 +106,23 @@
+         <key name="xembed-aspect-change-range" type="ad">
+             <default>[0, 1.6]</default>
+             <summary>Aspect range while embedded</summary>
+-            <description>Limits of the keyboard's aspect ratio when it is embedded, i.e. in unity-greeter, gnome-screensaver.</description>
++            <description>Limits of the keyboard's aspect ratio when it is embedded, i.e. in arctica-greeter, gnome-screensaver.</description>
+         </key>
+         <key name="xembed-background-color" type="s">
+             <default>'#0000007F'</default>
+             <summary>Background color when embedded</summary>
+-            <description>Color of the background bar that is rendered on top of the background image in unity-greeter and gnome-screensaver. If empty, the color is taken from the keyboard's current background color.'</description>
++            <description>Color of the background bar that is rendered on top of the background image in arctica-greeter and gnome-screensaver. If empty, the color is taken from the keyboard's current background color.'</description>
+         </key>
+         <key name="xembed-background-image-enabled" type="b">
+             <default>true</default>
+             <summary>Enable drawing background image when embedded</summary>
+-            <description>Enable drawing the current GNOME background image in unity-greeter and gnome-screensaver.</description>
++            <description>Enable drawing the current GNOME background image in arctica-greeter and gnome-screensaver.</description>
+         </key>
+-        <key name="xembed-unity-greeter-offset-x" type="d">
++        <key name="xembed-arctica-greeter-offset-x" type="d">
+             <default>85.0</default>
+-            <summary>Horizontal position in unity-greeter</summary>
+-            <description>Maximum distance of the keyboard in unity-greeter in pixels from the left screen edge. Depending on the available width, the offset is gradually lowered. Negative values center the keyboard horizontally. 
+-This key has no effect outside of unity-greeter.</description>
++            <summary>Horizontal position in arctica-greeter</summary>
++            <description>Maximum distance of the keyboard in arctica-greeter in pixels from the left screen edge. Depending on the available width, the offset is gradually lowered. Negative values center the keyboard horizontally. 
++This key has no effect outside of -greeter.</description>
+         </key>
+ 
+         <child name="auto-show" schema="org.onboard.auto-show" />
+--- a/Onboard/KbdWindow.py
++++ b/Onboard/KbdWindow.py
+@@ -175,7 +175,7 @@
+         self.supports_alpha = \
+             visual and \
+             (screen.is_composited() or \
+-             config.launched_by == config.LAUNCHER_UNITY_GREETER)
++             config.launched_by == config.LAUNCHER_ARCTICA_GREETER)
+ 
+         self.keyboard_widget.supports_alpha = self.supports_alpha
+ 
