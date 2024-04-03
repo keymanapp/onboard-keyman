@@ -1,3 +1,39 @@
+onboard (1.4.1-6) unstable; urgency=medium
+
+  [ Bo YU ]
+  * debian/patches:
+    + Add 1004-fix-ftbfs-python3-12.patch. Fix ftbfs on python3.12. (Closes:
+      #1057442)
+
+  [ Mike Gabriel ]
+  * debian/upstream/metadata:
+    + Add file. Comply with DEP-12.
+  * debian/patches:
+    + Add Forwarded: key to patches 1001, 1002, 1003 and 1004. Upstream has
+      been MIA since 2017.
+    + Add patches 1005, 1006, 1007 and 1008 to fix various problems during
+      unit tests. Mostly syntax fixes. (patch 1006 -> Closes: #948635).
+    + Add 1010_arctica-greeter.patch. Optimize for running in Arctica Greeter
+      rather than Unity Greeter.
+    + Add patches 2001 and 2002. Remove test_gui.py and test_dbus.py. Both fail
+      for various reasons. Deeper investigation needed.
+    + Add 1011_python-distutils-byebye.patch. Migrated from distutils to
+      setuptools.
+  * debian/copyright:
+    + Update copyright attributions.
+  * debian/rules:
+    + Add several file clean-ups to dh_auto_clean override. (Closes: #1048852).
+    + Prepare a proper test-bed for running onboard unit tests.
+    + Update buildflags. Build with LTO optimization (no code change needed).
+      (Closes: #1015562).
+  * debian/control:
+    + Bump DH compat level to version 13.
+    + Update B-D for (really!) running unit tests after build.
+    + Bump Standards-Version: to 4.6.2. No changes needed.
+    + Improve LONG_DESCRIPTIONs. (Closes: #992264).
+
+ -- Mike Gabriel <sunweaver@debian.org>  Wed, 03 Apr 2024 18:11:22 +0200
+
 onboard (1.4.1-5) unstable; urgency=medium
 
   [ Mike Gabriel ]
