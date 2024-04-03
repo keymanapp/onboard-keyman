@@ -1,6 +1,8 @@
 Description: don't enable onboard in GNOME sessions since caribou is being
  used and it leads to have two onscreen keyboards loaded at the same time
 Bug: https://launchpad.net/bugs/1721125
+Forwarded: pending, upstream maintainer is MIA
+
 --- a/data/onboard-autostart.desktop.in
 +++ b/data/onboard-autostart.desktop.in
 @@ -9,4 +9,4 @@

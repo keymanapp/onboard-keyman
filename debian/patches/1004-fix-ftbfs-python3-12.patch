@@ -1,6 +1,8 @@
 Description: Drop Wdeclaration-after-statement
  this is for Arch linux from upstream, so not need forward it
 Last-Update: 2023-12-06
+Forwarded: pending, upstream maintainer is MIA
+
 ---
 This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
 --- a/setup.py

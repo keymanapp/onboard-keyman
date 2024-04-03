@@ -1,5 +1,6 @@
 Description: Switch to AyatanaAppIndicator.
 Author: Mike Gabriel <mike.gabriel@das-netzwerkteam.de>
+Forwarded: pending, upstream maintainer is MIA
 
 --- a/Onboard/Indicator.py
 +++ b/Onboard/Indicator.py
