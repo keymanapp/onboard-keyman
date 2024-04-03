@@ -3,8 +3,10 @@
 #DH_VERBOSE=1
 export PYBUILD_NAME=onboard
 export PYBUILD_INSTALL_ARGS=--root=$(CURDIR)/debian/tmp
-export DEB_BUILD_MAINT_OPTIONS = hardening=+all,-pie
 export PYBUILD_TEST_PYTEST=1
+
+export DPKG_EXPORT_BUILDFLAGS = 1
+export DEB_BUILD_MAINT_OPTIONS = optimize=+lto hardening=+all
 
 %:
 	dh $@ --with python3 --buildsystem=pybuild
