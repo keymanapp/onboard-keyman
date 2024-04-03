@@ -11,9 +11,13 @@ export DEB_BUILD_MAINT_OPTIONS = hardening=+all,-pie
 override_dh_auto_clean:
 # Don't fail to build from git-buildpackage:
 	-dh_auto_clean
-	rm -rf build
+	rm -rf .pybuild
 	rm -rf Onboard/osk*.so
 	rm -rf Onboard/pypredict/lm*.so
+	rm -f  po/onboard.pot
+	rm -rf onboard.egg-info/
+	rm -rf debian/home/
+	rm -rf debian/data/
 
 override_dh_install:
 	rm -f debian/tmp/usr/share/onboard/COPYING
