@@ -11,3 +11,4 @@
 1010_arctica-greeter.patch
 2001_drop-gui-test.patch
 2002_drop-dbus-test.patch
+1011_python-distutils-byebye.patch
