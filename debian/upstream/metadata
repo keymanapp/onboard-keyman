@@ -1,0 +1,4 @@
+Bug-Database: https://bugs.launchpad.net/onboard/
+Bug-Submit: https://bugs.launchpad.net/onboard/+filebug
+Repository: bzr branch lp:onboard
+Repository-Browse: https://bazaar.launchpad.net/~onboard/onboard/trunk/files
