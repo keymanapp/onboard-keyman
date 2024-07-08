@@ -42,6 +42,7 @@ ifeq (,$(filter nocheck,$(DEB_BUILD_OPTIONS)))
 	  && export HOME=$$(pwd)/debian/home \
 	  && export XDG_CONFIG_HOME=$$HOME/.config \
 	  && export XDG_DATA_HOME=$$HOME/.local/share/ \
+	  && export LC_ALL=en_US.utf8 \
 	  && xvfb-run -a \
 	     dbus-test-runner --max-wait 3600 --keep-env --bus-type=session -t dh_auto_test
 	rm $$(find .pybuild/cpython3_*_onboard -maxdepth 0 | head -n1)/build/onboard
