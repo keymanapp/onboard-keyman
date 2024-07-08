@@ -4,7 +4,7 @@ Forwarded: pending, upstream maintainer is MIA
 
 --- a/setup.py
 +++ b/setup.py
-@@ -394,7 +394,7 @@
+@@ -399,7 +399,7 @@
      license = 'GPL-3+',
      description = 'Simple On-screen Keyboard',
  
