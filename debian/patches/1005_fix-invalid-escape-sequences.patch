@@ -174,3 +174,25 @@ Forwarded: pending, upstream maintainer is MIA
              choices = query_model.predict(context, limit)
  
              if 0:  # step mode for debugging
+--- a/Onboard/Appearance.py
++++ b/Onboard/Appearance.py
+@@ -921,7 +921,7 @@
+         ColorScheme._parse_dom_node_item(node, item)
+         return item
+ 
+-    _key_ids_pattern = re.compile('[\w-]+(?:[.][\w-]+)?', re.UNICODE)
++    _key_ids_pattern = re.compile('[\\w-]+(?:[.][\\w-]+)?', re.UNICODE)
+ 
+     @staticmethod
+     def _parse_key_group(node, used_keys):
+--- a/Onboard/TextDomain.py
++++ b/Onboard/TextDomain.py
+@@ -736,7 +736,7 @@
+     _protocols = ["mailto", "apt"]
+     _all_schemes = _schemes + _protocols
+ 
+-    _url_pattern = re.compile("([\w-]+)|(\W+)", re.UNICODE)
++    _url_pattern = re.compile("([\\w-]+)|(\\W+)", re.UNICODE)
+ 
+     def iter_url(self, url):
+         return self._url_pattern.finditer(url)
