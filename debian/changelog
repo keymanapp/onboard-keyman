@@ -1,3 +1,27 @@
+onboard (1.4.1-7) unstable; urgency=medium
+
+  [ Jeremy Bícha ]
+  * debian/control:
+    + Add Build-Depends: iso-codes for build tests
+
+  [ Bo YU ]
+  * debian/rules:
+    + Export LC_ALL when building. (Closes: #1071098).
+
+  [ Mike Gabriel ]
+  * debian/patches:
+    + Trivial rebase of 1008_enable-tests-during-build.patch.
+    + Update 1005_fix-invalid-escape-sequences.patch. Add more double-
+      backslashed regexp escape sequences. (Closes: #1069988).
+    + Update 1005_fix-invalid-escape-sequences.patch. Switch to raw
+      strings where possible.
+    + Merge patch 1009 into patch 1005. Both have been about regexp fixes /
+      escape sequences in regexps.
+  * debian/control:
+    + Add to B-D: locales-all (for unit tests).
+
+ -- Mike Gabriel <sunweaver@debian.org>  Wed, 10 Jul 2024 10:25:05 +0200
+
 onboard (1.4.1-6) unstable; urgency=medium
 
   [ Bo YU ]
