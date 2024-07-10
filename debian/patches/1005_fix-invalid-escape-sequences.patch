@@ -9,7 +9,7 @@ Forwarded: pending, upstream maintainer is MIA
  
      # regex
 -    >>> parse_key_combination(["F\d+"], ["TAB", "F1", "F2", "F3", "F9"])
-+    >>> parse_key_combination(["F\\d+"], ["TAB", "F1", "F2", "F3", "F9"])
++    >>> parse_key_combination([r"F\\d+"], ["TAB", "F1", "F2", "F3", "F9"])
      [('F1', 0), ('F2', 0), ('F3', 0), ('F9', 0)]
      """
      modifiers = combo[:-1]
@@ -19,65 +19,79 @@ Forwarded: pending, upstream maintainer is MIA
      # Join lines with text elements with their tag lines
 -    pattern = re.compile('>\n\s+([^<>\s].*?)\n\s+</', re.DOTALL)
 -    pretty_xml = pattern.sub('>\g<1></', ugly_xml)
-+    pattern = re.compile('>\n\\s+([^<>\\s].*?)\n\\s+</', re.DOTALL)
-+    pretty_xml = pattern.sub('>\\g<1></', ugly_xml)
++    pattern = re.compile(r'>\n\s+([^<>\s].*?)\n\s+</', re.DOTALL)
++    pretty_xml = pattern.sub(r'>\g<1></', ugly_xml)
  
      # Work around http://bugs.python.org/issue5752
      pretty_xml = re.sub(
-@@ -356,20 +356,20 @@
+@@ -356,8 +356,8 @@
      """
      Converts a list of strings into a dict of tuples.
      Sample list: ['LWIN:label:super', ...]
 -    ":" in a value must be escaped as "\:"
+-    "\" in a value must be escaped as "\\"
 +    ":" in a value must be escaped as "\\:"
-     "\" in a value must be escaped as "\\"
++    "\\" in a value must be escaped as "\\\\"
      """
      result = {}
  
-     # Awkward fixed regexes; todo: Allow arbirary number of values
-     if num_values == 1:
--        pattern = re.compile(r"""([^\s:]+)             # name
--                                 : ((?:\\.|[^\\:])*)   # first value
-+        pattern = re.compile(r"""([^\\s:]+)                # name
-+                                 : ((?:\\\\.|[^\\\\:])*)   # first value
-                              """, re.VERBOSE)
-     elif num_values == 2:
--        pattern = re.compile(r"""([^\s:]+)             # name
--                                 : ((?:\\.|[^\\:])*)   # first value
--                                 : ((?:\\.|[^\\:])*)   # second value
-+        pattern = re.compile(r"""([^\\s:]+)                # name
-+                                 : ((?:\\\\.|[^\\\\:])*)   # first value
-+                                 : ((?:\\\\.|[^\\\\:])*)   # second value
-                              """, re.VERBOSE)
-     else:
-         assert(False)  # unsupported number of values
-@@ -1540,12 +1540,12 @@
+@@ -379,8 +379,8 @@
+         if tuples:
+             a = []
+             for t in tuples[0]:
+-                t = t.replace("\\\\", "\\")   # unescape backslash
+-                t = t.replace("\\:", ":")     # unescape separator
++                t = t.replace(r'\\\\', r'\\')     # unescape backslash
++                t = t.replace(r'\\:', r'\:')      # unescape separator
+                 a.append(t)
+ 
+             if key_type == str:
+@@ -404,8 +404,8 @@
+         text = str(t[0])
+         sep = name_sep
+         for value in t[1]:
+-            value = value.replace("\\", "\\\\")   # escape backslash
+-            value = value.replace(sep, "\\"+sep)  # escape separator
++            value = value.replace(r'\\', r'\\\\')   # escape backslash
++            value = value.replace(sep, r'\\'+sep)  # escape separator
+             text += sep + '%s' % value
+             sep = field_sep
+         result.append(text)
+@@ -1539,9 +1539,9 @@
+ 
  
  _tag_pattern = re.compile(
-     """(?:
--            <[\w\-_]+                         # tag
+-    """(?:
++    r"""(?:
+             <[\w\-_]+                         # tag
 -            (?:\s+[\w\-_]+=["'][^"']*["'])*  # attributes
-+            <[\\w\\-_]+                         # tag
-+            (?:\\s+[\\w\\-_]+=["'][^"']*["'])*  # attributes
++            (?:\s+[\w\-_]+=["'][^"']*["'])*   # attributes
              /?>
          ) |
          (?:
--            </?[\w\-_]+>
-+            </?[\\w\\-_]+>
-         )
-     """, re.UNICODE|re.DOTALL|re.VERBOSE)
+@@ -1573,7 +1573,7 @@
+     [('<tag/>', True), (' ', False), ('<tag2 attr="value"/>', True)]
  
+     # must not modify input, i.e. concatenated result must equal input text
+-    >>> markup = "asd <tt>t est\\n ds</tt> te st2 "
++    >>> markup = r"asd <tt>t est\n ds</tt> te st2 "
+     >>> "".join([text for text, tag in _iter_markup(markup)]) == markup
+     True
+     """
 --- a/Onboard/pypredict/lm_wrapper.py
 +++ b/Onboard/pypredict/lm_wrapper.py
-@@ -301,11 +301,11 @@
+@@ -299,13 +299,13 @@
+ 
+ 
  SENTENCE_PATTERN = re.compile( \
-     """ .*?
+-    """ .*?
++    r""" .*?
             (?:
 -                 (?:[.;:!?](?:(?=[\s]) | \")) # punctuation
 -               | (?:\\s*\\n\\s*)+(?=[\\n])    # multiples newlines
 -               | <s>                          # sentence end mark
-+                 (?:[.;:!?](?:(?=[\\s]) | \")) # punctuation
-+               | (?:\\s*\\n\\s*)+(?=[\\n])     # multiples newlines
++                 (?:[.;:!?](?:(?=[\s]) | \"))  # punctuation
++               | (?:\s*\n\s*)+(?=[\n])         # multiples newlines
 +               | <s>                           # sentence end mark
             )
 -         | .+$                                # last sentence fragment
@@ -90,7 +104,7 @@ Forwarded: pending, upstream maintainer is MIA
          sentence = match.group()
          # not only newlines? remove fragments with only double newlines
 -        if True: #not re.match("^\s*\n+\s*$", sentence, re.UNICODE):
-+        if True: #not re.match("^\\s*\n+\\s*$", sentence, re.UNICODE):
++        if True: #not re.match(r"^\s*\n+\s*$", sentence, re.UNICODE):
              begin = match.start()
              end   = match.end()
  
@@ -99,78 +113,69 @@ Forwarded: pending, upstream maintainer is MIA
  
              # remove newlines and double spaces - no, invalidates spans
 -            #sentence = re.sub(u"\s+", u" ", sentence)
-+            #sentence = re.sub(u"\\s+", u" ", sentence)
++            #sentence = re.sub(r"\s+", u" ", sentence)
  
              # strip whitespace from the cuts, remove carriage returns
              l = len(sentence)
-@@ -367,27 +367,27 @@
+@@ -365,10 +365,10 @@
+     return sentences, spans
  
- tokenize_pattern = """
+ 
+-tokenize_pattern = """
++tokenize_pattern = r"""
      (                                     # <unk>
--      (?:^|(?<=\s))
+       (?:^|(?<=\s))
 -        \S*(\S)\\2{{3,}}\S*               # char repeated more than 3 times
-+      (?:^|(?<=\\s))
-+        \\S*(\\S)\\2{{3,}}\\S*            # char repeated more than 3 times
++        \S*(\S)\2{{3,}}\S*                # char repeated more than 3 times
          | [-]{{3}}                        # dash repeated more than 2 times
--      (?=\s|$)
--      | :[^\s:@]+?@                       # password in URL
-+      (?=\\s|$)
-+      | :[^\\s:@]+?@                      # password in URL
-     ) |
-     (                                     # <num>
--      (?:[-+]?\d+(?:[.,]\d+)*)            # anything numeric looking
--      | (?:[.,]\d+)
-+      (?:[-+]?\\d+(?:[.,]\\d+)*)          # anything numeric looking
-+      | (?:[.,]\\d+)
+       (?=\s|$)
+       | :[^\s:@]+?@                       # password in URL
+@@ -379,7 +379,7 @@
      ) |
      (                                     # word
        (?:[-]{{0,2}}                       # allow command line options
 -        [^\W\d]\w*(?:[-'´΄][\w]+)*        # word, not starting with a digit
-+        [^\\W\\d]\\w*(?:[-'´΄[\\w]+)*    # word, not starting with a digit
++        [^\W\d]\w*(?:[-'´΄[\w]+)*         # word, not starting with a digit
          [{trailing_characters}'´΄]?)
        | <unk> | <s> | </s> | <num>        # pass through control words
        | <bot:[a-z]*>                      # pass through begin of text merkers
--      | (?:^|(?<=\s))
-+      | (?:^|(?<=\\s))
-           (?:
--            \| {standalone_operators}     # common space delimited operators
-+            \\| {standalone_operators}    # common space delimited operators
-           )
--        (?=\s|$)
-+        (?=\\s|$)
-     )
-     """
- # Don't learn "-" or "--" as standalone tokens...
-@@ -465,10 +465,10 @@
+@@ -464,11 +464,11 @@
+         The result is ready for use in predict().
      """
      tokens, spans = tokenize_text(text, is_context = True)
-     if not re.match("""
+-    if not re.match("""
 -                  ^$                             # empty string?
--                | .*[-'´΄\w]$                    # word at the end?
--                | (?:^|.*\s)[|]=?$               # recognized operator?
--                | .*(\S)\\1{3,}$                 # anything repeated > 3 times?
++    if not re.match(r"""
 +                  ^$                              # empty string?
-+                | .*[-'´΄\\w]$                    # word at the end?
-+                | (?:^|.*\\s)[|]=?$               # recognized operator?
-+                | .*(\\S)\\1{3,}$                 # anything repeated > 3 times?
+                 | .*[-'´΄\w]$                    # word at the end?
+                 | (?:^|.*\s)[|]=?$               # recognized operator?
+-                | .*(\S)\\1{3,}$                 # anything repeated > 3 times?
++                | .*(\S)\1{3,}$                 # anything repeated > 3 times?
                  """, text, re.UNICODE|re.DOTALL|re.VERBOSE):
          tokens.append("")
          tend = len(text)
-@@ -501,7 +501,7 @@
+@@ -501,13 +501,13 @@
              continue
  
          if data:  # data section?
 -            result = re.search("ngram (\d+)=\d+", line)
-+            result = re.search("ngram (\\d+)=\\d+", line)
++            result = re.search(r"ngram (\d+)=\d+", line)
              if result:
                  if order is None:
                      order = 0
+                 order = max(order, int(result.groups()[0]))
+ 
+-            if line.startswith("\\"):  # end of data section?
++            if line.startswith(r"\\"):  # end of data section?
+                 break
+ 
+     return order
 @@ -621,7 +621,7 @@
              context, spans = tokenize_context(". " + inputline) # simulate sentence begin
              prefix = context[len(context)-1] if context else ""
              prefix_to_end = sentence[len(inputline)-len(prefix):]
 -            target_word = re.search("^([\w]|[-'])*", prefix_to_end, re.UNICODE).group()
-+            target_word = re.search("^([\\w]|[-'])*", prefix_to_end, re.UNICODE).group()
++            target_word = re.search(r"^([\w]|[-'])*", prefix_to_end, re.UNICODE).group()
              choices = query_model.predict(context, limit)
  
              if 0:  # step mode for debugging
@@ -181,10 +186,19 @@ Forwarded: pending, upstream maintainer is MIA
          return item
  
 -    _key_ids_pattern = re.compile('[\w-]+(?:[.][\w-]+)?', re.UNICODE)
-+    _key_ids_pattern = re.compile('[\\w-]+(?:[.][\\w-]+)?', re.UNICODE)
++    _key_ids_pattern = re.compile(r'[\w-]+(?:[.][\w-]+)?', re.UNICODE)
  
      @staticmethod
      def _parse_key_group(node, used_keys):
+@@ -1063,7 +1063,7 @@
+ 
+             # read key ids
+             text = "".join([n.data for n in group.childNodes])
+-            key_ids = [x for x in re.findall('\w+(?:[.][\w-]+)?', text) if x]
++            key_ids = [x for x in re.findall(r'\w+(?:[.][\w-]+)?', text) if x]
+ 
+             # check for duplicate key definitions
+             for key_id in key_ids:
 --- a/Onboard/TextDomain.py
 +++ b/Onboard/TextDomain.py
 @@ -736,7 +736,7 @@
@@ -192,7 +206,18 @@ Forwarded: pending, upstream maintainer is MIA
      _all_schemes = _schemes + _protocols
  
 -    _url_pattern = re.compile("([\w-]+)|(\W+)", re.UNICODE)
-+    _url_pattern = re.compile("([\\w-]+)|(\\W+)", re.UNICODE)
++    _url_pattern = re.compile(r"([\w-]+)|(\W+)", re.UNICODE)
  
      def iter_url(self, url):
          return self._url_pattern.finditer(url)
+--- a/setup.py
++++ b/setup.py
+@@ -115,7 +115,7 @@
+               .format(repr(package), status), file=sys.stderr)
+         sys.exit(2)
+ 
+-    version = re.search('(?:(?:\d+)\.)+\d+', output).group()
++    version = re.search(r'(?:(?:\d+)\.)+\d+', output).group()
+     components = version.split(".")
+     major, minor = int(components[0]), int(components[1])
+     revision = int(components[2]) if len(components) >= 3 else 0
