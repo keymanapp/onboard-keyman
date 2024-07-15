@@ -1,3 +1,11 @@
+onboard (1.4.1-8) unstable; urgency=medium
+
+  * debian/patches:
+    + Add 1012_thread-state.patch cherry-picked from Voidlinux. Wrap device
+      events into PyGILState_Ensure / PyGILState_Release. (Closes: #1076120).
+
+ -- Mike Gabriel <sunweaver@debian.org>  Mon, 15 Jul 2024 14:36:23 +0000
+
 onboard (1.4.1-7) unstable; urgency=medium
 
   [ Jeremy Bícha ]
