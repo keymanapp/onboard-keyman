@@ -20,7 +20,7 @@
 import os
 import glob
 import sys
-from distutils.core import setup, Extension
+from setuptools import setup, Extension
 from os.path import join
 
 try:

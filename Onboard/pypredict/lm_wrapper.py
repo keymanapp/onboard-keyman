@@ -299,13 +299,13 @@ def split_tokens_at(tokens, split_indices):
 
 
 SENTENCE_PATTERN = re.compile( \
-    """ .*?
+    r""" .*?
            (?:
-                 (?:[.;:!?](?:(?=[\s]) | \")) # punctuation
-               | (?:\\s*\\n\\s*)+(?=[\\n])    # multiples newlines
-               | <s>                          # sentence end mark
+                 (?:[.;:!?](?:(?=[\s]) | \"))  # punctuation
+               | (?:\s*\n\s*)+(?=[\n])         # multiples newlines
+               | <s>                           # sentence end mark
            )
-         | .+$                                # last sentence fragment
+         | .+$                                 # last sentence fragment
     """, re.UNICODE|re.DOTALL|re.VERBOSE)
 
 def split_sentences(text, disambiguate=False):
@@ -324,7 +324,7 @@ def split_sentences(text, disambiguate=False):
     for match in matches:
         sentence = match.group()
         # not only newlines? remove fragments with only double newlines
-        if True: #not re.match("^\s*\n+\s*$", sentence, re.UNICODE):
+        if True: #not re.match(r"^\s*\n+\s*$", sentence, re.UNICODE):
             begin = match.start()
             end   = match.end()
 
@@ -341,7 +341,7 @@ def split_sentences(text, disambiguate=False):
             sentence = re.sub("<s>", "   ", sentence)
 
             # remove newlines and double spaces - no, invalidates spans
-            #sentence = re.sub(u"\s+", u" ", sentence)
+            #sentence = re.sub(r"\s+", u" ", sentence)
 
             # strip whitespace from the cuts, remove carriage returns
             l = len(sentence)
@@ -365,10 +365,10 @@ def split_sentences(text, disambiguate=False):
     return sentences, spans
 
 
-tokenize_pattern = """
+tokenize_pattern = r"""
     (                                     # <unk>
       (?:^|(?<=\s))
-        \S*(\S)\\2{{3,}}\S*               # char repeated more than 3 times
+        \S*(\S)\2{{3,}}\S*                # char repeated more than 3 times
         | [-]{{3}}                        # dash repeated more than 2 times
       (?=\s|$)
       | :[^\s:@]+?@                       # password in URL
@@ -379,7 +379,7 @@ tokenize_pattern = """
     ) |
     (                                     # word
       (?:[-]{{0,2}}                       # allow command line options
-        [^\W\d]\w*(?:[-'´΄][\w]+)*        # word, not starting with a digit
+        [^\W\d]\w*(?:[-'´΄[\w]+)*         # word, not starting with a digit
         [{trailing_characters}'´΄]?)
       | <unk> | <s> | </s> | <num>        # pass through control words
       | <bot:[a-z]*>                      # pass through begin of text merkers
@@ -464,11 +464,11 @@ def tokenize_context(text):
         The result is ready for use in predict().
     """
     tokens, spans = tokenize_text(text, is_context = True)
-    if not re.match("""
-                  ^$                             # empty string?
+    if not re.match(r"""
+                  ^$                              # empty string?
                 | .*[-'´΄\w]$                    # word at the end?
                 | (?:^|.*\s)[|]=?$               # recognized operator?
-                | .*(\S)\\1{3,}$                 # anything repeated > 3 times?
+                | .*(\S)\1{3,}$                 # anything repeated > 3 times?
                 """, text, re.UNICODE|re.DOTALL|re.VERBOSE):
         tokens.append("")
         tend = len(text)
@@ -501,13 +501,13 @@ def read_order(filename, encoding=None):
             continue
 
         if data:  # data section?
-            result = re.search("ngram (\d+)=\d+", line)
+            result = re.search(r"ngram (\d+)=\d+", line)
             if result:
                 if order is None:
                     order = 0
                 order = max(order, int(result.groups()[0]))
 
-            if line.startswith("\\"):  # end of data section?
+            if line.startswith(r"\\"):  # end of data section?
                 break
 
     return order
@@ -621,7 +621,7 @@ def simulate_typing(query_model, learn_model, sentences, limit, progress=None):
             context, spans = tokenize_context(". " + inputline) # simulate sentence begin
             prefix = context[len(context)-1] if context else ""
             prefix_to_end = sentence[len(inputline)-len(prefix):]
-            target_word = re.search("^([\w]|[-'])*", prefix_to_end, re.UNICODE).group()
+            target_word = re.search(r"^([\w]|[-'])*", prefix_to_end, re.UNICODE).group()
             choices = query_model.predict(context, limit)
 
             if 0:  # step mode for debugging

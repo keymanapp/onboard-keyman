@@ -1250,8 +1250,8 @@ class WordSuggestions:
                 return word_span
         return None
 
-    _section_begin_pattern = re.compile("\S*\s*$")
-    _section_end_pattern = re.compile("\S*(?=\s*)")
+    _section_begin_pattern = re.compile(r"\S*\s*$")
+    _section_end_pattern = re.compile(r"\S*(?=\s*)")
 
     def _get_section_before_span(self, insertion_span):
         """

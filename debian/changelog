@@ -1,127 +1,86 @@
-onboard-keyman (1.4.4+onboard1.4.1-5ubuntu3) noble; urgency=medium
+onboard (1.4.4+onboard1.4.1-9) noble; urgency=medium
 
   * Build for noble
 
- -- Eberhard Beilharz <eb1@sil.org>  Wed, 27 Mar 2024 18:57:34 +0100
+ -- Eberhard Beilharz <eb1@sil.org>  Fri, 26 Jul 2024 11:39:52 +0200
 
-onboard (1.4.1-5ubuntu2) noble; urgency=medium
+onboard (1.4.1-9) unstable; urgency=medium
 
-  * No-change rebuild with Python 3.12 as default
+  * debian/patches:
+    + Add 1013_slow-down-tests-for-riscv64.patch. Give the unit test / onboard
+      startup more time before killing onboard again. Fixes unit tests on slower
+      architectures such as RISCV64. (Closes: #1076820). Thanks to Aurelien
+      Jarno for debugging this and for providing a patch.
 
- -- Graham Inggs <ginggs@ubuntu.com>  Sat, 20 Jan 2024 08:55:17 +0000
+ -- Mike Gabriel <sunweaver@debian.org>  Wed, 24 Jul 2024 07:54:48 +0200
 
-onboard (1.4.1-5ubuntu1) noble; urgency=medium
+onboard (1.4.1-8) unstable; urgency=medium
 
-  * Fix FTBFS, build without -Werror=declaration-after-statement.
-  * Only build for the default Python3 version, because pycairo
-    stopped building for all supported Python3 versions.
+  * debian/patches:
+    + Add 1012_thread-state.patch cherry-picked from Voidlinux. Wrap device
+      events into PyGILState_Ensure / PyGILState_Release. (Closes: #1076120).
 
- -- Matthias Klose <doko@ubuntu.com>  Mon, 01 Jan 2024 13:27:51 +0100
+ -- Mike Gabriel <sunweaver@debian.org>  Mon, 15 Jul 2024 14:36:23 +0000
 
-onboard (1.4.1-5build8) noble; urgency=medium
+onboard (1.4.1-7) unstable; urgency=medium
 
-  * No-change rebuild to build with python3.12 as supported.
+  [ Jeremy Bícha ]
+  * debian/control:
+    + Add Build-Depends: iso-codes for build tests
 
- -- Matthias Klose <doko@ubuntu.com>  Wed, 01 Nov 2023 17:06:44 +0100
-
-onboard (1.4.1-5build7) lunar; urgency=medium
-
-  * Rebuild to drop Python 3.10 extension
-
- -- Jeremy Bicha <jbicha@ubuntu.com>  Wed, 01 Mar 2023 12:33:50 -0500
-
-onboard (1.4.1-5build6) lunar; urgency=medium
-
-  * No-change rebuild with Python 3.11 as supported
-
- -- Graham Inggs <ginggs@ubuntu.com>  Wed, 02 Nov 2022 15:20:02 +0000
-
-onboard (1.4.1-5build5) jammy; urgency=medium
-
-  * No-change rebuild with Python 3.10 only.
-
- -- Matthias Klose <doko@ubuntu.com>  Thu, 17 Mar 2022 15:06:43 +0100
-
-onboard (1.4.1-5build4) jammy; urgency=medium
-
-  * No-change rebuild to add python3.10.
-
- -- Matthias Klose <doko@ubuntu.com>  Sun, 17 Oct 2021 12:21:38 +0200
-
-onboard (1.4.1-5build2) hirsute; urgency=medium
-
-  * No-change rebuild to drop python3.8 extensions.
-
- -- Matthias Klose <doko@ubuntu.com>  Mon, 07 Dec 2020 18:46:37 +0100
-
-onboard (1.4.1-5build1) hirsute; urgency=medium
-
-  * No-change rebuild to build with python3.9 as supported.
-
- -- Matthias Klose <doko@ubuntu.com>  Sat, 24 Oct 2020 13:08:20 +0200
-
-onboard (1.4.1-5) unstable; urgency=medium
+  [ Bo YU ]
+  * debian/rules:
+    + Export LC_ALL when building. (Closes: #1071098).
 
   [ Mike Gabriel ]
-  * debian/control:
-    + Bump Standards-Version: to 4.4.1. No changes needed.
-    + Add Rules-Requires-Root: field and set it to no.
-    + Don't build gnome-shell-extension-onboard anymore. It is broken with
-      recent GNONME and there is no feedback from upstream about the future
-      perspective of the shell extension.
-      NOTE: for now, this is a temporary measure until the Debian maintainer
-      has received feedback from Onboard upstream about this.
-    + Enforce removal of gnome-shell-extension-onboard via B:/R: when upgrading
-      onboard to this package version. (Closes: #891236).
-    + Switch to debhelper-compat notation. Bump DH compat level to version 12.
-  * debian/rules:
-    + Switch from dh_install --fail-missing to dh_missing override.
-    + Don't install gnome-shell extension files for Onboard anymore.
-  * debian/copyright:
-    + Drop COPYING file. Thanks, lintian.
-
-  [ Balint Reczey ]
   * debian/patches:
-    + Add 0001-Replace-invalid-UTF-8-characters-in-ACPI-events.patch. Resolves
-      UnicodeDecodeError in AcpidListener. (Closes: #936019, LP:#1808446).
-    + Add 1003_disable_onboard_on_gnome.patch. Disable onboard on GNOME.
-      (Closes: #931961, LP:#1721125).
-
- -- Mike Gabriel <sunweaver@debian.org>  Thu, 09 Jan 2020 11:26:40 +0100
-
-onboard (1.4.1-4) unstable; urgency=medium
-
+    + Trivial rebase of 1008_enable-tests-during-build.patch.
+    + Update 1005_fix-invalid-escape-sequences.patch. Add more double-
+      backslashed regexp escape sequences. (Closes: #1069988).
+    + Update 1005_fix-invalid-escape-sequences.patch. Switch to raw
+      strings where possible.
+    + Merge patch 1009 into patch 1005. Both have been about regexp fixes /
+      escape sequences in regexps.
   * debian/control:
-    + Drop pkg-mate-team Alioth mailing list from Uploaders: field.
-    + One uploader per line...
-    + Bump Standards-Version: to 4.2.0. No changes needed.
+    + Add to B-D: locales-all (for unit tests).
+
+ -- Mike Gabriel <sunweaver@debian.org>  Wed, 10 Jul 2024 10:25:05 +0200
+
+onboard (1.4.1-6) unstable; urgency=medium
+
+  [ Bo YU ]
+  * debian/patches:
+    + Add 1004-fix-ftbfs-python3-12.patch. Fix ftbfs on python3.12. (Closes:
+      #1057442)
+
+  [ Mike Gabriel ]
+  * debian/upstream/metadata:
+    + Add file. Comply with DEP-12.
+  * debian/patches:
+    + Add Forwarded: key to patches 1001, 1002, 1003 and 1004. Upstream has
+      been MIA since 2017.
+    + Add patches 1005, 1006, 1007 and 1008 to fix various problems during
+      unit tests. Mostly syntax fixes. (patch 1006 -> Closes: #948635).
+    + Add 1010_arctica-greeter.patch. Optimize for running in Arctica Greeter
+      rather than Unity Greeter.
+    + Add patches 2001 and 2002. Remove test_gui.py and test_dbus.py. Both fail
+      for various reasons. Deeper investigation needed.
+    + Add 1011_python-distutils-byebye.patch. Migrated from distutils to
+      setuptools.
   * debian/copyright:
-    + Use secure URL in Source: field.
-
- -- Mike Gabriel <sunweaver@debian.org>  Wed, 22 Aug 2018 12:09:38 +0200
-
-onboard-keyman (1.4.3+onboard1.4.1-5) UNRELEASED; urgency=medium
-
-  * Add missing dependency
-  * Fix error displayed during installation
-
- -- Eberhard Beilharz <eb1@sil.org>  Fri, 14 Jan 2022 17:25:00 +0100
-
-onboard-keyman (1.4.2+onboard1.4.1-5) unstable; urgency=medium
-
+    + Update copyright attributions.
+  * debian/rules:
+    + Add several file clean-ups to dh_auto_clean override. (Closes: #1048852).
+    + Prepare a proper test-bed for running onboard unit tests.
+    + Update buildflags. Build with LTO optimization (no code change needed).
+      (Closes: #1015562).
   * debian/control:
-    + Standards-Version 4.4.1
-    + Add dependency debhelper-compat 12
+    + Bump DH compat level to version 13.
+    + Update B-D for (really!) running unit tests after build.
+    + Bump Standards-Version: to 4.6.2. No changes needed.
+    + Improve LONG_DESCRIPTIONs. (Closes: #992264).
 
- -- Eberhard Beilharz <eb1@sil.org>  Fri, 14 Jan 2022 17:24:43 +0100
-
-onboard-keyman (1.4.1+onboard1.4.1-5) unstable; urgency=medium
-
-  * Local build for developing keyman integration
-  * monitor ibus-kmfl on dbus
-  * when keyman kb name changes change ldml file if it exists
-
- -- Daniel Glassey <wdg@debian.org>  Fri, 17 Aug 2018 15:49:30 +0700
+ -- Mike Gabriel <sunweaver@debian.org>  Wed, 03 Apr 2024 18:11:22 +0200
 
 onboard (1.4.1-5) unstable; urgency=medium
 
