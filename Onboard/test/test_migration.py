@@ -141,7 +141,7 @@ class TestMigration(unittest.TestCase):
             env["LANG"] = "en_US.UTF-8"
 
             p = subprocess.Popen(["./onboard"], env=env)
-            time.sleep(1)
+            time.sleep(3)
             yield p
 
         finally:

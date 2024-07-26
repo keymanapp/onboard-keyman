@@ -60,7 +60,6 @@ Files: Onboard/Appearance.py
  Onboard/pypredict/lm_wrapper.py
  Onboard/pypredict/test/test_checkmodels.py
  Onboard/pypredict/test/test_pypredict.py
- Onboard/pypredict/tools/pypredict.py
  Onboard/test/test_LayoutLoaderSVG.py
  Onboard/test/test_dbus_service.py
  Onboard/test/test_gui.py
@@ -150,7 +149,6 @@ License: GPL-3+
 Files: Onboard/Exceptions.py
  Onboard/Indicator.py
  Onboard/LayoutLoaderSVG.py
- data/layoutstrings.py
 Copyright: 2008-2009, Chris Jones <tortoise@tortuga>
   2008-2010, Chris Jones <tortoise@tortuga>
   2010, Chris Jones <tortoise@tortuga>
@@ -225,10 +223,6 @@ License: GPL-3+
 Files: gnome/Onboard_Indicator@onboard.org/convenience.js
 Copyright: 2011-2012, Giovanni Campagna <scampa.giovanni@gmail.com>
 License: BSD-3-clause
-
-Files: Onboard/pypredict/lm/lm.h
-Copyright: 2009-2010, 2012-2014, marmuta <marmvta@gmail.com>
-License: GPL-3+
 
 Files: Onboard/pypredict/README
 Copyright: Michael Djavidan
@@ -448,9 +442,6 @@ License: GPL-3+
 
 Files: 
  Onboard/pypredict/attic/Makefile
- Onboard/pypredict/attic/multilevel
- Onboard/pypredict/attic/randbench
- Onboard/pypredict/attic/test-client
  Onboard/pypredict/lm/gen_accent_transform
  PKG-INFO
  gnome/Onboard_Indicator@onboard.org/metadata.json
@@ -463,7 +454,7 @@ Comment:
 
 Files: debian/*
 Copyright: 2012-2015, Francesco Fumanti <francesco.fumanti@gmx.net>
-           2015, Mike Gabriel <mike.gabriel@das-netzwerkteam.de>
+           2015-2024, Mike Gabriel <mike.gabriel@das-netzwerkteam.de>
 License: GPL-3+
 
 License: GPL-3+

@@ -2698,17 +2698,17 @@ class BCHide(ButtonController):
     id = "hide"
 
     def release(self, view, button, event_type):
-        if config.unity_greeter:
-            config.unity_greeter.onscreen_keyboard = False
+        if config.arctica_greeter:
+            config.arctica_greeter.onscreen_keyboard = False
         else:
             # No request_keyboard_visible() here, so hide button can
             # unlock_visibility in case of stuck keys.
             self.keyboard.set_visible(False)
 
     def update(self):
-        # insensitive in XEmbed mode except in unity-greeter
+        # insensitive in XEmbed mode except in arctica-greeter
         self.set_sensitive(not config.xid_mode or
-                           config.unity_greeter)
+                           config.arctica_greeter)
 
 
 class BCShowClick(ButtonController):

@@ -921,7 +921,7 @@ class ColorScheme(object):
         ColorScheme._parse_dom_node_item(node, item)
         return item
 
-    _key_ids_pattern = re.compile('[\w-]+(?:[.][\w-]+)?', re.UNICODE)
+    _key_ids_pattern = re.compile(r'[\w-]+(?:[.][\w-]+)?', re.UNICODE)
 
     @staticmethod
     def _parse_key_group(node, used_keys):
@@ -1063,7 +1063,7 @@ class ColorScheme(object):
 
             # read key ids
             text = "".join([n.data for n in group.childNodes])
-            key_ids = [x for x in re.findall('\w+(?:[.][\w-]+)?', text) if x]
+            key_ids = [x for x in re.findall(r'\w+(?:[.][\w-]+)?', text) if x]
 
             # check for duplicate key definitions
             for key_id in key_ids:

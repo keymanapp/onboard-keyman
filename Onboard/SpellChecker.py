@@ -321,7 +321,7 @@ class hunspell(SCBackend):
     def is_running(self):
         return not self._osk_hunspell is None
 
-    SPLITWORDS = re.compile("[^-_\s]+", re.UNICODE|re.DOTALL)
+    SPLITWORDS = re.compile(r"[^-_\s]+", re.UNICODE|re.DOTALL)
 
     def query(self, text):
         """

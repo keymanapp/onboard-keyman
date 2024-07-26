@@ -25,7 +25,7 @@ from Onboard.pypredict import *
 
 class _TestPatterns(unittest.TestCase):
 
-    def __init__(self, test, text, result):
+    def __init__(self, test, text="", result=[]):
         unittest.TestCase.__init__(self, test)
         self.text = text
         self.result = result
@@ -39,7 +39,7 @@ class _TestPatterns(unittest.TestCase):
 
 class _TestTokenization(unittest.TestCase):
 
-    def __init__(self, test, text, result):
+    def __init__(self, test, text="", result=[]):
         unittest.TestCase.__init__(self, test)
         self.training_text = text
         self.result = result
@@ -64,7 +64,7 @@ class _TestTokenization(unittest.TestCase):
 
 
 class _TestMultiOrder(unittest.TestCase):
-    def __init__(self, test, order):
+    def __init__(self, test, order=2):
         unittest.TestCase.__init__(self, test)
         self.order = order
 

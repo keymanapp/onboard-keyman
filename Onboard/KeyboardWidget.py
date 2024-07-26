@@ -490,14 +490,14 @@ class KeyboardWidget(Gtk.DrawingArea, WindowManipulatorAspectRatio,
 
     def _get_aspect_corrected_layout_rect(self, rect, base_aspect_rect):
         """
-        Aspect correction specifically targets xembedding in unity-greeter
+        Aspect correction specifically targets xembedding in arctica-greeter
         and gnome-screen-saver. Else we would potentially disrupt embedding
         in existing kiosk applications.
         """
         orientation_co = self.get_kbd_window().get_orientation_config_object()
         keep_aspect = config.is_keep_frame_aspect_ratio_enabled(orientation_co)
         xembedding = config.xid_mode
-        unity_greeter = config.launched_by == config.LAUNCHER_UNITY_GREETER
+        arctica_greeter = config.launched_by == config.LAUNCHER_ARCTICA_GREETER
 
         x_align = 0.5
         aspect_change_range = (0, 100)
@@ -512,10 +512,10 @@ class KeyboardWidget(Gtk.DrawingArea, WindowManipulatorAspectRatio,
             ra = rect.resize_to_aspect_range(base_aspect_rect,
                                              aspect_change_range)
             if xembedding and \
-               unity_greeter:
+               arctica_greeter:
                 padding = rect.w - ra.w
-                offset = config.get_xembed_unity_greeter_offset_x()
-                # Attempt to left align to unity-greeters password box,
+                offset = config.get_xembed_arctica_greeter_offset_x()
+                # Attempt to left align to arctica-greeter's password box,
                 # but use the whole width on small screens.
                 if offset is not None \
                    and padding > 2 * offset:

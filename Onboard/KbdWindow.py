@@ -175,7 +175,7 @@ class KbdWindowBase:
         self.supports_alpha = \
             visual and \
             (screen.is_composited() or \
-             config.launched_by == config.LAUNCHER_UNITY_GREETER)
+             config.launched_by == config.LAUNCHER_ARCTICA_GREETER)
 
         self.keyboard_widget.supports_alpha = self.supports_alpha
 
