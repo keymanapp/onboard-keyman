@@ -103,7 +103,7 @@ class OnboardGtk(object):
             except dbus.exceptions.DBusException:
                 err_msg = "D-Bus session bus unavailable"
                 bus = None
-            self.keymandbus = KeymanDBus()
+            self.keymandbus = KeymanDBus(config)
 
         if not bus:
             _logger.warning(err_msg + "  " +
@@ -568,6 +568,8 @@ class OnboardGtk(object):
     def cb_keyman_changed(self, name):
         """ keyman keyboard change """
         print("keyman changed to", name)
+        # TODO: why is 'None' passed as a string here???
+        config.theme_settings.reset_key_label_font(name != 'None')
         self._keyman_labels = self.keymandbus.key_labels
         self.reload_layout_delayed()
 

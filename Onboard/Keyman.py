@@ -29,7 +29,7 @@ except ImportError:
     pass
 
 from Onboard.utils import Modifiers
-
+from Onboard.Config import Config
 from Onboard.Version import require_gi_versions
 require_gi_versions()
 from gi.repository       import GObject
@@ -81,8 +81,9 @@ class KeymanDBus(GObject.GObject):
     KM_DBUS_PROP_LDML  = "LDMLFile"
     KM_DBUS_PROP_NAME  = "Name"
 
-    def __init__(self):
+    def __init__(self, config):
         GObject.GObject.__init__(self)
+        self.config = config
         self.key_labels = None
         # self.keyboard = None
         self.name = "None"
@@ -152,15 +153,19 @@ class KeymanDBus(GObject.GObject):
             self.name = self._iface.Get(self.KM_DBUS_IFACE, self.KM_DBUS_PROP_NAME)
             # self._click_type = self._iface.Get(self.MT_DBUS_IFACE, self.MT_DBUS_PROP)
             if self._LDMLFile and self.name != "None":
-                self.key_labels = KeymanLabels()
+                self.key_labels = KeymanLabels(self.config)
                 self.key_labels.parse_labels(self._LDMLFile)
             else:
                 self.key_labels = None
+                if hasattr(self.config, 'theme_settings'):
+                    self.config.theme_settings.keyboard_key_label_font = None
         else:
             self._iface = None
             self.name = "None"
             self._LDMLFile = None
             self.key_labels = None
+            if hasattr(self.config, 'theme_settings'):
+                self.config.theme_settings.keyboard_key_label_font = None
             # self._click_type = self.CLICK_TYPE_SINGLE
 
     def _on_name_owner_changed(self, name, old, new):
@@ -187,7 +192,7 @@ class KeymanDBus(GObject.GObject):
             self._LDMLFile = self._iface.Get(self.KM_DBUS_IFACE, self.KM_DBUS_PROP_LDML)
             # self._click_type = self._iface.Get(self.MT_DBUS_IFACE, self.MT_DBUS_PROP)
             if self._LDMLFile and self.name != "None":
-                self.key_labels = KeymanLabels()
+                self.key_labels = KeymanLabels(self.config)
                 self.key_labels.parse_labels(self._LDMLFile)
             else:
                 self.key_labels = None
@@ -311,9 +316,17 @@ class KeymanLabels():
     # keymanlabels is a dict of modmask : label (and also has "code" : keycode?)
     # keymankeys is a dict of keycode : keymanlabels
 
+    def __init__(self, config):
+        self.config = config
+
     def parse_labels(self, ldmlfile):
         tree = etree.parse(ldmlfile)
         root = tree.getroot()
+        if hasattr(self.config, 'theme_settings'):
+            if root.attrib and 'keymanFacename' in root.attrib:
+                self.config.theme_settings.keyboard_key_label_font = root.attrib['keymanFacename']
+            else:
+                self.config.theme_settings.keyboard_key_label_font = None
         keymaps = tree.findall('keyMap')
 
         for keymap in keymaps:
@@ -336,7 +349,7 @@ class KeymanLabels():
                         iso = "LSGT"
                     elif iso == "AC12":
                         iso = "BKSL"
-                    if not iso in self.keymankeys:
+                    if iso not in self.keymankeys:
                         self.keymankeys[iso] = { keymanmodifier : map.attrib['to'] } # .encode('utf-8')}
                     else:
                         self.keymankeys[iso][keymanmodifier] = map.attrib['to'] # .encode('utf-8')
