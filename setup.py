@@ -30,12 +30,12 @@ import re
 import glob
 import subprocess
 from os.path import dirname, abspath, join, split
-from distutils.core import Extension, Command
-from distutils      import version
-from distutils.command.build_ext import build_ext
-from distutils.sysconfig import customize_compiler
+from setuptools import Extension, Command
+from setuptools.command.build_ext import build_ext
+from setuptools._distutils.sysconfig import customize_compiler
 from contextlib import contextmanager
 from subprocess import getstatusoutput
+import DistUtilsExtra.auto
 
 # Building in pbuilder for Precise with Python 3.2 and
 # python3-distutils-extra 2.34-0ubuntu0.1
@@ -45,16 +45,6 @@ if sys.version_info.major == 3 and \
    sys.version_info.minor <= 2:
     import locale
     locale.getpreferredencoding = lambda *x: 'UTF-8'
-
-try:
-    import DistUtilsExtra.auto
-except ImportError:
-    print('To build Onboard you need https://launchpad.net/python-distutils-extra', file=sys.stderr)
-    sys.exit(1)
-
-current_ver = version.StrictVersion(DistUtilsExtra.auto.__version__)
-required_ver = version.StrictVersion('2.12')
-assert current_ver >= required_ver , 'needs DistUtilsExtra.auto >= 2.12'
 
 project_root = dirname(abspath(__file__))
 build_root = join(project_root, 'build', 'lib*{}.*' \
@@ -115,7 +105,7 @@ def get_pkg_version(package):
               .format(repr(package), status), file=sys.stderr)
         sys.exit(2)
 
-    version = re.search('(?:(?:\d+)\.)+\d+', output).group()
+    version = re.search(r'(?:(?:\d+)\.)+\d+', output).group()
     components = version.split(".")
     major, minor = int(components[0]), int(components[1])
     revision = int(components[2]) if len(components) >= 3 else 0
@@ -230,7 +220,6 @@ class Extension_osk(Extension):
                            extra_compile_args = [
                                "-Wsign-compare",
                                "-Wdeclaration-after-statement",
-                               "-Werror=declaration-after-statement",
                                "-fPIC" ],
 
                            **pkgconfig('gdk-3.0', 'x11', 'xi', 'xtst', 'xkbfile',
@@ -288,19 +277,27 @@ extension_lm = Extension_lm("Onboard", "Onboard")
 class TestCommand(Command):
     user_options = [] # required by Command
 
-    depends = ["python3-nose",
+    depends = [
+               "dbus-test-runner",
+               "dconf-cli",
+               "gsettings-desktop-schemas",
                "hunspell",
                "hunspell-en-us",
                "hunspell-de-de",
-               "myspell-es",
-               "myspell-pt-pt",
+               "hunspell-es",
+               "hunspell-pt-pt",
                "hunspell-fr",
                "hunspell-ru",
-               "myspell-it",
-               "myspell-el-gr",
-               "xautomation",
+               "hunspell-it",
+               "hunspell-el",
+               "mousetweaks",
                "numlockx",
-              ]
+               "python3-dbus",
+               "python3-pytest",
+               "xauth",
+               "xautomation",
+               "xvfb",
+               ]
 
     def initialize_options(self):
         pass
@@ -347,7 +344,6 @@ class TestCommand(Command):
 
         return True
 
-
 # Custom build_i18n command that overrides the hard-coded
 # auto-start path "share/autostart" in auto.build_i18n_auto
 # for "onboard-autostart.desktop.in"
@@ -393,7 +389,7 @@ DistUtilsExtra.auto.setup(
     license = 'GPL-3+',
     description = 'Simple On-screen Keyboard',
 
-    packages = ['Onboard', 'Onboard.pypredict'],
+    packages = ['Onboard', 'Onboard.pypredict', 'Onboard.test'],
 
     data_files = [('share/glib-2.0/schemas', glob.glob('data/*.gschema.xml')),
                   ('share/dbus-1/services', glob.glob('data/org.onboard.Onboard.service')),

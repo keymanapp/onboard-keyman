@@ -1,25 +1,86 @@
-onboard-keyman (1.4.3+onboard1.4.1-5) UNRELEASED; urgency=medium
+onboard (1.4.4+onboard1.4.1-9) noble; urgency=medium
 
-  * Add missing dependency
-  * Fix error displayed during installation
+  * Build for noble
 
- -- Eberhard Beilharz <eb1@sil.org>  Fri, 14 Jan 2022 17:25:00 +0100
+ -- Eberhard Beilharz <eb1@sil.org>  Fri, 26 Jul 2024 11:39:52 +0200
 
-onboard-keyman (1.4.2+onboard1.4.1-5) unstable; urgency=medium
+onboard (1.4.1-9) unstable; urgency=medium
 
+  * debian/patches:
+    + Add 1013_slow-down-tests-for-riscv64.patch. Give the unit test / onboard
+      startup more time before killing onboard again. Fixes unit tests on slower
+      architectures such as RISCV64. (Closes: #1076820). Thanks to Aurelien
+      Jarno for debugging this and for providing a patch.
+
+ -- Mike Gabriel <sunweaver@debian.org>  Wed, 24 Jul 2024 07:54:48 +0200
+
+onboard (1.4.1-8) unstable; urgency=medium
+
+  * debian/patches:
+    + Add 1012_thread-state.patch cherry-picked from Voidlinux. Wrap device
+      events into PyGILState_Ensure / PyGILState_Release. (Closes: #1076120).
+
+ -- Mike Gabriel <sunweaver@debian.org>  Mon, 15 Jul 2024 14:36:23 +0000
+
+onboard (1.4.1-7) unstable; urgency=medium
+
+  [ Jeremy Bícha ]
   * debian/control:
-    + Standards-Version 4.4.1
-    + Add dependency debhelper-compat 12
+    + Add Build-Depends: iso-codes for build tests
 
- -- Eberhard Beilharz <eb1@sil.org>  Fri, 14 Jan 2022 17:24:43 +0100
+  [ Bo YU ]
+  * debian/rules:
+    + Export LC_ALL when building. (Closes: #1071098).
 
-onboard-keyman (1.4.1+onboard1.4.1-5) unstable; urgency=medium
+  [ Mike Gabriel ]
+  * debian/patches:
+    + Trivial rebase of 1008_enable-tests-during-build.patch.
+    + Update 1005_fix-invalid-escape-sequences.patch. Add more double-
+      backslashed regexp escape sequences. (Closes: #1069988).
+    + Update 1005_fix-invalid-escape-sequences.patch. Switch to raw
+      strings where possible.
+    + Merge patch 1009 into patch 1005. Both have been about regexp fixes /
+      escape sequences in regexps.
+  * debian/control:
+    + Add to B-D: locales-all (for unit tests).
 
-  * Local build for developing keyman integration
-  * monitor ibus-kmfl on dbus
-  * when keyman kb name changes change ldml file if it exists
+ -- Mike Gabriel <sunweaver@debian.org>  Wed, 10 Jul 2024 10:25:05 +0200
 
- -- Daniel Glassey <wdg@debian.org>  Fri, 17 Aug 2018 15:49:30 +0700
+onboard (1.4.1-6) unstable; urgency=medium
+
+  [ Bo YU ]
+  * debian/patches:
+    + Add 1004-fix-ftbfs-python3-12.patch. Fix ftbfs on python3.12. (Closes:
+      #1057442)
+
+  [ Mike Gabriel ]
+  * debian/upstream/metadata:
+    + Add file. Comply with DEP-12.
+  * debian/patches:
+    + Add Forwarded: key to patches 1001, 1002, 1003 and 1004. Upstream has
+      been MIA since 2017.
+    + Add patches 1005, 1006, 1007 and 1008 to fix various problems during
+      unit tests. Mostly syntax fixes. (patch 1006 -> Closes: #948635).
+    + Add 1010_arctica-greeter.patch. Optimize for running in Arctica Greeter
+      rather than Unity Greeter.
+    + Add patches 2001 and 2002. Remove test_gui.py and test_dbus.py. Both fail
+      for various reasons. Deeper investigation needed.
+    + Add 1011_python-distutils-byebye.patch. Migrated from distutils to
+      setuptools.
+  * debian/copyright:
+    + Update copyright attributions.
+  * debian/rules:
+    + Add several file clean-ups to dh_auto_clean override. (Closes: #1048852).
+    + Prepare a proper test-bed for running onboard unit tests.
+    + Update buildflags. Build with LTO optimization (no code change needed).
+      (Closes: #1015562).
+  * debian/control:
+    + Bump DH compat level to version 13.
+    + Update B-D for (really!) running unit tests after build.
+    + Bump Standards-Version: to 4.6.2. No changes needed.
+    + Improve LONG_DESCRIPTIONs. (Closes: #992264).
+
+ -- Mike Gabriel <sunweaver@debian.org>  Wed, 03 Apr 2024 18:11:22 +0200
 
 onboard (1.4.1-5) unstable; urgency=medium
 

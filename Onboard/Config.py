@@ -76,7 +76,7 @@ SCHEMA_WORD_SUGGESTIONS  = "org.onboard.typing-assistance.word-suggestions"
 SCHEMA_GSS               = "org.gnome.desktop.screensaver"
 SCHEMA_GDI               = "org.gnome.desktop.interface"
 SCHEMA_GDA               = "org.gnome.desktop.a11y.applications"
-SCHEMA_UNITY_GREETER     = "com.canonical.unity-greeter"
+SCHEMA_ARCTICA_GREETER   = "org.ArcticaProject.arctica-greeter"
 
 MODELESS_GKSU_KEY = "/apps/gksu/disable-grab"  # old gconf key, unused
 
@@ -134,7 +134,7 @@ class Config(ConfigObject):
     # launched by ...
     (LAUNCHER_NONE,
      LAUNCHER_GSS,
-     LAUNCHER_UNITY_GREETER) = range(3)
+     LAUNCHER_ARCTICA_GREETER) = range(3)
 
     # extension of layout files
     LAYOUT_FILE_EXTENSION = ".onboard"
@@ -278,7 +278,7 @@ class Config(ConfigObject):
                          metavar="ARG",
             help="Simulate being launched by certain XEmbed sockets. \n"
                  "Use this together with option --xid.               \n"
-                 "ARG={unity-greeter|gnome-screen-saver}\n")
+                 "ARG={arctica-greeter|gnome-screen-saver}\n")
 
         group.add_option("-g", "--log-learning",
                   action="store_true", dest="log_learn", default=False,
@@ -327,18 +327,18 @@ class Config(ConfigObject):
             if options.launched_by:
                 if options.launched_by == "gnome-screensaver":
                     self.launched_by = self.LAUNCHER_GSS
-                elif options.launched_by == "unity-greeter":
-                    self.launched_by = self.LAUNCHER_UNITY_GREETER
+                elif options.launched_by == "arctica-greeter":
+                    self.launched_by = self.LAUNCHER_ARCTICA_GREETER
             else:
                 if Process.was_launched_by("gnome-screensaver"):
                     self.launched_by = self.LAUNCHER_GSS
-                elif "UNITY_GREETER_DBUS_NAME" in os.environ:
-                    self.launched_by = self.LAUNCHER_UNITY_GREETER
+                elif "ARCTICA_GREETER_DBUS_NAME" in os.environ:
+                    self.launched_by = self.LAUNCHER_ARCTICA_GREETER
 
         self.is_running_from_source = self._is_running_from_source()
-        if self.is_running_from_source:
-            _logger.warning("Starting in project directory, "
-                            "importing local packages and extensions.")
+#        if self.is_running_from_source:
+#            _logger.warning("Starting in project directory, "
+#                            "importing local packages and extensions.")
 
 
     def init(self):
@@ -635,7 +635,7 @@ class Config(ConfigObject):
         self.add_key("xembed-aspect-change-range", [0, 1.6])
         self.add_key("xembed-background-color", "#0000007F")
         self.add_key("xembed-background-image-enabled", True)
-        self.add_key("xembed-unity-greeter-offset-x", 85.0)
+        self.add_key("xembed-arctica-greeter-offset-x", 85.0)
 
         self.keyboard          = ConfigKeyboard()
         self.window            = ConfigWindow()
@@ -674,12 +674,12 @@ class Config(ConfigObject):
             _logger.warning("mousetweaks GSettings schema not found, "
                             "mousetweaks integration disabled.")
 
-        # unity greeter (very optional)
-        self.unity_greeter = None
-        if self.launched_by == self.LAUNCHER_UNITY_GREETER:
+        # arctica greeter (very optional)
+        self.arctica_greeter = None
+        if self.launched_by == self.LAUNCHER_ARCTICA_GREETER:
             try:
-                self.unity_greeter = ConfigUnityGreeter(self)
-                self.children.append(self.unity_greeter)
+                self.arctica_greeter = ConfigArcticaGreeter(self)
+                self.children.append(self.arctica_greeter)
             except (SchemaError, ImportError) as e:
                 _logger.warning(unicode_str(e))
 
@@ -1354,11 +1354,11 @@ class Config(ConfigObject):
     def get_desktop_background_filename(self):
         fn = ""
 
-        # Starting with Vivid's unity greeter try to get the filename
+        # With arctica-greeter try to get the filename
         # from the greeter's schema.
-        if self.launched_by == self.LAUNCHER_UNITY_GREETER:
+        if self.launched_by == self.LAUNCHER_ARCTICA_GREETER:
             fn = self._get_desktop_background_filename_from_schema(
-                     "com.canonical.unity-greeter", "background")
+                     "org.ArcticaProject.arctica-greeter", "background")
 
         # Elsewhere (old Ubuntu releases, gnome-screen-saver) get it
         # from the gnome key.
@@ -1379,7 +1379,7 @@ class Config(ConfigObject):
             try:
                 # Valid file URI?
                 # Prevents error 'not an absolute URI using the "file" scheme'
-                # when using the unity-greeter schema.
+                # when using the arctica-greeter schema.
                 if GLib.uri_parse_scheme(fn) == "file":
                     try:
                         fn, error = GLib.filename_from_uri(fn)
@@ -1394,8 +1394,8 @@ class Config(ConfigObject):
                             .format(fn, unicode_str(ex)))
         return fn
 
-    def get_xembed_unity_greeter_offset_x(self):
-        value = self.gskeys["xembed_unity_greeter_offset_x"].value
+    def get_xembed_arctica_greeter_offset_x(self):
+        value = self.gskeys["xembed_arctica_greeter_offset_x"].value
         if value < 0:
             value = None
         return value
@@ -2004,12 +2004,12 @@ class ConfigGDA(ConfigObject):
         self.add_key("screen-keyboard-enabled", False, writable=False)
 
 
-class ConfigUnityGreeter(ConfigObject):
-    """ Key to hide onboard when embedded into unity-greeter """
+class ConfigArcticaGreeter(ConfigObject):
+    """ Key to hide onboard when embedded into arctica-greeter """
 
     def _init_keys(self):
-        self.schema = SCHEMA_UNITY_GREETER
-        self.sysdef_section = "unity-greeter"
+        self.schema = SCHEMA_ARCTICA_GREETER
+        self.sysdef_section = "arctica-greeter"
 
         self.add_key("onscreen-keyboard", False)
 

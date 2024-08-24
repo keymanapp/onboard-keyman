@@ -178,7 +178,7 @@ def parse_key_combination(combo, avaliable_key_ids = None):
     [('TAB', 5)]
 
     # regex
-    >>> parse_key_combination(["F\d+"], ["TAB", "F1", "F2", "F3", "F9"])
+    >>> parse_key_combination([r"F\\d+"], ["TAB", "F1", "F2", "F3", "F9"])
     [('F1', 0), ('F2', 0), ('F3', 0), ('F9', 0)]
     """
     modifiers = combo[:-1]
@@ -226,8 +226,8 @@ def run_script(script):
 def toprettyxml(domdoc):
     ugly_xml = domdoc.toprettyxml(indent='  ')
     # Join lines with text elements with their tag lines
-    pattern = re.compile('>\n\s+([^<>\s].*?)\n\s+</', re.DOTALL)
-    pretty_xml = pattern.sub('>\g<1></', ugly_xml)
+    pattern = re.compile(r'>\n\s+([^<>\s].*?)\n\s+</', re.DOTALL)
+    pretty_xml = pattern.sub(r'>\g<1></', ugly_xml)
 
     # Work around http://bugs.python.org/issue5752
     pretty_xml = re.sub(
@@ -365,8 +365,8 @@ def unpack_name_value_list(_list, num_values=2, key_type = str):
     """
     Converts a list of strings into a dict of tuples.
     Sample list: ['LWIN:label:super', ...]
-    ":" in a value must be escaped as "\:"
-    "\" in a value must be escaped as "\\"
+    ":" in a value must be escaped as "\\:"
+    "\\" in a value must be escaped as "\\\\"
     """
     result = {}
 
@@ -388,8 +388,8 @@ def unpack_name_value_list(_list, num_values=2, key_type = str):
         if tuples:
             a = []
             for t in tuples[0]:
-                t = t.replace("\\\\", "\\")   # unescape backslash
-                t = t.replace("\\:", ":")     # unescape separator
+                t = t.replace(r'\\\\', r'\\')     # unescape backslash
+                t = t.replace(r'\\:', r'\:')      # unescape separator
                 a.append(t)
 
             if key_type == str:
@@ -413,8 +413,8 @@ def pack_name_value_list(tuples, field_sep=":", name_sep=":"):
         text = str(t[0])
         sep = name_sep
         for value in t[1]:
-            value = value.replace("\\", "\\\\")   # escape backslash
-            value = value.replace(sep, "\\"+sep)  # escape separator
+            value = value.replace(r'\\', r'\\\\')   # escape backslash
+            value = value.replace(sep, r'\\'+sep)  # escape separator
             text += sep + '%s' % value
             sep = field_sep
         result.append(text)
@@ -1548,9 +1548,9 @@ class XDGDirs:
 
 
 _tag_pattern = re.compile(
-    """(?:
+    r"""(?:
             <[\w\-_]+                         # tag
-            (?:\s+[\w\-_]+=["'][^"']*["'])*  # attributes
+            (?:\s+[\w\-_]+=["'][^"']*["'])*   # attributes
             /?>
         ) |
         (?:
@@ -1582,7 +1582,7 @@ def _iter_markup(markup):
     [('<tag/>', True), (' ', False), ('<tag2 attr="value"/>', True)]
 
     # must not modify input, i.e. concatenated result must equal input text
-    >>> markup = "asd <tt>t est\\n ds</tt> te st2 "
+    >>> markup = r"asd <tt>t est\n ds</tt> te st2 "
     >>> "".join([text for text, tag in _iter_markup(markup)]) == markup
     True
     """
