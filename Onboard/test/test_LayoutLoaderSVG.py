@@ -125,7 +125,7 @@ class TestLayoutLoaderSVG(unittest.TestCase):
             ll._get_system_keyboard_layout = \
                 lambda vk: (system_keyboard_layout, system_keyboard_variant)
         Onboard.LayoutLoaderSVG.config = self.Config_mockup()
-        layout = ll.load(vk, layout_fn, None)
+        layout = ll.load(vk, None, layout_fn, None)
         return layout
 
     @staticmethod

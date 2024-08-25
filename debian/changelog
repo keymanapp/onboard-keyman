@@ -1,8 +1,8 @@
-onboard-keyman (1.5.0+onboard1.4.1-9) UNRELEASED; urgency=medium
+onboard-keyman (1.5.1+onboard1.4.1-9) UNRELEASED; urgency=medium
 
   * Add keyboard specific display fonts
 
- -- Eberhard Beilharz <eb1@sil.org>  Sat, 24 Aug 2024 12:20:45 +0800
+ -- Eberhard Beilharz <eb1@sil.org>  Sun, 25 Aug 2024 20:41:40 +0700
 
 onboard (1.4.4+onboard1.4.1-9) noble; urgency=medium
 
