@@ -3,7 +3,7 @@ Section: gnome
 Priority: optional
 Build-Depends: dbus-test-runner <!nocheck>,
                dconf-cli <!nocheck>,
-               debhelper-compat (= 13),
+               debhelper-compat (= 12),
                dh-python,
                gsettings-desktop-schemas <!nocheck>,
                hunspell <!nocheck>,
