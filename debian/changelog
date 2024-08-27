@@ -1,4 +1,4 @@
-onboard-keyman (1.5.2+onboard1.4.1-9) focal; urgency=medium
+onboard-keyman (1.5.3+focal+onboard1.4.1-9) focal; urgency=medium
 
   * Add keyboard specific display fonts
 
