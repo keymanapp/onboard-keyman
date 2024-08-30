@@ -1863,6 +1863,8 @@ class ConfigTheme(ConfigObject):
     def _init_keys(self):
         self.schema = SCHEMA_THEME
         self.sysdef_section = "theme-settings"
+        self._cached_key_label_font = None
+        self._keyboard_key_label_font = None
 
         self.add_key("color-scheme", DEFAULT_COLOR_SCHEME,
                      prop="color_scheme_filename")
@@ -1920,13 +1922,29 @@ class ConfigTheme(ConfigObject):
         return value
 
     _font_attributes = ("bold", "italic", "condensed")
-    _cached_key_label_font = None
+
+    @property
+    def keyboard_key_label_font(self):
+        return self._keyboard_key_label_font
+
+    @keyboard_key_label_font.setter
+    def keyboard_key_label_font(self, value):
+        self._keyboard_key_label_font = value
+
+    def reset_key_label_font(self, isKeymanKeyboard):
+        self._cached_key_label_font = None
+        if not isKeymanKeyboard:
+            self._keyboard_key_label_font = None
 
     def _post_notify_key_label_font(self):
         self._cached_key_label_font = None
 
     def get_key_label_font(self):
         if self._cached_key_label_font is None:
+            if self._keyboard_key_label_font:
+                self._cached_key_label_font = self._keyboard_key_label_font
+                return self._cached_key_label_font
+
             gskey = self.key_label_font_key
 
             value = gskey.value
