@@ -87,7 +87,6 @@ static PyObject*
 osk_audio_play(PyObject* self, PyObject* args)
 {
     OskAudio* audio = (OskAudio*) self;
-    GdkScreen* screen;
     ca_proplist* props;
     const char* event_id;
     float x, y;
@@ -97,9 +96,11 @@ osk_audio_play(PyObject* self, PyObject* args)
     if (!PyArg_ParseTuple(args, "sffff", &event_id, &x, &y, &xs, &ys))
         return NULL;
 
-    screen = gdk_screen_get_default();
-    sw = gdk_screen_get_width(screen);
-    sh = gdk_screen_get_height(screen);
+    GdkRectangle workarea = {0};
+    gdk_monitor_get_workarea(gdk_display_get_primary_monitor(gdk_display_get_default()), &workarea);
+
+    sw = workarea.width;
+    sh = workarea.height;
 
     ca_proplist_create(&props);
     ca_proplist_sets(props, CA_PROP_EVENT_ID, event_id);
