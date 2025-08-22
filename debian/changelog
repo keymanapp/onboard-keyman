@@ -1,8 +1,8 @@
-onboard-keyman (1.5.4+onboard1.4.1-9) UNRELEASED; urgency=medium
+onboard-keyman (1.5.5+onboard1.4.1-9) UNRELEASED; urgency=medium
 
   * Replace deprecated methods
 
- -- Eberhard Beilharz <eb1@sil.org>  Thu, 21 Aug 2025 19:40:52 +0200
+ -- Eberhard Beilharz <eb1@sil.org>  Fri, 22 Aug 2025 17:56:04 +0200
 
 onboard-keyman (1.5.3+onboard1.4.1-9) noble; urgency=medium
 
